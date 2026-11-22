@@ -136,13 +136,13 @@ export const Gauge: React.FC<{ value: number; from?: number; to?: number }> = ({
 };
 
 /** Hand-drawn bar pair (values in %). */
-export const BarPair: React.FC<{ a: number; b: number; la: string; lb: string; H?: number }> = ({ a, b, la, lb, H = 380 }) => {
+export const BarPair: React.FC<{ a: number; b: number; la: string; lb: string; H?: number; ta?: string; tb?: string }> = ({ a, b, la, lb, H = 380, ta, tb }) => {
   const g = useTwos();
   const pa = interpolate(g, [4, 30], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
   const pb = interpolate(g, [24, 52], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
-  const Bar: React.FC<{ v: number; p: number; c: string; l: string }> = ({ v, p, c, l }) => (
+  const Bar: React.FC<{ v: number; p: number; c: string; l: string; tx?: string }> = ({ v, p, c, l, tx }) => (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 260 }}>
-      <div style={{ fontSize: 84, fontWeight: 900, color: c }}>{Math.round(v * p)}%</div>
+      <div style={{ fontSize: 84, fontWeight: 900, color: c, opacity: tx ? p : 1 }}>{tx ?? `${Math.round(v * p)}%`}</div>
       <div style={{ height: H, display: "flex", alignItems: "flex-end" }}>
         <div style={{ width: 170, height: H * (v / 100) * p, border: `4px solid ${P.ink}`, borderBottom: "none", borderRadius: "10px 10px 0 0", background: `repeating-linear-gradient(-45deg, ${c}99 0 10px, ${c}55 10px 20px)` }} />
       </div>
@@ -150,5 +150,5 @@ export const BarPair: React.FC<{ a: number; b: number; la: string; lb: string; H
       <div style={{ fontFamily: HAND, fontSize: 44, marginTop: 6 }}>{l}</div>
     </div>
   );
-  return <div style={{ display: "flex", gap: 60, justifyContent: "center" }}><Bar v={a} p={pa} c={P.muted} l={la} /><Bar v={b} p={pb} c={P.teal} l={lb} /></div>;
+  return <div style={{ display: "flex", gap: 60, justifyContent: "center" }}><Bar v={a} p={pa} c={P.muted} l={la} tx={ta} /><Bar v={b} p={pb} c={P.teal} l={lb} tx={tb} /></div>;
 };
