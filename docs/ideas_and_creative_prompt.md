@@ -104,3 +104,21 @@ The AI Bounce logo ball come alive: glowing cyan→purple ball inside a round to
 ### Image prompt for a paper version of Bouncy (if you want him hand-drawn like the other four)
 "Full-body illustration of a cheerful round mascot character: a glowing ball with a cyan-to-purple gradient, big round googly eyes, rosy pink cheeks, wide open happy smile, thin noodle arms waving, tiny feet, hand-drawn ink line art with soft watercolour shading, paper-sticker style with a thick torn cream paper border, on a plain flat light-grey background (#d4d7dc), no text, centred, 16:9."
 (Ask for extra sheets: laughing, surprised, winking, thumbs-up, holding a sign.)
+
+## D. "AI jokes: then vs. now" (researched 2026-11-22)
+
+### Then – 2023 (ChatGPT-3.5)
+Study: Jentzsch & Kersting, "ChatGPT is fun, but it is not funny!" (WASSA 2023 / arXiv 2306.04563). Asked for a joke 1,008 times → over 90% were the same 25 jokes.
+1. ✅ Most repeated: "Why did the scarecrow win an award? Because he was outstanding in his field."
+2. ✅ Second: "Why did the tomato turn red? Because it saw the salad dressing."
+3. ⚠️ Also in the top list (per paper's table, not re-verified here): "Why was the math book sad? Because it had too many problems."
+
+### In between – 2024
+Gorenz & Schwarz, PLOS ONE (Jul 2024): ~70% of participants rated ChatGPT-3.5's jokes funnier than human-written ones; its satirical headlines held up against The Onion.
+
+### Now – 2026 (written by an AI, Claude, for AI Bounce – label "written by AI" on screen)
+1. "AI can pass exams, read scans and claim math proofs… and I still have to prove to it that I'm not a robot."
+2. "I told my AI to stop overthinking. It said: 'Sure – let me think about that for 30 seconds.'"
+3. "Why are AIs terrible at poker? They explain their reasoning before every bet."
+
+Sources: https://aclanthology.org/2023.wassa-1.29 · https://www.popsci.com/technology/chatgpt-comedy-study/ · https://interestingengineering.com/culture/chatgpt-knows-25-jokes-and-will-repeat-them-like-a-broken-record · https://today.usc.edu/ai-jokes-chatgpt-humor-study/
