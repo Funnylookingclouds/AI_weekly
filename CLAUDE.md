@@ -35,3 +35,9 @@ När jag ber dig skapa veckans video (eller ger dig en lista med nyheter) ska du
 * Spara råmaterial och delkomponenter i `/temp` och färdig video i `/output`.
 * Normalisera röstspåret till -14 LUFS och lägg bakgrundsmusiken på ca -28 LUFS så rösten alltid hörs glasklart.
 * Vid kod- eller renderingsfel: felsök, korrigera och kör om automatiskt upp till 3 gånger.
+
+## 6. Leverans efter varje rendering
+Efter **varje** rendering (även omrenderingar efter fixar): committa och pusha `output/weekly_ai_short.mp4`, och ge mig sedan alltid en länk till videon:
+* **Permalänk (låst till commiten):** `https://github.com/Funnylookingclouds/AI_weekly/blob/<commit-sha>/output/weekly_ai_short.mp4`
+* **Direkt nedladdning:** `https://github.com/Funnylookingclouds/AI_weekly/raw/<commit-sha>/output/weekly_ai_short.mp4`
+Använd commit-SHA (inte branchnamn) så att länken alltid pekar på exakt den versionen. Skicka även filen direkt i chatten när det går.
