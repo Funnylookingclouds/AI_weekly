@@ -20,3 +20,4 @@ Preview while editing: `cd video && npm run studio`.
 - `video/src/episode.ts` selects the active week (one line).
 - Each week's config is archived in `scripts/episodes/<id>.json` (+ `.words.json`, `.youtube.md`).
 - To rebuild an old week: copy its `<id>.json` to `scripts/episode.json`, its `<id>.words.json` to `temp/words.json` and `video/src/data/words.json` (or re-run `scripts/tts.py`), point `episode.ts` at it, then render.
+- Quick re-render of an archived week (no TTS): `scripts/render_episode.sh <id> <module>` – e.g. `scripts/render_episode.sh 2026-w46-en w46` (needs the matching `output/voiceover.mp3`).
