@@ -3,6 +3,7 @@ import { AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame
 import { C, FONT } from "./theme";
 import { WORDS, at, FPS, TOTAL_SEC, segStart } from "./timing";
 import * as S from "./Scenes";
+import { SceneTransition, TRANSITIONS, GlitchDefs, Shockwave, LightSweep, Particles, Overlay, useBeatPulse } from "./Effects";
 
 type Beat = { t: number; C: React.FC; sfx?: "whoosh" | "pop" };
 
@@ -25,10 +26,14 @@ const BEATS: Beat[] = [
   { t: at("loop", "and"), C: S.LoopOut, sfx: "whoosh" },
 ];
 
+const SEG_COLOR: Record<string, string> = { hook: C.green, news1: C.amber, news2: C.pink, news3: C.amber, loop: C.cyan };
+const segOf = (t: number) => [...WORDS].reverse().find((w) => w.start <= t + 0.01)?.segment ?? "hook";
+
 const SEG_LABEL: Record<string, string> = { hook: "", news1: "1/3", news2: "2/3", news3: "3/3", loop: "" };
 
 const Background: React.FC = () => {
   const f = useCurrentFrame();
+  const pulse = useBeatPulse();
   return (
     <AbsoluteFill style={{ background: C.bg, overflow: "hidden" }}>
       <div style={{ position: "absolute", width: 900, height: 900, borderRadius: 450, left: -300 + Math.sin(f / 90) * 120, top: 100 + Math.cos(f / 110) * 140, background: `radial-gradient(circle, ${C.purple}44, transparent 65%)` }} />
@@ -36,7 +41,9 @@ const Background: React.FC = () => {
       <AbsoluteFill style={{
         backgroundImage: `linear-gradient(${C.text}0d 2px, transparent 2px), linear-gradient(90deg, ${C.text}0d 2px, transparent 2px)`,
         backgroundSize: "90px 90px", backgroundPosition: `0 ${(f * 0.6) % 90}px`,
+        transform: `scale(${1 + pulse * 0.012})`, opacity: 0.7 + pulse * 0.6,
       }} />
+      <Particles />
     </AbsoluteFill>
   );
 };
@@ -45,8 +52,12 @@ const Header: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
   const seg = [...WORDS].reverse().find((w) => w.start <= t)?.segment ?? "hook";
+  const prog = t / TOTAL_SEC;
   return (
     <div style={{ position: "absolute", top: 120, left: 70, right: 70, display: "flex", justifyContent: "space-between", alignItems: "center", fontFamily: FONT }}>
+      <div style={{ position: "absolute", top: 70, left: 0, right: 0, height: 6, borderRadius: 3, background: "#ffffff14" }}>
+        <div style={{ width: `${prog * 100}%`, height: 6, borderRadius: 3, background: `linear-gradient(90deg, ${C.purple}, ${C.cyan})`, boxShadow: `0 0 16px ${C.cyan}` }} />
+      </div>
       <div style={{ fontSize: 36, fontWeight: 900, letterSpacing: 3, color: C.text }}>
         <span style={{ color: C.cyan }}>AI</span> SOLVED <span style={{ color: C.muted, fontWeight: 700 }}>· WK 47</span>
       </div>
@@ -84,29 +95,20 @@ const Captions: React.FC = () => {
         const active = t >= w.start && t < w.end + 0.08;
         const color = w.keyword ? (i % 2 ? C.purple : C.cyan) : C.text;
         const txt = w.display.replace(/[.,:;!?–]+$/, "").toUpperCase();
+        const since = t - w.start;
+        const kwPop = w.keyword ? interpolate(since, [0, 0.08, 0.2], [0.7, 1.12, 1.0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 1;
+        const line = w.keyword ? interpolate(since, [0.05, 0.25], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
         return (
-          <span key={i} style={{
+          <span key={i} style={{ position: "relative", display: "inline-block",
             fontSize: 92, fontWeight: 900, color, letterSpacing: -1, lineHeight: 1.15,
             WebkitTextStroke: "3px #020617", paintOrder: "stroke fill",
             textShadow: `0 8px 0 #020617, 0 0 ${active ? 34 : 0}px ${w.keyword ? color : "#ffffff55"}`,
-            transform: `scale(${active ? 1.05 : 1}) translateY(${active ? -8 : 0}px)`,
+            transform: `scale(${(active ? 1.05 : 1) * (since >= 0 ? kwPop : 1)}) translateY(${active ? -8 : 0}px) rotate(${w.keyword && active ? (i % 2 ? 2 : -2) : 0}deg)`,
             opacity: t >= w.start - 0.02 ? 1 : 0.45,
-          }}>{txt}</span>
+          }}>{txt}{line > 0 && <span style={{ position: "absolute", left: 0, bottom: 4, height: 10, width: `${line * 100}%`, borderRadius: 5, background: color, boxShadow: `0 0 18px ${color}` }} />}</span>
         );
       })}
     </div>
-  );
-};
-
-const CameraMove: React.FC<{ children: React.ReactNode; i: number; dur: number }> = ({ children, i, dur }) => {
-  const f = useCurrentFrame();
-  const p = f / Math.max(1, dur);
-  const dir = i % 2 ? 1 : -1;
-  const enter = interpolate(f, [0, 10], [0, 1], { extrapolateRight: "clamp" });
-  return (
-    <AbsoluteFill style={{ transform: `scale(${1 + p * 0.06}) rotate(${dir * p * 1.2}deg) translateY(${(1 - enter) * 60}px)`, opacity: enter }}>
-      {children}
-    </AbsoluteFill>
   );
 };
 
@@ -121,11 +123,14 @@ export const WeeklyShort: React.FC = () => {
         const dur = to - from;
         return (
           <Sequence key={i} from={from} durationInFrames={dur} name={b.C.name}>
-            <CameraMove i={i} dur={dur}><b.C /></CameraMove>
+            <SceneTransition kind={TRANSITIONS[i % TRANSITIONS.length]} i={i} dur={i === BEATS.length - 1 ? dur + 999 : dur}><b.C /></SceneTransition>
+            {i > 0 && (b.sfx === "pop" ? <Shockwave color={SEG_COLOR[segOf(b.t)]} /> : <LightSweep />)}
             {b.sfx && <Audio src={staticFile(`${b.sfx}.wav`)} volume={b.sfx === "whoosh" ? 0.55 : 0.6} />}
           </Sequence>
         );
       })}
+      <Overlay />
+      <GlitchDefs />
       <Header />
       <Captions />
       <Audio src={staticFile("voiceover.mp3")} />

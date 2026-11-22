@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig, Easing } from "remotion";
 import { C, FONT, MONO } from "./theme";
+import { Scramble, GlitchText, StaggerText } from "./Effects";
 
 // ---------- helpers ----------
 const useSpring = (delay = 0, damping = 12, stiffness = 120) => {
@@ -43,7 +44,7 @@ export const MoneyHook: React.FC = () => {
     <Stage>
       <div style={{ fontSize: 46, fontWeight: 700, color: C.muted, letterSpacing: 8, opacity: s }}>MATH PROBLEM WORTH</div>
       <div style={{ fontSize: 150, fontWeight: 900, transform: `scale(${0.6 + 0.4 * s})`, fontVariantNumeric: "tabular-nums", marginTop: 10 }}>
-        <Glow color={C.green}>${txt}</Glow>
+        <Glow color={C.green}><GlitchText seed="hook">{`$${txt}`}</GlitchText></Glow>
       </div>
       <div style={{ marginTop: 50 }}><Chip color={C.cyan} delay={30}>SOLVED BY AI?</Chip></div>
       {[...Array(14)].map((_, i) => {
@@ -72,17 +73,33 @@ export const NotEvenTop: React.FC = () => {
 };
 
 // ---------- NEWS 1: Riemann ----------
+const MATH_GLYPHS = ["∑", "π", "∞", "ζ", "∫", "√", "≈", "∂", "ℂ", "½"];
+const FloatingGlyphs: React.FC = () => {
+  const f = useCurrentFrame();
+  return (
+    <AbsoluteFill style={{ top: -250, height: 1920 }}>
+      {MATH_GLYPHS.map((g, i) => {
+        const a = (i / MATH_GLYPHS.length) * Math.PI * 2 + f / 120;
+        const r = 380 + (i % 3) * 70;
+        const o = interpolate(f, [0, 20], [0, 0.35], clamp);
+        return <div key={i} style={{ position: "absolute", left: 540 + Math.cos(a) * r - 40, top: 690 + Math.sin(a) * r * 1.25 - 50, fontSize: 70 + (i % 3) * 20, fontWeight: 900, color: [C.cyan, C.purple, C.amber][i % 3], opacity: o, transform: `rotate(${Math.sin(f / 40 + i) * 20}deg)`, fontFamily: MONO }}>{g}</div>;
+      })}
+    </AbsoluteFill>
+  );
+};
+
 export const RiemannTitle: React.FC = () => {
   const s = useSpring(0);
   const f = useCurrentFrame();
   return (
     <Stage>
+      <FloatingGlyphs />
       <Chip color={C.amber}>THURSDAY, NOV 20</Chip>
       <div style={{ fontSize: 96, fontWeight: 900, marginTop: 40, letterSpacing: -2, transform: `translateX(${(1 - s) * -300}px)`, opacity: s }}>
-        RIEMANN
+        <Scramble text="RIEMANN" />
       </div>
       <div style={{ fontSize: 96, fontWeight: 900, letterSpacing: -2, color: C.cyan, transform: `translateX(${(1 - s) * 300}px)`, opacity: s }}>
-        <Glow color={C.cyan} size={30}>HYPOTHESIS</Glow>
+        <Glow color={C.cyan} size={30}><Scramble text="HYPOTHESIS" delay={8} /></Glow>
       </div>
       <div style={{ fontFamily: MONO, fontSize: 64, marginTop: 40, color: C.text, opacity: interpolate(f, [20, 40], [0, 1], clamp) }}>
         ζ(s) = 0 ⇒ Re(s) = ½
@@ -106,7 +123,7 @@ export const Years167: React.FC = () => {
       <div style={{ fontSize: 240, fontWeight: 900, lineHeight: 1, transform: `scale(${s})` }}>
         <Glow color={C.amber}>167</Glow><span style={{ fontSize: 90, color: C.muted }}> years</span>
       </div>
-      <div style={{ fontSize: 48, fontWeight: 700, color: C.muted, marginTop: 10, letterSpacing: 4 }}>UNSOLVED MYSTERY</div>
+      <div style={{ fontSize: 48, fontWeight: 700, color: C.muted, marginTop: 10, letterSpacing: 4 }}><Scramble text="UNSOLVED MYSTERY" delay={10} speed={1.2} /></div>
       <div style={{ position: "relative", width: 800, height: 140, marginTop: 70 }}>
         <div style={{ position: "absolute", top: 60, left: 0, width: 800, height: 8, borderRadius: 4, background: C.bg2 }} />
         <div style={{ position: "absolute", top: 60, left: 0, width: 800 * p, height: 8, borderRadius: 4, background: `linear-gradient(90deg, ${C.purple}, ${C.amber})` }} />
@@ -183,7 +200,7 @@ export const Historic: React.FC = () => {
     <Stage>
       <div style={{ fontSize: 50, fontWeight: 800, color: C.muted, letterSpacing: 6, opacity: s }}>IF IT HOLDS…</div>
       <div style={{ fontSize: 132, fontWeight: 900, marginTop: 20, transform: `scale(${s * pulse})`, background: `linear-gradient(90deg, ${C.cyan}, ${C.purple}, ${C.pink})`, WebkitBackgroundClip: "text", color: "transparent" }}>
-        HISTORIC
+        <Scramble text="HISTORIC" delay={4} speed={2.2} />
       </div>
       <div style={{ marginTop: 40 }}><Chip color={C.green} delay={20}>$1M MILLENNIUM PRIZE</Chip></div>
     </Stage>
@@ -213,11 +230,17 @@ export const SavesLives: React.FC = () => {
   const draw = interpolate(f, [0, 100], [2400, 0], clamp);
   return (
     <Stage>
-      <Heart size={320} color={C.pink} beat={beat} />
+      <div style={{ position: "relative", width: 320, height: 320 }}>
+        {[0, 1, 2].map((k) => {
+          const ph = ((f + k * 15) % 45) / 45;
+          return <div key={k} style={{ position: "absolute", left: 160 - ph * 300, top: 160 - ph * 300, width: ph * 600, height: ph * 600, borderRadius: "50%", border: `6px solid ${C.pink}`, opacity: (1 - ph) * 0.6 }} />;
+        })}
+        <div style={{ position: "absolute", inset: 0 }}><Heart size={320} color={C.pink} beat={beat} /></div>
+      </div>
       <svg width={1000} height={220} style={{ marginTop: 30 }}>
         <path d={ecgPath(1000, 220, 3)} stroke={C.pink} strokeWidth={8} fill="none" strokeDasharray={2400} strokeDashoffset={draw} strokeLinejoin="round" style={{ filter: `drop-shadow(0 0 12px ${C.pink})` }} />
       </svg>
-      <div style={{ fontSize: 96, fontWeight: 900, marginTop: 20 }}><Glow color={C.pink} size={30}>SAVES LIVES</Glow></div>
+      <div style={{ fontSize: 96, fontWeight: 900, marginTop: 20 }}><Glow color={C.pink} size={30}><StaggerText text="SAVES LIVES" delay={8} /></Glow></div>
     </Stage>
   );
 };
@@ -318,8 +341,7 @@ export const Quickie: React.FC = () => {
       <svg width={260} height={260} viewBox="0 0 24 24" style={{ transform: `scale(${s}) rotate(${(1 - s) * 30}deg)`, filter: `drop-shadow(0 0 40px ${C.amber})` }}>
         <path d="M13 2 L4 14 H11 L10 22 L20 9 H13 Z" fill={C.amber} />
       </svg>
-      <div style={{ fontSize: 140, fontWeight: 900, letterSpacing: -2, transform: `scale(${2.2 - 1.2 * s})`, opacity: s }}>QUICK HIT</div>
-      <div style={{ position: "absolute", inset: 0, background: C.amber, opacity: interpolate(f, [0, 8], [0.35, 0], clamp) }} />
+      <div style={{ fontSize: 140, fontWeight: 900, letterSpacing: -2, transform: `scale(${2.2 - 1.2 * s})`, opacity: s }}><GlitchText seed="qh">QUICK HIT</GlitchText></div>
     </Stage>
   );
 };
@@ -396,7 +418,7 @@ export const Recap: React.FC = () => {
         })}
       </div>
       <div style={{ fontSize: 170, fontWeight: 900, marginTop: 60, transform: `scale(${big})` }}>
-        <Glow color={C.cyan}>7</Glow> <span style={{ color: C.cyan }}>DAYS</span>
+        <Glow color={C.cyan}>7</Glow> <StaggerText text="DAYS" delay={34} style={{ color: C.cyan }} />
       </div>
     </Stage>
   );
@@ -410,7 +432,7 @@ export const LoopOut: React.FC = () => {
     <Stage>
       <div style={{ fontSize: 50, fontWeight: 700, color: C.muted, letterSpacing: 8, opacity: o }}>MATH PROBLEM WORTH</div>
       <div style={{ fontSize: 150, fontWeight: 900, transform: `scale(${z})`, opacity: o }}>
-        <Glow color={C.green}>$1,000,000</Glow>
+        <Glow color={C.green}><GlitchText seed="loop">$1,000,000</GlitchText></Glow>
       </div>
     </Stage>
   );
