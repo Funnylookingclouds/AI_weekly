@@ -1,32 +1,10 @@
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, FONT } from "./theme";
-import { WORDS, at, FPS, TOTAL_SEC, segStart } from "./timing";
-import * as S from "./Scenes";
+import { WORDS, FPS, TOTAL_SEC } from "./timing";
+import { BEATS, WEEK_LABEL, SEG_COLOR } from "./episode";
 import { SceneTransition, TRANSITIONS, GlitchDefs, Shockwave, LightSweep, Particles, Overlay, useBeatPulse } from "./Effects";
 
-type Beat = { t: number; C: React.FC; sfx?: "whoosh" | "pop" };
-
-const BEATS: Beat[] = [
-  { t: 0, C: S.MoneyHook },
-  { t: at("hook", "and"), C: S.NotEvenTop, sfx: "whoosh" },
-  { t: segStart("news1"), C: S.RiemannTitle, sfx: "whoosh" },
-  { t: at("news1", "167"), C: S.Years167, sfx: "whoosh" },
-  { t: at("news1", "proof", 1), C: S.LeanCheck, sfx: "whoosh" },
-  { t: at("news1", "experts"), C: S.UnderReview, sfx: "pop" },
-  { t: at("news1", "if"), C: S.Historic, sfx: "whoosh" },
-  { t: segStart("news2"), C: S.SavesLives, sfx: "whoosh" },
-  { t: at("news2", "an", 0), C: S.Ultrasound, sfx: "whoosh" },
-  { t: at("news2", "found"), C: S.BarCompare, sfx: "pop" },
-  { t: at("news2", "and"), C: S.SwedishData, sfx: "whoosh" },
-  { t: segStart("news3"), C: S.Quickie, sfx: "pop" },
-  { t: at("news3", "inkling"), C: S.Laptop, sfx: "whoosh" },
-  { t: at("news3", "smart"), C: S.PrivateData, sfx: "pop" },
-  { t: segStart("loop"), C: S.Recap, sfx: "whoosh" },
-  { t: at("loop", "and"), C: S.LoopOut, sfx: "whoosh" },
-];
-
-const SEG_COLOR: Record<string, string> = { hook: C.green, news1: C.amber, news2: C.pink, news3: C.amber, loop: C.cyan };
 const segOf = (t: number) => [...WORDS].reverse().find((w) => w.start <= t + 0.01)?.segment ?? "hook";
 
 const SEG_LABEL: Record<string, string> = { hook: "", news1: "1/3", news2: "2/3", news3: "3/3", loop: "" };
@@ -59,7 +37,7 @@ const Header: React.FC = () => {
         <div style={{ width: `${prog * 100}%`, height: 6, borderRadius: 3, background: `linear-gradient(90deg, ${C.purple}, ${C.cyan})`, boxShadow: `0 0 16px ${C.cyan}` }} />
       </div>
       <div style={{ fontSize: 36, fontWeight: 900, letterSpacing: 3, color: C.text }}>
-        <span style={{ color: C.cyan }}>AI</span> SOLVED <span style={{ color: C.muted, fontWeight: 700 }}>· WK 47</span>
+        <span style={{ color: C.cyan }}>AI</span> SOLVED <span style={{ color: C.muted, fontWeight: 700 }}>· {WEEK_LABEL}</span>
       </div>
       {SEG_LABEL[seg] && (
         <div style={{ fontSize: 34, fontWeight: 900, color: C.bg, background: C.cyan, padding: "8px 22px", borderRadius: 12 }}>{SEG_LABEL[seg]}</div>
@@ -73,10 +51,17 @@ type Chunk = { words: typeof WORDS; start: number; end: number };
 const CHUNKS: Chunk[] = (() => {
   const out: Chunk[] = [];
   let cur: typeof WORDS = [];
-  WORDS.forEach((w, i) => {
+  // glue standalone "%" onto the preceding number so "97 %" never splits across lines
+  const CAP: typeof WORDS = [];
+  WORDS.forEach((w) => {
+    const prev = CAP[CAP.length - 1];
+    if (/^%[.,:;!?–]*$/.test(w.display) && prev) CAP[CAP.length - 1] = { ...prev, display: prev.display + w.display, word: prev.word + w.word, end: w.end, keyword: prev.keyword || w.keyword };
+    else CAP.push(w);
+  });
+  CAP.forEach((w, i) => {
     cur.push(w);
     const len = cur.map((x) => x.display).join(" ").length;
-    const brk = /[.,:;!?–]$/.test(w.word) || cur.length >= 3 || len > 18 || i === WORDS.length - 1;
+    const brk = /[.,:;!?–]$/.test(w.word) || cur.length >= 3 || len > 18 || i === CAP.length - 1;
     if (brk) { out.push({ words: cur, start: cur[0].start, end: cur[cur.length - 1].end }); cur = []; }
   });
   return out;

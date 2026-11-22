@@ -1,0 +1,41 @@
+{
+  "id": "2026-w46-en",
+  "language": "en",
+  "voice_id": "nPczCjzI2devNBz1zQrb",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.1,
+  "segments": [
+    {
+      "id": "hook",
+      "tts": "AI just beat eight brain tumor experts at their own job – and that's only the start of this week."
+    },
+    {
+      "id": "news1",
+      "tts": "At a pathology conference, Mayo Clinic researchers tested an AI on 100 brain tumor cases, choosing from 52 tumor types using tissue images. It scored 97 percent – beating all eight specialists. Even better: doctors got more accurate when the AI helped them."
+    },
+    {
+      "id": "news2",
+      "tts": "Next: Google DeepMind's AlphaProof Code mathematically checked the encryption code behind Signal's private chats – millions of lines of proof in just four weeks. When researchers slipped in two old bugs, it caught both."
+    },
+    {
+      "id": "news3",
+      "tts": "Quick hit: AlphaGenome 2 reads DNA cell type by cell type, finding nearly twice as many gene-changing variants – clues to where diseases begin."
+    },
+    {
+      "id": "loop",
+      "tts": "Tumors, privacy, DNA – all in seven days. So remember:"
+    }
+  ],
+  "display_map": {
+    "eight": "8",
+    "percent": "%",
+    "four": "4",
+    "two": "2",
+    "seven": "7"
+  },
+  "keywords": [
+    "eight", "experts", "mayo", "clinic", "100", "52", "97", "percent",
+    "alphaproof", "signals", "encryption", "millions", "four", "weeks", "two", "both",
+    "alphagenome", "2", "dna", "twice", "tumors", "privacy", "seven"
+  ]
+}

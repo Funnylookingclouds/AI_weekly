@@ -1,37 +1,10 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig, Easing } from "remotion";
-import { C, FONT, MONO } from "./theme";
-import { Scramble, GlitchText, StaggerText } from "./Effects";
-
-// ---------- helpers ----------
-const useSpring = (delay = 0, damping = 12, stiffness = 120) => {
-  const f = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  return spring({ frame: f - delay, fps, config: { damping, stiffness } });
-};
-const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
-
-/** Visual stage: content area above subtitles (y 260–1120). */
-const Stage: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <AbsoluteFill style={{ top: 250, height: 880, alignItems: "center", justifyContent: "center", fontFamily: FONT, color: C.text }}>
-    {children}
-  </AbsoluteFill>
-);
-
-const Glow: React.FC<{ color: string; children: React.ReactNode; size?: number }> = ({ color, children, size = 40 }) => (
-  <span style={{ textShadow: `0 0 ${size}px ${color}, 0 0 ${size / 3}px ${color}` }}>{children}</span>
-);
-
-const Chip: React.FC<{ color: string; children: React.ReactNode; delay?: number }> = ({ color, children, delay = 0 }) => {
-  const s = useSpring(delay);
-  return (
-    <div style={{
-      display: "inline-flex", alignItems: "center", gap: 14, padding: "14px 30px", borderRadius: 999,
-      border: `3px solid ${color}`, background: `${color}22`, color, fontSize: 40, fontWeight: 800,
-      letterSpacing: 2, transform: `scale(${s})`, opacity: s,
-    }}>{children}</div>
-  );
-};
+import { C, FONT, MONO } from "../theme";
+import { Scramble, GlitchText, StaggerText } from "../Effects";
+import { useSpring, clamp, Stage, Glow, Chip } from "../ui";
+import { at, segStart } from "../timing";
+import type { Beat } from "../types";
 
 // ---------- HOOK ----------
 export const MoneyHook: React.FC = () => {
@@ -437,3 +410,27 @@ export const LoopOut: React.FC = () => {
     </Stage>
   );
 };
+
+// ---------- beat list ----------
+export const WEEK_LABEL = "WK 47";
+export const BEATS: Beat[] = [
+  { t: 0, C: MoneyHook },
+  { t: at("hook", "and"), C: NotEvenTop, sfx: "whoosh" },
+  { t: segStart("news1"), C: RiemannTitle, sfx: "whoosh" },
+  { t: at("news1", "167"), C: Years167, sfx: "whoosh" },
+  { t: at("news1", "proof", 1), C: LeanCheck, sfx: "whoosh" },
+  { t: at("news1", "experts"), C: UnderReview, sfx: "pop" },
+  { t: at("news1", "if"), C: Historic, sfx: "whoosh" },
+  { t: segStart("news2"), C: SavesLives, sfx: "whoosh" },
+  { t: at("news2", "an", 0), C: Ultrasound, sfx: "whoosh" },
+  { t: at("news2", "found"), C: BarCompare, sfx: "pop" },
+  { t: at("news2", "and"), C: SwedishData, sfx: "whoosh" },
+  { t: segStart("news3"), C: Quickie, sfx: "pop" },
+  { t: at("news3", "inkling"), C: Laptop, sfx: "whoosh" },
+  { t: at("news3", "smart"), C: PrivateData, sfx: "pop" },
+  { t: segStart("loop"), C: Recap, sfx: "whoosh" },
+  { t: at("loop", "and"), C: LoopOut, sfx: "whoosh" },
+];
+
+export const SEG_COLOR: Record<string, string> = { hook: C.green, news1: C.amber, news2: C.pink, news3: C.amber, loop: C.cyan };
+

@@ -14,3 +14,9 @@ Preview while editing: `cd video && npm run studio`.
 - ElevenLabs key: injected by the cloud environment's proxy (or set `ELEVENLABS_API_KEY` locally).
 - Node 18+, Python 3 + numpy, ffmpeg.
 - Music and SFX are synthesised by `scripts/make_audio_assets.py` (royalty-free, no external assets).
+
+## Episodes & rebuilding an old week
+- Scenes per week live in `video/src/episodes/wNN.tsx` (shared building blocks in `video/src/ui.tsx`, effects in `video/src/Effects.tsx`).
+- `video/src/episode.ts` selects the active week (one line).
+- Each week's config is archived in `scripts/episodes/<id>.json` (+ `.words.json`, `.youtube.md`).
+- To rebuild an old week: copy its `<id>.json` to `scripts/episode.json`, its `<id>.words.json` to `temp/words.json` and `video/src/data/words.json` (or re-run `scripts/tts.py`), point `episode.ts` at it, then render.
