@@ -1,40 +1,40 @@
-# YouTube upload – SPECIAL EDITION: When was AI first mentioned? – presenters: Rune, Ture, Saga, Cara
+# YouTube upload – SPECIAL EDITION: How fast is AI really moving? (12 months) – presenters: Rune, Ture, Saga, Cara
 
 ## Title options
-1. **Who Invented the Term "Artificial Intelligence"? 🤯** ← recommended
-2. When Was AI First Mentioned? (Way Before ChatGPT)
-3. The 1955 Document That Named AI
+1. **How Fast Is AI Really Improving? 12 Months, Measured 📈** ← recommended
+2. AI Got 10× Better at Long Tasks in One Year?!
+3. AI Progress in 12 Months: 10× Longer Tasks, 13× Cheaper
 
 ## Description (copy everything between the lines)
 
 ---
-When was AI first mentioned? Way before ChatGPT – the term "artificial intelligence" was coined in 1955. A special edition on the history of AI in under a minute, presented by all four AI Bounce hosts. 📜🤖
+How fast is AI really improving? We measured the last 12 months with real data: AI can now finish tasks about 10× longer than a year ago – and the same performance costs about 13× less. A special edition on the speed of AI progress, presented by all four AI Bounce hosts. 📈🤖
 
-📜 1955 – THE NAME IS BORN
-On August 31, 1955, John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon wrote "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence" – the first known use of the term "artificial intelligence" (per the Oxford English Dictionary).
-🔗 https://ojs.aaai.org/index.php/aimagazine/article/view/1904
-🔗 https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth
+⏱ 1. TASK LENGTH: FROM ~3 HOURS TO ~12 HOURS
+METR measures the "50% time horizon": how long a task (in human expert time) AI agents can complete half the time. In November 2025 the frontier was about 3 hours (GPT-5.1-Codex-Max); by spring 2026 the best public models were around 12 hours (wide uncertainty: 5–61 h). METR's latest update finds this doubles roughly every 3.6 months – about 10× per year. (Measured on software and research tasks.)
+🔗 https://metr.org/blog/2026-11-20-q4-2026-capability-update/
+🔗 https://metr.org/blog/2026-05-19-frontier-risk-report/
+🔗 https://metr.org/evaluations/gpt-5-1-codex-max-report/
 
-🏛 1956 – THE DARTMOUTH WORKSHOP
-The plan: "a 2 month, 10 man study" at Dartmouth College in summer 1956, built on the idea that every aspect of learning or any other feature of intelligence can in principle be described so precisely that a machine can simulate it. It's often called the birth of AI as a field.
-🔗 https://www-formal.stanford.edu/jmc/slides/dartmouth/dartmouth/node1.html
+💸 2. COST: ABOUT 13× CHEAPER PER YEAR
+Epoch AI estimates the cost of reaching a given level of AI performance has fallen about 47% per quarter since 2023 – roughly 13× per year.
+🔗 https://epoch.ai/publications/the-plunging-price-of-thought
 
-❓ 1950 – "CAN MACHINES THINK?"
-Five years earlier, Alan Turing's paper "Computing Machinery and Intelligence" (Mind, 1950) asked "Can machines think?" and proposed the imitation game – today known as the Turing test.
-🔗 https://web.mit.edu/practicum/www/turingab.htm
+🧠 3. WHAT IT LOOKS LIKE
+This autumn alone: AI-assisted proof claims for famous math problems (still under review) and an AI that beat eight brain tumor specialists in a conference test – see our weekly episodes (wk 44, 46, 47) for details and sources.
 
-📅 Every week: what did AI solve? Plus special editions on AI history – short, jargon-free and under 60 seconds.
+📅 Every week: what did AI solve? Plus special editions on how AI is changing – short, jargon-free and under 60 seconds.
 
 🔔 Subscribe to @AIBounce for a new "What did AI solve?" every week: https://www.youtube.com/@AIBounce
 
-#Shorts #AIBounce #AI #AIHistory #TuringTest
+#Shorts #AIBounce #AI #AIProgress #AINews
 ---
 
 ## Tags (paste into the Tags field)
-history of AI, AI history, who invented AI, who coined artificial intelligence, when was AI invented, first mention of AI, artificial intelligence history, John McCarthy, Marvin Minsky, Claude Shannon, Nathaniel Rochester, Dartmouth workshop, Dartmouth conference 1956, 1955 AI proposal, Alan Turing, Turing test, imitation game, Can machines think, Computing Machinery and Intelligence, origin of AI, AI explained, AI before ChatGPT, artificial intelligence, AI news, AI Bounce
+AI progress, how fast is AI improving, AI in 12 months, AI growth, AI exponential growth, AI news, latest AI news, AI explained, METR, METR time horizon, AI time horizon, AI agents, AI doubling time, Epoch AI, AI cost decline, AI getting cheaper, cost of AI, AI benchmarks, AI 2026, future of AI, AI speed, artificial intelligence, AI trends, AI Bounce, what did AI solve
 
 ## Pinned comment
-Did you know AI got its name in 1955? Which AI history moment should we cover next? 👇 (Sources are in the description.)
+10× longer tasks in one year – exciting or scary? 👇 (Sources are in the description.)
 
 ## Notes
-- Portraits and buildings in the video are illustrations, not historical photos.
+- Figures are measurements with wide uncertainty; the video and description say "about".
