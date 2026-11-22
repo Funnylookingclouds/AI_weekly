@@ -1,0 +1,16 @@
+{
+  "id": "2026-w44-en",
+  "language": "en",
+  "voice_id": "nPczCjzI2devNBz1zQrb",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.1,
+  "segments": [
+    {"id": "hook", "tts": "AI just claimed three of the hardest problems in science – in a single day."},
+    {"id": "news1", "tts": "On Monday, OpenAI said its models proved the local smoothing conjecture in every dimension – which would also crack two famous math puzzles, Kakeya and Stein's restriction. Plus new claims in computer science and physics. The math comes with computer-checked proofs, but experts haven't reviewed it yet."},
+    {"id": "news2", "tts": "Next: Google DeepMind's Genie 4 turns a text prompt into a world you can explore – now with sound and dialogue, and you can change the weather while you play."},
+    {"id": "news3", "tts": "Quick hit: Meta reportedly built a humanoid home robot called Max in just three months, with five-fingered hands for picking up bottles and toys."},
+    {"id": "loop", "tts": "Proofs, worlds, robots – all in seven days."}
+  ],
+  "display_map": {"three": "3", "seven": "7", "two": "2"},
+  "keywords": ["three", "hardest", "openai", "local", "smoothing", "conjecture", "kakeya", "steins", "computerchecked", "genie", "4", "sound", "dialogue", "weather", "meta", "max", "months", "fivefingered", "proofs", "worlds", "robots", "seven"]
+}
