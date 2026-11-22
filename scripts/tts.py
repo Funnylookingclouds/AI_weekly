@@ -13,7 +13,9 @@ import base64, json, os, re, subprocess, sys, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ep = json.loads((ROOT / "scripts/episode.json").read_text())
+EP_PATH = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "scripts/episode.json"
+OUT_DIR = Path(sys.argv[2]) if len(sys.argv) > 2 else None
+ep = json.loads(EP_PATH.read_text())
 (ROOT / "temp").mkdir(exist_ok=True)
 (ROOT / "output").mkdir(exist_ok=True)
 
@@ -36,7 +38,7 @@ req = urllib.request.Request(
 with urllib.request.urlopen(req, timeout=180) as r:
     data = json.load(r)
 
-raw = ROOT / "temp/voiceover_raw.mp3"
+raw = (OUT_DIR or ROOT / "temp") / "voiceover_raw.mp3"
 raw.write_bytes(base64.b64decode(data["audio_base64"]))
 al = data.get("normalized_alignment") or data["alignment"]
 chars, starts, ends = al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
@@ -73,9 +75,9 @@ for i, ch in enumerate(chars + [" "]):
         cur += ch
         ce = ends[i]
 
-(ROOT / "temp/words.json").write_text(json.dumps(words, ensure_ascii=False, indent=1))
+((OUT_DIR or ROOT / "temp") / "words.json").write_text(json.dumps(words, ensure_ascii=False, indent=1))
 
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw),
                 "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000",
-                "-b:a", "192k", str(ROOT / "output/voiceover.mp3")], check=True)
+                "-b:a", "192k", str((OUT_DIR or ROOT / "output") / "voiceover.mp3")], check=True)
 print(f"{len(words)} words, duration {words[-1]['end']:.2f}s")

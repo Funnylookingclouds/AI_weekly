@@ -1,0 +1,346 @@
+[
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 0.035,
+  "end": 0.36,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "just",
+  "display": "just",
+  "start": 0.43,
+  "end": 0.627,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "beat",
+  "display": "beat",
+  "start": 0.673,
+  "end": 0.848,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "eight",
+  "display": "8",
+  "start": 0.952,
+  "end": 1.207,
+  "segment": "hook",
+  "keyword": true
+ },
+ {
+  "word": "brain",
+  "display": "brain",
+  "start": 1.324,
+  "end": 1.66,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "tumor",
+  "display": "tumor",
+  "start": 1.73,
+  "end": 2.067,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "experts",
+  "display": "experts",
+  "start": 2.171,
+  "end": 2.67,
+  "segment": "hook",
+  "keyword": true
+ },
+ {
+  "word": "at",
+  "display": "at",
+  "start": 2.705,
+  "end": 2.763,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "their",
+  "display": "their",
+  "start": 2.798,
+  "end": 2.937,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "own",
+  "display": "own",
+  "start": 2.984,
+  "end": 3.111,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "job.",
+  "display": "job.",
+  "start": 3.17,
+  "end": 3.599,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "Mayo",
+  "display": "Mayo",
+  "start": 4.249,
+  "end": 4.516,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "Clinic",
+  "display": "Clinic",
+  "start": 4.574,
+  "end": 4.853,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "researchers",
+  "display": "researchers",
+  "start": 4.923,
+  "end": 5.457,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "tested",
+  "display": "tested",
+  "start": 5.503,
+  "end": 5.84,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "it",
+  "display": "it",
+  "start": 5.886,
+  "end": 5.956,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "on",
+  "display": "on",
+  "start": 6.002,
+  "end": 6.084,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "100",
+  "display": "100",
+  "start": 6.188,
+  "end": 6.432,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "real",
+  "display": "real",
+  "start": 6.478,
+  "end": 6.641,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "tumor",
+  "display": "tumor",
+  "start": 6.687,
+  "end": 6.908,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "cases",
+  "display": "cases",
+  "start": 6.954,
+  "end": 7.314,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "and",
+  "display": "and",
+  "start": 7.79,
+  "end": 8.011,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "it",
+  "display": "it",
+  "start": 8.069,
+  "end": 8.139,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "scored",
+  "display": "scored",
+  "start": 8.208,
+  "end": 8.533,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "97",
+  "display": "97",
+  "start": 8.603,
+  "end": 9.125,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "percent,",
+  "display": "%,",
+  "start": 9.195,
+  "end": 9.683,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "better",
+  "display": "better",
+  "start": 9.985,
+  "end": 10.228,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "than",
+  "display": "than",
+  "start": 10.263,
+  "end": 10.391,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "every",
+  "display": "every",
+  "start": 10.461,
+  "end": 10.67,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "single",
+  "display": "single",
+  "start": 10.704,
+  "end": 10.937,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "specialist.",
+  "display": "specialist.",
+  "start": 10.96,
+  "end": 11.587,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "The",
+  "display": "The",
+  "start": 11.947,
+  "end": 12.051,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "best",
+  "display": "best",
+  "start": 12.086,
+  "end": 12.272,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "part?",
+  "display": "part?",
+  "start": 12.318,
+  "end": 12.643,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "Doctors",
+  "display": "Doctors",
+  "start": 13.05,
+  "end": 13.433,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "got",
+  "display": "got",
+  "start": 13.479,
+  "end": 13.63,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "even",
+  "display": "even",
+  "start": 13.677,
+  "end": 13.874,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "better",
+  "display": "better",
+  "start": 13.944,
+  "end": 14.176,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "when",
+  "display": "when",
+  "start": 14.211,
+  "end": 14.338,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 14.362,
+  "end": 14.431,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 14.466,
+  "end": 14.71,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "helped",
+  "display": "helped",
+  "start": 14.768,
+  "end": 15.0,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "them.",
+  "display": "them.",
+  "start": 15.023,
+  "end": 15.279,
+  "segment": "news2",
+  "keyword": false
+ }
+]

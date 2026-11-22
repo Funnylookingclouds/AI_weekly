@@ -3,6 +3,7 @@ import { Composition, Still } from "remotion";
 import { WeeklyShort, DURATION } from "./WeeklyShort";
 import { FPS } from "./timing";
 import * as B from "./brand/Brand";
+import { PresenterProto, PROTO_LEN } from "./proto/Presenter";
 
 const V = { fps: FPS, width: 1080, height: 1920 } as const;
 
@@ -17,6 +18,7 @@ export const Root: React.FC = () => (
     <Composition id="OutroLoading" component={B.OutroLoading} durationInFrames={B.SEG} {...V} />
     <Composition id="OutroKaraoke" component={B.OutroKaraoke} durationInFrames={B.SEG} {...V} />
     <Composition id="ProposalsReel" component={B.ProposalsReel} durationInFrames={B.REEL_LEN} {...V} />
+    <Composition id="PresenterProto" component={PresenterProto} durationInFrames={PROTO_LEN} {...V} />
     <Still id="LogoSquare" component={B.LogoSquare} width={1080} height={1080} />
     <Still id="LogoAvatar" component={B.LogoAvatar} width={800} height={800} />
   </>

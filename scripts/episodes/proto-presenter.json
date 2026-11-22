@@ -1,0 +1,14 @@
+{
+  "id": "proto-presenter",
+  "language": "en",
+  "voice_id": "nPczCjzI2devNBz1zQrb",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.08,
+  "segments": [
+    {"id": "hook", "tts": "AI just beat eight brain tumor experts at their own job."},
+    {"id": "news1", "tts": "Mayo Clinic researchers tested it on 100 real tumor cases – and it scored 97 percent, better than every single specialist."},
+    {"id": "news2", "tts": "The best part? Doctors got even better when the AI helped them."}
+  ],
+  "display_map": {"eight": "8", "percent": "%"},
+  "keywords": ["eight", "experts", "mayo", "clinic", "100", "97", "percent", "every", "best", "better"]
+}
