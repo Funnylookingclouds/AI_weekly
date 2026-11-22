@@ -1,0 +1,41 @@
+{
+  "id": "2026-w47",
+  "voice_id": "nPczCjzI2devNBz1zQrb",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.12,
+  "segments": [
+    {
+      "id": "hook",
+      "tts": "AI kan just ha löst ett matteproblem värt en miljon dollar – och det är inte ens veckans viktigaste nyhet."
+    },
+    {
+      "id": "news1",
+      "tts": "I torsdags presenterade matematikern Levent Alpöge ett bevis för Riemannhypotesen, framtaget tillsammans med AI:n Claude. Ett hundrasextiosju år gammalt mysterium. Beviset är skrivet så att en dator kan kontrollera varje steg – nu granskar experterna. Håller det, är det historiskt."
+    },
+    {
+      "id": "news2",
+      "tts": "Men det som räddar liv: AI som läser ett enda vanligt hjärtultraljud hittade sjuttioåtta procent av patienterna med en svårupptäckt hjärtsvikt – mot fyrtioåtta procent utan AI. Och en AI tränad på svenska patientdata ser varningstecken för plötsligt hjärtstopp som vanliga tester missar."
+    },
+    {
+      "id": "news3",
+      "tts": "Snabbisen: Inkling två Mini – en gratis AI som körs helt offline på en laptop. Smart hjälp, utan att dina data lämnar datorn."
+    },
+    {
+      "id": "loop",
+      "tts": "Allt det på sju dagar. Och tänk dig –"
+    }
+  ],
+  "display_map": {
+    "hundrasextiosju": "167",
+    "sjuttioåtta": "78",
+    "fyrtioåtta": "48",
+    "procent": "%",
+    "två": "2",
+    "sju": "7"
+  },
+  "keywords": [
+    "miljon", "dollar", "Riemannhypotesen", "Claude", "hundrasextiosju", "historiskt",
+    "hjärtultraljud", "sjuttioåtta", "fyrtioåtta", "procent", "svenska", "hjärtstopp",
+    "Inkling", "två", "Mini", "gratis", "offline", "sju"
+  ]
+}

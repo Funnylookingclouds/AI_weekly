@@ -1,0 +1,1042 @@
+[
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 0.186,
+  "end": 0.372,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "kan",
+  "display": "kan",
+  "start": 0.488,
+  "end": 0.639,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "just",
+  "display": "just",
+  "start": 0.697,
+  "end": 0.952,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "ha",
+  "display": "ha",
+  "start": 1.01,
+  "end": 1.091,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "löst",
+  "display": "löst",
+  "start": 1.149,
+  "end": 1.428,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "ett",
+  "display": "ett",
+  "start": 1.486,
+  "end": 1.556,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "matteproblem",
+  "display": "matteproblem",
+  "start": 1.625,
+  "end": 2.322,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "värt",
+  "display": "värt",
+  "start": 2.426,
+  "end": 2.694,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "en",
+  "display": "en",
+  "start": 2.798,
+  "end": 2.972,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "miljon",
+  "display": "miljon",
+  "start": 3.042,
+  "end": 3.367,
+  "segment": "hook",
+  "keyword": true
+ },
+ {
+  "word": "dollar",
+  "display": "dollar",
+  "start": 3.413,
+  "end": 3.855,
+  "segment": "hook",
+  "keyword": true
+ },
+ {
+  "word": "och",
+  "display": "och",
+  "start": 4.423,
+  "end": 4.528,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "det",
+  "display": "det",
+  "start": 4.563,
+  "end": 4.644,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "är",
+  "display": "är",
+  "start": 4.667,
+  "end": 4.737,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "inte",
+  "display": "inte",
+  "start": 4.841,
+  "end": 5.166,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "ens",
+  "display": "ens",
+  "start": 5.19,
+  "end": 5.306,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "veckans",
+  "display": "veckans",
+  "start": 5.352,
+  "end": 5.654,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "viktigaste",
+  "display": "viktigaste",
+  "start": 5.7,
+  "end": 6.107,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "nyhet.",
+  "display": "nyhet.",
+  "start": 6.153,
+  "end": 6.583,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "I",
+  "display": "I",
+  "start": 7.117,
+  "end": 7.175,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "torsdags",
+  "display": "torsdags",
+  "start": 7.279,
+  "end": 7.767,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "presenterade",
+  "display": "presenterade",
+  "start": 7.825,
+  "end": 8.359,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "matematikern",
+  "display": "matematikern",
+  "start": 8.406,
+  "end": 9.102,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "Levent",
+  "display": "Levent",
+  "start": 9.253,
+  "end": 9.683,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "Alpöge",
+  "display": "Alpöge",
+  "start": 9.752,
+  "end": 10.368,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "ett",
+  "display": "ett",
+  "start": 10.437,
+  "end": 10.6,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "bevis",
+  "display": "bevis",
+  "start": 10.646,
+  "end": 10.96,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "för",
+  "display": "för",
+  "start": 11.006,
+  "end": 11.134,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "Riemannhypotesen,",
+  "display": "Riemannhypotesen,",
+  "start": 11.157,
+  "end": 12.249,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "framtaget",
+  "display": "framtaget",
+  "start": 12.539,
+  "end": 13.026,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "tillsammans",
+  "display": "tillsammans",
+  "start": 13.05,
+  "end": 13.491,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "med",
+  "display": "med",
+  "start": 13.549,
+  "end": 13.642,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "AI:n",
+  "display": "AI:n",
+  "start": 13.665,
+  "end": 14.048,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "Claude.",
+  "display": "Claude.",
+  "start": 14.106,
+  "end": 14.536,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "Ett",
+  "display": "Ett",
+  "start": 14.989,
+  "end": 15.151,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "hundrasextiosju",
+  "display": "167",
+  "start": 15.198,
+  "end": 16.127,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "år",
+  "display": "år",
+  "start": 16.243,
+  "end": 16.37,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "gammalt",
+  "display": "gammalt",
+  "start": 16.428,
+  "end": 16.695,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "mysterium.",
+  "display": "mysterium.",
+  "start": 16.754,
+  "end": 17.357,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "Beviset",
+  "display": "Beviset",
+  "start": 17.752,
+  "end": 18.123,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "är",
+  "display": "är",
+  "start": 18.158,
+  "end": 18.205,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "skrivet",
+  "display": "skrivet",
+  "start": 18.228,
+  "end": 18.611,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "så",
+  "display": "så",
+  "start": 18.646,
+  "end": 18.704,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "att",
+  "display": "att",
+  "start": 18.762,
+  "end": 18.832,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "en",
+  "display": "en",
+  "start": 18.867,
+  "end": 18.925,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "dator",
+  "display": "dator",
+  "start": 18.971,
+  "end": 19.354,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "kan",
+  "display": "kan",
+  "start": 19.401,
+  "end": 19.575,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "kontrollera",
+  "display": "kontrollera",
+  "start": 19.644,
+  "end": 20.155,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "varje",
+  "display": "varje",
+  "start": 20.19,
+  "end": 20.376,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "steg",
+  "display": "steg",
+  "start": 20.399,
+  "end": 20.747,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "nu",
+  "display": "nu",
+  "start": 21.061,
+  "end": 21.154,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "granskar",
+  "display": "granskar",
+  "start": 21.2,
+  "end": 21.548,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "experterna.",
+  "display": "experterna.",
+  "start": 21.572,
+  "end": 22.164,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "Håller",
+  "display": "Håller",
+  "start": 22.617,
+  "end": 22.942,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "det,",
+  "display": "det,",
+  "start": 22.988,
+  "end": 23.29,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "är",
+  "display": "är",
+  "start": 23.394,
+  "end": 23.487,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "det",
+  "display": "det",
+  "start": 23.511,
+  "end": 23.592,
+  "segment": "news1",
+  "keyword": false
+ },
+ {
+  "word": "historiskt.",
+  "display": "historiskt.",
+  "start": 23.615,
+  "end": 24.265,
+  "segment": "news1",
+  "keyword": true
+ },
+ {
+  "word": "Men",
+  "display": "Men",
+  "start": 24.602,
+  "end": 24.718,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "det",
+  "display": "det",
+  "start": 24.764,
+  "end": 24.857,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "som",
+  "display": "som",
+  "start": 24.904,
+  "end": 25.02,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "räddar",
+  "display": "räddar",
+  "start": 25.089,
+  "end": 25.38,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "liv:",
+  "display": "liv:",
+  "start": 25.426,
+  "end": 25.856,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 25.995,
+  "end": 26.378,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "som",
+  "display": "som",
+  "start": 26.436,
+  "end": 26.564,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "läser",
+  "display": "läser",
+  "start": 26.61,
+  "end": 26.924,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "ett",
+  "display": "ett",
+  "start": 27.005,
+  "end": 27.237,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "enda",
+  "display": "enda",
+  "start": 27.295,
+  "end": 27.551,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "vanligt",
+  "display": "vanligt",
+  "start": 27.597,
+  "end": 27.911,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "hjärtultraljud",
+  "display": "hjärtultraljud",
+  "start": 27.934,
+  "end": 28.863,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "hittade",
+  "display": "hittade",
+  "start": 29.153,
+  "end": 29.525,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "sjuttioåtta",
+  "display": "78",
+  "start": 29.56,
+  "end": 30.268,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "procent",
+  "display": "%",
+  "start": 30.314,
+  "end": 30.721,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "av",
+  "display": "av",
+  "start": 30.767,
+  "end": 30.813,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "patienterna",
+  "display": "patienterna",
+  "start": 30.848,
+  "end": 31.394,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "med",
+  "display": "med",
+  "start": 31.44,
+  "end": 31.533,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "en",
+  "display": "en",
+  "start": 31.557,
+  "end": 31.615,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "svårupptäckt",
+  "display": "svårupptäckt",
+  "start": 31.673,
+  "end": 32.218,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "hjärtsvikt",
+  "display": "hjärtsvikt",
+  "start": 32.242,
+  "end": 32.741,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "mot",
+  "display": "mot",
+  "start": 33.252,
+  "end": 33.414,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "fyrtioåtta",
+  "display": "48",
+  "start": 33.461,
+  "end": 34.076,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "procent",
+  "display": "%",
+  "start": 34.122,
+  "end": 34.529,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "utan",
+  "display": "utan",
+  "start": 34.587,
+  "end": 34.831,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "AI.",
+  "display": "AI.",
+  "start": 34.97,
+  "end": 35.388,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "Och",
+  "display": "Och",
+  "start": 35.783,
+  "end": 35.899,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "en",
+  "display": "en",
+  "start": 35.945,
+  "end": 36.119,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 36.259,
+  "end": 36.584,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "tränad",
+  "display": "tränad",
+  "start": 36.653,
+  "end": 36.932,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "på",
+  "display": "på",
+  "start": 36.955,
+  "end": 37.036,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "svenska",
+  "display": "svenska",
+  "start": 37.106,
+  "end": 37.501,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "patientdata",
+  "display": "patientdata",
+  "start": 37.547,
+  "end": 38.302,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "ser",
+  "display": "ser",
+  "start": 38.348,
+  "end": 38.476,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "varningstecken",
+  "display": "varningstecken",
+  "start": 38.523,
+  "end": 39.277,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "för",
+  "display": "för",
+  "start": 39.463,
+  "end": 39.614,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "plötsligt",
+  "display": "plötsligt",
+  "start": 39.649,
+  "end": 40.009,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "hjärtstopp",
+  "display": "hjärtstopp",
+  "start": 40.043,
+  "end": 40.659,
+  "segment": "news2",
+  "keyword": true
+ },
+ {
+  "word": "som",
+  "display": "som",
+  "start": 40.81,
+  "end": 40.972,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "vanliga",
+  "display": "vanliga",
+  "start": 41.019,
+  "end": 41.321,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "tester",
+  "display": "tester",
+  "start": 41.379,
+  "end": 41.669,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "missar.",
+  "display": "missar.",
+  "start": 41.716,
+  "end": 42.203,
+  "segment": "news2",
+  "keyword": false
+ },
+ {
+  "word": "Snabbisen:",
+  "display": "Snabbisen:",
+  "start": 42.737,
+  "end": 43.469,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "Inkling",
+  "display": "Inkling",
+  "start": 44.003,
+  "end": 44.432,
+  "segment": "news3",
+  "keyword": true
+ },
+ {
+  "word": "två",
+  "display": "2",
+  "start": 44.479,
+  "end": 44.676,
+  "segment": "news3",
+  "keyword": true
+ },
+ {
+  "word": "Mini",
+  "display": "Mini",
+  "start": 44.746,
+  "end": 45.141,
+  "segment": "news3",
+  "keyword": true
+ },
+ {
+  "word": "en",
+  "display": "en",
+  "start": 45.268,
+  "end": 45.373,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "gratis",
+  "display": "gratis",
+  "start": 45.431,
+  "end": 45.802,
+  "segment": "news3",
+  "keyword": true
+ },
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 45.907,
+  "end": 46.22,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "som",
+  "display": "som",
+  "start": 46.302,
+  "end": 46.418,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "körs",
+  "display": "körs",
+  "start": 46.464,
+  "end": 46.65,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "helt",
+  "display": "helt",
+  "start": 46.708,
+  "end": 46.987,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "offline",
+  "display": "offline",
+  "start": 47.033,
+  "end": 47.439,
+  "segment": "news3",
+  "keyword": true
+ },
+ {
+  "word": "på",
+  "display": "på",
+  "start": 47.474,
+  "end": 47.544,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "en",
+  "display": "en",
+  "start": 47.579,
+  "end": 47.625,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "laptop.",
+  "display": "laptop.",
+  "start": 47.672,
+  "end": 48.136,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "Smart",
+  "display": "Smart",
+  "start": 48.589,
+  "end": 48.867,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "hjälp,",
+  "display": "hjälp,",
+  "start": 48.891,
+  "end": 49.285,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "utan",
+  "display": "utan",
+  "start": 49.332,
+  "end": 49.564,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "att",
+  "display": "att",
+  "start": 49.61,
+  "end": 49.692,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "dina",
+  "display": "dina",
+  "start": 49.715,
+  "end": 49.912,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "data",
+  "display": "data",
+  "start": 49.959,
+  "end": 50.272,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "lämnar",
+  "display": "lämnar",
+  "start": 50.319,
+  "end": 50.574,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "datorn.",
+  "display": "datorn.",
+  "start": 50.609,
+  "end": 51.085,
+  "segment": "news3",
+  "keyword": false
+ },
+ {
+  "word": "Allt",
+  "display": "Allt",
+  "start": 51.48,
+  "end": 51.723,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "det",
+  "display": "det",
+  "start": 51.758,
+  "end": 51.874,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "på",
+  "display": "på",
+  "start": 51.944,
+  "end": 52.025,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "sju",
+  "display": "7",
+  "start": 52.049,
+  "end": 52.281,
+  "segment": "loop",
+  "keyword": true
+ },
+ {
+  "word": "dagar.",
+  "display": "dagar.",
+  "start": 52.327,
+  "end": 52.803,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "Och",
+  "display": "Och",
+  "start": 53.093,
+  "end": 53.221,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "tänk",
+  "display": "tänk",
+  "start": 53.268,
+  "end": 53.535,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "dig",
+  "display": "dig",
+  "start": 53.604,
+  "end": 53.813,
+  "segment": "loop",
+  "keyword": false
+ }
+]
