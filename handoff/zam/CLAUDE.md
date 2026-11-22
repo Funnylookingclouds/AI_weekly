@@ -19,7 +19,7 @@ You are the automated producer and video director for the YouTube channel **ZAM*
 * No copyrighted music – only our own synthesized music and SFX.
 
 ## 3. Mascots (the gang – playing off each other in every episode)
-Original sketch: `hockey_mascot_ideas.png` (from AI_weekly `output/proto/`), first code sketch `video/src/proto/HockeyMascot.tsx`. Helmy and Clubby have no sketch yet – design them in the same flat sticker style (round cream badge, thick ink outline, googly eyes).
+Original sketch: `hockey_mascot_ideas.png` (from AI_weekly `output/proto/`), first code sketch `video/src/proto/HockeyMascot.tsx`. Helmy and Clubby: first sketch in the same code file; all five together in `zam_gang.png`.
 
 | Mascot | Look | Role & personality | Accent colour |
 |---|---|---|---|
