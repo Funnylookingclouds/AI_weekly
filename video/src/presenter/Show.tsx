@@ -3,10 +3,11 @@ import React from "react";
 import { AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { FONT } from "../theme";
 import { WORDS, FPS, TOTAL_SEC } from "../timing";
-import type { Character, Mood } from "./characters";
+import { CHARACTERS, type Character, type Mood } from "./characters";
 import { P, HAND, onTwos, clamp } from "./kit";
 
-export type Plate = { t: number; C: React.FC; mood: Mood; from?: "left" | "right" | "top" };
+export type PlateMood = Mood | "group";
+export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character };
 export type Show = { presenter: Character; plates: Plate[] };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
@@ -25,7 +26,30 @@ const pulseAt = (t: number, onlyKeywords: boolean, len: number) => {
 };
 
 // ---------------------------------------------------------------------------
-const Presenter: React.FC<{ ch: Character; mood: Mood; i: number; t: number }> = ({ ch, mood, i, t }) => {
+/** All four presenters hop in one after another. */
+const Group: React.FC<{ t: number }> = ({ t }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const tq = onTwos(Math.round(t * FPS)) / FPS;
+  const talk = pulseAt(tq, false, 0.18);
+  const ids = ["rune", "saga", "ture", "cara"] as const;
+  return (
+    <div style={{ position: "absolute", left: 0, right: 0, top: 1180, display: "flex", justifyContent: "center", alignItems: "flex-end", gap: 0 }}>
+      {ids.map((id, k) => {
+        const s = spring({ frame: f - k * 6, fps, config: { damping: 8, stiffness: 170 } });
+        const hop = Math.abs(Math.sin((onTwos(f) + k * 15) / 12)) * 22 + talk * 10;
+        return (
+          <div key={id} style={{ transform: `translateY(${(1 - s) * 600 - hop}px) rotate(${Math.sin((onTwos(f) + k * 20) / 14) * 3}deg)`, marginLeft: k ? -40 : 0, transformOrigin: "50% 100%" }}>
+            <Img src={staticFile(CHARACTERS[id].art.body)} style={{ height: 760, filter: "drop-shadow(0 16px 20px #0008)" }} />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const Presenter: React.FC<{ ch: Character; mood: PlateMood; i: number; t: number }> = ({ ch, mood, i, t }) => {
+  if (mood === "group") return <Group t={t} />;
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const g = onTwos(f);
@@ -75,7 +99,7 @@ const Doodles: React.FC<{ t: number }> = ({ t }) => {
   );
 };
 
-const CaptionStrip: React.FC<{ ch: Character; t: number }> = ({ ch, t }) => {
+const CaptionStrip: React.FC<{ ch: Character; t: number; group?: boolean }> = ({ ch, t, group }) => {
   const chunks: (typeof WORDS)[] = [];
   let cur: typeof WORDS = [];
   WORDS.forEach((w, i) => {
@@ -88,7 +112,7 @@ const CaptionStrip: React.FC<{ ch: Character; t: number }> = ({ ch, t }) => {
   if (!c || t > c[c.length - 1].end + 0.8) return null;
   return (
     <div style={{ position: "absolute", left: 60, right: 170, top: 1010, background: "#fffdf7", borderLeft: `12px solid ${ch.accent}`, borderRadius: 8, padding: "22px 28px", boxShadow: "0 10px 30px #0006", fontFamily: FONT, fontSize: 44, fontWeight: 800, color: P.ink, lineHeight: 1.25 }}>
-      <span style={{ color: ch.accent, fontWeight: 900 }}>{ch.name}: </span>
+      <span style={{ color: ch.accent, fontWeight: 900 }}>{group ? "ALL FOUR" : ch.name}: </span>
       {c.map((w, i) => {
         const on = t >= w.start, active = on && t < w.end + 0.05;
         return <span key={i} style={{ opacity: on ? 1 : 0.35, color: w.keyword && on ? P.mustard : P.ink, borderBottom: active ? `5px solid ${P.mustard}` : "5px solid transparent" }}>{w.display} </span>;
@@ -111,15 +135,17 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
   const f = useCurrentFrame();
   const t = f / FPS;
   const end = Math.ceil(TOTAL_SEC * FPS);
-  const ch = show.presenter;
+  const cur = [...show.plates].reverse().find((p) => p.t <= t + 1e-6) ?? show.plates[0];
+  const speaker = cur.who ?? show.presenter;
   return (
     <AbsoluteFill style={{ background: "#000" }}>
-      <Backdrop ch={ch} />
       {show.plates.map((p, i) => {
         const from = Math.round(p.t * FPS);
         const to = i + 1 < show.plates.length ? Math.round(show.plates[i + 1].t * FPS) : end;
+        const ch = p.who ?? show.presenter;
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, to - from)} name={`plate${i}`}>
+            <Backdrop ch={ch} />
             <PlateSlot p={p} />
             <Presenter ch={ch} mood={p.mood} i={i} t={t} />
             <Audio src={staticFile(i === 0 ? "whoosh.wav" : i % 3 === 0 ? "pop.wav" : "whoosh.wav")} volume={0.4} />
@@ -127,7 +153,7 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
         );
       })}
       <Doodles t={t} />
-      <CaptionStrip ch={ch} t={t} />
+      <CaptionStrip ch={speaker} t={t} group={cur.mood === "group"} />
       <Audio src={staticFile("voiceover.mp3")} />
     </AbsoluteFill>
   );

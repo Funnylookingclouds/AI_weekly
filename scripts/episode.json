@@ -1,16 +1,16 @@
 {
-  "id": "2026-w44-en",
+  "id": "special-ai-origin-en",
   "language": "en",
   "voice_id": "nPczCjzI2devNBz1zQrb",
   "model_id": "eleven_multilingual_v2",
-  "speed": 1.1,
+  "speed": 1.08,
   "segments": [
-    {"id": "hook", "tts": "AI just claimed three of the hardest problems in science – in a single day."},
-    {"id": "news1", "tts": "On Monday, OpenAI said its models proved the local smoothing conjecture in every dimension – which would also crack two famous math puzzles, Kakeya and Stein's restriction. Plus new claims in computer science and physics. The math comes with computer-checked proofs, but experts haven't reviewed it yet."},
-    {"id": "news2", "tts": "Next: Google DeepMind's Genie 4 turns a text prompt into a world you can explore – now with sound and dialogue, and you can change the weather while you play."},
-    {"id": "news3", "tts": "Quick hit: Meta reportedly built a humanoid home robot called Max in just three months, with five-fingered hands for picking up bottles and toys."},
-    {"id": "loop", "tts": "Proofs, worlds, robots – all in seven days."}
+    {"id": "hook", "tts": "When was AI first mentioned? Spoiler: way before ChatGPT."},
+    {"id": "y1955", "tts": "August 31st, 1955. A young mathematician, John McCarthy, writes a funding proposal with Marvin Minsky, Nathaniel Rochester and Claude Shannon. And right in the title: a brand-new term – artificial intelligence."},
+    {"id": "y1956", "tts": "The plan: a two-month, ten-person summer workshop at Dartmouth College in 1956. Their bold idea: every feature of intelligence can be described so precisely that a machine could simulate it."},
+    {"id": "y1950", "tts": "But the question is even older. In 1950, Alan Turing asked: \"Can machines think?\" – and proposed the imitation game, today's Turing test."},
+    {"id": "loop", "tts": "Seventy-one years later, that idea fits in your pocket."}
   ],
-  "display_map": {"three": "3", "seven": "7", "two": "2"},
-  "keywords": ["three", "hardest", "openai", "local", "smoothing", "conjecture", "kakeya", "steins", "computerchecked", "genie", "4", "sound", "dialogue", "weather", "meta", "max", "months", "fivefingered", "proofs", "worlds", "robots", "seven"]
+  "display_map": {"seventyone": "71"},
+  "keywords": ["chatgpt", "1955", "mccarthy", "minsky", "rochester", "shannon", "artificial", "intelligence", "dartmouth", "1956", "simulate", "1950", "turing", "think", "imitation", "game", "test", "seventyone", "pocket"]
 }
