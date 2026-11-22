@@ -262,7 +262,7 @@ export const BarCompare: React.FC = () => {
   const H = 560;
   const Bar: React.FC<{ v: number; g: number; color: string; label: string }> = ({ v, g, color, label }) => (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 300 }}>
-      <div style={{ fontSize: 110, fontWeight: 900, color, fontVariantNumeric: "tabular-nums" }}>{Math.round(v * g)}%</div>
+      <div style={{ fontSize: 110, fontWeight: 900, color, fontVariantNumeric: "tabular-nums" }}>{Math.round(v * Math.min(g, 1))}%</div>
       <div style={{ height: H, display: "flex", alignItems: "flex-end" }}>
         <div style={{ width: 220, height: H * (v / 100) * g, borderRadius: "24px 24px 0 0", background: `linear-gradient(180deg, ${color}, ${color}55)`, boxShadow: `0 0 50px ${color}66` }} />
       </div>

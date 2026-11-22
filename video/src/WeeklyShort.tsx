@@ -79,7 +79,7 @@ const Captions: React.FC = () => {
   if (!ch || t > ch.end + 0.6) return null;
   const pop = interpolate(t - ch.start, [0, 0.12], [0.85, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <div style={{ position: "absolute", top: 1200, left: 70, right: 170, display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0 22px", fontFamily: FONT, transform: `scale(${pop})` }}>
+    <div style={{ position: "absolute", top: 1200, left: 70, right: 170, display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0 34px", fontFamily: FONT, transform: `scale(${pop})` }}>
       {ch.words.map((w, i) => {
         const active = t >= w.start && t < w.end + 0.08;
         const color = w.keyword ? (i % 2 ? C.purple : C.cyan) : C.text;
