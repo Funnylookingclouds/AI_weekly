@@ -44,3 +44,19 @@ After **every** render (including re-renders after fixes): commit and push `outp
 * **Permalink (locked to the commit):** `https://github.com/Funnylookingclouds/AI_weekly/blob/<commit-sha>/output/weekly_ai_short.mp4`
 * **Direct download:** `https://github.com/Funnylookingclouds/AI_weekly/raw/<commit-sha>/output/weekly_ai_short.mp4`
 Use the commit SHA (not the branch name) so the link always points to that exact version. Also send the file directly in the chat when possible.
+
+**File size:** Target ≈ 40 MB per video. `scripts/build.sh` encodes at a fixed video bitrate of 5.5 Mbps (≈ 38–42 MB for 52–58 s). Keep it below GitHub's 50 MB warning limit.
+
+## 7. YouTube description & links (every video)
+For every weekly video, write `output/youtube_description.md` and paste it in the chat (ready to copy). It must contain:
+1. **Title options (3):** Max ~60 characters, curiosity-driven, with the main search term early (e.g. "AI May Have Solved a $1M Math Problem 🤯"). Mark one as recommended.
+2. **Description:**
+   * First 1–2 lines = hook + main keywords (this is what shows in search and above the fold).
+   * One short paragraph per story: what happened, why it matters, and the source link(s) for viewers who want to know more. Use primary sources (company blog, journal, official announcement) first, then one reputable news outlet.
+   * Unverified claims are labelled as such ("claimed", "under review"), same as in the video.
+   * A short "Every week: what did AI solve?" line to build series recognition.
+3. **SEO wording:** Naturally include high-volume search phrases (e.g. "AI news this week", "latest AI breakthroughs", "AI in medicine", plus the exact names of models, people and discoveries). No keyword stuffing.
+4. **Hashtags:** 3–5 in the description, `#Shorts` first, then topic tags (e.g. `#AI #AINews #RiemannHypothesis`).
+5. **Tags field:** A comma-separated list of 15–25 tags (broad + specific + misspellings/variants), under 500 characters total.
+6. **Pinned comment:** One engagement question (e.g. "Do you think the proof will hold? 👇").
+Note: YouTube does not make links clickable in Shorts descriptions on mobile. Links are still included (viewers can copy them, and they work on desktop), and the most important source can also be put in the pinned comment.

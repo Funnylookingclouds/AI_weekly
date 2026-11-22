@@ -15,7 +15,7 @@ attempt python3 scripts/make_audio_assets.py
 cp output/voiceover.mp3 video/public/voiceover.mp3
 cp temp/words.json video/src/data/words.json
 (cd video && [[ -d node_modules ]] || npm install --no-audit --no-fund)
-(cd video && attempt npx remotion render src/index.ts WeeklyShort ../temp/video_raw.mp4 --codec=h264 --crf=18 --audio-bitrate=256k --log=error)
+(cd video && attempt npx remotion render src/index.ts WeeklyShort ../temp/video_raw.mp4 --codec=h264 --video-bitrate=5.5M --audio-bitrate=256k --log=error)
 # Two-pass loudnorm of the final mix to -14 LUFS (video stream copied)
 J=$(ffmpeg -hide_banner -i temp/video_raw.mp4 -af loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json -f null - 2>&1 | sed -n '/^{/,/^}/p')
 g() { echo "$J" | python3 -c "import json,sys;print(json.load(sys.stdin)['$1'])"; }
