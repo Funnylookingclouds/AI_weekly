@@ -11,7 +11,7 @@ export const Root: React.FC = () => (
     <Composition id="WeeklyShort" component={WeeklyShort} durationInFrames={DURATION} {...V} />
     {/* brand proposals (3 s each) */}
     <Composition id="IntroHyperbounce" component={B.IntroHyperbounce} durationInFrames={B.SEG} {...V} />
-    <Composition id="IntroWarp" component={B.IntroWarp} durationInFrames={B.SEG} {...V} />
+    <Composition id="IntroWarp" component={B.IntroWarp} durationInFrames={B.INTRO_SEG} {...V} />
     <Composition id="IntroOffTheCharts" component={B.IntroOffTheCharts} durationInFrames={B.SEG} {...V} />
     <Composition id="OutroSmash" component={B.OutroSmash} durationInFrames={B.SEG} {...V} />
     <Composition id="OutroLoading" component={B.OutroLoading} durationInFrames={B.SEG} {...V} />

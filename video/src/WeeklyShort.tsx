@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, FONT } from "./theme";
 import { WORDS, FPS, TOTAL_SEC } from "./timing";
-import { IntroWarp, OutroLoading, SEG as BRAND_SEG } from "./brand/Brand";
+import { IntroWarp, OutroLoading, SEG as BRAND_SEG, INTRO_SEG } from "./brand/Brand";
 import { BEATS, WEEK_LABEL, SEG_COLOR } from "./episode";
 import { SceneTransition, TRANSITIONS, GlitchDefs, Shockwave, LightSweep, Particles, Overlay, useBeatPulse } from "./Effects";
 
@@ -131,7 +131,7 @@ const FadeIn: React.FC<{ frames: number; children: React.ReactNode }> = ({ frame
   return <AbsoluteFill style={{ opacity: interpolate(f, [0, frames], [0, 1], { extrapolateRight: "clamp" }) }}>{children}</AbsoluteFill>;
 };
 
-export const INTRO_FRAMES = BRAND_SEG; // 3 s – Intro B "Warp Speed"
+export const INTRO_FRAMES = INTRO_SEG; // 2 s – Intro B "Warp Speed"
 export const OUTRO_FRAMES = BRAND_SEG; // 3 s – Outro 2 "Loading next week"
 const XFADE = 12;
 export const MAIN_FRAMES = Math.ceil(TOTAL_SEC * FPS);
@@ -142,7 +142,7 @@ export const WeeklyShort: React.FC = () => (
     <Sequence from={INTRO_FRAMES} durationInFrames={MAIN_FRAMES} name="Main"><Main /></Sequence>
     <Sequence from={INTRO_FRAMES + MAIN_FRAMES - XFADE} durationInFrames={OUTRO_FRAMES} name="Outro"><FadeIn frames={XFADE}><OutroLoading /></FadeIn></Sequence>
     {/* music runs under the news part and the outro */}
-    <Sequence from={INTRO_FRAMES - 20}><Audio src={staticFile("music.wav")} /></Sequence>
+    <Sequence from={INTRO_FRAMES - 12}><Audio src={staticFile("music.wav")} /></Sequence>
   </AbsoluteFill>
 );
 

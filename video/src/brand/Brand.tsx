@@ -179,14 +179,14 @@ const LogoBounceIn: React.FC = () => {
 const STREAKS = [...Array(70)].map((_, i) => ({ a: random(`wa${i}`) * Math.PI * 2, r: random(`wr${i}`), c: [C.cyan, C.purple, C.pink, C.text][i % 4] }));
 export const IntroWarp: React.FC = () => {
   const f = useCurrentFrame();
-  const HIT = 70;
+  const HIT = 42; // compressed: whole intro is 2 s (INTRO_SEG)
   const speed = interpolate(f, [0, HIT], [0.2, 3], { ...clamp, easing: Easing.in(Easing.cubic) });
-  const counter = f < 20 ? "1×" : f < 40 ? "10×" : f < 58 ? "1000×" : "∞";
+  const counter = f < 12 ? "1×" : f < 24 ? "10×" : f < 35 ? "1000×" : "∞";
   const ai = interpolate(f, [0, HIT], [0.05, 1], { ...clamp, easing: Easing.in(Easing.exp) });
   return (
     <Bg>
       <AbsoluteFill style={{ transform: shake(f, HIT, 50) }}>
-        <svg width={1080} height={1920} style={{ position: "absolute", opacity: f < HIT + 20 ? 1 : interpolate(f, [HIT + 20, HIT + 40], [1, 0.2], clamp) }}>
+        <svg width={1080} height={1920} style={{ position: "absolute", opacity: f < HIT + 14 ? 1 : interpolate(f, [HIT + 14, HIT + 30], [1, 0.2], clamp) }}>
           {STREAKS.map((s, i) => {
             const d0 = ((s.r * 900 + f * 30 * speed) % 1100);
             const len = 20 + speed * 160;
@@ -214,9 +214,9 @@ export const IntroWarp: React.FC = () => {
         <Burst at={HIT} />
       </AbsoluteFill>
       <Flash at={HIT} color={C.cyan} />
-      <Audio src={staticFile("brand/riser.wav")} volume={0.8} />
+      <Audio src={staticFile("brand/riser.wav")} volume={0.8} startFrom={Math.round(1.4 * 60) - HIT} />
       <Sequence from={HIT}><Audio src={staticFile("brand/impact.wav")} /></Sequence>
-      <Sequence from={HIT + 18}><Audio src={staticFile("brand/boing.wav")} volume={0.4} /></Sequence>
+      <Sequence from={HIT + 12}><Audio src={staticFile("brand/boing.wav")} volume={0.4} /></Sequence>
     </Bg>
   );
 };
@@ -230,13 +230,13 @@ const RicochetLogo: React.FC = () => {
       <div style={{ fontSize: 250, fontWeight: 900, fontStyle: "italic", lineHeight: 1, transform: `scale(${ai})`, background: GRAD, WebkitBackgroundClip: "text", color: "transparent", filter: `drop-shadow(0 0 40px ${C.cyan})` }}>AI</div>
       <div style={{ display: "flex", fontSize: 160, fontWeight: 900, fontStyle: "italic", letterSpacing: -4, marginTop: -10 }}>
         {letters.map((ch, i) => {
-          const t = f - 10 - i * 3;
-          const p = interpolate(t, [0, 16], [0, 1], { ...clamp, easing: Easing.out(Easing.elastic(1.2)) });
+          const t = f - 6 - i * 2;
+          const p = interpolate(t, [0, 14], [0, 1], { ...clamp, easing: Easing.out(Easing.elastic(1.2)) });
           const sx = (random(`rx${i}`) - 0.5) * 2400, sy = (random(`ry${i}`) - 0.5) * 2400;
           return <span key={i} style={{ display: "inline-block", transform: `translate(${sx * (1 - p)}px, ${sy * (1 - p) - Math.pow(1.55, i) * 3}px) rotate(${(1 - p) * 720}deg)`, opacity: t > 0 ? 1 : 0, textShadow: `0 10px 0 #020617` }}>{ch}</span>;
         })}
       </div>
-      <div style={{ marginTop: 30, fontSize: 44, fontWeight: 800, letterSpacing: 10, color: C.muted, opacity: interpolate(f, [40, 55], [0, 1], clamp) }}>KEEP UP WITH AI</div>
+      <div style={{ marginTop: 30, fontSize: 44, fontWeight: 800, letterSpacing: 10, color: C.muted, opacity: interpolate(f, [26, 38], [0, 1], clamp) }}>KEEP UP WITH AI</div>
     </div>
   );
 };
@@ -411,6 +411,7 @@ const ITEMS: { C: React.FC; label: string }[] = [
   { C: OutroKaraoke, label: "OUTRO 3 · KARAOKE BOUNCE" },
 ];
 export const SEG = 180;
+export const INTRO_SEG = 120; // chosen intro (Warp Speed) is 2 s
 export const ProposalsReel: React.FC = () => (
   <AbsoluteFill style={{ background: "#000" }}>
     {ITEMS.map((it, i) => (
