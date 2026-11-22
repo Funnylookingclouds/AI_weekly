@@ -8,21 +8,21 @@ type Beat = { t: number; C: React.FC; sfx?: "whoosh" | "pop" };
 
 const BEATS: Beat[] = [
   { t: 0, C: S.MoneyHook },
-  { t: at("hook", "och"), C: S.NotEvenTop, sfx: "whoosh" },
+  { t: at("hook", "and"), C: S.NotEvenTop, sfx: "whoosh" },
   { t: segStart("news1"), C: S.RiemannTitle, sfx: "whoosh" },
-  { t: at("news1", "ett", 0), C: S.Years167, sfx: "whoosh" },
-  { t: at("news1", "beviset"), C: S.LeanCheck, sfx: "whoosh" },
-  { t: at("news1", "nu"), C: S.UnderReview, sfx: "pop" },
-  { t: at("news1", "håller"), C: S.Historic, sfx: "whoosh" },
+  { t: at("news1", "167"), C: S.Years167, sfx: "whoosh" },
+  { t: at("news1", "proof", 1), C: S.LeanCheck, sfx: "whoosh" },
+  { t: at("news1", "experts"), C: S.UnderReview, sfx: "pop" },
+  { t: at("news1", "if"), C: S.Historic, sfx: "whoosh" },
   { t: segStart("news2"), C: S.SavesLives, sfx: "whoosh" },
-  { t: at("news2", "ai", 0), C: S.Ultrasound, sfx: "whoosh" },
-  { t: at("news2", "hittade"), C: S.BarCompare, sfx: "pop" },
-  { t: at("news2", "och"), C: S.SwedishData, sfx: "whoosh" },
+  { t: at("news2", "an", 0), C: S.Ultrasound, sfx: "whoosh" },
+  { t: at("news2", "found"), C: S.BarCompare, sfx: "pop" },
+  { t: at("news2", "and"), C: S.SwedishData, sfx: "whoosh" },
   { t: segStart("news3"), C: S.Quickie, sfx: "pop" },
   { t: at("news3", "inkling"), C: S.Laptop, sfx: "whoosh" },
   { t: at("news3", "smart"), C: S.PrivateData, sfx: "pop" },
   { t: segStart("loop"), C: S.Recap, sfx: "whoosh" },
-  { t: at("loop", "och"), C: S.LoopOut, sfx: "whoosh" },
+  { t: at("loop", "and"), C: S.LoopOut, sfx: "whoosh" },
 ];
 
 const SEG_LABEL: Record<string, string> = { hook: "", news1: "1/3", news2: "2/3", news3: "3/3", loop: "" };
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
   return (
     <div style={{ position: "absolute", top: 120, left: 70, right: 70, display: "flex", justifyContent: "space-between", alignItems: "center", fontFamily: FONT }}>
       <div style={{ fontSize: 36, fontWeight: 900, letterSpacing: 3, color: C.text }}>
-        <span style={{ color: C.cyan }}>AI</span> LÖSTE <span style={{ color: C.muted, fontWeight: 700 }}>· v.47</span>
+        <span style={{ color: C.cyan }}>AI</span> SOLVED <span style={{ color: C.muted, fontWeight: 700 }}>· WK 47</span>
       </div>
       {SEG_LABEL[seg] && (
         <div style={{ fontSize: 34, fontWeight: 900, color: C.bg, background: C.cyan, padding: "8px 22px", borderRadius: 12 }}>{SEG_LABEL[seg]}</div>
@@ -79,7 +79,7 @@ const Captions: React.FC = () => {
   if (!ch || t > ch.end + 0.6) return null;
   const pop = interpolate(t - ch.start, [0, 0.12], [0.85, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <div style={{ position: "absolute", top: 1200, left: 70, right: 170, display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0 34px", fontFamily: FONT, transform: `scale(${pop})` }}>
+    <div style={{ position: "absolute", top: 1200, left: 70, right: 170, display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0 40px", fontFamily: FONT, transform: `scale(${pop})` }}>
       {ch.words.map((w, i) => {
         const active = t >= w.start && t < w.end + 0.08;
         const color = w.keyword ? (i % 2 ? C.purple : C.cyan) : C.text;
@@ -89,7 +89,7 @@ const Captions: React.FC = () => {
             fontSize: 92, fontWeight: 900, color, letterSpacing: -1, lineHeight: 1.15,
             WebkitTextStroke: "3px #020617", paintOrder: "stroke fill",
             textShadow: `0 8px 0 #020617, 0 0 ${active ? 34 : 0}px ${w.keyword ? color : "#ffffff55"}`,
-            transform: `scale(${active ? 1.1 : 1}) translateY(${active ? -6 : 0}px)`,
+            transform: `scale(${active ? 1.05 : 1}) translateY(${active ? -8 : 0}px)`,
             opacity: t >= w.start - 0.02 ? 1 : 0.45,
           }}>{txt}</span>
         );

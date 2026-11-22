@@ -38,14 +38,14 @@ export const MoneyHook: React.FC = () => {
   const p = interpolate(f, [5, 85], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
   const val = Math.round(p * 1_000_000);
   const s = useSpring(0, 9);
-  const txt = val.toLocaleString("sv-SE").replace(/ /g, " ");
+  const txt = val.toLocaleString("en-US");
   return (
     <Stage>
-      <div style={{ fontSize: 46, fontWeight: 700, color: C.muted, letterSpacing: 8, opacity: s }}>MATTEPROBLEM VÄRT</div>
+      <div style={{ fontSize: 46, fontWeight: 700, color: C.muted, letterSpacing: 8, opacity: s }}>MATH PROBLEM WORTH</div>
       <div style={{ fontSize: 150, fontWeight: 900, transform: `scale(${0.6 + 0.4 * s})`, fontVariantNumeric: "tabular-nums", marginTop: 10 }}>
         <Glow color={C.green}>${txt}</Glow>
       </div>
-      <div style={{ marginTop: 50 }}><Chip color={C.cyan} delay={30}>LÖST AV AI?</Chip></div>
+      <div style={{ marginTop: 50 }}><Chip color={C.cyan} delay={30}>SOLVED BY AI?</Chip></div>
       {[...Array(14)].map((_, i) => {
         const a = (i / 14) * Math.PI * 2;
         const r = interpolate(f, [60, 120], [0, 430], clamp);
@@ -62,9 +62,9 @@ export const NotEvenTop: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <Stage>
-      <div style={{ fontSize: 60, fontWeight: 800, color: C.muted, transform: `translateY(${(1 - s) * 60}px)`, opacity: s }}>…och det är inte ens</div>
+      <div style={{ fontSize: 60, fontWeight: 800, color: C.muted, transform: `translateY(${(1 - s) * 60}px)`, opacity: s }}>…and it's not even</div>
       <div style={{ fontSize: 120, fontWeight: 900, textAlign: "center", lineHeight: 1.05, marginTop: 30, transform: `scale(${s2})` }}>
-        VECKANS<br /><Glow color={C.purple}><span style={{ color: C.purple }}>#1</span></Glow> NYHET
+        THIS WEEK'S<br /><Glow color={C.purple}><span style={{ color: C.purple }}>#1</span></Glow> STORY
       </div>
       <div style={{ fontSize: 200, fontWeight: 900, color: C.pink, marginTop: 10, transform: `rotate(${Math.sin(f / 6) * 8}deg) scale(${s2})` }}>?!</div>
     </Stage>
@@ -77,12 +77,12 @@ export const RiemannTitle: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <Stage>
-      <Chip color={C.amber}>TORSDAG 20 NOV</Chip>
+      <Chip color={C.amber}>THURSDAY, NOV 20</Chip>
       <div style={{ fontSize: 96, fontWeight: 900, marginTop: 40, letterSpacing: -2, transform: `translateX(${(1 - s) * -300}px)`, opacity: s }}>
-        RIEMANN-
+        RIEMANN
       </div>
       <div style={{ fontSize: 96, fontWeight: 900, letterSpacing: -2, color: C.cyan, transform: `translateX(${(1 - s) * 300}px)`, opacity: s }}>
-        <Glow color={C.cyan} size={30}>HYPOTESEN</Glow>
+        <Glow color={C.cyan} size={30}>HYPOTHESIS</Glow>
       </div>
       <div style={{ fontFamily: MONO, fontSize: 64, marginTop: 40, color: C.text, opacity: interpolate(f, [20, 40], [0, 1], clamp) }}>
         ζ(s) = 0 ⇒ Re(s) = ½
@@ -104,9 +104,9 @@ export const Years167: React.FC = () => {
   return (
     <Stage>
       <div style={{ fontSize: 240, fontWeight: 900, lineHeight: 1, transform: `scale(${s})` }}>
-        <Glow color={C.amber}>167</Glow><span style={{ fontSize: 90, color: C.muted }}> år</span>
+        <Glow color={C.amber}>167</Glow><span style={{ fontSize: 90, color: C.muted }}> years</span>
       </div>
-      <div style={{ fontSize: 48, fontWeight: 700, color: C.muted, marginTop: 10, letterSpacing: 4 }}>OLÖST MYSTERIUM</div>
+      <div style={{ fontSize: 48, fontWeight: 700, color: C.muted, marginTop: 10, letterSpacing: 4 }}>UNSOLVED MYSTERY</div>
       <div style={{ position: "relative", width: 800, height: 140, marginTop: 70 }}>
         <div style={{ position: "absolute", top: 60, left: 0, width: 800, height: 8, borderRadius: 4, background: C.bg2 }} />
         <div style={{ position: "absolute", top: 60, left: 0, width: 800 * p, height: 8, borderRadius: 4, background: `linear-gradient(90deg, ${C.purple}, ${C.amber})` }} />
@@ -134,7 +134,7 @@ export const LeanCheck: React.FC = () => {
       <div style={{ width: 900, borderRadius: 28, background: "#020617", border: `2px solid ${C.bg2}`, boxShadow: `0 30px 80px #000a, 0 0 60px ${C.cyan}22`, transform: `scale(${0.85 + 0.15 * s}) rotate(${(1 - s) * -4}deg)`, overflow: "hidden" }}>
         <div style={{ display: "flex", gap: 12, padding: "22px 28px", background: C.bg2 }}>
           {[C.red, C.amber, C.green].map((c) => <div key={c} style={{ width: 22, height: 22, borderRadius: 11, background: c }} />)}
-          <div style={{ marginLeft: 20, fontSize: 30, color: C.muted, fontFamily: MONO }}>bevis.lean</div>
+          <div style={{ marginLeft: 20, fontSize: 30, color: C.muted, fontFamily: MONO }}>proof.lean</div>
           <div style={{ marginLeft: "auto", fontSize: 24, color: C.muted, fontFamily: FONT, fontWeight: 700, letterSpacing: 2 }}>ILLUSTRATION</div>
         </div>
         <div style={{ padding: "30px 34px", fontFamily: MONO, fontSize: 34, lineHeight: 1.75 }}>
@@ -151,7 +151,7 @@ export const LeanCheck: React.FC = () => {
           })}
         </div>
       </div>
-      <div style={{ marginTop: 50 }}><Chip color={C.green} delay={80}>DATORN KONTROLLERAR VARJE STEG</Chip></div>
+      <div style={{ marginTop: 50 }}><Chip color={C.green} delay={80}>COMPUTERS CHECK EVERY STEP</Chip></div>
     </Stage>
   );
 };
@@ -168,9 +168,9 @@ export const UnderReview: React.FC = () => {
         <div style={{ position: "absolute", left: 240 + mx * 0.3, top: 230 + my * 0.3, width: 130, height: 34, borderRadius: 17, background: C.cyan, transform: "rotate(45deg)", transformOrigin: "left center" }} />
       </div>
       <div style={{ marginTop: 40, padding: "24px 40px", border: `6px solid ${C.amber}`, borderRadius: 18, color: C.amber, fontSize: 64, fontWeight: 900, letterSpacing: 4, transform: `rotate(-6deg) scale(${2 - s})`, opacity: s }}>
-        GRANSKAS NU
+        UNDER REVIEW
       </div>
-      <div style={{ marginTop: 34, fontSize: 40, color: C.muted, fontWeight: 700 }}>Ännu inte verifierat av experter</div>
+      <div style={{ marginTop: 34, fontSize: 40, color: C.muted, fontWeight: 700 }}>Not yet verified by experts</div>
     </Stage>
   );
 };
@@ -181,11 +181,11 @@ export const Historic: React.FC = () => {
   const pulse = 1 + Math.sin(f / 5) * 0.03;
   return (
     <Stage>
-      <div style={{ fontSize: 50, fontWeight: 800, color: C.muted, letterSpacing: 6, opacity: s }}>OM DET HÅLLER…</div>
+      <div style={{ fontSize: 50, fontWeight: 800, color: C.muted, letterSpacing: 6, opacity: s }}>IF IT HOLDS…</div>
       <div style={{ fontSize: 132, fontWeight: 900, marginTop: 20, transform: `scale(${s * pulse})`, background: `linear-gradient(90deg, ${C.cyan}, ${C.purple}, ${C.pink})`, WebkitBackgroundClip: "text", color: "transparent" }}>
-        HISTORISKT
+        HISTORIC
       </div>
-      <div style={{ marginTop: 40 }}><Chip color={C.green} delay={20}>$1M MILLENNIEPRIS</Chip></div>
+      <div style={{ marginTop: 40 }}><Chip color={C.green} delay={20}>$1M MILLENNIUM PRIZE</Chip></div>
     </Stage>
   );
 };
@@ -217,7 +217,7 @@ export const SavesLives: React.FC = () => {
       <svg width={1000} height={220} style={{ marginTop: 30 }}>
         <path d={ecgPath(1000, 220, 3)} stroke={C.pink} strokeWidth={8} fill="none" strokeDasharray={2400} strokeDashoffset={draw} strokeLinejoin="round" style={{ filter: `drop-shadow(0 0 12px ${C.pink})` }} />
       </svg>
-      <div style={{ fontSize: 96, fontWeight: 900, marginTop: 20 }}><Glow color={C.pink} size={30}>RÄDDAR LIV</Glow></div>
+      <div style={{ fontSize: 96, fontWeight: 900, marginTop: 20 }}><Glow color={C.pink} size={30}>SAVES LIVES</Glow></div>
     </Stage>
   );
 };
@@ -247,9 +247,9 @@ export const Ultrasound: React.FC = () => {
           </g>
           {found && <rect x={265} y={255} width={250} height={210} rx={14} fill="none" stroke={C.green} strokeWidth={8} strokeDasharray="30 14" />}
         </svg>
-        {found && <div style={{ position: "absolute", left: 470, top: 210, padding: "10px 22px", borderRadius: 12, background: C.green, color: C.bg, fontSize: 34, fontWeight: 900 }}>AI: HJÄRTSVIKT</div>}
+        {found && <div style={{ position: "absolute", left: 470, top: 210, padding: "10px 22px", borderRadius: 12, background: C.green, color: C.bg, fontSize: 34, fontWeight: 900 }}>AI: HEART FAILURE</div>}
       </div>
-      <div style={{ marginTop: 20 }}><Chip color={C.cyan}>1 VANLIGT HJÄRTULTRALJUD</Chip></div>
+      <div style={{ marginTop: 20 }}><Chip color={C.cyan}>1 ROUTINE HEART ULTRASOUND</Chip></div>
     </Stage>
   );
 };
@@ -271,10 +271,10 @@ export const BarCompare: React.FC = () => {
   );
   return (
     <Stage>
-      <div style={{ fontSize: 44, fontWeight: 800, color: C.muted, letterSpacing: 3, marginBottom: 10 }}>HITTADE DOLD HJÄRTSVIKT</div>
+      <div style={{ fontSize: 44, fontWeight: 800, color: C.muted, letterSpacing: 3, marginBottom: 10 }}>HIDDEN HEART FAILURE FOUND</div>
       <div style={{ display: "flex", gap: 80, alignItems: "flex-end" }}>
-        <Bar v={48} g={g1} color={C.muted} label="Utan AI" />
-        <Bar v={78} g={g2} color={C.green} label="Med AI" />
+        <Bar v={48} g={g1} color={C.muted} label="Without AI" />
+        <Bar v={78} g={g2} color={C.green} label="With AI" />
       </div>
     </Stage>
   );
@@ -293,7 +293,7 @@ export const SwedishData: React.FC = () => {
           <rect x={5} width={2} height={10} fill="#FECC00" />
           <rect y={4} width={16} height={2} fill="#FECC00" />
         </svg>
-        <div style={{ fontSize: 64, fontWeight: 900 }}>Svensk patientdata</div>
+        <div style={{ fontSize: 64, fontWeight: 900 }}>Swedish patient data</div>
       </div>
       <div style={{ position: "relative", marginTop: 70 }}>
         <svg width={1000} height={260}>
@@ -302,9 +302,9 @@ export const SwedishData: React.FC = () => {
         </svg>
       </div>
       <div style={{ marginTop: 50, opacity: warn ? 1 : 0, transform: `scale(${warn ? 1 : 0.5})` }}>
-        <Chip color={C.red}>⚠ VARNING: PLÖTSLIGT HJÄRTSTOPP</Chip>
+        <Chip color={C.red}>⚠ WARNING: SUDDEN CARDIAC DEATH</Chip>
       </div>
-      <div style={{ marginTop: 26, fontSize: 38, color: C.muted, fontWeight: 700, opacity: warn ? 1 : 0 }}>…som vanliga tester missar</div>
+      <div style={{ marginTop: 26, fontSize: 38, color: C.muted, fontWeight: 700, opacity: warn ? 1 : 0 }}>…that standard tests miss</div>
     </Stage>
   );
 };
@@ -318,7 +318,7 @@ export const Quickie: React.FC = () => {
       <svg width={260} height={260} viewBox="0 0 24 24" style={{ transform: `scale(${s}) rotate(${(1 - s) * 30}deg)`, filter: `drop-shadow(0 0 40px ${C.amber})` }}>
         <path d="M13 2 L4 14 H11 L10 22 L20 9 H13 Z" fill={C.amber} />
       </svg>
-      <div style={{ fontSize: 140, fontWeight: 900, letterSpacing: -2, transform: `scale(${2.2 - 1.2 * s})`, opacity: s }}>SNABBISEN</div>
+      <div style={{ fontSize: 140, fontWeight: 900, letterSpacing: -2, transform: `scale(${2.2 - 1.2 * s})`, opacity: s }}>QUICK HIT</div>
       <div style={{ position: "absolute", inset: 0, background: C.amber, opacity: interpolate(f, [0, 8], [0.35, 0], clamp) }} />
     </Stage>
   );
@@ -340,15 +340,15 @@ export const Laptop: React.FC = () => {
             OFFLINE
           </div>
           <div style={{ marginTop: 50, display: "flex", flexDirection: "column", gap: 22 }}>
-            <div style={{ alignSelf: "flex-end", background: C.purple, padding: "18px 28px", borderRadius: "26px 26px 6px 26px", fontSize: 34, fontWeight: 700, transform: `scale(${bubble(15)})`, transformOrigin: "right" }}>Sammanfatta mitt avtal</div>
-            <div style={{ alignSelf: "flex-start", background: C.bg2, padding: "18px 28px", borderRadius: "26px 26px 26px 6px", fontSize: 34, fontWeight: 700, transform: `scale(${bubble(40)})`, transformOrigin: "left", maxWidth: 600 }}>Klart! 3 viktiga punkter…</div>
+            <div style={{ alignSelf: "flex-end", background: C.purple, padding: "18px 28px", borderRadius: "26px 26px 6px 26px", fontSize: 34, fontWeight: 700, transform: `scale(${bubble(15)})`, transformOrigin: "right" }}>Summarize my contract</div>
+            <div style={{ alignSelf: "flex-start", background: C.bg2, padding: "18px 28px", borderRadius: "26px 26px 26px 6px", fontSize: 34, fontWeight: 700, transform: `scale(${bubble(40)})`, transformOrigin: "left", maxWidth: 600 }}>Done! 3 key points…</div>
           </div>
         </div>
         <div style={{ width: 960, height: 34, marginLeft: -70, background: "#475569", borderRadius: "0 0 30px 30px" }} />
       </div>
       <div style={{ marginTop: 50, display: "flex", gap: 24 }}>
-        <Chip color={C.green} delay={50}>GRATIS</Chip>
-        <Chip color={C.amber} delay={62}>KÖRS LOKALT</Chip>
+        <Chip color={C.green} delay={50}>FREE</Chip>
+        <Chip color={C.amber} delay={62}>RUNS LOCALLY</Chip>
       </div>
     </Stage>
   );
@@ -366,7 +366,7 @@ export const PrivateData: React.FC = () => {
         <path d="M9.5 12 V10 a2.5 2.5 0 0 1 5 0 V12" stroke={C.green} strokeWidth={1.4} fill="none" />
       </svg>
       <div style={{ fontSize: 76, fontWeight: 900, marginTop: 30, textAlign: "center", lineHeight: 1.1 }}>
-        Dina data<br /><span style={{ color: C.green }}>stannar hemma</span>
+        Your data<br /><span style={{ color: C.green }}>stays with you</span>
       </div>
     </Stage>
   );
@@ -377,9 +377,9 @@ export const Recap: React.FC = () => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const items = [
-    { c: C.amber, t: "ζ", l: "Matte" },
-    { c: C.pink, t: "♥", l: "Hjärta" },
-    { c: C.green, t: "⌂", l: "Integritet" },
+    { c: C.amber, t: "ζ", l: "Math" },
+    { c: C.pink, t: "♥", l: "Heart" },
+    { c: C.green, t: "⌂", l: "Privacy" },
   ];
   const big = spring({ frame: f - 30, fps, config: { damping: 8 } });
   return (
@@ -396,7 +396,7 @@ export const Recap: React.FC = () => {
         })}
       </div>
       <div style={{ fontSize: 170, fontWeight: 900, marginTop: 60, transform: `scale(${big})` }}>
-        <Glow color={C.cyan}>7</Glow> <span style={{ color: C.cyan }}>DAGAR</span>
+        <Glow color={C.cyan}>7</Glow> <span style={{ color: C.cyan }}>DAYS</span>
       </div>
     </Stage>
   );
@@ -408,9 +408,9 @@ export const LoopOut: React.FC = () => {
   const o = interpolate(f, [0, 10], [0, 1], clamp);
   return (
     <Stage>
-      <div style={{ fontSize: 50, fontWeight: 700, color: C.muted, letterSpacing: 8, opacity: o }}>MATTEPROBLEM VÄRT</div>
+      <div style={{ fontSize: 50, fontWeight: 700, color: C.muted, letterSpacing: 8, opacity: o }}>MATH PROBLEM WORTH</div>
       <div style={{ fontSize: 150, fontWeight: 900, transform: `scale(${z})`, opacity: o }}>
-        <Glow color={C.green}>$1 000 000</Glow>
+        <Glow color={C.green}>$1,000,000</Glow>
       </div>
     </Stage>
   );

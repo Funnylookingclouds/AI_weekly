@@ -1,41 +1,55 @@
 {
-  "id": "2026-w47",
+  "id": "2026-w47-en",
+  "language": "en",
   "voice_id": "nPczCjzI2devNBz1zQrb",
   "model_id": "eleven_multilingual_v2",
-  "speed": 1.12,
+  "speed": 1.1,
   "segments": [
     {
       "id": "hook",
-      "tts": "AI kan just ha löst ett matteproblem värt en miljon dollar – och det är inte ens veckans viktigaste nyhet."
+      "tts": "AI may have just solved a million-dollar math problem – and that's not even this week's biggest story."
     },
     {
       "id": "news1",
-      "tts": "I torsdags presenterade matematikern Levent Alpöge ett bevis för Riemannhypotesen, framtaget tillsammans med AI:n Claude. Ett hundrasextiosju år gammalt mysterium. Beviset är skrivet så att en dator kan kontrollera varje steg – nu granskar experterna. Håller det, är det historiskt."
+      "tts": "On Thursday, mathematician Levent Alpöge presented a proof of the Riemann Hypothesis, developed with the AI Claude. A 167-year-old mystery. The proof is written so computers can check every step – and experts are reviewing it now. If it holds, it's historic."
     },
     {
       "id": "news2",
-      "tts": "Men det som räddar liv: AI som läser ett enda vanligt hjärtultraljud hittade sjuttioåtta procent av patienterna med en svårupptäckt hjärtsvikt – mot fyrtioåtta procent utan AI. Och en AI tränad på svenska patientdata ser varningstecken för plötsligt hjärtstopp som vanliga tester missar."
+      "tts": "But here's what saves lives: an AI reading a single routine heart ultrasound found 78 percent of patients with hidden heart failure – versus 48 percent without AI. And an AI trained on Swedish patient data spots warning signs of sudden cardiac death that standard tests miss."
     },
     {
       "id": "news3",
-      "tts": "Snabbisen: Inkling två Mini – en gratis AI som körs helt offline på en laptop. Smart hjälp, utan att dina data lämnar datorn."
+      "tts": "Quick hit: Inkling 2 Mini – a free AI that runs offline on a laptop. Smart help, without your data ever leaving your computer."
     },
     {
       "id": "loop",
-      "tts": "Allt det på sju dagar. Och tänk dig –"
+      "tts": "All that in seven days. And just think –"
     }
   ],
   "display_map": {
-    "hundrasextiosju": "167",
-    "sjuttioåtta": "78",
-    "fyrtioåtta": "48",
-    "procent": "%",
-    "två": "2",
-    "sju": "7"
+    "percent": "%",
+    "seven": "7"
   },
   "keywords": [
-    "miljon", "dollar", "Riemannhypotesen", "Claude", "hundrasextiosju", "historiskt",
-    "hjärtultraljud", "sjuttioåtta", "fyrtioåtta", "procent", "svenska", "hjärtstopp",
-    "Inkling", "två", "Mini", "gratis", "offline", "sju"
+    "milliondollar",
+    "riemann",
+    "hypothesis",
+    "claude",
+    "167yearold",
+    "historic",
+    "ultrasound",
+    "78",
+    "48",
+    "percent",
+    "swedish",
+    "cardiac",
+    "death",
+    "inkling",
+    "2",
+    "mini",
+    "free",
+    "offline",
+    "seven",
+    "hidden"
   ]
 }

@@ -1,6 +1,6 @@
 # AI Veckonyheter – Faceless YouTube Shorts
 
-Pipeline for the weekly "Vad har AI löst den här veckan?" Short. See `CLAUDE.md` for the editorial rules.
+Pipeline for the weekly "What did AI solve this week?" Short (English).  See `CLAUDE.md` for the editorial rules.
 
 ## Weekly workflow
 1. Research + script draft → `temp/manus_<datum>.md` (await approval).

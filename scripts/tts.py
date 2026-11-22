@@ -23,7 +23,7 @@ text = " ".join(seg_texts)
 body = json.dumps({
     "text": text,
     "model_id": ep["model_id"],
-    "language_code": "sv",
+    "language_code": ep.get("language", "en"),
     "voice_settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35,
                        "use_speaker_boost": True, "speed": ep["speed"]},
 }).encode()
