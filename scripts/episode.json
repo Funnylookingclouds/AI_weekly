@@ -1,16 +1,18 @@
 {
-  "id": "special-12months-en",
+  "id": "special-electricity-en",
   "language": "en",
   "voice_id": "nPczCjzI2devNBz1zQrb",
   "model_id": "eleven_multilingual_v2",
   "speed": 1.08,
   "segments": [
-    {"id": "hook", "tts": "How fast is AI really moving? Let's measure twelve months."},
-    {"id": "skill", "tts": "Researchers at METR track how long a task – in human working time – AI can complete half the time. November 2025: about three hours. This spring: around twelve. That length doubles roughly every three and a half months. That's about ten times longer every year."},
-    {"id": "cost", "tts": "And it's getting cheaper. Epoch AI estimates the cost of reaching the same performance falls about thirteen-fold per year."},
-    {"id": "real", "tts": "What does that look like? This autumn alone, AI claimed proofs of famous math problems – and beat eight brain tumor experts in a test."},
-    {"id": "loop", "tts": "Ten times longer tasks, thirteen times cheaper – in just one year."}
+    {"id": "hook", "tts": "Is AI eating the world's electricity? Let's check the real numbers."},
+    {"id": "t1", "tts": "It sure sounds like it! Data centers used about 485 terawatt-hours in 2025."},
+    {"id": "r1", "tts": "True – that's roughly one and a half percent of all the world's electricity. But AI is only part of it. AI-focused data centers used about 155 terawatt-hours. That's around half a percent."},
+    {"id": "t2", "tts": "Half a percent? So it's no problem at all?"},
+    {"id": "r2", "tts": "Not so fast. The IEA expects data centers to nearly double by 2030 – to about three percent of the world's power."},
+    {"id": "t3", "tts": "So: small today, but growing fast."},
+    {"id": "loop", "tts": "Half a percent now – watch this space."}
   ],
-  "display_map": {"twelve": "12", "three": "3", "ten": "10", "thirteenfold": "13×", "thirteen": "13", "eight": "8"},
-  "keywords": ["twelve", "metr", "three", "hours", "doubles", "ten", "cheaper", "epoch", "thirteenfold", "claimed", "proofs", "eight", "experts", "thirteen", "year"]
+  "display_map": {"three": "3"},
+  "keywords": ["electricity", "485", "2025", "half", "155", "ai", "problem", "iea", "double", "2030", "three", "small", "growing", "fast", "percent"]
 }

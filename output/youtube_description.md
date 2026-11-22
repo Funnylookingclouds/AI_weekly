@@ -1,40 +1,36 @@
-# YouTube upload – SPECIAL EDITION: How fast is AI really moving? (12 months) – presenters: Rune, Ture, Saga, Cara
+# YouTube upload – SPECIAL EDITION 3: How much electricity does AI really use? – presenters: Rune vs. Ture (+ all four)
 
 ## Title options
-1. **How Fast Is AI Really Improving? 12 Months, Measured 📈** ← recommended
-2. AI Got 10× Better at Long Tasks in One Year?!
-3. AI Progress in 12 Months: 10× Longer Tasks, 13× Cheaper
+1. **How Much Electricity Does AI Really Use? ⚡** ← recommended
+2. Is AI Eating the World's Power? The Real Numbers
+3. AI Uses Only 0.5% of the World's Electricity… For Now
 
 ## Description (copy everything between the lines)
 
 ---
-How fast is AI really improving? We measured the last 12 months with real data: AI can now finish tasks about 10× longer than a year ago – and the same performance costs about 13× less. A special edition on the speed of AI progress, presented by all four AI Bounce hosts. 📈🤖
+How much electricity does AI really use? We checked the real numbers: AI-focused data centers used about half a percent of the world's electricity in 2025 – but data center demand is set to nearly double by 2030. A myth-vs-fact special edition on AI energy use, debated by Rune and Ture. ⚡🤖
 
-⏱ 1. TASK LENGTH: FROM ~3 HOURS TO ~12 HOURS
-METR measures the "50% time horizon": how long a task (in human expert time) AI agents can complete half the time. In November 2025 the frontier was about 3 hours (GPT-5.1-Codex-Max); by spring 2026 the best public models were around 12 hours (wide uncertainty: 5–61 h). METR's latest update finds this doubles roughly every 3.6 months – about 10× per year. (Measured on software and research tasks.)
-🔗 https://metr.org/blog/2026-11-20-q4-2026-capability-update/
-🔗 https://metr.org/blog/2026-05-19-frontier-risk-report/
-🔗 https://metr.org/evaluations/gpt-5-1-codex-max-report/
+⚡ DATA CENTERS: ~485 TWh IN 2025 (≈1.5%)
+According to the International Energy Agency (IEA, April 2026 update), data centers worldwide used about 485 terawatt-hours of electricity in 2025 – roughly 1.5% of global electricity.
+🔗 https://ourworldindata.org/how-much-energy-do-data-centers-and-artificial-intelligence-use
+🔗 https://www.carbonbrief.org/ai-five-charts-that-put-data-centre-energy-use-and-emissions-into-context
 
-💸 2. COST: ABOUT 13× CHEAPER PER YEAR
-Epoch AI estimates the cost of reaching a given level of AI performance has fallen about 47% per quarter since 2023 – roughly 13× per year.
-🔗 https://epoch.ai/publications/the-plunging-price-of-thought
+🤖 AI'S SHARE: ~155 TWh (≈0.5%)
+AI-focused data centers used about 155 TWh in 2025 – around 0.49% of the world's electricity (Our World in Data, based on IEA figures).
 
-🧠 3. WHAT IT LOOKS LIKE
-This autumn alone: AI-assisted proof claims for famous math problems (still under review) and an AI that beat eight brain tumor specialists in a conference test – see our weekly episodes (wk 44, 46, 47) for details and sources.
+📈 2030: NEARLY DOUBLE
+The IEA projects data centers will use about 950 TWh by 2030 – around 3% of global electricity demand. An independent Nature study projects AI data centers alone at about 1% of global electricity by 2030. Small today, growing fast.
+🔗 https://www.nature.com/articles/s44458-026-00152-5
 
-📅 Every week: what did AI solve? Plus special editions on how AI is changing – short, jargon-free and under 60 seconds.
+📅 Every week: what did AI solve? Plus special editions on the big AI questions – short, jargon-free and under 60 seconds.
 
 🔔 Subscribe to @AIBounce for a new "What did AI solve?" every week: https://www.youtube.com/@AIBounce
 
-#Shorts #AIBounce #AI #AIProgress #AINews
+#Shorts #AIBounce #AI #AIEnergy #DataCenters
 ---
 
 ## Tags (paste into the Tags field)
-AI progress, how fast is AI improving, AI in 12 months, AI growth, AI exponential growth, AI news, latest AI news, AI explained, METR, METR time horizon, AI time horizon, AI agents, AI doubling time, Epoch AI, AI cost decline, AI getting cheaper, cost of AI, AI benchmarks, AI 2026, future of AI, AI speed, artificial intelligence, AI trends, AI Bounce, what did AI solve
+AI electricity, AI energy use, how much electricity does AI use, AI power consumption, data center energy, data centers electricity, AI climate, AI environmental impact, IEA data centers, AI energy 2030, terawatt hours, AI carbon footprint, is AI bad for the environment, AI myths, AI facts, AI explained, AI news, latest AI news, AI 2026, energy and AI, green AI, artificial intelligence, AI Bounce, what did AI solve, AI special edition
 
 ## Pinned comment
-10× longer tasks in one year – exciting or scary? 👇 (Sources are in the description.)
-
-## Notes
-- Figures are measurements with wide uncertainty; the video and description say "about".
+Did you think AI used more or less than 0.5% of the world's electricity? 👇 (Sources are in the description.)

@@ -1,0 +1,794 @@
+[
+ {
+  "word": "Is",
+  "display": "Is",
+  "start": 0.035,
+  "end": 0.174,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 0.244,
+  "end": 0.615,
+  "segment": "hook",
+  "keyword": true
+ },
+ {
+  "word": "eating",
+  "display": "eating",
+  "start": 0.72,
+  "end": 0.964,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 1.01,
+  "end": 1.08,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "world's",
+  "display": "world's",
+  "start": 1.115,
+  "end": 1.347,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "electricity?",
+  "display": "electricity?",
+  "start": 1.382,
+  "end": 2.055,
+  "segment": "hook",
+  "keyword": true
+ },
+ {
+  "word": "Let's",
+  "display": "Let's",
+  "start": 2.113,
+  "end": 2.322,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "check",
+  "display": "check",
+  "start": 2.357,
+  "end": 2.531,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 2.577,
+  "end": 2.647,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "real",
+  "display": "real",
+  "start": 2.682,
+  "end": 2.821,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "numbers.",
+  "display": "numbers.",
+  "start": 2.879,
+  "end": 3.355,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "It",
+  "display": "It",
+  "start": 3.611,
+  "end": 3.75,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "sure",
+  "display": "sure",
+  "start": 3.796,
+  "end": 3.959,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "sounds",
+  "display": "sounds",
+  "start": 3.994,
+  "end": 4.238,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "like",
+  "display": "like",
+  "start": 4.272,
+  "end": 4.412,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "it!",
+  "display": "it!",
+  "start": 4.447,
+  "end": 4.656,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "Data",
+  "display": "Data",
+  "start": 5.41,
+  "end": 5.724,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "centers",
+  "display": "centers",
+  "start": 5.793,
+  "end": 6.153,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "used",
+  "display": "used",
+  "start": 6.223,
+  "end": 6.409,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "about",
+  "display": "about",
+  "start": 6.444,
+  "end": 6.664,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "485",
+  "display": "485",
+  "start": 6.734,
+  "end": 7.802,
+  "segment": "t1",
+  "keyword": true
+ },
+ {
+  "word": "terawatt-hours",
+  "display": "terawatt-hours",
+  "start": 7.872,
+  "end": 8.696,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "in",
+  "display": "in",
+  "start": 8.754,
+  "end": 8.858,
+  "segment": "t1",
+  "keyword": false
+ },
+ {
+  "word": "2025.",
+  "display": "2025.",
+  "start": 8.928,
+  "end": 9.88,
+  "segment": "t1",
+  "keyword": true
+ },
+ {
+  "word": "True",
+  "display": "True",
+  "start": 10.24,
+  "end": 10.623,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "that's",
+  "display": "that's",
+  "start": 10.739,
+  "end": 10.971,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "roughly",
+  "display": "roughly",
+  "start": 11.076,
+  "end": 11.471,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "one",
+  "display": "one",
+  "start": 11.552,
+  "end": 11.796,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "and",
+  "display": "and",
+  "start": 11.831,
+  "end": 11.912,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "a",
+  "display": "a",
+  "start": 11.958,
+  "end": 11.981,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "half",
+  "display": "half",
+  "start": 12.051,
+  "end": 12.237,
+  "segment": "r1",
+  "keyword": true
+ },
+ {
+  "word": "percent",
+  "display": "percent",
+  "start": 12.295,
+  "end": 12.632,
+  "segment": "r1",
+  "keyword": true
+ },
+ {
+  "word": "of",
+  "display": "of",
+  "start": 12.666,
+  "end": 12.713,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "all",
+  "display": "all",
+  "start": 12.759,
+  "end": 12.887,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 12.934,
+  "end": 13.003,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "world's",
+  "display": "world's",
+  "start": 13.026,
+  "end": 13.247,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "electricity.",
+  "display": "electricity.",
+  "start": 13.282,
+  "end": 13.978,
+  "segment": "r1",
+  "keyword": true
+ },
+ {
+  "word": "But",
+  "display": "But",
+  "start": 14.28,
+  "end": 14.454,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 14.501,
+  "end": 14.861,
+  "segment": "r1",
+  "keyword": true
+ },
+ {
+  "word": "is",
+  "display": "is",
+  "start": 14.919,
+  "end": 15.012,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "only",
+  "display": "only",
+  "start": 15.07,
+  "end": 15.233,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "part",
+  "display": "part",
+  "start": 15.291,
+  "end": 15.453,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "of",
+  "display": "of",
+  "start": 15.488,
+  "end": 15.546,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "it.",
+  "display": "it.",
+  "start": 15.581,
+  "end": 15.755,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "AI-focused",
+  "display": "AI-focused",
+  "start": 16.161,
+  "end": 16.939,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "data",
+  "display": "data",
+  "start": 16.974,
+  "end": 17.218,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "centers",
+  "display": "centers",
+  "start": 17.276,
+  "end": 17.578,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "used",
+  "display": "used",
+  "start": 17.647,
+  "end": 17.822,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "about",
+  "display": "about",
+  "start": 17.856,
+  "end": 18.077,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "155",
+  "display": "155",
+  "start": 18.181,
+  "end": 19.157,
+  "segment": "r1",
+  "keyword": true
+ },
+ {
+  "word": "terawatt-hours.",
+  "display": "terawatt-hours.",
+  "start": 19.226,
+  "end": 20.097,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "That's",
+  "display": "That's",
+  "start": 20.353,
+  "end": 20.561,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "around",
+  "display": "around",
+  "start": 20.585,
+  "end": 20.794,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "half",
+  "display": "half",
+  "start": 20.852,
+  "end": 20.991,
+  "segment": "r1",
+  "keyword": true
+ },
+ {
+  "word": "a",
+  "display": "a",
+  "start": 21.038,
+  "end": 21.061,
+  "segment": "r1",
+  "keyword": false
+ },
+ {
+  "word": "percent.",
+  "display": "percent.",
+  "start": 21.107,
+  "end": 21.572,
+  "segment": "r1",
+  "keyword": true
+ },
+ {
+  "word": "Half",
+  "display": "Half",
+  "start": 21.873,
+  "end": 22.117,
+  "segment": "t2",
+  "keyword": true
+ },
+ {
+  "word": "a",
+  "display": "a",
+  "start": 22.175,
+  "end": 22.199,
+  "segment": "t2",
+  "keyword": false
+ },
+ {
+  "word": "percent?",
+  "display": "percent?",
+  "start": 22.268,
+  "end": 22.837,
+  "segment": "t2",
+  "keyword": true
+ },
+ {
+  "word": "So",
+  "display": "So",
+  "start": 23.092,
+  "end": 23.232,
+  "segment": "t2",
+  "keyword": false
+ },
+ {
+  "word": "it's",
+  "display": "it's",
+  "start": 23.29,
+  "end": 23.429,
+  "segment": "t2",
+  "keyword": false
+ },
+ {
+  "word": "no",
+  "display": "no",
+  "start": 23.51,
+  "end": 23.661,
+  "segment": "t2",
+  "keyword": false
+ },
+ {
+  "word": "problem",
+  "display": "problem",
+  "start": 23.731,
+  "end": 24.044,
+  "segment": "t2",
+  "keyword": true
+ },
+ {
+  "word": "at",
+  "display": "at",
+  "start": 24.079,
+  "end": 24.137,
+  "segment": "t2",
+  "keyword": false
+ },
+ {
+  "word": "all?",
+  "display": "all?",
+  "start": 24.172,
+  "end": 24.462,
+  "segment": "t2",
+  "keyword": false
+ },
+ {
+  "word": "Not",
+  "display": "Not",
+  "start": 25.113,
+  "end": 25.298,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "so",
+  "display": "so",
+  "start": 25.356,
+  "end": 25.473,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "fast.",
+  "display": "fast.",
+  "start": 25.542,
+  "end": 26.088,
+  "segment": "r2",
+  "keyword": true
+ },
+ {
+  "word": "The",
+  "display": "The",
+  "start": 26.448,
+  "end": 26.575,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "IEA",
+  "display": "IEA",
+  "start": 26.68,
+  "end": 27.272,
+  "segment": "r2",
+  "keyword": true
+ },
+ {
+  "word": "expects",
+  "display": "expects",
+  "start": 27.342,
+  "end": 27.725,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "data",
+  "display": "data",
+  "start": 27.829,
+  "end": 28.143,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "centers",
+  "display": "centers",
+  "start": 28.201,
+  "end": 28.503,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "to",
+  "display": "to",
+  "start": 28.538,
+  "end": 28.607,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "nearly",
+  "display": "nearly",
+  "start": 28.677,
+  "end": 28.944,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "double",
+  "display": "double",
+  "start": 29.014,
+  "end": 29.373,
+  "segment": "r2",
+  "keyword": true
+ },
+ {
+  "word": "by",
+  "display": "by",
+  "start": 29.432,
+  "end": 29.571,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "2030",
+  "display": "2030",
+  "start": 29.641,
+  "end": 30.279,
+  "segment": "r2",
+  "keyword": true
+ },
+ {
+  "word": "to",
+  "display": "to",
+  "start": 30.709,
+  "end": 30.813,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "about",
+  "display": "about",
+  "start": 30.883,
+  "end": 31.115,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "three",
+  "display": "3",
+  "start": 31.173,
+  "end": 31.428,
+  "segment": "r2",
+  "keyword": true
+ },
+ {
+  "word": "percent",
+  "display": "percent",
+  "start": 31.487,
+  "end": 31.812,
+  "segment": "r2",
+  "keyword": true
+ },
+ {
+  "word": "of",
+  "display": "of",
+  "start": 31.846,
+  "end": 31.893,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 31.928,
+  "end": 31.997,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "world's",
+  "display": "world's",
+  "start": 32.032,
+  "end": 32.276,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "power.",
+  "display": "power.",
+  "start": 32.311,
+  "end": 32.706,
+  "segment": "r2",
+  "keyword": false
+ },
+ {
+  "word": "So:",
+  "display": "So:",
+  "start": 33.007,
+  "end": 33.309,
+  "segment": "t3",
+  "keyword": false
+ },
+ {
+  "word": "small",
+  "display": "small",
+  "start": 33.449,
+  "end": 33.797,
+  "segment": "t3",
+  "keyword": true
+ },
+ {
+  "word": "today,",
+  "display": "today,",
+  "start": 33.855,
+  "end": 34.192,
+  "segment": "t3",
+  "keyword": false
+ },
+ {
+  "word": "but",
+  "display": "but",
+  "start": 34.215,
+  "end": 34.331,
+  "segment": "t3",
+  "keyword": false
+ },
+ {
+  "word": "growing",
+  "display": "growing",
+  "start": 34.366,
+  "end": 34.61,
+  "segment": "t3",
+  "keyword": true
+ },
+ {
+  "word": "fast.",
+  "display": "fast.",
+  "start": 34.679,
+  "end": 35.12,
+  "segment": "t3",
+  "keyword": true
+ },
+ {
+  "word": "Half",
+  "display": "Half",
+  "start": 35.48,
+  "end": 35.713,
+  "segment": "loop",
+  "keyword": true
+ },
+ {
+  "word": "a",
+  "display": "a",
+  "start": 35.759,
+  "end": 35.782,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "percent",
+  "display": "percent",
+  "start": 35.84,
+  "end": 36.177,
+  "segment": "loop",
+  "keyword": true
+ },
+ {
+  "word": "now",
+  "display": "now",
+  "start": 36.247,
+  "end": 36.421,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "watch",
+  "display": "watch",
+  "start": 36.978,
+  "end": 37.233,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "this",
+  "display": "this",
+  "start": 37.292,
+  "end": 37.431,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "space.",
+  "display": "space.",
+  "start": 37.466,
+  "end": 37.953,
+  "segment": "loop",
+  "keyword": false
+ }
+]

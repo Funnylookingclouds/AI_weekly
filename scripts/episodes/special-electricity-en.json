@@ -1,0 +1,18 @@
+{
+  "id": "special-electricity-en",
+  "language": "en",
+  "voice_id": "nPczCjzI2devNBz1zQrb",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.08,
+  "segments": [
+    {"id": "hook", "tts": "Is AI eating the world's electricity? Let's check the real numbers."},
+    {"id": "t1", "tts": "It sure sounds like it! Data centers used about 485 terawatt-hours in 2025."},
+    {"id": "r1", "tts": "True – that's roughly one and a half percent of all the world's electricity. But AI is only part of it. AI-focused data centers used about 155 terawatt-hours. That's around half a percent."},
+    {"id": "t2", "tts": "Half a percent? So it's no problem at all?"},
+    {"id": "r2", "tts": "Not so fast. The IEA expects data centers to nearly double by 2030 – to about three percent of the world's power."},
+    {"id": "t3", "tts": "So: small today, but growing fast."},
+    {"id": "loop", "tts": "Half a percent now – watch this space."}
+  ],
+  "display_map": {"three": "3"},
+  "keywords": ["electricity", "485", "2025", "half", "155", "ai", "problem", "iea", "double", "2030", "three", "small", "growing", "fast", "percent"]
+}
