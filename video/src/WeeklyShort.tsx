@@ -2,6 +2,7 @@ import React from "react";
 import { AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, FONT } from "./theme";
 import { WORDS, FPS, TOTAL_SEC } from "./timing";
+import { IntroWarp, OutroLoading, SEG as BRAND_SEG } from "./brand/Brand";
 import { BEATS, WEEK_LABEL, SEG_COLOR } from "./episode";
 import { SceneTransition, TRANSITIONS, GlitchDefs, Shockwave, LightSweep, Particles, Overlay, useBeatPulse } from "./Effects";
 
@@ -97,8 +98,9 @@ const Captions: React.FC = () => {
   );
 };
 
-export const WeeklyShort: React.FC = () => {
-  const { durationInFrames } = useVideoConfig();
+/** Main news part (voice + scenes + captions), local time 0 = first word. */
+const Main: React.FC = () => {
+  const durationInFrames = MAIN_FRAMES;
   return (
     <AbsoluteFill style={{ background: C.bg }}>
       <Background />
@@ -119,9 +121,29 @@ export const WeeklyShort: React.FC = () => {
       <Header />
       <Captions />
       <Audio src={staticFile("voiceover.mp3")} />
-      <Audio src={staticFile("music.wav")} />
     </AbsoluteFill>
   );
 };
 
-export const DURATION = Math.ceil(TOTAL_SEC * FPS);
+/** Cross-fade wrapper for the outro. */
+const FadeIn: React.FC<{ frames: number; children: React.ReactNode }> = ({ frames, children }) => {
+  const f = useCurrentFrame();
+  return <AbsoluteFill style={{ opacity: interpolate(f, [0, frames], [0, 1], { extrapolateRight: "clamp" }) }}>{children}</AbsoluteFill>;
+};
+
+export const INTRO_FRAMES = BRAND_SEG; // 3 s – Intro B "Warp Speed"
+export const OUTRO_FRAMES = BRAND_SEG; // 3 s – Outro 2 "Loading next week"
+const XFADE = 12;
+export const MAIN_FRAMES = Math.ceil(TOTAL_SEC * FPS);
+
+export const WeeklyShort: React.FC = () => (
+  <AbsoluteFill style={{ background: C.bg }}>
+    <Sequence durationInFrames={INTRO_FRAMES} name="Intro"><IntroWarp /></Sequence>
+    <Sequence from={INTRO_FRAMES} durationInFrames={MAIN_FRAMES} name="Main"><Main /></Sequence>
+    <Sequence from={INTRO_FRAMES + MAIN_FRAMES - XFADE} durationInFrames={OUTRO_FRAMES} name="Outro"><FadeIn frames={XFADE}><OutroLoading /></FadeIn></Sequence>
+    {/* music runs under the news part and the outro */}
+    <Sequence from={INTRO_FRAMES - 20}><Audio src={staticFile("music.wav")} /></Sequence>
+  </AbsoluteFill>
+);
+
+export const DURATION = INTRO_FRAMES + MAIN_FRAMES - XFADE + OUTRO_FRAMES;

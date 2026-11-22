@@ -1,5 +1,5 @@
 {
-  "id": "2026-w46-en",
+  "id": "2026-w47-en",
   "language": "en",
   "voice_id": "nPczCjzI2devNBz1zQrb",
   "model_id": "eleven_multilingual_v2",
@@ -7,35 +7,49 @@
   "segments": [
     {
       "id": "hook",
-      "tts": "AI just beat eight brain tumor experts at their own job – and that's only the start of this week."
+      "tts": "AI may have just solved a million-dollar math problem – and that's not even this week's biggest story."
     },
     {
       "id": "news1",
-      "tts": "At a pathology conference, Mayo Clinic researchers tested an AI on 100 brain tumor cases, choosing from 52 tumor types using tissue images. It scored 97 percent – beating all eight specialists. Even better: doctors got more accurate when the AI helped them."
+      "tts": "On Thursday, mathematician Levent Alpöge presented a proof of the Riemann Hypothesis, developed with the AI Claude. A 167-year-old mystery. The proof is written so computers can check every step – and experts are reviewing it now. If it holds, it's historic."
     },
     {
       "id": "news2",
-      "tts": "Next: Google DeepMind's AlphaProof Code mathematically checked the encryption code behind Signal's private chats – millions of lines of proof in just four weeks. When researchers slipped in two old bugs, it caught both."
+      "tts": "But here's what saves lives: an AI reading a single routine heart ultrasound found 78 percent of patients with hidden heart failure – versus 48 percent without AI. And an AI trained on Swedish patient data spots warning signs of sudden cardiac death that standard tests miss."
     },
     {
       "id": "news3",
-      "tts": "Quick hit: AlphaGenome 2 reads DNA cell type by cell type, finding nearly twice as many gene-changing variants – clues to where diseases begin."
+      "tts": "Quick hit: Inkling 2 Mini – a free AI that runs offline on a laptop. Smart help, without your data ever leaving your computer."
     },
     {
       "id": "loop",
-      "tts": "Tumors, privacy, DNA – all in seven days. So remember:"
+      "tts": "All that in seven days."
     }
   ],
   "display_map": {
-    "eight": "8",
     "percent": "%",
-    "four": "4",
-    "two": "2",
     "seven": "7"
   },
   "keywords": [
-    "eight", "experts", "mayo", "clinic", "100", "52", "97", "percent",
-    "alphaproof", "signals", "encryption", "millions", "four", "weeks", "two", "both",
-    "alphagenome", "2", "dna", "twice", "tumors", "privacy", "seven"
+    "milliondollar",
+    "riemann",
+    "hypothesis",
+    "claude",
+    "167yearold",
+    "historic",
+    "ultrasound",
+    "78",
+    "48",
+    "percent",
+    "swedish",
+    "cardiac",
+    "death",
+    "inkling",
+    "2",
+    "mini",
+    "free",
+    "offline",
+    "seven",
+    "hidden"
   ]
 }

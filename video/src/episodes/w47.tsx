@@ -429,7 +429,6 @@ export const BEATS: Beat[] = [
   { t: at("news3", "inkling"), C: Laptop, sfx: "whoosh" },
   { t: at("news3", "smart"), C: PrivateData, sfx: "pop" },
   { t: segStart("loop"), C: Recap, sfx: "whoosh" },
-  { t: at("loop", "and"), C: LoopOut, sfx: "whoosh" },
 ];
 
 export const SEG_COLOR: Record<string, string> = { hook: C.green, news1: C.amber, news2: C.pink, news3: C.amber, loop: C.cyan };

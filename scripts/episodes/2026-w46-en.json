@@ -23,7 +23,7 @@
     },
     {
       "id": "loop",
-      "tts": "Tumors, privacy, DNA – all in seven days. So remember:"
+      "tts": "Tumors, privacy, DNA – all in seven days."
     }
   ],
   "display_map": {
@@ -34,8 +34,28 @@
     "seven": "7"
   },
   "keywords": [
-    "eight", "experts", "mayo", "clinic", "100", "52", "97", "percent",
-    "alphaproof", "signals", "encryption", "millions", "four", "weeks", "two", "both",
-    "alphagenome", "2", "dna", "twice", "tumors", "privacy", "seven"
+    "eight",
+    "experts",
+    "mayo",
+    "clinic",
+    "100",
+    "52",
+    "97",
+    "percent",
+    "alphaproof",
+    "signals",
+    "encryption",
+    "millions",
+    "four",
+    "weeks",
+    "two",
+    "both",
+    "alphagenome",
+    "2",
+    "dna",
+    "twice",
+    "tumors",
+    "privacy",
+    "seven"
   ]
 }

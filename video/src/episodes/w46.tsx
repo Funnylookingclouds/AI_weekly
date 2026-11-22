@@ -473,5 +473,4 @@ export const BEATS: Beat[] = [
   { t: at("news3", "alphagenome"), C: Helix, sfx: "whoosh" },
   { t: at("news3", "finding"), C: TwiceAsMany, sfx: "pop" },
   { t: segStart("loop"), C: Recap46, sfx: "whoosh" },
-  { t: at("loop", "so"), C: LoopOut46, sfx: "whoosh" },
 ];
