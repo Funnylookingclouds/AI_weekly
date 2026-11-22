@@ -115,6 +115,7 @@ const CaptionStrip: React.FC<{ ch: Character; t: number; group?: boolean }> = ({
       <span style={{ color: ch.accent, fontWeight: 900 }}>{group ? "ALL FOUR" : ch.name}: </span>
       {c.map((w, i) => {
         const on = t >= w.start, active = on && t < w.end + 0.05;
+        if (!w.display) return null;
         return <span key={i} style={{ opacity: on ? 1 : 0.35, color: w.keyword && on ? P.mustard : P.ink, borderBottom: active ? `5px solid ${P.mustard}` : "5px solid transparent" }}>{w.display} </span>;
       })}
     </div>
