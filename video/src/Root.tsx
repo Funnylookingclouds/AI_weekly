@@ -5,6 +5,7 @@ import { FPS } from "./timing";
 import * as B from "./brand/Brand";
 import { PresenterProto, PROTO_LEN } from "./proto/Presenter";
 import { JokeProto, JOKE_LEN } from "./proto/Joke";
+import { HockeyMascots } from "./proto/HockeyMascot";
 
 const V = { fps: FPS, width: 1080, height: 1920 } as const;
 
@@ -21,6 +22,7 @@ export const Root: React.FC = () => (
     <Composition id="ProposalsReel" component={B.ProposalsReel} durationInFrames={B.REEL_LEN} {...V} />
     <Composition id="PresenterProto" component={PresenterProto} durationInFrames={PROTO_LEN} {...V} />
     <Composition id="JokeProto" component={JokeProto} durationInFrames={JOKE_LEN} {...V} />
+    <Still id="HockeyMascots" component={HockeyMascots} width={1080} height={720} />
     <Still id="LogoSquare" component={B.LogoSquare} width={1080} height={1080} />
     <Still id="LogoAvatar" component={B.LogoAvatar} width={800} height={800} />
   </>
