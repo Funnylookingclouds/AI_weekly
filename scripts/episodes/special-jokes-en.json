@@ -1,17 +1,62 @@
 {
   "id": "special-jokes-en",
   "language": "en",
-  "voice_id": "cgSgspJ2msm6clMCkdW9",
+  "voice_id": "fBD19tfE58bkETeiwUoC",
   "model_id": "eleven_multilingual_v2",
-  "speed": 1.1,
+  "speed": 1.12,
   "segments": [
-    {"id": "hook", "tts": "Can AI actually be funny? Let's compare its jokes – then and now."},
-    {"id": "y23", "tts": "Back in 2023, researchers asked ChatGPT for a joke one thousand and eight times. Over ninety percent were the same twenty-five jokes. The number one hit: Why did the scarecrow win an award? Because he was outstanding in his field."},
-    {"id": "y23b", "tts": "Number two: Why did the tomato turn red? It saw the salad dressing."},
-    {"id": "y24", "tts": "One year later, a new study found most people rated ChatGPT's jokes funnier than human ones."},
-    {"id": "y26", "tts": "So here's a 2026 joke, written by AI: I told my AI to stop overthinking. It said: \"Sure – let me think about that for thirty seconds.\""},
-    {"id": "loop", "tts": "From scarecrows to self-roasts – AI comedy is growing up."}
+    {
+      "id": "hook",
+      "tts": "Can AI actually be funny? Let's compare its jokes – then and now."
+    },
+    {
+      "id": "y23",
+      "tts": "Back in 2023, researchers asked ChatGPT for a joke one thousand and eight times. Over ninety percent were the same twenty-five jokes. The number one hit: Why did the scarecrow win an award? Because he was outstanding in his field."
+    },
+    {
+      "id": "y23b",
+      "tts": "Number two: Why did the tomato turn red? It saw the salad dressing."
+    },
+    {
+      "id": "y24",
+      "tts": "One year later, a new study found most people rated ChatGPT's jokes funnier than human ones."
+    },
+    {
+      "id": "y26",
+      "tts": "So here's a 2026 joke, written by AI: I told my AI to stop overthinking. It said: \"Sure – let me think about that for thirty seconds.\""
+    },
+    {
+      "id": "loop",
+      "tts": "From scarecrows to self-roasts – AI comedy is growing up."
+    }
   ],
-  "display_map": {"ninety": "90", "twentyfive": "25", "thirty": "30", "two": "2"},
-  "keywords": ["funny", "2023", "chatgpt", "ninety", "percent", "twentyfive", "scarecrow", "outstanding", "tomato", "dressing", "funnier", "2026", "ai", "overthinking", "thirty", "seconds", "comedy"]
+  "display_map": {
+    "ninety": "90",
+    "twentyfive": "25",
+    "thirty": "30",
+    "two": "2"
+  },
+  "keywords": [
+    "funny",
+    "2023",
+    "chatgpt",
+    "ninety",
+    "percent",
+    "twentyfive",
+    "scarecrow",
+    "outstanding",
+    "tomato",
+    "dressing",
+    "funnier",
+    "2026",
+    "ai",
+    "overthinking",
+    "thirty",
+    "seconds",
+    "comedy"
+  ],
+  "voice_settings": {
+    "stability": 0.3,
+    "style": 0.6
+  }
 }
