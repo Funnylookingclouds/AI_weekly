@@ -1,0 +1,19 @@
+{
+  "id": "special-roast-en",
+  "language": "en",
+  "voice_id": "cgSgspJ2msm6clMCkdW9",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.1,
+  "voice_gap": 0.35,
+  "segments": [
+    {"id": "hook", "tts": "Has AI ever won a roast battle? Actually… yes. Sometimes."},
+    {"id": "facts", "tts": "In 2023, a ChatGPT-powered comedy bot reportedly beat a human comic at a roast battle in New York. But at a Toronto show pitting comics against an AI avatar, the AI won only two battles. And in San Francisco, a rapper out-roasted an AI Confucius."},
+    {"id": "settle", "tts": "So let's settle it. Ture versus me!"},
+    {"id": "ture1", "voice_id": "nPczCjzI2devNBz1zQrb", "tts": "Bouncy, you're so round, even your opinions have no edges."},
+    {"id": "bouncy1", "tts": "Oh yeah? Ture, your beard has more parameters than my whole model."},
+    {"id": "ture2", "voice_id": "nPczCjzI2devNBz1zQrb", "tts": "…Okay. That was good."},
+    {"id": "loop", "tts": "Final score: humans one, AI one. The roast war is officially a tie."}
+  ],
+  "display_map": {"two": "2", "one": "1"},
+  "keywords": ["roast", "yes", "2023", "reportedly", "beat", "new", "york", "toronto", "two", "san", "francisco", "confucius", "settle", "round", "edges", "beard", "parameters", "good", "tie", "one"]
+}
