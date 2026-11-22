@@ -1,34 +1,35 @@
-# YouTube upload – SPECIAL EDITION 4: The move that shocked the world (AlphaGo, Move 37) – relay, all four presenters
+# YouTube upload – SPECIAL EDITION 5: Can AI be funny? Jokes then vs. now – host: Bouncy
 
 ## Title options
-1. **The AI Move That Shocked the World (1 in 10,000) 🤯** ← recommended
-2. AlphaGo's Move 37: When AI Out-Thought a Champion
-3. AlphaGo vs Lee Sedol: The Move Nobody Expected
+1. **Can AI Actually Be Funny? 2023 vs 2026 😂** ← recommended
+2. ChatGPT Told the Same 25 Jokes 1,008 Times
+3. AI Jokes Then vs Now (They Got Better!)
 
 ## Description (copy everything between the lines)
 
 ---
-One move had a 1-in-10,000 chance – and an AI played it anyway. The story of AlphaGo vs Lee Sedol and the legendary Move 37, in under a minute. A special edition on AI history, presented by all four AI Bounce hosts. ⚫⚪🤖
+Can AI actually be funny? In 2023 ChatGPT told the same 25 jokes over and over – by 2024 people rated its jokes funnier than human ones. AI jokes then vs. now, hosted by our new mascot Bouncy. 😂🤖
 
-🏆 THE MATCH (March 2016, Seoul)
-Google DeepMind's AlphaGo played Lee Sedol – winner of 18 world titles – at Go, a game with about 10^170 possible board positions (far more than the ~10^80 atoms in the observable universe). Over 200 million people watched worldwide.
+😐 2023: THE SAME 25 JOKES
+Researchers asked ChatGPT (GPT-3.5) for a joke 1,008 times – over 90% of the answers were the same 25 jokes. The #1 hit: "Why did the scarecrow win an award? Because he was outstanding in his field." #2: the tomato that saw the salad dressing.
+🔗 https://aclanthology.org/2023.wassa-1.29
 
-⚫ MOVE 37 (Game 2)
-AlphaGo played a move with about a 1-in-10,000 chance of being played by a human. Commentators were stunned – but it helped AlphaGo win the game and upended centuries of Go wisdom.
+😮 2024: FUNNIER THAN HUMANS?
+A study in PLOS ONE found about 70% of participants rated ChatGPT's jokes funnier than jokes written by people (blind test).
+🔗 https://today.usc.edu/ai-jokes-chatgpt-humor-study/
 
-⚪ GOD'S TOUCH (Game 4)
-Lee Sedol struck back with Move 78, an equally rare 1-in-10,000 move nicknamed "God's Touch" – and won the game. AlphaGo took the match 4–1.
-🔗 https://deepmind.google/research/breakthroughs/alphago/
+😂 2026: A NEW JOKE, WRITTEN BY AI
+"I told my AI to stop overthinking. It said: 'Sure – let me think about that for 30 seconds.'" (Written by an AI for AI Bounce.)
 
-📅 Every week: what did AI solve? Plus special editions on AI history – short, jargon-free and under 60 seconds.
+📅 Every week: what did AI solve? Plus special editions – short, jargon-free and under 60 seconds.
 
 🔔 Subscribe to @AIBounce for a new "What did AI solve?" every week: https://www.youtube.com/@AIBounce
 
-#Shorts #AIBounce #AI #AlphaGo #AIHistory
+#Shorts #AIBounce #AI #AIJokes #ChatGPT
 ---
 
 ## Tags (paste into the Tags field)
-AlphaGo, Move 37, AlphaGo Move 37, Lee Sedol, AlphaGo vs Lee Sedol, God's Touch, Move 78, Go game AI, AI beats human, AI history, Google DeepMind, DeepMind AlphaGo, AI Go match 2016, AI creativity, history of AI, AI milestones, AI explained, machine learning, AI documentary, AI shorts, artificial intelligence, AI news, AI Bounce, AI special edition, what did AI solve
+AI jokes, can AI be funny, ChatGPT jokes, AI humor, AI comedy, funny AI, ChatGPT 25 jokes, scarecrow joke, outstanding in his field, AI vs humans jokes, AI joke of the week, AI then vs now, ChatGPT funny, AI 2026, AI explained, AI shorts, artificial intelligence, AI news, AI Bounce, Bouncy, AI mascot, what did AI solve, AI special edition, dad jokes AI, LLM humor
 
 ## Pinned comment
-Would you have called Move 37 a mistake too? 👇 (Source in the description.)
+Rate the 2026 joke from 1 to 10 – be honest 😂👇 (Sources are in the description.)

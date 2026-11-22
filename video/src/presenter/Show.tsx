@@ -5,9 +5,10 @@ import { FONT } from "../theme";
 import { WORDS, FPS, TOTAL_SEC } from "../timing";
 import { CHARACTERS, type Character, type Mood } from "./characters";
 import { P, HAND, onTwos, clamp } from "./kit";
+import { Bouncy, mouthOpen, type BouncyMood } from "./Bouncy";
 
 export type PlateMood = Mood | "group";
-export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character };
+export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood };
 export type Show = { presenter: Character; plates: Plate[] };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
@@ -106,7 +107,8 @@ const CaptionStrip: React.FC<{ ch: Character; t: number; group?: boolean }> = ({
     const prev = cur[cur.length - 1];
     if (prev && /^%/.test(w.display)) { cur[cur.length - 1] = { ...prev, display: prev.display + w.display, end: w.end }; }
     else cur.push(w);
-    if (/[.?!,:–]$/.test(w.word) || cur.length >= 7 || i === WORDS.length - 1) { chunks.push(cur); cur = []; }
+    const nextSeg = WORDS[i + 1]?.segment;
+    if (/[.?!,:–]$/.test(w.word) || cur.length >= 7 || i === WORDS.length - 1 || nextSeg !== w.segment) { chunks.push(cur); cur = []; }
   });
   const c = chunks.find((x, i) => t >= x[0].start - 0.1 && t < (chunks[i + 1]?.[0].start ?? 999) - 0.1);
   if (!c || t > c[c.length - 1].end + 0.8) return null;
@@ -148,7 +150,7 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
           <Sequence key={i} from={from} durationInFrames={Math.max(1, to - from)} name={`plate${i}`}>
             <Backdrop ch={ch} />
             <PlateSlot p={p} />
-            <Presenter ch={ch} mood={p.mood} i={i} t={t} />
+            {p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={p.bouncy} open={p.bouncy === "laugh" ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
             <Audio src={staticFile(i === 0 ? "whoosh.wav" : i % 3 === 0 ? "pop.wav" : "whoosh.wav")} volume={0.4} />
           </Sequence>
         );

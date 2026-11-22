@@ -10,7 +10,7 @@ import { onTwos, P } from "./kit";
 const tornCircle = (r: number, seed: string, n = 46, amp = 7) =>
   "M" + [...Array(n)].map((_, i) => { const a = (i / n) * Math.PI * 2; const rr = r - random(`${seed}${i}`) * amp; return `${Math.cos(a) * rr} ${Math.sin(a) * rr}`; }).join(" L") + " Z";
 
-export type BouncyMood = "talk" | "laugh" | "wink" | "wow";
+export type BouncyMood = "talk" | "laugh" | "wink" | "wow" | "bored";
 type W = { start: number; end: number; word: string };
 
 /** 0..1 mouth opening from word timings (syllable-ish flapping inside each word). */
@@ -75,6 +75,7 @@ export const Bouncy: React.FC<{ size?: number; mood?: BouncyMood; open?: number;
             [-39, 39].map((x, i) => (
               <g key={i}>
                 <ellipse cx={x} cy={-20} rx={22} ry={blink || (mood === "wink" && i === 1) ? 2.5 : 27} fill="#fff" stroke={P.ink} strokeWidth={5} />
+                {mood === "bored" && <path d={`M${x - 24} -22 A 24 27 0 0 1 ${x + 24} -22 Z`} fill="#7c3aed" stroke={P.ink} strokeWidth={5} />}
                 {!(blink || (mood === "wink" && i === 1)) && <><circle cx={x + lx} cy={-16} r={11} fill={P.ink} /><circle cx={x + lx - 4} cy={-21} r={3.5} fill="#fff" /></>}
               </g>
             ))
@@ -89,6 +90,7 @@ export const Bouncy: React.FC<{ size?: number; mood?: BouncyMood; open?: number;
             </g>
           )}
         </g>
+        {mood === "bored" && [0, 1, 2].map((k) => { const tt = ((f + k * 25) % 75) / 75; return <text key={k} x={90 + tt * 40} y={-90 - tt * 70} fontSize={30 + k * 8} fontWeight={900} fill={P.ink} opacity={1 - tt}>Z</text>; })}
       </svg>
     </div>
   );
