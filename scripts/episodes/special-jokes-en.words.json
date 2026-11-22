@@ -2,928 +2,928 @@
  {
   "word": "Can",
   "display": "Can",
-  "start": 0.058,
-  "end": 0.197,
+  "start": 0.07,
+  "end": 0.232,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "AI",
   "display": "AI",
-  "start": 0.255,
-  "end": 0.534,
+  "start": 0.29,
+  "end": 0.627,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "actually",
   "display": "actually",
-  "start": 0.592,
-  "end": 0.975,
+  "start": 0.673,
+  "end": 1.033,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "be",
   "display": "be",
-  "start": 1.022,
-  "end": 1.115,
+  "start": 1.08,
+  "end": 1.161,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "funny?",
   "display": "funny?",
-  "start": 1.149,
-  "end": 1.695,
+  "start": 1.219,
+  "end": 1.707,
   "segment": "hook",
   "keyword": true
  },
  {
   "word": "Let's",
   "display": "Let's",
-  "start": 2.438,
-  "end": 2.659,
+  "start": 2.334,
+  "end": 2.589,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "compare",
   "display": "compare",
-  "start": 2.694,
-  "end": 2.984,
+  "start": 2.635,
+  "end": 2.949,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "its",
   "display": "its",
-  "start": 3.019,
-  "end": 3.135,
+  "start": 2.972,
+  "end": 3.111,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "jokes",
   "display": "jokes",
-  "start": 3.193,
-  "end": 3.564,
+  "start": 3.181,
+  "end": 3.529,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "then",
   "display": "then",
-  "start": 4.342,
-  "end": 4.632,
+  "start": 3.831,
+  "end": 4.168,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "and",
   "display": "and",
-  "start": 4.702,
-  "end": 4.876,
+  "start": 4.354,
+  "end": 4.574,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "now.",
   "display": "now.",
-  "start": 4.934,
-  "end": 5.399,
+  "start": 4.644,
+  "end": 5.097,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "Back",
   "display": "Back",
-  "start": 6.037,
-  "end": 6.235,
+  "start": 5.55,
+  "end": 5.782,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "in",
   "display": "in",
-  "start": 6.281,
-  "end": 6.327,
+  "start": 5.828,
+  "end": 5.909,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "2023,",
   "display": "2023,",
-  "start": 6.374,
-  "end": 7.152,
+  "start": 5.979,
+  "end": 6.873,
   "segment": "y23",
   "keyword": true
  },
  {
   "word": "researchers",
   "display": "researchers",
-  "start": 7.21,
-  "end": 7.732,
+  "start": 6.92,
+  "end": 7.465,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "asked",
   "display": "asked",
-  "start": 7.802,
-  "end": 8.127,
+  "start": 7.535,
+  "end": 7.767,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "ChatGPT",
   "display": "ChatGPT",
-  "start": 8.208,
-  "end": 8.951,
+  "start": 7.848,
+  "end": 8.499,
   "segment": "y23",
   "keyword": true
  },
  {
   "word": "for",
   "display": "for",
-  "start": 9.091,
-  "end": 9.207,
+  "start": 8.615,
+  "end": 8.742,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "a",
   "display": "a",
-  "start": 9.253,
-  "end": 9.288,
+  "start": 8.789,
+  "end": 8.812,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "joke",
   "display": "joke",
-  "start": 9.346,
-  "end": 9.59,
+  "start": 8.858,
+  "end": 9.102,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "one",
   "display": "1,008",
-  "start": 9.636,
-  "end": 9.834,
+  "start": 9.149,
+  "end": 9.381,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "thousand",
   "display": "",
-  "start": 9.88,
-  "end": 10.24,
+  "start": 9.427,
+  "end": 9.845,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "and",
   "display": "",
-  "start": 10.286,
-  "end": 10.356,
+  "start": 9.903,
+  "end": 9.996,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "eight",
   "display": "",
-  "start": 10.403,
-  "end": 10.577,
+  "start": 10.101,
+  "end": 10.333,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "times.",
   "display": "times.",
-  "start": 10.6,
-  "end": 11.192,
+  "start": 10.368,
+  "end": 10.925,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "Over",
   "display": "Over",
-  "start": 11.54,
-  "end": 11.784,
+  "start": 11.32,
+  "end": 11.564,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "ninety",
   "display": "90",
-  "start": 11.865,
-  "end": 12.121,
+  "start": 11.645,
+  "end": 11.9,
   "segment": "y23",
   "keyword": true
  },
  {
   "word": "percent",
   "display": "percent",
-  "start": 12.179,
-  "end": 12.492,
+  "start": 11.947,
+  "end": 12.26,
   "segment": "y23",
   "keyword": true
  },
  {
   "word": "were",
   "display": "were",
-  "start": 12.539,
-  "end": 12.643,
+  "start": 12.307,
+  "end": 12.434,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "the",
   "display": "the",
-  "start": 12.678,
-  "end": 12.748,
+  "start": 12.481,
+  "end": 12.55,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "same",
   "display": "same",
-  "start": 12.794,
-  "end": 13.073,
+  "start": 12.585,
+  "end": 12.783,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "twenty-five",
   "display": "twenty-five",
-  "start": 13.108,
-  "end": 13.642,
+  "start": 12.817,
+  "end": 13.375,
   "segment": "y23",
   "keyword": true
  },
  {
   "word": "jokes.",
   "display": "jokes.",
-  "start": 13.688,
-  "end": 14.303,
+  "start": 13.421,
+  "end": 13.99,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "The",
   "display": "The",
-  "start": 14.559,
-  "end": 14.675,
+  "start": 14.443,
+  "end": 14.559,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "number",
   "display": "number",
-  "start": 14.721,
-  "end": 14.919,
+  "start": 14.617,
+  "end": 14.861,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "one",
   "display": "one",
-  "start": 14.977,
-  "end": 15.093,
+  "start": 14.919,
+  "end": 15.058,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "hit:",
   "display": "hit:",
-  "start": 15.128,
-  "end": 15.546,
+  "start": 15.093,
+  "end": 15.523,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "Why",
   "display": "Why",
-  "start": 15.766,
-  "end": 15.929,
+  "start": 16.057,
+  "end": 16.3,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "did",
   "display": "did",
-  "start": 15.975,
-  "end": 16.08,
+  "start": 16.358,
+  "end": 16.497,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "the",
   "display": "the",
-  "start": 16.103,
-  "end": 16.173,
+  "start": 16.532,
+  "end": 16.614,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "scarecrow",
   "display": "scarecrow",
-  "start": 16.219,
-  "end": 16.684,
+  "start": 16.66,
+  "end": 17.148,
   "segment": "y23",
   "keyword": true
  },
  {
   "word": "win",
   "display": "win",
-  "start": 16.753,
-  "end": 16.869,
+  "start": 17.206,
+  "end": 17.391,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "an",
   "display": "an",
-  "start": 16.916,
-  "end": 16.962,
+  "start": 17.438,
+  "end": 17.496,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "award?",
   "display": "award?",
-  "start": 16.997,
-  "end": 17.531,
+  "start": 17.542,
+  "end": 18.007,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "Because",
   "display": "Because",
-  "start": 18.077,
-  "end": 18.332,
+  "start": 18.46,
+  "end": 18.773,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "he",
   "display": "he",
-  "start": 18.355,
-  "end": 18.402,
+  "start": 18.808,
+  "end": 18.866,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "was",
   "display": "was",
-  "start": 18.437,
-  "end": 18.541,
+  "start": 18.912,
+  "end": 19.04,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "outstanding",
   "display": "outstanding",
-  "start": 18.599,
-  "end": 19.215,
+  "start": 19.098,
+  "end": 19.702,
   "segment": "y23",
   "keyword": true
  },
  {
   "word": "in",
   "display": "in",
-  "start": 19.261,
-  "end": 19.307,
+  "start": 19.748,
+  "end": 19.795,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "his",
   "display": "his",
-  "start": 19.342,
-  "end": 19.424,
+  "start": 19.841,
+  "end": 19.934,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "field.",
   "display": "field.",
-  "start": 19.482,
-  "end": 19.992,
+  "start": 19.98,
+  "end": 20.352,
   "segment": "y23",
   "keyword": false
  },
  {
   "word": "Number",
   "display": "Number",
-  "start": 20.735,
-  "end": 20.968,
+  "start": 20.979,
+  "end": 21.269,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "two:",
   "display": "2:",
-  "start": 21.014,
-  "end": 21.548,
+  "start": 21.316,
+  "end": 21.884,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "Why",
   "display": "Why",
-  "start": 21.896,
-  "end": 22.059,
+  "start": 22.035,
+  "end": 22.256,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "did",
   "display": "did",
-  "start": 22.105,
-  "end": 22.222,
+  "start": 22.314,
+  "end": 22.465,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "the",
   "display": "the",
-  "start": 22.245,
-  "end": 22.314,
+  "start": 22.511,
+  "end": 22.581,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "tomato",
   "display": "tomato",
-  "start": 22.361,
-  "end": 22.674,
+  "start": 22.628,
+  "end": 22.976,
   "segment": "y23b",
   "keyword": true
  },
  {
   "word": "turn",
   "display": "turn",
-  "start": 22.732,
-  "end": 22.93,
+  "start": 23.022,
+  "end": 23.208,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "red?",
   "display": "red?",
-  "start": 22.988,
-  "end": 23.417,
+  "start": 23.266,
+  "end": 23.696,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "It",
   "display": "It",
-  "start": 24.16,
-  "end": 24.276,
+  "start": 24.148,
+  "end": 24.311,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "saw",
   "display": "saw",
-  "start": 24.323,
-  "end": 24.462,
+  "start": 24.369,
+  "end": 24.566,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "the",
   "display": "the",
-  "start": 24.509,
-  "end": 24.578,
+  "start": 24.613,
+  "end": 24.694,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "salad",
   "display": "salad",
-  "start": 24.636,
-  "end": 24.938,
+  "start": 24.764,
+  "end": 25.077,
   "segment": "y23b",
   "keyword": false
  },
  {
   "word": "dressing.",
   "display": "dressing.",
-  "start": 24.961,
-  "end": 25.53,
+  "start": 25.112,
+  "end": 25.669,
   "segment": "y23b",
   "keyword": true
  },
  {
   "word": "One",
   "display": "One",
-  "start": 26.169,
-  "end": 26.331,
+  "start": 26.389,
+  "end": 26.587,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "year",
   "display": "year",
-  "start": 26.366,
-  "end": 26.494,
+  "start": 26.61,
+  "end": 26.761,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "later,",
   "display": "later,",
-  "start": 26.552,
-  "end": 26.877,
+  "start": 26.807,
+  "end": 27.283,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "a",
   "display": "a",
-  "start": 26.9,
-  "end": 26.947,
+  "start": 27.469,
+  "end": 27.539,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "new",
   "display": "new",
-  "start": 27.016,
-  "end": 27.156,
+  "start": 27.643,
+  "end": 27.771,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "study",
   "display": "study",
-  "start": 27.202,
-  "end": 27.469,
+  "start": 27.829,
+  "end": 28.096,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "found",
   "display": "found",
-  "start": 27.527,
-  "end": 27.725,
+  "start": 28.177,
+  "end": 28.351,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "most",
   "display": "most",
-  "start": 27.771,
-  "end": 27.945,
+  "start": 28.398,
+  "end": 28.607,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "people",
   "display": "people",
-  "start": 27.98,
-  "end": 28.247,
+  "start": 28.653,
+  "end": 28.885,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "rated",
   "display": "rated",
-  "start": 28.305,
-  "end": 28.549,
+  "start": 28.932,
+  "end": 29.199,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "ChatGPT's",
   "display": "ChatGPT's",
-  "start": 28.584,
-  "end": 29.246,
+  "start": 29.28,
+  "end": 30.035,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "jokes",
   "display": "jokes",
-  "start": 29.315,
-  "end": 29.605,
+  "start": 30.104,
+  "end": 30.429,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "funnier",
   "display": "funnier",
-  "start": 29.663,
-  "end": 30.012,
+  "start": 30.58,
+  "end": 30.929,
   "segment": "y24",
   "keyword": true
  },
  {
   "word": "than",
   "display": "than",
-  "start": 30.07,
-  "end": 30.198,
+  "start": 30.975,
+  "end": 31.103,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "human",
   "display": "human",
-  "start": 30.256,
-  "end": 30.523,
+  "start": 31.149,
+  "end": 31.393,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "ones.",
   "display": "ones.",
-  "start": 30.581,
-  "end": 31.138,
+  "start": 31.451,
+  "end": 31.834,
   "segment": "y24",
   "keyword": false
  },
  {
   "word": "So",
   "display": "So",
-  "start": 31.777,
-  "end": 31.939,
+  "start": 32.171,
+  "end": 32.31,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "here's",
   "display": "here's",
-  "start": 31.997,
-  "end": 32.264,
+  "start": 32.357,
+  "end": 32.566,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "a",
   "display": "a",
-  "start": 32.299,
-  "end": 32.322,
+  "start": 32.612,
+  "end": 32.647,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "2026",
   "display": "2026",
-  "start": 32.38,
-  "end": 33.112,
+  "start": 32.751,
+  "end": 33.68,
   "segment": "y26",
   "keyword": true
  },
  {
   "word": "joke,",
   "display": "joke,",
-  "start": 33.17,
-  "end": 33.599,
+  "start": 33.75,
+  "end": 34.063,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "written",
   "display": "written",
-  "start": 33.855,
-  "end": 34.157,
+  "start": 34.11,
+  "end": 34.365,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "by",
   "display": "by",
-  "start": 34.215,
-  "end": 34.331,
+  "start": 34.412,
+  "end": 34.528,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "AI:",
   "display": "AI:",
-  "start": 34.389,
-  "end": 34.958,
+  "start": 34.597,
+  "end": 35.166,
   "segment": "y26",
   "keyword": true
  },
  {
   "word": "I",
   "display": "I",
-  "start": 35.701,
-  "end": 35.759,
+  "start": 35.561,
+  "end": 35.642,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "told",
   "display": "told",
-  "start": 35.863,
-  "end": 36.038,
+  "start": 35.782,
+  "end": 35.979,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "my",
   "display": "my",
-  "start": 36.084,
-  "end": 36.177,
+  "start": 36.025,
+  "end": 36.118,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "AI",
   "display": "AI",
-  "start": 36.235,
-  "end": 36.456,
+  "start": 36.188,
+  "end": 36.443,
   "segment": "y26",
   "keyword": true
  },
  {
   "word": "to",
   "display": "to",
-  "start": 36.525,
-  "end": 36.583,
+  "start": 36.49,
+  "end": 36.571,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "stop",
   "display": "stop",
-  "start": 36.641,
-  "end": 36.873,
+  "start": 36.629,
+  "end": 36.861,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "overthinking.",
   "display": "overthinking.",
-  "start": 36.92,
-  "end": 37.651,
+  "start": 36.919,
+  "end": 37.57,
   "segment": "y26",
   "keyword": true
  },
  {
   "word": "It",
   "display": "It",
-  "start": 37.837,
-  "end": 37.976,
+  "start": 37.616,
+  "end": 37.767,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "said:",
   "display": "said:",
-  "start": 38.034,
-  "end": 38.429,
+  "start": 37.813,
+  "end": 38.185,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "\"Sure",
   "display": "\"Sure",
-  "start": 38.836,
-  "end": 39.23,
+  "start": 38.243,
+  "end": 38.754,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "let",
   "display": "let",
-  "start": 39.66,
-  "end": 39.776,
+  "start": 39.207,
+  "end": 39.357,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "me",
   "display": "me",
-  "start": 39.811,
-  "end": 39.869,
+  "start": 39.404,
+  "end": 39.462,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "think",
   "display": "think",
-  "start": 39.904,
-  "end": 40.055,
+  "start": 39.497,
+  "end": 39.671,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "about",
   "display": "about",
-  "start": 40.089,
-  "end": 40.275,
+  "start": 39.706,
+  "end": 39.903,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "that",
   "display": "that",
-  "start": 40.31,
-  "end": 40.473,
+  "start": 39.938,
+  "end": 40.077,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "for",
   "display": "for",
-  "start": 40.531,
-  "end": 40.647,
+  "start": 40.124,
+  "end": 40.251,
   "segment": "y26",
   "keyword": false
  },
  {
   "word": "thirty",
   "display": "30",
-  "start": 40.705,
-  "end": 40.96,
+  "start": 40.321,
+  "end": 40.576,
   "segment": "y26",
   "keyword": true
  },
  {
   "word": "seconds.\"",
   "display": "seconds.\"",
-  "start": 41.018,
-  "end": 41.645,
+  "start": 40.623,
+  "end": 41.215,
   "segment": "y26",
   "keyword": true
  },
  {
   "word": "From",
   "display": "From",
-  "start": 42.655,
-  "end": 42.841,
+  "start": 41.505,
+  "end": 41.679,
   "segment": "loop",
   "keyword": false
  },
  {
   "word": "scarecrows",
   "display": "scarecrows",
-  "start": 42.899,
-  "end": 43.456,
+  "start": 41.726,
+  "end": 42.318,
   "segment": "loop",
   "keyword": false
  },
  {
   "word": "to",
   "display": "to",
-  "start": 43.514,
-  "end": 43.596,
+  "start": 42.364,
+  "end": 42.446,
   "segment": "loop",
   "keyword": false
  },
  {
   "word": "self-roasts",
   "display": "self-roasts",
-  "start": 43.654,
-  "end": 44.362,
+  "start": 42.515,
+  "end": 43.131,
   "segment": "loop",
   "keyword": false
  },
  {
   "word": "AI",
   "display": "AI",
-  "start": 44.501,
-  "end": 44.745,
+  "start": 43.537,
+  "end": 43.827,
   "segment": "loop",
   "keyword": false
  },
  {
   "word": "comedy",
   "display": "comedy",
-  "start": 44.803,
-  "end": 45.175,
+  "start": 43.885,
+  "end": 44.199,
   "segment": "loop",
   "keyword": true
  },
  {
   "word": "is",
   "display": "is",
-  "start": 45.221,
-  "end": 45.302,
+  "start": 44.245,
+  "end": 44.338,
   "segment": "loop",
   "keyword": false
  },
  {
   "word": "growing",
   "display": "growing",
-  "start": 45.349,
-  "end": 45.627,
+  "start": 44.419,
+  "end": 44.768,
   "segment": "loop",
   "keyword": false
  },
  {
   "word": "up.",
   "display": "up.",
-  "start": 45.685,
-  "end": 45.929,
+  "start": 44.826,
+  "end": 45.128,
   "segment": "loop",
   "keyword": false
  }
