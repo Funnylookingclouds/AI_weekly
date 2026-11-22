@@ -112,7 +112,7 @@ const CaptionStrip: React.FC<{ ch: Character; t: number; group?: boolean }> = ({
   if (!c || t > c[c.length - 1].end + 0.8) return null;
   return (
     <div style={{ position: "absolute", left: 60, right: 170, top: 1010, background: "#fffdf7", borderLeft: `12px solid ${ch.accent}`, borderRadius: 8, padding: "22px 28px", boxShadow: "0 10px 30px #0006", fontFamily: FONT, fontSize: 44, fontWeight: 800, color: P.ink, lineHeight: 1.25 }}>
-      <span style={{ color: ch.accent, fontWeight: 900 }}>{group ? "ALL FOUR" : ch.name}: </span>
+      {/* speaker names intentionally not shown (owner preference); accent bar still marks who speaks */}
       {c.map((w, i) => {
         const on = t >= w.start, active = on && t < w.end + 0.05;
         if (!w.display) return null;

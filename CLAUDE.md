@@ -33,7 +33,7 @@ When I ask you to create this week's video (or give you a list of stories), alwa
 * **Pacing:** Change visual element, camera angle or text card every 2–3 seconds.
 * **Visual style:** Paper-cutout / hand-drawn look from the owner's other channel – torn cream paper boards (`#f3ead6`), ink (`#2b2622`), teal, mustard and brick-red accents, handwritten labels (Caveat), stop-motion movement on twos (~12 fps). Building blocks in `video/src/presenter/kit.tsx`. Intro/outro keep the neon AI Bounce brand look.
 * **Board layout:** Board (960×760) at the top, caption strip under it, presenter below. Every board has a small red `AI BOUNCE · WK NN` tag and a source line at the bottom.
-* **Subtitles:** Caption strip in the style of the other channel – `NAME: sentence…`, the presenter's accent colour as the left bar, current word underlined, keywords in mustard. Kept clear of YouTube's UI on the right and bottom.
+* **Subtitles:** Caption strip in the style of the other channel – just the sentence, **no speaker name** (no "RUNE:" prefix); the presenter's accent colour as the left bar shows who speaks, current word underlined, keywords in mustard. Kept clear of YouTube's UI on the right and bottom.
 
 ## 4c. Presenters (rotating weekly)
 * **Characters** (artwork owned by the channel): **Rune** (young man, glasses, sports shirt), **Ture** (big bearded man, mustard vest), **Saga** (young woman, blonde braids, navy coat), **Cara** (older woman, grey curls, green cardigan, mustard scarf). Captions show the plain first name.

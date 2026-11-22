@@ -1,0 +1,14 @@
+{
+  "id": "joke-proto",
+  "language": "en",
+  "voice_id": "cgSgspJ2msm6clMCkdW9",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.05,
+  "segments": [
+    {"id": "intro", "tts": "AI joke of the week!"},
+    {"id": "setup", "tts": "Why did the AI cross the road?"},
+    {"id": "punch", "tts": "Because it was trained on chicken data!"}
+  ],
+  "display_map": {},
+  "keywords": ["joke", "road", "chicken", "data"]
+}

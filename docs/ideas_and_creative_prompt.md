@@ -86,3 +86,21 @@ SCRIPT:
 
 ### Why the pose prompt matters
 New poses generated on a **plain light-grey background with the torn paper border** drop straight into `scripts/cutout_characters.py` (the flood-fill keyer) – clean cutouts, no manual masking. Most wanted next: **pointing at the board, waving hello/bye, holding a sign, thumbs-up, shocked face.**
+
+## C. Fun & audience-magnet ideas (added 2026-11-22)
+
+### New mascot: **Bouncy** (built – `video/src/presenter/Bouncy.tsx`)
+The AI Bounce logo ball come alive: glowing cyan→purple ball inside a round torn paper-sticker border, big googly eyes that look around and blink, noodle arms waving, squash-and-stretch bouncing, mouth that flaps on every spoken word, moods `talk` / `wow` / `wink` / `laugh` (squinty eyes + tears of joy). Voice: ElevenLabs "Jessica" (playful). Never serious, always happy – the comic relief next to the four presenters.
+* Prototype: `output/proto/AIBounce_joke_of_the_week_prototype.mp4` (9.3 s).
+
+### Segment ideas
+1. **AI joke of the week (Bouncy)** – setup on the board, punchline slams in, "BA-DUM-TSS!" + rimshot + confetti, Bouncy laughs. ~7–9 s at the end, before the outro.
+2. **Bouncy's reaction cam** – Bouncy pops into a corner on the biggest number of the week with a "WOW" face + comic burst. 1 s, no extra script.
+3. **True or False?** – viewers guess before the reveal; giant TRUE/FALSE rubber stamp. Great for comments.
+4. **AI fail of the week** – a real, sourced funny AI mistake (needs verification every week).
+5. **Then vs. Now** – split board "2016 vs 2026" with a paper wipe between the halves.
+6. **Guess the number** – countdown dial, "comment your guess", reveal next episode (retention + return viewers).
+
+### Image prompt for a paper version of Bouncy (if you want him hand-drawn like the other four)
+"Full-body illustration of a cheerful round mascot character: a glowing ball with a cyan-to-purple gradient, big round googly eyes, rosy pink cheeks, wide open happy smile, thin noodle arms waving, tiny feet, hand-drawn ink line art with soft watercolour shading, paper-sticker style with a thick torn cream paper border, on a plain flat light-grey background (#d4d7dc), no text, centred, 16:9."
+(Ask for extra sheets: laughing, surprised, winking, thumbs-up, holding a sign.)
