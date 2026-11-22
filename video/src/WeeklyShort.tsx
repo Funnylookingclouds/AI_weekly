@@ -3,7 +3,12 @@ import { AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame
 import { C, FONT } from "./theme";
 import { WORDS, FPS, TOTAL_SEC } from "./timing";
 import { IntroWarp, OutroLoading, SEG as BRAND_SEG, INTRO_SEG } from "./brand/Brand";
-import { BEATS, WEEK_LABEL, SEG_COLOR } from "./episode";
+import * as EP from "./episode";
+import { PresenterMain, type Show } from "./presenter/Show";
+import type { Beat } from "./types";
+const BEATS: Beat[] = (EP as { BEATS?: Beat[] }).BEATS ?? [];
+const SHOW: Show | undefined = (EP as { SHOW?: Show }).SHOW;
+const { WEEK_LABEL, SEG_COLOR } = EP;
 import { SceneTransition, TRANSITIONS, GlitchDefs, Shockwave, LightSweep, Particles, Overlay, useBeatPulse } from "./Effects";
 
 const segOf = (t: number) => [...WORDS].reverse().find((w) => w.start <= t + 0.01)?.segment ?? "hook";
@@ -139,7 +144,7 @@ export const MAIN_FRAMES = Math.ceil(TOTAL_SEC * FPS);
 export const WeeklyShort: React.FC = () => (
   <AbsoluteFill style={{ background: C.bg }}>
     <Sequence durationInFrames={INTRO_FRAMES} name="Intro"><IntroWarp /></Sequence>
-    <Sequence from={INTRO_FRAMES} durationInFrames={MAIN_FRAMES} name="Main"><Main /></Sequence>
+    <Sequence from={INTRO_FRAMES} durationInFrames={MAIN_FRAMES} name="Main">{SHOW ? <PresenterMain show={SHOW} /> : <Main />}</Sequence>
     <Sequence from={INTRO_FRAMES + MAIN_FRAMES - XFADE} durationInFrames={OUTRO_FRAMES} name="Outro"><FadeIn frames={XFADE}><OutroLoading /></FadeIn></Sequence>
     {/* music runs under the news part and the outro */}
     <Sequence from={INTRO_FRAMES - 12}><Audio src={staticFile("music.wav")} /></Sequence>

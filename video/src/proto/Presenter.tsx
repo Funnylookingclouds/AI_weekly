@@ -193,7 +193,7 @@ const PlateTeam: React.FC = () => {
 // ---------------------------------------------------------------------------
 type Pose = "body" | "think" | "watch" | "smile";
 const POSE_SRC: Record<Pose, string> = {
-  body: "chars/runejr_body.png", think: "chars/runejr_head_think.png", watch: "chars/runejr_head_watch.png", smile: "chars/runejr_head_smile.png",
+  body: "chars/rune_body.png", think: "chars/rune_think.png", watch: "chars/rune_watch.png", smile: "chars/rune_smile.png",
 };
 const Presenter: React.FC<{ pose: Pose; talk: number }> = ({ pose, talk }) => {
   const f = useCurrentFrame();
