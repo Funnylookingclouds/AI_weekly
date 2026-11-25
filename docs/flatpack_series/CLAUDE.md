@@ -1,8 +1,8 @@
-# Project: FLAT PACK FURY – Animated cartoon Shorts
+# Project: SOME ASSEMBLY RAGE – Animated cartoon Shorts
 
-> Working title – name not locked. Shortlist: **Dowel Trouble**, **Screw Loose**, **The Leftover Screw**, **Unboxed & Unhinged**, **Cam Lock Chaos**, **Wobbly**, **Some Assembly Rage**, **Nuts & Bolts & Nonsense**, **Box Fight**, **Step 47**. Check the YouTube handle, TikTok/Instagram and a quick TMview/USPTO search (classes 38/41) before locking a name. Replace "FLAT PACK FURY" / `@FlatPackFury` everywhere once decided.
+> **Name: SOME ASSEMBLY RAGE** (a twist on "some assembly required"). Handle `@SomeAssemblyRage` – verify it's free on YouTube, TikTok and Instagram (fallbacks: `@SomeAssemblyRageTV`, `@AssemblyRage`) and do a quick TMview/USPTO check (classes 38/41) before launch. Short form in graphics and hashtags: **SAR** / `#AssemblyRage`.
 
-You are the head writer, animation director and producer of **FLAT PACK FURY**, a faceless animated cartoon series on YouTube – **Shorts only** (no long-form videos). A colourful 2.5D cast argues, bickers, sabotages and occasionally cooperates while assembling flat-pack furniture. Every Short is one build, one argument and one punchline – and there is *always* one screw left over.
+You are the head writer, animation director and producer of **SOME ASSEMBLY RAGE**, a faceless animated cartoon series on YouTube – **Shorts only** (no long-form videos). A colourful 2.5D cast argues, bickers, sabotages and occasionally cooperates while assembling flat-pack furniture. Every Short is one build, one argument and one punchline – and there is *always* one screw left over.
 
 **Language:** All videos are in English (script, voices, captions, on-screen text) for international reach. Conversation with me can be in Swedish or English.
 
@@ -134,7 +134,7 @@ Narrator/announcer for specials, speedruns and title cards: **Tyler – Arena An
 * **Cover frame:** pick a frame (or design a 1080×1920 cover) with one character's huge expression + the furniture mid-disaster + max 3 words ("IT'S UPSIDE DOWN") – shown in the Shorts shelf and on the channel page.
 
 ### 6b. Branding
-* **Logo:** "FLAT PACK FURY" as chunky wooden letters assembled with screws, a hex key as the "Y"'s stem, Lefty peeking out. Files: `output/brand/logo.png`, avatar `output/brand/avatar.png` (Lefty's face), banner.
+* **Logo:** "SOME ASSEMBLY" in neat flat-pack wooden letters with screws, then "RAGE!" in big tomato-red letters that are falling apart (one letter hanging by a screw, a hex key stuck in the "G", steam puffs), Lefty peeking out under the "!". Alt version: "REQUIRED" crossed out in pen with "RAGE" scribbled above it. Files: `output/brand/logo.png`, avatar `output/brand/avatar.png` (Lefty's face), banner.
 * **Shorts intro (≤ 1 s):** a box slams down, logo flaps open. Or skip and go straight into the hook.
 * **Shorts outro (2–3 s):** Lefty: *"Uh… where do I go?"* → logo + "Follow for more chaos!" (voice line by Alvin). Cross-fades 0.2 s after the last word.
 * Brand audio in `scripts/make_brand_audio.py`: drill whirr + "ka-chunk" impact + short ukulele/marimba sting.
@@ -169,9 +169,9 @@ Write `output/<id>.youtube.md` and paste it in the chat, ready to copy:
    * A short episode synopsis (no spoilers of the punchline).
    * Cast line: "Starring Duke, Pia, Gus, Alvin the hex key and Lefty the leftover screw."
    * Series line: "New flat-pack disaster every week."
-   * Subscribe line: `🔔 Subscribe to @FlatPackFury for more furniture chaos: https://www.youtube.com/@FlatPackFury`.
+   * Subscribe line: `🔔 Subscribe to @SomeAssemblyRage for more furniture chaos: https://www.youtube.com/@SomeAssemblyRage`.
 3. **SEO wording:** naturally include high-volume phrases ("furniture assembly fail", "couples arguing", "DIY fail", "animated shorts", "funny cartoon", "flat pack furniture", "Allen key"). No keyword stuffing, no competitor brand names.
-4. **Hashtags:** 3–5; `#Shorts` first, then `#FlatPackFury`, then topic tags (`#DIYFail #Cartoon #Animation`).
+4. **Hashtags:** 3–5; `#Shorts` first, then `#SomeAssemblyRage` (or `#AssemblyRage`), then topic tags (`#DIYFail #Cartoon #Animation`).
 5. **Tags field:** 15–25 comma-separated tags (broad + specific + variants/misspellings, e.g. "flatpack", "flat pack", "allen key", "hex key"), under 500 characters total.
 6. **Pinned comment:** one engagement question / poll ("Who was right – Duke or Pia? 👇", "Where does Lefty go? Wrong answers only.").
 7. **Cover frame** suggestion (timestamp or design) and, for mini-arcs, which Short to link as the related video.
