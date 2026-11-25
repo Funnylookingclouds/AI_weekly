@@ -1,37 +1,37 @@
-# YouTube upload – Week 48 (Nov 23–29, 2026) – presenter: Wattson (new host)
+# YouTube upload – Week 43 (Oct 19–25, 2026) – ensemble: Lumi, Cloudy, Pixel, Chip, Wattson
 
 ## Title options
-1. **The AI Riemann Proof Just Passed Its Computer Check 🔋** ← recommended
-2. AI Riemann Proof: Certified Correct? (Claim Check)
-3. What Did AI Solve This Week? Math, Proteins & Medicine
+1. **AI Just Doubled Long-Range Weather Forecasts 🌦️** ← recommended
+2. AI Can Now Predict Weather 6 Weeks Ahead?!
+3. What Did AI Solve This Week? Weather, DNA & Robot Labs
 
 ## Description (copy everything between the lines)
 
 ---
-The AI-assisted Riemann Hypothesis proof just passed its computer check – plus GPT-6 designs real proteins and big pharma says AI is speeding up drug discovery. The latest AI news this week, presented by our grumpy new host Wattson. 🔋🧮🧬
+AI just doubled the skill of weather forecasts two to six weeks ahead – plus an open AI you can chat with about DNA, and robot chemistry labs hunting for new drugs. The latest AI news this week, presented by the whole AI Bounce crew. 🌦️🧬🤖
 
-🧮 1. CLAIM CHECK: THE RIEMANN PROOF (LEAN-CERTIFIED, HUMAN REVIEW ONGOING)
-On Nov 21, the Lean FRO and the Mathlib Initiative said the computer-checked (Lean) proof of the Riemann Hypothesis by Anthropic mathematician Levent Alpöge, made with Claude, is correct. Top mathematicians reacted with excitement – and some skepticism about the write-up – and human mathematical review is still in progress. (Disclosure: Claude is made by Anthropic, which also makes the assistant that produced this video.)
-🔗 https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/
-🔗 https://www.nature.com/articles/d41586-026-03812-7
+🌦️ 1. AI DOUBLES LONG-RANGE WEATHER FORECAST SKILL
+A study in Nature (published Oct 14) shows a machine-learning method that corrects the errors of existing forecast models – reported to double forecast skill for the hard two-to-six-week window. That could mean earlier warnings for heat waves and floods. Researchers note it still needs to hold up across seasons.
+🔗 https://www.nature.com/articles/d41586-026-03077-0
+🔗 https://phys.org/news/2026-10-ai-weather-power-weeks.html
 
-🧬 2. GPT-6 DESIGNS PROTEINS (OPENAI CLAIM, PREPRINT)
-OpenAI says its GPT-6 models can design proteins using general reasoning and code. In wet-lab tests by partner Onava, 35 of 322 designed minibinders (about 10.9%) showed binding to their targets. Not yet peer-reviewed.
-🔗 https://www.unite.ai/openai-reports-gpt-6-designs-proteins-with-reasoning-and-code/
+🧬 2. CARBON-X: CHAT WITH DNA
+Hugging Face released Carbon-X, an open 14.8B-parameter model that lets researchers ask questions about DNA in plain English – e.g. what a mutation might do – and it runs locally on a laptop. Benchmarks are self-reported and it hasn't been validated in wet-lab experiments yet.
+🔗 https://www.techrepublic.com/article/news-hugging-face-carbon-x-ai-dna-analysis/
 
-💊 3. AI IN DRUG DISCOVERY
-Big pharma companies like Novartis and Bristol Myers say AI is shrinking early drug-discovery timelines – while an Eli Lilly executive warns that claims of AI curing all disease are overstated.
-🔗 https://www.investing.com/news/stock-market-news/big-pharma-with-eye-on-anthropic-says-ai-is-shrinking-drug-discovery-timelines-5041287
+🤖 3. ROBOT CHEMISTRY LABS
+OpenAI's former science chief Kevin Weil launched Warp Sciences with a reported $215 million to build AI-and-robotics chemistry labs for drug discovery.
+🔗 https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/
 
-📅 Every week: what did AI solve? Short, jargon-free AI news this week – AI breakthroughs, AI math, AI in medicine, explained in under 60 seconds.
+📅 Every week: what did AI solve? Short, jargon-free AI news this week – AI breakthroughs, AI science and AI in medicine, explained in under 60 seconds.
 
 🔔 Subscribe to @AIBounce for a new "What did AI solve?" every week: https://www.youtube.com/@AIBounce
 
-#Shorts #AIBounce #AI #AINews #RiemannHypothesis
+#Shorts #AIBounce #AI #AINews #WeatherForecast
 ---
 
 ## Tags (paste into the Tags field)
-AI news, AI news this week, latest AI news, AI breakthroughs, what did AI solve, Riemann Hypothesis, Riemann Hypothesis proof, Riemann proof verified, Lean proof, Mathlib, Claude AI, AI math, GPT-6, OpenAI protein design, AI protein design, AI biology, AI drug discovery, AI in medicine, Novartis AI, Eli Lilly AI, AI claim check, artificial intelligence, AI Bounce, Wattson, AI shorts
+AI news, AI news this week, latest AI news, AI breakthroughs, what did AI solve, AI weather forecast, AI weather prediction, long range forecast, subseasonal forecast, machine learning weather, Nature study AI, Carbon-X, Hugging Face, chat with DNA, AI DNA model, AI genetics, open source AI, Warp Sciences, Kevin Weil, robot lab, AI drug discovery, AI science, artificial intelligence, AI Bounce, AI shorts
 
 ## Pinned comment
-Should Wattson get excited yet – or wait for peer review? 🔋👇 (Sources in the description.)
+Who should host next week – Lumi, Cloudy, Pixel, Chip or Wattson? 👇 (Sources in the description.)
