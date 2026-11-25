@@ -15,13 +15,13 @@ const SRC_META = "The Information via Interesting Engineering · unconfirmed by 
 const MONO = "DejaVu Sans Mono, monospace";
 
 // ---------- small ink drawings ----------
-const Folder: React.FC<{ label: string; c: string; show: boolean; rot: number }> = ({ label, c, show, rot }) => (
+export const Folder: React.FC<{ label: string; c: string; show: boolean; rot: number }> = ({ label, c, show, rot }) => (
   <div style={{ width: 250, height: 190, position: "relative", transform: `rotate(${rot}deg) scale(${show ? 1 : 0})` }}>
     <div style={{ position: "absolute", left: 0, top: 0, width: 110, height: 34, background: `${c}55`, border: `4px solid ${P.ink}`, borderBottom: "none", borderRadius: "12px 12px 0 0" }} />
     <div style={{ position: "absolute", left: 0, top: 30, width: 250, height: 160, background: `${c}33`, border: `4px solid ${P.ink}`, borderRadius: "0 12px 12px 12px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 34, fontWeight: 900, textAlign: "center", lineHeight: 1.1 }}>{label}</div>
   </div>
 );
-const Robot: React.FC<{ s?: number; g: number }> = ({ s = 300, g }) => {
+export const Robot: React.FC<{ s?: number; g: number }> = ({ s = 300, g }) => {
   const blink = g % 90 < 6;
   return (
     <svg width={s} height={s * 1.25} viewBox="0 0 80 100">
@@ -38,7 +38,7 @@ const Robot: React.FC<{ s?: number; g: number }> = ({ s = 300, g }) => {
 };
 
 // ---------- hook ----------
-const ThreeProblems: React.FC = () => {
+export const ThreeProblems: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="w44a" rot={-1.2} tag={TAG}>
@@ -53,7 +53,7 @@ const ThreeProblems: React.FC = () => {
     </PaperCard>
   );
 };
-const SingleDay: React.FC = () => {
+export const SingleDay: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="w44b" rot={1} tag={TAG}>
@@ -70,7 +70,7 @@ const SingleDay: React.FC = () => {
 };
 
 // ---------- news 1: OpenAI claims ----------
-const LocalSmoothing: React.FC = () => {
+export const LocalSmoothing: React.FC = () => {
   const g = useTwos();
   const s = interpolate(g, [10, 70], [0, 1], clamp);
   const pts = [...Array(90)].map((_, i) => {
@@ -88,7 +88,7 @@ const LocalSmoothing: React.FC = () => {
     </PaperCard>
   );
 };
-const AlsoCracks: React.FC = () => {
+export const AlsoCracks: React.FC = () => {
   const g = useTwos();
   const a = (g * 3) % 360;
   return (
@@ -115,7 +115,7 @@ const AlsoCracks: React.FC = () => {
     </PaperCard>
   );
 };
-const MoreClaims: React.FC = () => {
+export const MoreClaims: React.FC = () => {
   const g = useTwos();
   const rows = [
     { f: "Computer science", t: "Exponential Time Hypothesis – refuted?", c: P.teal },
@@ -136,7 +136,7 @@ const MoreClaims: React.FC = () => {
     </PaperCard>
   );
 };
-const CheckedNotReviewed: React.FC = () => {
+export const CheckedNotReviewed: React.FC = () => {
   const g = useTwos();
   const lines = ["theorem local_smoothing (d : ℕ) :", "  ∀ p > p_d, ‖e^{it√-Δ} f‖ ≤ …", "  := by", "  …", "  exact key_estimate d"];
   return (
@@ -157,7 +157,7 @@ const CheckedNotReviewed: React.FC = () => {
 };
 
 // ---------- news 2: Genie 4 ----------
-const PromptToWorld: React.FC = () => {
+export const PromptToWorld: React.FC = () => {
   const g = useTwos();
   const text = "a snowy mountain village at dusk";
   const n = Math.floor(interpolate(g, [4, 50], [0, text.length], clamp));
@@ -178,7 +178,7 @@ const PromptToWorld: React.FC = () => {
     </PaperCard>
   );
 };
-const SoundDialogue: React.FC = () => {
+export const SoundDialogue: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="w44h" rot={1} tag={TAG}>
@@ -196,7 +196,7 @@ const SoundDialogue: React.FC = () => {
     </PaperCard>
   );
 };
-const WeatherSwitch: React.FC = () => {
+export const WeatherSwitch: React.FC = () => {
   const g = useTwos();
   const k = Math.floor(g / 30) % 3;
   const icons = [
@@ -219,7 +219,7 @@ const WeatherSwitch: React.FC = () => {
 };
 
 // ---------- news 3: Meta robot ----------
-const RobotMax: React.FC = () => {
+export const RobotMax: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="w44j" rot={1} tag={TAG}>
@@ -237,7 +237,7 @@ const RobotMax: React.FC = () => {
     </PaperCard>
   );
 };
-const FiveFingers: React.FC = () => {
+export const FiveFingers: React.FC = () => {
   const g = useTwos();
   const lift = interpolate(g, [20, 60], [0, 1], clamp);
   return (
@@ -262,7 +262,7 @@ const FiveFingers: React.FC = () => {
 };
 
 // ---------- ending ----------
-const Recap: React.FC = () => {
+export const Recap: React.FC = () => {
   const g = useTwos();
   const items = [{ l: "proofs", c: P.mustard, s: "∑" }, { l: "worlds", c: P.teal, s: "⛰" }, { l: "robots", c: P.red, s: "🤖" }];
   return (

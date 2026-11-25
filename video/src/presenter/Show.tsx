@@ -1,6 +1,6 @@
 /** Presenter format: a rotating AI Bounce character presents paper boards. */
 import React from "react";
-import { AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing } from "remotion";
 import { FONT } from "../theme";
 import { WORDS, FPS, TOTAL_SEC } from "../timing";
 import { CHARACTERS, type Character, type Mood } from "./characters";
@@ -11,7 +11,7 @@ import { Studio, Ensemble, type Member } from "../cast/stage";
 import type { Expr } from "../cast/rig";
 
 export type PlateMood = Mood | "group";
-export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr }; cast?: Member[]; tint?: string };
+export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr }; cast?: Member[]; tint?: string; chip?: string };
 export type Show = { presenter: Character; plates: Plate[]; stage?: boolean };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
@@ -155,6 +155,7 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
           <AbsoluteFill style={{ opacity: prev && prev !== tint ? k : 1 }}><Studio tint={tint} /></AbsoluteFill>
         </>);
       })()}
+      <AbsoluteFill style={show.stage ? { transform: `scale(${1 + 0.03 * pulseAt(onTwos(f) / FPS, true, 0.35)})`, transformOrigin: "50% 45%" } : undefined}>
       {show.plates.map((p, i) => {
         const from = Math.round(p.t * FPS);
         const to = i + 1 < show.plates.length ? Math.round(show.plates[i + 1].t * FPS) : end;
@@ -162,12 +163,14 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, to - from)} name={`plate${i}`}>
             {!show.stage && <Backdrop ch={ch} />}
-            <PlateSlot p={p} />
+            <PlateSlot p={p} stage={show.stage} />
+            {show.stage && p.chip && <TopicChip label={p.chip} tint={p.tint ?? "#7c3aed"} />}
             {p.cast ? <Ensemble members={p.cast} t={t} open={mouthOpen(WORDS, t)} tint={p.tint ?? "#7c3aed"} i={i} /> : p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={p.bouncy} open={p.bouncy === "laugh" ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
             <Audio src={staticFile(i === 0 ? "whoosh.wav" : i % 3 === 0 ? "pop.wav" : "whoosh.wav")} volume={0.4} />
           </Sequence>
         );
       })}
+      </AbsoluteFill>
       <Doodles t={t} />
       <CaptionStrip ch={(() => { const sp = cur.cast?.find((m) => m.talk); const acc = sp ? CAST.find((c) => c.id === sp.id)?.accent : undefined; return acc ? { ...speaker, accent: acc } : speaker; })()} t={t} group={cur.mood === "group"} />
       <Audio src={staticFile("voiceover.mp3")} />
@@ -188,8 +191,27 @@ const ToonHost: React.FC<{ id: CastId; expr: Expr; t: number; i: number }> = ({ 
   );
 };
 
-const PlateSlot: React.FC<{ p: Plate }> = ({ p }) => {
+const PlateSlot: React.FC<{ p: Plate; stage?: boolean }> = ({ p, stage }) => {
   const f = onTwos(useCurrentFrame());
+  const raw = useCurrentFrame();
+  if (stage) {
+    // hanging paper board: drops in on two strings, bounces, swings gently in 3D, casts a shadow
+    const drop = interpolate(raw, [0, 22], [0, 1], { ...clamp, easing: Easing.out(Easing.bounce) });
+    const sw = Math.sin(f / 28) * 1.6 * (1 - 0.3 * drop) + (1 - drop) * 6;
+    const ry = Math.sin(f / 40) * 6;
+    const rx = Math.cos(f / 50) * 3;
+    const tint = p.tint ?? "#7c3aed";
+    return (
+      <AbsoluteFill style={{ top: 200, alignItems: "center", perspective: 1600 }}>
+        <svg width={1080} height={260} style={{ position: "absolute", top: -260, left: 0, overflow: "visible", transform: `translateY(${(1 - drop) * -900}px)` }}>
+          {[160, 920].map((x, k) => <line key={k} x1={x + (k ? -40 : 40)} y1={-40} x2={540 + (x - 540) * 0.82 + sw * 4} y2={262} stroke="#f3ead6" strokeWidth={4} opacity={0.75} strokeDasharray="14 5" />)}
+        </svg>
+        <div style={{ transformOrigin: "50% -200px", transform: `translateY(${(1 - drop) * -1100}px) rotate(${sw}deg) rotateY(${ry}deg) rotateX(${rx}deg)`, filter: `drop-shadow(0 0 26px ${tint}66) drop-shadow(30px 40px 30px #0007)` }}>
+          <p.C />
+        </div>
+      </AbsoluteFill>
+    );
+  }
   const p01 = interpolate(f, [0, 15], [0, 1], clamp);
   const dx = p.from === "left" ? -1200 : p.from === "top" ? 0 : 1200;
   const dy = p.from === "top" ? -1400 : 0;
@@ -198,5 +220,14 @@ const PlateSlot: React.FC<{ p: Plate }> = ({ p }) => {
     <AbsoluteFill style={{ top: 200, alignItems: "center" }}>
       <div style={{ transform: `translate(${dx * (1 - e)}px, ${dy * (1 - e)}px) rotate(${(1 - e) * (p.from === "left" ? -14 : 12)}deg)` }}><p.C /></div>
     </AbsoluteFill>
+  );
+};
+
+/** Paper tab top-left: STORY n/3 · TOPIC */
+const TopicChip: React.FC<{ label: string; tint: string }> = ({ label, tint }) => {
+  const f = useCurrentFrame();
+  const s = spring({ frame: f, fps: 60, config: { damping: 12 } });
+  return (
+    <div style={{ position: "absolute", left: 50, top: 92, padding: "8px 18px", background: "#fbf6ea", border: "4px solid #2b2622", borderLeft: `14px solid ${tint}`, borderRadius: 10, fontFamily: FONT, fontWeight: 900, fontSize: 28, letterSpacing: 2, color: "#2b2622", transform: `translateX(${(1 - s) * -400}px) rotate(-2deg)`, boxShadow: "4px 6px 0 #0003" }}>{label}</div>
   );
 };
