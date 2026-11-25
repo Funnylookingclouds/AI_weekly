@@ -15,7 +15,7 @@ const SRC_GENOME = "Google DeepMind blog · TechRepublic";
 const MONO = "DejaVu Sans Mono, monospace";
 
 // ---------- hook ----------
-const EightVsAI: React.FC = () => {
+export const EightVsAI: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="vs46" rot={-1.2} tag={TAG}>
@@ -32,7 +32,7 @@ const EightVsAI: React.FC = () => {
     </PaperCard>
   );
 };
-const OnlyTheStart: React.FC = () => {
+export const OnlyTheStart: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="start46" rot={1} tag={TAG}>
@@ -47,7 +47,7 @@ const OnlyTheStart: React.FC = () => {
 };
 
 // ---------- news 1: brain tumors ----------
-const MayoTest: React.FC = () => {
+export const MayoTest: React.FC = () => {
   const g = useTwos();
   const n = Math.floor(interpolate(g, [10, 90], [0, 100], clamp));
   return (
@@ -66,7 +66,7 @@ const MayoTest: React.FC = () => {
     </PaperCard>
   );
 };
-const TumorTypes: React.FC = () => {
+export const TumorTypes: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="types" rot={1.1} tag={TAG}>
@@ -85,14 +85,14 @@ const TumorTypes: React.FC = () => {
     </PaperCard>
   );
 };
-const Score97: React.FC = () => (
+export const Score97: React.FC = () => (
   <PaperCard seed="g97" rot={-0.8} tag={TAG}>
     <Title sub="diagnostic accuracy">The AI scored</Title>
     <div style={{ marginTop: 40 }}><Gauge value={97} /></div>
     <Source>{SRC_TUMOR} · not yet peer-reviewed</Source>
   </PaperCard>
 );
-const BeatAll: React.FC = () => {
+export const BeatAll: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="beat" rot={1.2} tag={TAG}>
@@ -107,7 +107,7 @@ const BeatAll: React.FC = () => {
     </PaperCard>
   );
 };
-const TeamUp: React.FC = () => {
+export const TeamUp: React.FC = () => {
   const g = useTwos();
   const up = interpolate(g, [20, 45], [0, 1], clamp);
   return (
@@ -126,7 +126,7 @@ const TeamUp: React.FC = () => {
 };
 
 // ---------- news 2: Signal proof ----------
-const SignalChat: React.FC = () => {
+export const SignalChat: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="sig" rot={1} tag={TAG}>
@@ -142,7 +142,7 @@ const SignalChat: React.FC = () => {
     </PaperCard>
   );
 };
-const ProofCheck: React.FC = () => {
+export const ProofCheck: React.FC = () => {
   const g = useTwos();
   const lines = ["lemma ratchet_secrecy :", "  ∀ k, derive k ≠ leak k", "theorem session_auth :", "  verify (sign m sk) pk", "lemma decrypt_encrypt :", "  dec k (enc k m) = m"];
   return (
@@ -160,7 +160,7 @@ const ProofCheck: React.FC = () => {
     </PaperCard>
   );
 };
-const MillionsWeeks: React.FC = () => {
+export const MillionsWeeks: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="weeks" rot={1.2} tag={TAG}>
@@ -179,7 +179,7 @@ const MillionsWeeks: React.FC = () => {
     </PaperCard>
   );
 };
-const BugsCaught: React.FC = () => {
+export const BugsCaught: React.FC = () => {
   const g = useTwos();
   const Bug: React.FC<{ caught: boolean }> = ({ caught }) => (
     <div style={{ position: "relative", width: 200, height: 200 }}>
@@ -201,7 +201,7 @@ const BugsCaught: React.FC = () => {
 };
 
 // ---------- news 3: AlphaGenome ----------
-const Helix: React.FC = () => {
+export const Helix: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="dna" rot={1} tag={TAG}>
@@ -219,7 +219,7 @@ const Helix: React.FC = () => {
     </PaperCard>
   );
 };
-const TwiceAsMany: React.FC = () => (
+export const TwiceAsMany: React.FC = () => (
   <PaperCard seed="twice" rot={-1} tag={TAG}>
     <Title sub="gene-changing variants found">Nearly 2× as many</Title>
     <div style={{ marginTop: 10 }}><BarPair a={40} b={78} la="previous best" lb="AlphaGenome 2" H={330} ta="1×" tb="≈2×" /></div>
@@ -229,7 +229,7 @@ const TwiceAsMany: React.FC = () => (
 );
 
 // ---------- ending ----------
-const Recap: React.FC = () => {
+export const Recap: React.FC = () => {
   const g = useTwos();
   const items = [{ l: "tumors", c: P.red, s: "✚" }, { l: "privacy", c: P.teal, s: "🔒" }, { l: "DNA", c: P.green, s: "🧬" }];
   return (
