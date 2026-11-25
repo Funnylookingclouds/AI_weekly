@@ -8,6 +8,8 @@ import { JokeProto, JOKE_LEN } from "./proto/Joke";
 import { HockeyMascots } from "./proto/HockeyMascot";
 import { CastSheet, CastTurn, CastLoop } from "./cast/Sheet";
 import { CastDemo, CAST_DEMO_LEN } from "./cast/Demo";
+import { FlatpackSheet } from "./flatpack/Sheet";
+import { FlatpackPilot, PILOT_LEN } from "./flatpack/Pilot";
 
 const V = { fps: FPS, width: 1080, height: 1920 } as const;
 
@@ -29,6 +31,8 @@ export const Root: React.FC = () => (
     <Still id="CastTurn" component={CastTurn} width={1600} height={1450} />
     <Composition id="CastDemo" component={CastDemo} durationInFrames={CAST_DEMO_LEN} {...V} />
     <Composition id="CastLoop" component={CastLoop} durationInFrames={450} {...V} />
+    <Composition id="FlatpackPilot" component={FlatpackPilot} durationInFrames={PILOT_LEN} fps={60} width={1080} height={1920} />
+    <Still id="FlatpackSheet" component={FlatpackSheet} width={3560} height={2120} />
     <Still id="LogoSquare" component={B.LogoSquare} width={1080} height={1080} />
     <Still id="LogoAvatar" component={B.LogoAvatar} width={800} height={800} />
   </>
