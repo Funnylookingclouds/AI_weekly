@@ -1,0 +1,21 @@
+{
+  "id": "2026-w43-en",
+  "language": "en",
+  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.12,
+  "voice_gap": 0.25,
+  "voice_settings": {"stability": 0.32, "style": 0.6},
+  "segments": [
+    {"id": "hook", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Big week, team! AI just got better at seeing weeks into the future."},
+    {"id": "c1", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "That's my department! Researchers used machine learning to fix the errors in weather models – and doubled forecast skill two to six weeks ahead. It's in Nature."},
+    {"id": "l1", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "That could mean earlier warnings for heat waves and floods."},
+    {"id": "c2", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "And I finally get to plan my rain."},
+    {"id": "p1", "voice_id": "TX3LPaxmHKxFdv7VOQHJ", "tts": "Next! Hugging Face released Carbon-X – an open AI you can literally chat with about DNA. Ask what a mutation does, in plain English!"},
+    {"id": "ch1", "voice_id": "SDARFhQygpPvpLh7Ad1B", "tts": "And it runs on a laptop! Though… it hasn't been tested in a real lab yet."},
+    {"id": "w1", "voice_id": "MKlLqCItoCkvdhrxgtLv", "tts": "Quick hit: OpenAI's former science chief launched Warp Sciences – 215 million dollars for robot chemistry labs that hunt for new drugs. Robots doing chemistry. Finally, someone else gets to blow things up."},
+    {"id": "loop", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Weather, DNA, robot labs – all in seven days."}
+  ],
+  "display_map": {"seven": "7", "two": "2", "six": "6"},
+  "keywords": ["future", "department", "machine", "learning", "weather", "doubled", "nature", "heat", "floods", "rain", "carbonx", "dna", "mutation", "laptop", "lab", "warp", "215", "robot", "chemistry", "drugs", "seven"]
+}

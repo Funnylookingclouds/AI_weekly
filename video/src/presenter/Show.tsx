@@ -6,12 +6,13 @@ import { WORDS, FPS, TOTAL_SEC } from "../timing";
 import { CHARACTERS, type Character, type Mood } from "./characters";
 import { P, HAND, onTwos, clamp } from "./kit";
 import { Bouncy, mouthOpen, type BouncyMood } from "./Bouncy";
-import { Toon, type CastId } from "../cast/cast";
+import { Toon, CAST, type CastId } from "../cast/cast";
+import { Studio, Ensemble, type Member } from "../cast/stage";
 import type { Expr } from "../cast/rig";
 
 export type PlateMood = Mood | "group";
-export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr } };
-export type Show = { presenter: Character; plates: Plate[] };
+export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr }; cast?: Member[]; tint?: string };
+export type Show = { presenter: Character; plates: Plate[]; stage?: boolean };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
 /** Start time of the nth word in a segment that matches exactly (punctuation ignored). */
@@ -144,21 +145,31 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
   const speaker = cur.who ?? show.presenter;
   return (
     <AbsoluteFill style={{ background: "#000" }}>
+      {show.stage && (() => {
+        const ci = show.plates.indexOf(cur);
+        const prev = ci > 0 ? show.plates[ci - 1].tint ?? "#7c3aed" : undefined;
+        const tint = cur.tint ?? "#7c3aed";
+        const k = Math.min(1, (t - cur.t) / 0.5);
+        return (<>
+          {prev && prev !== tint && k < 1 && <Studio tint={prev} />}
+          <AbsoluteFill style={{ opacity: prev && prev !== tint ? k : 1 }}><Studio tint={tint} /></AbsoluteFill>
+        </>);
+      })()}
       {show.plates.map((p, i) => {
         const from = Math.round(p.t * FPS);
         const to = i + 1 < show.plates.length ? Math.round(show.plates[i + 1].t * FPS) : end;
         const ch = p.who ?? show.presenter;
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, to - from)} name={`plate${i}`}>
-            <Backdrop ch={ch} />
+            {!show.stage && <Backdrop ch={ch} />}
             <PlateSlot p={p} />
-            {p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={p.bouncy} open={p.bouncy === "laugh" ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
+            {p.cast ? <Ensemble members={p.cast} t={t} open={mouthOpen(WORDS, t)} tint={p.tint ?? "#7c3aed"} i={i} /> : p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={p.bouncy} open={p.bouncy === "laugh" ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
             <Audio src={staticFile(i === 0 ? "whoosh.wav" : i % 3 === 0 ? "pop.wav" : "whoosh.wav")} volume={0.4} />
           </Sequence>
         );
       })}
       <Doodles t={t} />
-      <CaptionStrip ch={speaker} t={t} group={cur.mood === "group"} />
+      <CaptionStrip ch={(() => { const sp = cur.cast?.find((m) => m.talk); const acc = sp ? CAST.find((c) => c.id === sp.id)?.accent : undefined; return acc ? { ...speaker, accent: acc } : speaker; })()} t={t} group={cur.mood === "group"} />
       <Audio src={staticFile("voiceover.mp3")} />
     </AbsoluteFill>
   );
