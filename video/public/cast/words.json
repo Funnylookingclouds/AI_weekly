@@ -1,0 +1,610 @@
+[
+ {
+  "word": "Hi!",
+  "display": "Hi!",
+  "start": 0.058,
+  "end": 0.383,
+  "segment": "pixel",
+  "keyword": false
+ },
+ {
+  "word": "I'm",
+  "display": "I'm",
+  "start": 0.464,
+  "end": 0.592,
+  "segment": "pixel",
+  "keyword": false
+ },
+ {
+  "word": "Pixel.",
+  "display": "Pixel.",
+  "start": 0.65,
+  "end": 1.08,
+  "segment": "pixel",
+  "keyword": true
+ },
+ {
+  "word": "I",
+  "display": "I",
+  "start": 1.242,
+  "end": 1.3,
+  "segment": "pixel",
+  "keyword": false
+ },
+ {
+  "word": "run",
+  "display": "run",
+  "start": 1.37,
+  "end": 1.474,
+  "segment": "pixel",
+  "keyword": false
+ },
+ {
+  "word": "at",
+  "display": "at",
+  "start": 1.509,
+  "end": 1.567,
+  "segment": "pixel",
+  "keyword": false
+ },
+ {
+  "word": "sixty",
+  "display": "60",
+  "start": 1.625,
+  "end": 1.904,
+  "segment": "pixel",
+  "keyword": true
+ },
+ {
+  "word": "frames",
+  "display": "frames",
+  "start": 1.962,
+  "end": 2.241,
+  "segment": "pixel",
+  "keyword": false
+ },
+ {
+  "word": "per",
+  "display": "per",
+  "start": 2.287,
+  "end": 2.415,
+  "segment": "pixel",
+  "keyword": false
+ },
+ {
+  "word": "second...",
+  "display": "second...",
+  "start": 2.461,
+  "end": 2.868,
+  "segment": "pixel",
+  "keyword": false
+ },
+ {
+  "word": "emotionally!",
+  "display": "emotionally!",
+  "start": 3.03,
+  "end": 3.785,
+  "segment": "pixel",
+  "keyword": true
+ },
+ {
+  "word": "I'm",
+  "display": "I'm",
+  "start": 4.536,
+  "end": 4.664,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "Lumi.",
+  "display": "Lumi.",
+  "start": 4.722,
+  "end": 5.117,
+  "segment": "lumi",
+  "keyword": true
+ },
+ {
+  "word": "Every",
+  "display": "Every",
+  "start": 5.163,
+  "end": 5.407,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "time",
+  "display": "time",
+  "start": 5.442,
+  "end": 5.593,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "I",
+  "display": "I",
+  "start": 5.628,
+  "end": 5.651,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "get",
+  "display": "get",
+  "start": 5.709,
+  "end": 5.825,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "an",
+  "display": "an",
+  "start": 5.86,
+  "end": 5.918,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "idea...",
+  "display": "idea...",
+  "start": 5.976,
+  "end": 6.44,
+  "segment": "lumi",
+  "keyword": true
+ },
+ {
+  "word": "I",
+  "display": "I",
+  "start": 6.51,
+  "end": 6.568,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "literally",
+  "display": "literally",
+  "start": 6.673,
+  "end": 7.033,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "light",
+  "display": "light",
+  "start": 7.091,
+  "end": 7.276,
+  "segment": "lumi",
+  "keyword": true
+ },
+ {
+  "word": "up!",
+  "display": "up!",
+  "start": 7.323,
+  "end": 7.543,
+  "segment": "lumi",
+  "keyword": false
+ },
+ {
+  "word": "Ch-Chip",
+  "display": "Ch-Chip",
+  "start": 8.156,
+  "end": 8.597,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "here.",
+  "display": "here.",
+  "start": 8.667,
+  "end": 8.946,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "Sorry,",
+  "display": "Sorry,",
+  "start": 8.992,
+  "end": 9.375,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "I'm",
+  "display": "I'm",
+  "start": 9.398,
+  "end": 9.526,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "a",
+  "display": "a",
+  "start": 9.572,
+  "end": 9.596,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "bit",
+  "display": "bit",
+  "start": 9.642,
+  "end": 9.793,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "nervous.",
+  "display": "nervous.",
+  "start": 9.851,
+  "end": 10.292,
+  "segment": "chip",
+  "keyword": true
+ },
+ {
+  "word": "I'm",
+  "display": "I'm",
+  "start": 10.316,
+  "end": 10.443,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "ninety",
+  "display": "90",
+  "start": 10.501,
+  "end": 10.803,
+  "segment": "chip",
+  "keyword": true
+ },
+ {
+  "word": "percent",
+  "display": "percent",
+  "start": 10.861,
+  "end": 11.314,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "anxiety,",
+  "display": "anxiety,",
+  "start": 11.384,
+  "end": 12.196,
+  "segment": "chip",
+  "keyword": true
+ },
+ {
+  "word": "ten",
+  "display": "10",
+  "start": 12.417,
+  "end": 12.614,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "percent",
+  "display": "percent",
+  "start": 12.672,
+  "end": 13.044,
+  "segment": "chip",
+  "keyword": false
+ },
+ {
+  "word": "silicon.",
+  "display": "silicon.",
+  "start": 13.102,
+  "end": 13.822,
+  "segment": "chip",
+  "keyword": true
+ },
+ {
+  "word": "Heyyy,",
+  "display": "Heyyy,",
+  "start": 14.551,
+  "end": 14.772,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "I'm",
+  "display": "I'm",
+  "start": 14.806,
+  "end": 14.923,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "Cloudy.",
+  "display": "Cloudy.",
+  "start": 14.981,
+  "end": 15.584,
+  "segment": "cloudy",
+  "keyword": true
+ },
+ {
+  "word": "I",
+  "display": "I",
+  "start": 16.049,
+  "end": 16.107,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "store",
+  "display": "store",
+  "start": 16.176,
+  "end": 16.409,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "all",
+  "display": "all",
+  "start": 16.432,
+  "end": 16.548,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "your",
+  "display": "your",
+  "start": 16.606,
+  "end": 16.711,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "photos...",
+  "display": "photos...",
+  "start": 16.745,
+  "end": 17.349,
+  "segment": "cloudy",
+  "keyword": true
+ },
+ {
+  "word": "and",
+  "display": "and",
+  "start": 17.813,
+  "end": 18.127,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "some",
+  "display": "some",
+  "start": 18.185,
+  "end": 18.382,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "of",
+  "display": "of",
+  "start": 18.417,
+  "end": 18.464,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "your",
+  "display": "your",
+  "start": 18.498,
+  "end": 18.626,
+  "segment": "cloudy",
+  "keyword": false
+ },
+ {
+  "word": "feelings.",
+  "display": "feelings.",
+  "start": 18.673,
+  "end": 19.288,
+  "segment": "cloudy",
+  "keyword": true
+ },
+ {
+  "word": "Wattson.",
+  "display": "Wattson.",
+  "start": 20.016,
+  "end": 20.469,
+  "segment": "wattson",
+  "keyword": true
+ },
+ {
+  "word": "Fully",
+  "display": "Fully",
+  "start": 20.492,
+  "end": 20.771,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "charged.",
+  "display": "charged.",
+  "start": 20.829,
+  "end": 21.34,
+  "segment": "wattson",
+  "keyword": true
+ },
+ {
+  "word": "Do",
+  "display": "Do",
+  "start": 21.56,
+  "end": 21.734,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "NOT",
+  "display": "NOT",
+  "start": 21.839,
+  "end": 22.059,
+  "segment": "wattson",
+  "keyword": true
+ },
+ {
+  "word": "ask",
+  "display": "ask",
+  "start": 22.094,
+  "end": 22.268,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "me",
+  "display": "me",
+  "start": 22.326,
+  "end": 22.396,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "to",
+  "display": "to",
+  "start": 22.431,
+  "end": 22.489,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "run",
+  "display": "run",
+  "start": 22.547,
+  "end": 22.698,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "your",
+  "display": "your",
+  "start": 22.744,
+  "end": 22.86,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "video",
+  "display": "video",
+  "start": 22.919,
+  "end": 23.255,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "calls.",
+  "display": "calls.",
+  "start": 23.325,
+  "end": 23.801,
+  "segment": "wattson",
+  "keyword": false
+ },
+ {
+  "word": "Hey",
+  "display": "Hey",
+  "start": 24.494,
+  "end": 24.645,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "Pixel",
+  "display": "Pixel",
+  "start": 24.703,
+  "end": 25.11,
+  "segment": "setup",
+  "keyword": true
+ },
+ {
+  "word": "why",
+  "display": "why",
+  "start": 25.272,
+  "end": 25.423,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "did",
+  "display": "did",
+  "start": 25.47,
+  "end": 25.563,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 25.597,
+  "end": 25.667,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "neural",
+  "display": "neural",
+  "start": 25.713,
+  "end": 25.969,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "network",
+  "display": "network",
+  "start": 26.027,
+  "end": 26.375,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "go",
+  "display": "go",
+  "start": 26.433,
+  "end": 26.538,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "to",
+  "display": "to",
+  "start": 26.596,
+  "end": 26.666,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "therapy?",
+  "display": "therapy?",
+  "start": 26.724,
+  "end": 27.258,
+  "segment": "setup",
+  "keyword": true
+ },
+ {
+  "word": "Too",
+  "display": "Too",
+  "start": 30.832,
+  "end": 30.995,
+  "segment": "punch",
+  "keyword": false
+ },
+ {
+  "word": "many",
+  "display": "many",
+  "start": 31.053,
+  "end": 31.238,
+  "segment": "punch",
+  "keyword": false
+ },
+ {
+  "word": "hidden",
+  "display": "hidden",
+  "start": 31.285,
+  "end": 31.529,
+  "segment": "punch",
+  "keyword": true
+ },
+ {
+  "word": "layers!",
+  "display": "layers!",
+  "start": 31.587,
+  "end": 32.063,
+  "segment": "punch",
+  "keyword": true
+ }
+]

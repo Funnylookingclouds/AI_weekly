@@ -87,7 +87,7 @@ def parse_words(al, segs, offset):
 groups = []
 for s in ep["segments"]:
     v = s.get("voice_id", ep["voice_id"])
-    if groups and groups[-1][0] == v and groups[-1][1][-1].get("voice_settings") == s.get("voice_settings"):
+    if groups and groups[-1][0] == v and groups[-1][1][-1].get("voice_settings") == s.get("voice_settings") and "pause_after" not in groups[-1][1][-1]:
         groups[-1][1].append(s)
     else:
         groups.append((v, [s]))
@@ -102,7 +102,7 @@ with tempfile.TemporaryDirectory() as td:
         mp3.write_bytes(audio)
         wav = Path(td) / f"g{k}.wav"
         # normalise each voice to the same loudness before joining, then pad with GAP silence
-        pad = GAP if k < len(groups) - 1 else 0
+        pad = segs[-1].get("pause_after", GAP) if k < len(groups) - 1 else 0
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), "-af",
                         f"loudnorm=I=-16:TP=-2,apad=pad_dur={pad}", "-ar", "48000", "-ac", "1", str(wav)], check=True)
         words += parse_words(al, segs, offset)

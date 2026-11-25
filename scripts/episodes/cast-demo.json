@@ -1,0 +1,20 @@
+{
+  "id": "cast-demo",
+  "language": "en",
+  "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.1,
+  "voice_gap": 0.45,
+  "voice_settings": {"stability": 0.3, "style": 0.6},
+  "segments": [
+    {"id": "pixel", "voice_id": "TX3LPaxmHKxFdv7VOQHJ", "tts": "Hi! I'm Pixel. I run at sixty frames per second… emotionally!"},
+    {"id": "lumi", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "I'm Lumi. Every time I get an idea… I literally light up!"},
+    {"id": "chip", "voice_id": "SDARFhQygpPvpLh7Ad1B", "tts": "Ch-Chip here. Sorry, I'm a bit nervous. I'm ninety percent anxiety, ten percent silicon."},
+    {"id": "cloudy", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "Heyyy, I'm Cloudy. I store all your photos… and some of your feelings."},
+    {"id": "wattson", "voice_id": "MKlLqCItoCkvdhrxgtLv", "tts": "Wattson. Fully charged. Do NOT ask me to run your video calls."},
+    {"id": "setup", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Hey Pixel – why did the neural network go to therapy?", "pause_after": 3.4},
+    {"id": "punch", "voice_id": "TX3LPaxmHKxFdv7VOQHJ", "tts": "Too many hidden layers!"}
+  ],
+  "display_map": {"sixty": "60", "ninety": "90", "ten": "10"},
+  "keywords": ["pixel", "sixty", "emotionally", "lumi", "idea", "light", "chip", "nervous", "ninety", "anxiety", "silicon", "cloudy", "photos", "feelings", "wattson", "charged", "not", "therapy", "hidden", "layers"]
+}
