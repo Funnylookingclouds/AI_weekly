@@ -6,9 +6,11 @@ import { WORDS, FPS, TOTAL_SEC } from "../timing";
 import { CHARACTERS, type Character, type Mood } from "./characters";
 import { P, HAND, onTwos, clamp } from "./kit";
 import { Bouncy, mouthOpen, type BouncyMood } from "./Bouncy";
+import { Toon, type CastId } from "../cast/cast";
+import type { Expr } from "../cast/rig";
 
 export type PlateMood = Mood | "group";
-export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood };
+export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr } };
 export type Show = { presenter: Character; plates: Plate[] };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
@@ -150,7 +152,7 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
           <Sequence key={i} from={from} durationInFrames={Math.max(1, to - from)} name={`plate${i}`}>
             <Backdrop ch={ch} />
             <PlateSlot p={p} />
-            {p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={p.bouncy} open={p.bouncy === "laugh" ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
+            {p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={p.bouncy} open={p.bouncy === "laugh" ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
             <Audio src={staticFile(i === 0 ? "whoosh.wav" : i % 3 === 0 ? "pop.wav" : "whoosh.wav")} volume={0.4} />
           </Sequence>
         );
@@ -159,6 +161,19 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
       <CaptionStrip ch={speaker} t={t} group={cur.mood === "group"} />
       <Audio src={staticFile("voiceover.mp3")} />
     </AbsoluteFill>
+  );
+};
+
+/** New-cast character as presenter: lip-synced, 3D sway, drops in on each plate. */
+const ToonHost: React.FC<{ id: CastId; expr: Expr; t: number; i: number }> = ({ id, expr, t, i }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const enter = spring({ frame: f, fps, config: { damping: 9, stiffness: 170 } });
+  const yaw = Math.sin((t * FPS) / 45 + i) * 0.4 + (i % 2 ? 0.15 : -0.15);
+  return (
+    <div style={{ position: "absolute", left: 540 - 270, top: 1120, transform: `translateY(${(1 - enter) * 120}px) scale(${0.85 + 0.15 * enter})`, transformOrigin: "50% 100%" }}>
+      <Toon id={id} expr={expr} f={Math.round(t * FPS)} size={540} yaw={yaw} open={mouthOpen(WORDS, t)} look={{ x: Math.sin(t / 2) * 0.4, y: -0.3 }} />
+    </div>
   );
 };
 

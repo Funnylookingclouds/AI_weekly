@@ -1,62 +1,17 @@
 {
-  "id": "special-jokes-en",
+  "id": "2026-w48-en",
   "language": "en",
-  "voice_id": "fBD19tfE58bkETeiwUoC",
+  "voice_id": "MKlLqCItoCkvdhrxgtLv",
   "model_id": "eleven_multilingual_v2",
-  "speed": 1.12,
+  "speed": 1.18,
+  "voice_settings": {"stability": 0.35, "style": 0.55},
   "segments": [
-    {
-      "id": "hook",
-      "tts": "Can AI actually be funny? Let's compare its jokes – then and now."
-    },
-    {
-      "id": "y23",
-      "tts": "Back in 2023, researchers asked ChatGPT for a joke one thousand and eight times. Over ninety percent were the same twenty-five jokes. The number one hit: Why did the scarecrow win an award? Because he was outstanding in his field."
-    },
-    {
-      "id": "y23b",
-      "tts": "Number two: Why did the tomato turn red? It saw the salad dressing."
-    },
-    {
-      "id": "y24",
-      "tts": "One year later, a new study found most people rated ChatGPT's jokes funnier than human ones."
-    },
-    {
-      "id": "y26",
-      "tts": "So here's a 2026 joke, written by AI: I told my AI to stop overthinking. It said: \"Sure – let me think about that for thirty seconds.\""
-    },
-    {
-      "id": "loop",
-      "tts": "From scarecrows to self-roasts – AI comedy is growing up."
-    }
+    {"id": "hook", "tts": "An AI may have cracked math's biggest mystery – and the checks are coming in. I'm Wattson. Let's get this over with."},
+    {"id": "news1", "tts": "Remember the Riemann proof made with Claude? On Saturday, the Lean and Mathlib teams said the computer-checked proof is correct. Top mathematicians are impressed – but one called the write-up \"garbled\", and human review is still going. Fine. I'll get excited when it's peer-reviewed."},
+    {"id": "news2", "tts": "Next: OpenAI says its GPT-6 models can design proteins using plain reasoning and code. In lab tests, 35 of 322 designs actually stuck to their targets. Great. Next it'll design my replacement."},
+    {"id": "news3", "tts": "Quick hit: big drug makers say AI is shrinking discovery timelines – but Lilly warns: don't expect miracles yet."},
+    {"id": "loop", "tts": "Math, proteins, medicine – all in seven days. Now somebody charge me."}
   ],
-  "display_map": {
-    "ninety": "90",
-    "twentyfive": "25",
-    "thirty": "30",
-    "two": "2"
-  },
-  "keywords": [
-    "funny",
-    "2023",
-    "chatgpt",
-    "ninety",
-    "percent",
-    "twentyfive",
-    "scarecrow",
-    "outstanding",
-    "tomato",
-    "dressing",
-    "funnier",
-    "2026",
-    "ai",
-    "overthinking",
-    "thirty",
-    "seconds",
-    "comedy"
-  ],
-  "voice_settings": {
-    "stability": 0.3,
-    "style": 0.6
-  }
+  "display_map": {"seven": "7"},
+  "keywords": ["mystery", "wattson", "riemann", "claude", "lean", "correct", "garbled", "review", "peerreviewed", "openai", "gpt6", "proteins", "35", "322", "replacement", "shrinking", "timelines", "lilly", "miracles", "seven", "charge"]
 }

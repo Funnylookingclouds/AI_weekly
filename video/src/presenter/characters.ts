@@ -1,5 +1,5 @@
 /** AI Bounce presenters (artwork owned by the channel; cut out by scripts/cutout_characters.py). */
-export type PresenterId = "rune" | "ture" | "saga" | "cara" | "bouncy";
+export type PresenterId = "rune" | "ture" | "saga" | "cara" | "bouncy" | "wattson";
 /** Generic moods used by episode files; each character maps them to their own art. */
 export type Mood = "body" | "happy" | "curious" | "serious";
 
@@ -16,6 +16,8 @@ export const CHARACTERS: Record<PresenterId, Character> = {
   cara: { id: "cara", name: "CARA", art: art("cara", "laugh", "smile", "watch"), accent: "#5d7a2e" },
   /** mascot – drawn in code (Bouncy.tsx); art paths unused */
   bouncy: { id: "bouncy", name: "BOUNCY", art: art("rune", "smile", "think", "watch"), accent: "#A855F7" },
+  /** new-cast host – drawn in code (cast/cast.tsx); art paths unused */
+  wattson: { id: "wattson", name: "WATTSON", art: art("rune", "smile", "think", "watch"), accent: "#f97316" },
 };
 
 /** Weekly rotation: presenter = ROTATION[isoWeek % 4]  (wk 47 → Cara, wk 48 → Rune, …). */
