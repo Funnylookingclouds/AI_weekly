@@ -1,4 +1,4 @@
-# YouTube upload – SPECIAL EDITION: When was AI first mentioned? – presenters: Rune, Ture, Saga, Cara
+# YouTube upload – SPECIAL EDITION: When was AI first mentioned? – ensemble: Lumi, Wattson, Pixel, Cloudy
 
 ## Title options
 1. **Who Invented the Term "Artificial Intelligence"? 🤯** ← recommended
@@ -8,7 +8,7 @@
 ## Description (copy everything between the lines)
 
 ---
-When was AI first mentioned? Way before ChatGPT – the term "artificial intelligence" was coined in 1955. A special edition on the history of AI in under a minute, presented by all four AI Bounce hosts. 📜🤖
+When was AI first mentioned? Way before ChatGPT – the term "artificial intelligence" was coined in 1955. A special edition on the history of AI in under a minute, presented by the whole AI Bounce crew. 📜🤖
 
 📜 1955 – THE NAME IS BORN
 On August 31, 1955, John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon wrote "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence" – the first known use of the term "artificial intelligence" (per the Oxford English Dictionary).

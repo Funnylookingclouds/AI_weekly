@@ -1,4 +1,4 @@
-# YouTube upload – SPECIAL EDITION: How fast is AI really moving? (12 months) – presenters: Rune, Ture, Saga, Cara
+# YouTube upload – SPECIAL EDITION: How fast is AI really moving? (12 months) – ensemble: Pixel, Lumi, Chip, Wattson, Cloudy
 
 ## Title options
 1. **How Fast Is AI Really Improving? 12 Months, Measured 📈** ← recommended
@@ -8,7 +8,7 @@
 ## Description (copy everything between the lines)
 
 ---
-How fast is AI really improving? We measured the last 12 months with real data: AI can now finish tasks about 10× longer than a year ago – and the same performance costs about 13× less. A special edition on the speed of AI progress, presented by all four AI Bounce hosts. 📈🤖
+How fast is AI really improving? We measured the last 12 months with real data: AI can now finish tasks about 10× longer than a year ago – and the same performance costs about 13× less. A special edition on the speed of AI progress, presented by the whole AI Bounce crew. 📈🤖
 
 ⏱ 1. TASK LENGTH: FROM ~3 HOURS TO ~12 HOURS
 METR measures the "50% time horizon": how long a task (in human expert time) AI agents can complete half the time. In November 2025 the frontier was about 3 hours (GPT-5.1-Codex-Max); by spring 2026 the best public models were around 12 hours (wide uncertainty: 5–61 h). METR's latest update finds this doubles roughly every 3.6 months – about 10× per year. (Measured on software and research tasks.)

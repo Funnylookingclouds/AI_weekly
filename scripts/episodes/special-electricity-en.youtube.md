@@ -1,4 +1,4 @@
-# YouTube upload – SPECIAL EDITION 3: How much electricity does AI really use? – presenters: Rune vs. Ture (+ all four)
+# YouTube upload – SPECIAL EDITION 3: How much electricity does AI really use? – ensemble: Chip vs. Wattson (+ the crew)
 
 ## Title options
 1. **How Much Electricity Does AI Really Use? ⚡** ← recommended
@@ -8,7 +8,7 @@
 ## Description (copy everything between the lines)
 
 ---
-How much electricity does AI really use? We checked the real numbers: AI-focused data centers used about half a percent of the world's electricity in 2025 – but data center demand is set to nearly double by 2030. A myth-vs-fact special edition on AI energy use, debated by Rune and Ture. ⚡🤖
+How much electricity does AI really use? We checked the real numbers: AI-focused data centers used about half a percent of the world's electricity in 2025 – but data center demand is set to nearly double by 2030. A myth-vs-fact special edition on AI energy use, debated by nervous Chip and Wattson – a battery who knows a thing or two about power. ⚡🤖
 
 ⚡ DATA CENTERS: ~485 TWh IN 2025 (≈1.5%)
 According to the International Energy Agency (IEA, April 2026 update), data centers worldwide used about 485 terawatt-hours of electricity in 2025 – roughly 1.5% of global electricity.

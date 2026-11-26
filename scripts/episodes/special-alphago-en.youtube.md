@@ -1,4 +1,4 @@
-# YouTube upload – SPECIAL EDITION 4: The move that shocked the world (AlphaGo, Move 37) – relay, all four presenters
+# YouTube upload – SPECIAL EDITION 4: The move that shocked the world (AlphaGo, Move 37) – ensemble: Chip, Lumi, Pixel, Wattson
 
 ## Title options
 1. **The AI Move That Shocked the World (1 in 10,000) 🤯** ← recommended
@@ -8,7 +8,7 @@
 ## Description (copy everything between the lines)
 
 ---
-One move had a 1-in-10,000 chance – and an AI played it anyway. The story of AlphaGo vs Lee Sedol and the legendary Move 37, in under a minute. A special edition on AI history, presented by all four AI Bounce hosts. ⚫⚪🤖
+One move had a 1-in-10,000 chance – and an AI played it anyway. The story of AlphaGo vs Lee Sedol and the legendary Move 37, in under a minute. A special edition on AI history, presented by the whole AI Bounce crew. ⚫⚪🤖
 
 🏆 THE MATCH (March 2016, Seoul)
 Google DeepMind's AlphaGo played Lee Sedol – winner of 18 world titles – at Go, a game with about 10^170 possible board positions (far more than the ~10^80 atoms in the observable universe). Over 200 million people watched worldwide.
