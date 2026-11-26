@@ -375,8 +375,8 @@ export const Stage: React.FC<{ t: number; cam: Cam; items: { y: number; node: Re
       </defs>
       {split ? (
         <g>
-          <g clipPath="url(#topHalf)"><g transform="translate(0 -480)"><World t={t} cam={split[0]} items={items} wall={wall} angry={angry} /></g></g>
-          <g clipPath="url(#botHalf)"><g transform="translate(0 480)"><World t={t} cam={split[1]} items={items} wall={wall} angry={angry} /></g></g>
+          <g clipPath="url(#topHalf)"><World t={t} cam={split[0]} items={items} wall={wall} angry={angry} /></g>
+          <g clipPath="url(#botHalf)"><World t={t} cam={split[1]} items={items} wall={wall} angry={angry} /></g>
           <polyline points="0,1020 1080,900" stroke={INK} strokeWidth={22} /><polyline points="0,1020 1080,900" stroke={C.sun} strokeWidth={10} />
         </g>
       ) : <World t={t} cam={cam} items={items} wall={wall} angry={angry} />}

@@ -1,18 +1,140 @@
-{"id": "ep4", "title": "The Bunk Bed Race", "speed": 1.12, "voices": {"duke": {"id": "R9RZPy40Zzy1wNxrgQpj"}, "pia": {"id": "FGY2WhTYpPnrIDTdsKH5"}, "gus": {"id": "wGkprrTXgBM5EC3Znt6U"}, "lotta": {"id": "pFZP5JQG7iQjIQuC4Bku", "settings": {"style": 0.2, "stability": 0.6, "speed": 0.95}}, "alvin": {"id": "SDARFhQygpPvpLh7Ad1B"}, "lefty": {"id": "fBD19tfE58bkETeiwUoC", "settings": {"speed": 1.0}}, "junior": {"id": "eh3mW70o6niXfNTuBPbY", "settings": {"speed": 1.0}}},
- "music": [[0, 5.0, "tense"], [5.0, 17.0, "happy"], [17.0, 18.5, "stop"], [18.5, 30.5, "tense"], [30.5, 39.0, "stop"], [39.0, 42.5, "happy"]],
+{
+ "id": "ep4",
+ "title": "The Bunk Bed Race",
+ "speed": 1.12,
+ "voices": {
+  "duke": {
+   "id": "R9RZPy40Zzy1wNxrgQpj"
+  },
+  "pia": {
+   "id": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "gus": {
+   "id": "wGkprrTXgBM5EC3Znt6U"
+  },
+  "lotta": {
+   "id": "pFZP5JQG7iQjIQuC4Bku",
+   "settings": {
+    "style": 0.2,
+    "stability": 0.6,
+    "speed": 0.95
+   }
+  },
+  "alvin": {
+   "id": "SDARFhQygpPvpLh7Ad1B"
+  },
+  "lefty": {
+   "id": "fBD19tfE58bkETeiwUoC",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "junior": {
+   "id": "eh3mW70o6niXfNTuBPbY",
+   "settings": {
+    "speed": 1.0
+   }
+  }
+ },
+ "music": [
+  [
+   0,
+   6.1,
+   "tense"
+  ],
+  [
+   6.1,
+   13.0,
+   "happy"
+  ],
+  [
+   13.0,
+   14.6,
+   "tense"
+  ],
+  [
+   14.6,
+   15.2,
+   "stop"
+  ],
+  [
+   15.2,
+   22.3,
+   "tense"
+  ],
+  [
+   22.3,
+   25.0,
+   "hush"
+  ],
+  [
+   25.0,
+   30.0,
+   "stop"
+  ],
+  [
+   30.0,
+   33.5,
+   "happy"
+  ]
+ ],
  "lines": [
-  {"who": "duke", "tts": "I'll build my half faster than you."},
-  {"who": "pia", "tts": "With the manual? Easily."},
-  {"who": "gus", "tts": "Ready... set... BUILD!"},
-  {"who": "alvin", "tts": "I'm a hex key, not a DRILL!"},
-  {"who": "duke", "tts": "Done! New record!"},
-  {"who": "pia", "tts": "Done. Correctly."},
-  {"who": "pia", "tts": "Your ladder goes to the CEILING!"},
-  {"who": "duke", "tts": "...For tall people?"},
-  {"who": "duke+pia", "tts": "YOUR half is wrong!"},
-  {"who": "gus", "tts": "Can I test it?"},
-  {"who": "gus", "tts": "...I liked it."},
-  {"who": "lefty", "tts": "Uh... where do I go?"},
-  {"who": "duke", "tts": "HER half!"},
-  {"who": "pia", "tts": "HIS half!"}
- ]}
+  {
+   "who": "duke",
+   "tts": "I'll build my half faster than you."
+  },
+  {
+   "who": "pia",
+   "tts": "With the manual? Easily."
+  },
+  {
+   "who": "gus",
+   "tts": "Ready... set... BUILD!"
+  },
+  {
+   "who": "alvin",
+   "tts": "I'm a hex key, not a DRILL!"
+  },
+  {
+   "who": "duke",
+   "tts": "Done! New record!"
+  },
+  {
+   "who": "pia",
+   "tts": "Done. Correctly."
+  },
+  {
+   "who": "pia",
+   "tts": "Your ladder goes to the CEILING!"
+  },
+  {
+   "who": "duke",
+   "tts": "...For tall people?"
+  },
+  {
+   "who": "duke+pia",
+   "tts": "YOUR half is wrong!"
+  },
+  {
+   "who": "gus",
+   "tts": "Can I test it?"
+  },
+  {
+   "who": "gus",
+   "tts": "...I liked it."
+  },
+  {
+   "who": "lefty",
+   "tts": "Uh... where do I go?"
+  },
+  {
+   "who": "duke",
+   "tts": "HER half!"
+  },
+  {
+   "who": "pia",
+   "tts": "HIS half!"
+  }
+ ],
+ "dur": 33.5
+}
