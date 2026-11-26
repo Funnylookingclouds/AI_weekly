@@ -1,59 +1,68 @@
 {
-  "id": "special-jokes-en",
+  "id": "special-roast-en",
   "language": "en",
   "voice_id": "fBD19tfE58bkETeiwUoC",
   "model_id": "eleven_multilingual_v2",
   "speed": 1.12,
+  "voice_gap": 0.35,
   "segments": [
     {
       "id": "hook",
-      "tts": "Can AI actually be funny? Let's compare its jokes – then and now."
+      "tts": "Has AI ever won a roast battle? Actually… yes. Sometimes."
     },
     {
-      "id": "y23",
-      "tts": "Back in 2023, researchers asked ChatGPT for a joke one thousand and eight times. Over ninety percent were the same twenty-five jokes. The number one hit: Why did the scarecrow win an award? Because he was outstanding in his field."
+      "id": "facts",
+      "tts": "In 2023, a ChatGPT-powered comedy bot reportedly beat a human comic at a roast battle in New York. But at a Toronto show pitting comics against an AI avatar, the AI won only two battles. And in San Francisco, a rapper out-roasted an AI Confucius."
     },
     {
-      "id": "y23b",
-      "tts": "Number two: Why did the tomato turn red? It saw the salad dressing."
+      "id": "settle",
+      "tts": "So let's settle it. Ture versus me!"
     },
     {
-      "id": "y24",
-      "tts": "One year later, a new study found most people rated ChatGPT's jokes funnier than human ones."
+      "id": "ture1",
+      "tts": "Bouncy, you're so round, even your opinions have no edges.",
+      "voice_id": "Q4oILuo4P8VeXtE6FMLI"
     },
     {
-      "id": "y26",
-      "tts": "So here's a 2026 joke, written by AI: I told my AI to stop overthinking. It said: \"Sure – let me think about that for thirty seconds.\""
+      "id": "bouncy1",
+      "tts": "Oh yeah? Ture, your beard has more parameters than my whole model."
+    },
+    {
+      "id": "ture2",
+      "tts": "…Okay. That was good.",
+      "voice_id": "Q4oILuo4P8VeXtE6FMLI"
     },
     {
       "id": "loop",
-      "tts": "From scarecrows to self-roasts – AI comedy is growing up."
+      "tts": "Final score: humans one, AI one. The roast war is officially a tie.",
+      "voice_id": "GyIXYY876myKNtA1j8NI"
     }
   ],
   "display_map": {
-    "ninety": "90",
-    "twentyfive": "25",
-    "thirty": "30",
-    "two": "2"
+    "two": "2",
+    "one": "1"
   },
   "keywords": [
-    "funny",
+    "roast",
+    "yes",
     "2023",
-    "chatgpt",
-    "ninety",
-    "percent",
-    "twentyfive",
-    "scarecrow",
-    "outstanding",
-    "tomato",
-    "dressing",
-    "funnier",
-    "2026",
-    "ai",
-    "overthinking",
-    "thirty",
-    "seconds",
-    "comedy"
+    "reportedly",
+    "beat",
+    "new",
+    "york",
+    "toronto",
+    "two",
+    "san",
+    "francisco",
+    "confucius",
+    "settle",
+    "round",
+    "edges",
+    "beard",
+    "parameters",
+    "good",
+    "tie",
+    "one"
   ],
   "voice_settings": {
     "stability": 0.3,
