@@ -1,90 +1,21 @@
 {
- "id": "2026-w48-en",
- "language": "en",
- "voice_id": "FGY2WhTYpPnrIDTdsKH5",
- "model_id": "eleven_multilingual_v2",
- "speed": 1.15,
- "voice_settings": {
-  "stability": 0.32,
-  "style": 0.6
- },
- "segments": [
-  {
-   "id": "hook",
-   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "An AI may have cracked math's biggest mystery – and the checks are coming in."
-  },
-  {
-   "id": "hook",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "I'm Wattson. Let's get this over with."
-  },
-  {
-   "id": "news1",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "Remember the Riemann proof made with Claude? On Saturday, the Lean and Mathlib teams said the computer-checked proof is correct."
-  },
-  {
-   "id": "news1",
-   "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "Top mathematicians are impressed – but one called the write-up \"garbled\", and human review is still going."
-  },
-  {
-   "id": "news1",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "Fine. I'll get excited when it's peer-reviewed."
-  },
-  {
-   "id": "news2",
-   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "Next: OpenAI says its GPT-6 models can design proteins using plain reasoning and code. In lab tests, 35 of 322 designs actually stuck to their targets."
-  },
-  {
-   "id": "news2",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "Great. Next it'll design my replacement."
-  },
-  {
-   "id": "news3",
-   "voice_id": "wGkprrTXgBM5EC3Znt6U",
-   "tts": "Quick hit: big drug makers say AI is shrinking discovery timelines – but Lilly warns: don't expect miracles yet."
-  },
-  {
-   "id": "loop",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "Math, proteins, medicine – all in seven days."
-  },
-  {
-   "id": "loop",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "Now somebody charge me."
-  }
- ],
- "display_map": {
-  "seven": "7"
- },
- "keywords": [
-  "mystery",
-  "wattson",
-  "riemann",
-  "claude",
-  "lean",
-  "correct",
-  "garbled",
-  "review",
-  "peerreviewed",
-  "openai",
-  "gpt6",
-  "proteins",
-  "35",
-  "322",
-  "replacement",
-  "shrinking",
-  "timelines",
-  "lilly",
-  "miracles",
-  "seven",
-  "charge"
- ],
- "voice_gap": 0.25
+  "id": "2026-w43-en",
+  "language": "en",
+  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.12,
+  "voice_gap": 0.25,
+  "voice_settings": {"stability": 0.32, "style": 0.6},
+  "segments": [
+    {"id": "hook", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Big week, team! AI just got better at seeing weeks into the future."},
+    {"id": "c1", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "That's my department! Researchers used machine learning to fix the errors in weather models – and doubled forecast skill two to six weeks ahead. It's in Nature."},
+    {"id": "l1", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "That could mean earlier warnings for heat waves and floods."},
+    {"id": "c2", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "And I finally get to plan my rain."},
+    {"id": "p1", "voice_id": "TX3LPaxmHKxFdv7VOQHJ", "tts": "Next! Hugging Face released Carbon-X – an open AI you can literally chat with about DNA. Ask what a mutation does, in plain English!"},
+    {"id": "ch1", "voice_id": "SDARFhQygpPvpLh7Ad1B", "tts": "And it runs on a laptop! Though… it hasn't been tested in a real lab yet."},
+    {"id": "w1", "voice_id": "MKlLqCItoCkvdhrxgtLv", "tts": "Quick hit: OpenAI's former science chief launched Warp Sciences – 215 million dollars for robot chemistry labs that hunt for new drugs. Robots doing chemistry. Finally, someone else gets to blow things up."},
+    {"id": "loop", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Weather, DNA, robot labs – all in seven days."}
+  ],
+  "display_map": {"seven": "7", "two": "2", "six": "6"},
+  "keywords": ["future", "department", "machine", "learning", "weather", "doubled", "nature", "heat", "floods", "rain", "carbonx", "dna", "mutation", "laptop", "lab", "warp", "215", "robot", "chemistry", "drugs", "seven"]
 }
