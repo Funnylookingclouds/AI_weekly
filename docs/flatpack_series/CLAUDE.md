@@ -75,12 +75,12 @@ Original characters, owned by the channel. Each has a fixed colour, silhouette, 
 ### 4a. The furniture four (the arguers)
 The main cast are **living pieces of furniture** – code-drawn 2.5D characters (`video/src/flatpack/furni.tsx`, `<Furni id expr emote f yaw talk hop glow />`) with real box geometry and lighting, faces that wrap on the 3D shape when they turn, noodle arms with cartoon gloves and stubby wooden legs. Sheet: `output/flatpack/cast_sheet.png`.
 
-| Character | Furniture (colour) | Personality | Catchphrase / habit | Signature animation | Voice (audition before locking) |
+| Character | Furniture (colour) | Personality | Catchphrase / habit | Signature animation | Voice (ElevenLabs, locked 2026-11-26) |
 |---|---|---|---|---|---|
-| **Duke** | Tall **bookcase**, tomato red, colourful books on his shelves and a stack of books as a quiff (`#FF5A4E`) | Overconfident "I've built a hundred of these". Never reads instructions. Lovable, loud, wrong. | "Manuals are a *suggestion*." | Books rattle and tilt when he's angry | Brian `nPczCjzI2devNBz1zQrb` (or a more comedic male voice) |
-| **Pia** | **Chest of drawers**, teal, round glasses, drawers labelled "SCREWS" / "MORE SCREWS", highlighter behind the "ear" (`#2EC4B6`) | Manual purist, organises every screw. Secretly also panics. | "Step one: READ the manual." | Drawers shoot out when she's angry or shocked | Laura `FGY2WhTYpPnrIDTdsKH5` |
-| **Gus** | **Armchair**, grape purple, tufted buttons (`#9B5DE5`) | Big, soft, sweet, slow, accidentally destructive. Hungry. Sits on things (incl. Alvin). | "Fixed it!" | Bounces like a cushion, tiny hammer | Gus `wGkprrTXgBM5EC3Znt6U` |
-| **Lotta** | **Floor lamp**, bubblegum shade with sunflower trim, silver "bun" finial, half-moon reading glasses on a chain (`#F15BB5`) | Ancient, silent, deadpan. Sleeps through every fight, then finishes the build in 2 seconds. | *sigh* … "Done." | **Lights up** (glow) when she takes over | A calm older voice from the library |
+| **Duke** | Tall **bookcase**, tomato red, colourful books on his shelves and a stack of books as a quiff (`#FF5A4E`) | Overconfident "I've built a hundred of these". Never reads instructions. Lovable, loud, wrong. | "Manuals are a *suggestion*." | Books rattle and tilt when he's angry | **Witty McGee** `R9RZPy40Zzy1wNxrgQpj` |
+| **Pia** | **Chest of drawers**, teal, round glasses, drawers labelled "SCREWS" / "MORE SCREWS", highlighter behind the "ear" (`#2EC4B6`) | Manual purist, organises every screw. Secretly also panics. | "Step one: READ the manual." | Drawers shoot out when she's angry or shocked | **Laura** `FGY2WhTYpPnrIDTdsKH5` |
+| **Gus** | **Armchair**, grape purple, tufted buttons (`#9B5DE5`) | Big, soft, sweet, slow, accidentally destructive. Hungry. Sits on things (incl. Alvin). | "Fixed it!" | Bounces like a cushion, tiny hammer | **Gus** `wGkprrTXgBM5EC3Znt6U` |
+| **Lotta** | **Floor lamp**, bubblegum shade with sunflower trim, silver "bun" finial, half-moon reading glasses on a chain (`#F15BB5`) | Ancient, silent, deadpan. Sleeps through every fight, then finishes the build in 2 seconds. | *sigh* … "Done." | **Lights up** (glow) when she takes over | **Lily** `pFZP5JQG7iQjIQuC4Bku` (stability 0.6, style 0.2, speed 0.95 – deadpan) |
 
 Pairings: **Duke vs. Pia** = the core couple (method clash). **Gus** = chaos multiplier. **Lotta** = the twist/punchline (use sparingly – max every 3rd Short so it stays funny).
 
@@ -97,8 +97,8 @@ Pairings: **Duke vs. Pia** = the core couple (method clash). **Gus** = chaos mul
 ### 4b. Objects (the commentators)
 | Character | Look | Role | Voice |
 |---|---|---|---|
-| **Alvin** – the hex key | Small silver L-shaped hex key with big eyes | Sarcastic sidekick, constantly lost (under Gus, behind the pallet). Breaks the fourth wall. | Odd Todd `SDARFhQygpPvpLh7Ad1B` |
-| **Lefty** – the leftover screw | Tiny silver screw with a single tuft of hair and huge sad eyes | Appears near the end of every episode (tiny screw with a dome head, sad eyebrows, one curl of hair): *"Uh… where do I go?"* Never answered. | Little Dude II `fBD19tfE58bkETeiwUoC` |
+| **Alvin** – the hex key | Small silver L-shaped hex key with big eyes | Sarcastic sidekick, constantly lost (under Gus, behind the pallet). Breaks the fourth wall. | **Odd Todd** `SDARFhQygpPvpLh7Ad1B` (locked) |
+| **Lefty** – the leftover screw | Tiny silver screw with a single tuft of hair and huge sad eyes | Appears near the end of every episode (tiny screw with a dome head, sad eyebrows, one curl of hair): *"Uh… where do I go?"* Never answered. | **Little Dude II** `fBD19tfE58bkETeiwUoC` (locked) |
 | **Mr. Manual** | Our own pictogram figure: round head, tiny cap, flat coloured line-art, lives inside the instruction booklet | Communicates **only** with pictograms, sighs and "?!" signs. Gets crumpled, thrown, ignored. Pia's ally. | No words – SFX only (paper rustle, sigh) |
 | **The Box** | A big cardboard box with a face on the "THIS SIDE UP" arrow | Ominous one-liners at the start ("I contain… 214 parts.") | Old Timer Mountain Man `Q4oILuo4P8VeXtE6FMLI` |
 
@@ -149,6 +149,7 @@ Narrator/announcer for specials, speedruns and title cards: **Tyler – Arena An
 * **Logo:** "SOME ASSEMBLY" in neat flat-pack wooden letters with screws, then "RAGE!" in big tomato-red letters that are falling apart (one letter hanging by a screw, a hex key stuck in the "G", steam puffs), Lefty peeking out under the "!". Alt version: "REQUIRED" crossed out in pen with "RAGE" scribbled above it. Files: `output/brand/logo.png`, avatar `output/brand/avatar.png` (Lefty's face), banner.
 * **Shorts intro (≤ 1 s):** a box slams down, logo flaps open. Or skip and go straight into the hook.
 * **Shorts outro (3.5 s, `Outro.tsx`):** sunburst background, "SOME" + "ASSEMBLY" wooden planks slide in with screws, "RAGE!" slams in (crooked G, steam, hex key stuck in it), big **FOLLOW FOR MORE!** button, Lefty pops up and says *"Follow for more rage!"* (Little Dude II), Duke and Pia peek in from the corners, still angry. Cross-fades in 0.2 s after the story.
+* Voices: one line per speech bubble in `scripts/episodes/flatpack-epN.json` → `scripts/flatpack_voices.py` (ElevenLabs with word timestamps → `video/src/flatpack/epN.voice.json`). Bubbles stretch to fit the line but close when the next bubble opens. Group swearing = babble + bleep.
 * Music + SFX are synthesised by `scripts/flatpack_audio.py` (royalty-free): marimba/pizzicato score with mood sections (happy / tense / magic / stop), rip, ratchet, bonk, ka-chunk, crash, thunder, record scratch, plus per-character **babble** voices (cartoon gibberish) under speech bubbles until real voices are approved.
 
 ---
@@ -194,5 +195,5 @@ Write `output/<id>.youtube.md` and paste it in the chat, ready to copy:
 1. ✅ Name: Some Assembly Rage. Reserve `@SomeAssemblyRage` on YouTube/TikTok/Instagram.
 2. ✅ Furniture cast in code + character sheet (`output/flatpack/cast_sheet.png`).
 3. ✅ Pilot style test "Ep. 1 – The Bookcase" (`output/flatpack/some_assembly_rage_ep1.mp4`): speech bubbles + babble, music, SFX, outro.
-4. 🔄 Voice audition reel (`output/flatpack/voice_audition.mp4`, candidates in `video/src/flatpack/audition.json`) – owner picks A/B/C per character → voiced version of Ep. 1 (bubbles become captions), then 3 more Shorts and a 3-part mini-arc ("The Wardrobe of Doom").
+4. ✅ Voices locked (all "A") – audition reel (`output/flatpack/voice_audition.mp4`, candidates in `video/src/flatpack/audition.json`) – owner picks A/B/C per character → ✅ voiced Ep. 1 (speech bubbles = captions with the current word highlighted, lip-sync from word timestamps). Next: 3 more Shorts and a 3-part mini-arc ("The Wardrobe of Doom").
 5. Move to its own repo when created; keep `docs/episode_log.md` and `docs/furniture_names.md` updated after every episode.

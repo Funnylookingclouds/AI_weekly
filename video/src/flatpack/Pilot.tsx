@@ -9,6 +9,11 @@ import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, random } fr
 import type { Expr } from "../cast/rig";
 import { Alvin, C, Furni, LUCKY, Lefty, type Emote, type FurniId } from "./furni";
 import { Outro, OUTRO_LEN } from "./Outro";
+import VOICE_RAW from "./ep1.voice.json";
+
+type Voice = { file: string; dur: number; words: { w: string; s: number; e: number }[] } | null;
+const VOICE = VOICE_RAW as Voice[];
+const VDELAY = 0.05;
 
 export const FPS = 60;
 const STORY = 39.0;
@@ -48,7 +53,7 @@ const BUBBLES: Bub[] = [
   { who: "gus", t0: 3.7, t1: 5.1, text: "I LOVE FLAT-PACK DAY!" },
   { who: "duke", t0: 5.3, t1: 6.7, text: "Five minutes. Tops." },
   { who: "pia", t0: 7.2, t1: 8.6, text: "Step one: READ the manual." },
-  { who: "duke", t0: 8.7, t1: 10.0, text: "Manuals are a SUGGESTION." },
+  { who: "duke", t0: 8.85, t1: 10.0, text: "Manuals are a SUGGESTION." },
   { who: "alvin", t0: 13.0, t1: 14.2, text: "Ow. Ow. OW!" },
   { who: "pia", t0: 15.4, t1: 16.8, text: "THAT'S BACKWARDS!", kind: "shout" },
   { who: "duke", t0: 16.9, t1: 18.0, text: "It's… a design choice." },
@@ -84,6 +89,9 @@ const BURSTS: BurstT[] = [
   [21.4, 60, -700, "KRAKOOM!", "#e5e7eb", 3], [27.6, -160, -340, "KA-CHUNK!", C.mint, -8], [28.2, 220, -250, "KA-CHUNK!", C.sky, 7],
   [28.8, 40, -520, "KA-CHUNK!", C.sun, -4], [36.6, 40, -220, "CRASH!", C.tomato, -6],
 ];
+
+BUBBLES.forEach((b, i) => { const v = VOICE[i]; const nx = BUBBLES[i + 1]; if (v) b.t1 = Math.max(b.t1, Math.min(b.t0 + VDELAY + v.dur + 0.25, nx ? Math.max(b.t1, nx.t0) : 99)); });
+const speaking = (who: Who, t: number) => BUBBLES.some((b, i) => { const v = VOICE[i]; if (b.who !== who || !v) return false; const lt = t - b.t0 - VDELAY; return v.words.some((w) => lt >= w.s - 0.02 && lt <= w.e + 0.02); });
 
 // =============================================================================== state helpers
 const camAt = (t: number) => {
@@ -288,7 +296,7 @@ const Burst: React.FC<{ x: number; y: number; text: string; color: string; rot: 
   );
 };
 
-const Bubble: React.FC<{ b: Bub; ax: number; ay: number; t: number }> = ({ b, ax, ay, t }) => {
+const Bubble: React.FC<{ b: Bub; ax: number; ay: number; t: number; v?: Voice }> = ({ b, ax, ay, t, v }) => {
   const age = t - b.t0, left = b.t1 - t;
   const s = age < 0.15 ? back(age / 0.15) : left < 0.12 ? clamp(left / 0.12) : 1;
   const kind = b.kind ?? "say";
@@ -314,7 +322,12 @@ const Bubble: React.FC<{ b: Bub; ax: number; ay: number; t: number }> = ({ b, ax
         {b.who !== "all" && <path d={`M${tailX - bx - 22} ${h - 10} L${tailX - bx + 22} ${h - 10}`} stroke={jag ? C.sun : "#fff"} strokeWidth={10} />}
         {!jag && <rect x={22} y={h * 0.22} width={12} height={h * 0.56} rx={6} fill={col} />}
       </svg>
-      <div style={{ position: "absolute", left: jag ? 30 : 46, right: 30, top: 0, height: h, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: LUCKY, fontSize: fs, lineHeight: 1.05, color: kind === "grawlix" ? "#fff" : INK, WebkitTextStroke: kind === "grawlix" ? `4px ${INK}` : undefined, paintOrder: "stroke", fontStyle: kind === "whisper" ? "italic" : undefined, letterSpacing: kind === "grawlix" ? 8 : 1 }}>{b.text}</div>
+      <div style={{ position: "absolute", left: jag ? 30 : 46, right: 30, top: 0, height: h, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: LUCKY, fontSize: fs, lineHeight: 1.05, color: kind === "grawlix" ? "#fff" : INK, WebkitTextStroke: kind === "grawlix" ? `4px ${INK}` : undefined, paintOrder: "stroke", fontStyle: kind === "whisper" ? "italic" : undefined, letterSpacing: kind === "grawlix" ? 8 : 1 }}><span>{(() => {
+        const ws = b.text.split(" ");
+        const lt = t - b.t0 - VDELAY;
+        const vw = v && v.words.length === ws.length ? v.words : null;
+        return ws.map((w, k) => { const on = vw && lt >= vw[k].s - 0.03 && lt < (k + 1 < vw.length ? vw[k + 1].s : vw[k].e + 0.3); return <span key={k} style={{ color: on ? (jag ? C.tomato : "#e8890c") : undefined, textDecoration: on ? "underline" : undefined, textDecorationThickness: 6, textUnderlineOffset: 8 }}>{w}{k < ws.length - 1 ? " " : ""}</span>; });
+      })()}</span></div>
     </div>
   );
 };
@@ -424,7 +437,7 @@ export const FlatpackPilot: React.FC = () => {
   const pos: Record<FurniId, { x: number; y: number; walk: number }> = { duke: posAt("duke", t), pia: posAt("pia", t), gus: posAt("gus", t), lotta: posAt("lotta", t) };
   (Object.keys(MOOD) as FurniId[]).forEach((id) => {
     const p = pos[id], m = moodAt(id, t);
-    const talk = BUBBLES.some((b) => (b.who === id || (b.who === "all" && id !== "lotta")) && t >= b.t0 && t < b.t1 && b.kind !== "whisper") || (id === "lotta" && t >= 29.3 && t < 30.0);
+    const talk = speaking(id, t) || BUBBLES.some((b) => b.who === "all" && id !== "lotta" && t >= b.t0 && t < b.t1);
     let hop = p.walk + (m.since < 0.35 ? Math.sin((m.since / 0.35) * Math.PI) * 55 : 0);
     if (t > 30.6 && t < 33.0 && id !== "lotta") hop += Math.abs(Math.sin((t - 30.6) * 7 + id.length)) * 60;
     if (t > 0.75 && t < 1.1) hop += Math.sin(((t - 0.75) / 0.35) * Math.PI) * 90;
@@ -464,7 +477,7 @@ export const FlatpackPilot: React.FC = () => {
     const lx = lerp(900, 130, ease(a)), ly = 262;
     const rot = a < 1 ? 90 + (1 - ease(a)) * 1440 : 0;
     const hop = t > 34 && t < 34.3 ? Math.sin(((t - 34) / 0.3) * Math.PI) * 40 : 0;
-    items.push({ y: ly, node: <g key="lefty" transform={`translate(${lx} ${ly - 60 - hop}) rotate(${a < 1 ? rot : Math.sin(t * 3) * 4})`}><Lefty f={frame} size={0.75} talk={t >= 34.2 && t < 35.5} /></g> });
+    items.push({ y: ly, node: <g key="lefty" transform={`translate(${lx} ${ly - 60 - hop}) rotate(${a < 1 ? rot : Math.sin(t * 3) * 4})`}><Lefty f={frame} size={0.75} talk={speaking("lefty", t)} /></g> });
   }
   // dust puffs on impacts
   const dust = (t0: number, x: number, y: number, key: string) => { const a = (t - t0) / 0.8; if (a < 0 || a > 1) return; items.push({ y: y + 5, node: <g key={key}>{[...Array(8)].map((_, i) => { const ang = (i / 8) * Math.PI; return <circle key={i} cx={x + Math.cos(ang) * (80 + a * 260) * (i % 2 ? 1 : -1)} cy={y - Math.sin(ang) * a * 60} r={30 + a * 50} fill="#fff" stroke={INK} strokeWidth={4} opacity={1 - a} />; })}</g> }); };
@@ -499,7 +512,7 @@ export const FlatpackPilot: React.FC = () => {
         <rect width={W} height={1920} fill="#1e1b4b" opacity={stormTint} />
       </svg>
       {BURSTS.map(([bt, x, y, txt, col, rot], i) => t >= bt && t < bt + 0.85 && (() => { const p = toScreen(x, y); return <Burst key={i} x={p.x} y={p.y} text={txt} color={col} rot={rot} age={t - bt} />; })())}
-      {BUBBLES.map((b, i) => { if (t < b.t0 || t >= b.t1) return null; const h = heads[b.who]; const p = b.who === "all" ? { x: 540, y: 820 } : toScreen(h.x, h.y); return <Bubble key={i} b={b} ax={p.x} ay={p.y} t={t} />; })}
+      {BUBBLES.map((b, i) => { if (t < b.t0 || t >= b.t1) return null; const h = heads[b.who]; const p = b.who === "all" ? { x: 540, y: 820 } : toScreen(h.x, h.y); return <Bubble key={i} b={b} ax={p.x} ay={p.y} t={t} v={VOICE[i]} />; })}
       <StepCounter t={t} />
       <Scoreboard t={t} />
       <LogoStamp t={t} />
@@ -512,12 +525,11 @@ export const FlatpackPilot: React.FC = () => {
       <Audio src={staticFile("flatpack/music.wav")} volume={0.9} />
       {SFX.map(([st, n, v], i) => <Sequence key={`s${i}`} from={Math.round(st * FPS)} durationInFrames={Math.round(2.4 * FPS)}><Audio src={staticFile(`flatpack/${n}.wav`)} volume={v} /></Sequence>)}
       {BRAND.map(([st, n, v], i) => <Sequence key={`b${i}`} from={Math.round(st * FPS)} durationInFrames={Math.round(2 * FPS)}><Audio src={staticFile(n)} volume={v} /></Sequence>)}
-      {BUBBLES.filter((b) => b.who !== "lefty").flatMap((b, i) => (b.who === "all" ? (["duke", "pia", "gus"] as Who[]) : [b.who]).map((w, k) => (
-        <Sequence key={`v${i}${k}`} from={Math.round(b.t0 * FPS)} durationInFrames={Math.round((b.t1 - b.t0 - 0.1) * FPS)}>
-          <Audio src={staticFile(`flatpack/babble_${w}.wav`)} volume={b.kind === "whisper" ? 0.35 : b.kind === "shout" || b.kind === "grawlix" ? 0.9 : 0.7} playbackRate={b.kind === "shout" || b.kind === "grawlix" ? 1.15 : 1} loop startFrom={Math.round(((i * 37 + k * 23) % 90))} />
-        </Sequence>
-      )))}
-      <Sequence from={Math.round(34.25 * FPS)}><Audio src={staticFile("flatpack/vo_lefty_where.wav")} volume={1} /></Sequence>
+      {BUBBLES.map((b, i) => { const v = VOICE[i]; return v && <Sequence key={`vo${i}`} from={Math.round((b.t0 + VDELAY) * FPS)} durationInFrames={Math.round((v.dur + 0.3) * FPS)}><Audio src={staticFile(v.file)} volume={1} /></Sequence>; })}
+      {/* Lotta's sigh + the group grawlix (bleeped) */}
+      <Sequence from={Math.round(26.0 * FPS)} durationInFrames={70}><Audio src={staticFile("flatpack/sfx_sigh.wav")} volume={0.8} /></Sequence>
+      {(["duke", "pia", "gus"] as Who[]).map((w, k) => <Sequence key={`g${k}`} from={Math.round(37.0 * FPS)} durationInFrames={Math.round(1.7 * FPS)}><Audio src={staticFile(`flatpack/babble_${w}.wav`)} volume={0.55} playbackRate={1.2} loop startFrom={k * 30} /></Sequence>)}
+      <Sequence from={Math.round(37.05 * FPS)} durationInFrames={Math.round(1.7 * FPS)}><Audio src={staticFile("flatpack/sfx_bleep.wav")} volume={0.35} /></Sequence>
     </AbsoluteFill>
   );
 };
