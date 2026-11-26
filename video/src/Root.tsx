@@ -12,6 +12,7 @@ import { FlatpackSheet } from "./flatpack/Sheet";
 import { FlatpackPilot, PILOT_LEN } from "./flatpack/Pilot";
 import { FlatpackAudition, AUDITION_LEN } from "./flatpack/Audition";
 import { FlatpackEp2, EP2_LEN } from "./flatpack/episodes/ep2";
+import { FlatpackEp3, EP3_LEN } from "./flatpack/episodes/ep3";
 
 const V = { fps: FPS, width: 1080, height: 1920 } as const;
 
@@ -36,6 +37,7 @@ export const Root: React.FC = () => (
     <Composition id="FlatpackPilot" component={FlatpackPilot} durationInFrames={PILOT_LEN} fps={60} width={1080} height={1920} />
     <Composition id="FlatpackAudition" component={FlatpackAudition} durationInFrames={AUDITION_LEN} fps={60} width={1080} height={1920} />
     <Composition id="FlatpackEp2" component={FlatpackEp2} durationInFrames={EP2_LEN} fps={60} width={1080} height={1920} />
+    <Composition id="FlatpackEp3" component={FlatpackEp3} durationInFrames={EP3_LEN} fps={60} width={1080} height={1920} />
     <Still id="FlatpackSheet" component={FlatpackSheet} width={3560} height={2120} />
     <Still id="LogoSquare" component={B.LogoSquare} width={1080} height={1080} />
     <Still id="LogoAvatar" component={B.LogoAvatar} width={800} height={800} />
