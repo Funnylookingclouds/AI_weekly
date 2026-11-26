@@ -9,6 +9,7 @@ ID=$1; MOD=$2
 cp "scripts/episodes/$ID.json" scripts/episode.json
 cp "scripts/episodes/$ID.words.json" temp/words.json
 cp temp/words.json video/src/data/words.json
+python3 -c "import json,sys;d=json.load(open(sys.argv[1]));json.dump({'tail':d.get('tail',0.6)},open('video/src/data/meta.json','w'))" "scripts/episodes/$ID.json"
 cp output/voiceover.mp3 video/public/voiceover.mp3
 printf '// Active episode – change this one line to rebuild another week\n// (also copy the matching scripts/episodes/<id>.json to scripts/episode.json).\nexport * from "./episodes/%s";\n' "$MOD" > video/src/episode.ts
 (cd video && npx tsc && npx remotion render src/index.ts WeeklyShort ../temp/video_raw.mp4 --codec=h264 --video-bitrate=5.5M --audio-bitrate=256k --log=error --concurrency=4)

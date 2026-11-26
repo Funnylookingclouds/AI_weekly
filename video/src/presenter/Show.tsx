@@ -168,7 +168,7 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
             <PlateSlot p={p} stage={show.stage} club={show.scene === "club"} />
             {show.scene === "club" && !p.cast && !p.toon && <MicStand x={p.bouncy ? 860 : 900} />}
             {(show.stage || show.scene) && p.chip && <TopicChip label={p.chip} tint={p.tint ?? "#7c3aed"} />}
-            {p.cast ? <Ensemble members={p.cast} t={t} open={mouthOpen(WORDS, t)} tint={p.tint ?? "#7c3aed"} i={i} /> : p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={p.bouncy} open={p.bouncy === "laugh" ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
+            {p.cast ? <Ensemble members={p.cast} t={t} open={mouthOpen(WORDS, t)} tint={p.tint ?? "#7c3aed"} i={i} /> : p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={typeof p.laugh === "number" && t >= p.laugh ? "laugh" : p.bouncy} open={p.bouncy === "laugh" || (typeof p.laugh === "number" && t >= p.laugh) ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
             <Audio src={staticFile(i === 0 ? "whoosh.wav" : i % 3 === 0 ? "pop.wav" : "whoosh.wav")} volume={0.4} />
           </Sequence>
         );

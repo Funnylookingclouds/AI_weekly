@@ -112,9 +112,9 @@ export const Audience: React.FC<{ laughing: boolean; lf: number }> = ({ laughing
           <g key={i}>
             <ellipse cx={x} cy={y + r * 1.6} rx={r * 1.3} ry={r * 1.1} fill="#0a0505" />
             <circle cx={x} cy={y} r={r} fill="#0a0505" />
-            {laughing && lf > i * 3 && lf < 110 + i * 3 && (i % 2 === 0 || i === 3) && (() => {
+            {laughing && lf > i * 3 && lf < 110 + i * 3 && (i % 2 === 0) && (() => {
               const k = Math.min(1, (lf - i * 3) / 8);
-              return <text x={x} y={y - r - 90 - (lf - i * 3) * 1.6} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={72 * k} fill="#fff6c9" stroke={INK} strokeWidth={3} paintOrder="stroke" transform={`rotate(${(i - 4) * 4} ${x} ${y})`}>{BUBBLES[i % BUBBLES.length]}</text>;
+              return <text x={x} y={y - r - 40 - Math.min(90, (lf - i * 3) * 0.9)} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={60 * k} fill="#fff6c9" stroke={INK} strokeWidth={3} paintOrder="stroke" transform={`rotate(${(i - 4) * 4} ${x} ${y})`}>{BUBBLES[i % BUBBLES.length]}</text>;
             })()}
           </g>
         );

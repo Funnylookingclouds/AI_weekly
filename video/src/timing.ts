@@ -1,4 +1,5 @@
 import words from "./data/words.json";
+import meta from "./data/meta.json";
 
 export type Word = {
   word: string;
@@ -11,7 +12,7 @@ export type Word = {
 
 export const WORDS = words as Word[];
 export const FPS = 60;
-export const TAIL = 0.6; // seconds after last word (outro cross-fades in)
+export const TAIL: number = (meta as { tail?: number }).tail ?? 0.6; // seconds after last word (outro cross-fades in); joke shorts use a longer tail for the laugh
 export const TOTAL_SEC = WORDS[WORDS.length - 1].end + TAIL;
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
