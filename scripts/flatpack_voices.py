@@ -46,7 +46,9 @@ for n, ln in enumerate(ep["lines"]):
     whos = ln["who"].split("+")
     parts = [synth(w, ln, n, f"_{k}") for k, w in enumerate(whos)]
     out = out_dir / f"line_{n}.wav"
-    if len(parts) == 1:
+    if len(parts) == 1 and ln.get("fx") == "muffle":  # speaking from inside furniture
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(parts[0][0]), "-af", "lowpass=f=700,lowpass=f=900,aecho=0.6:0.5:25:0.3,volume=2.2,loudnorm=I=-18:TP=-1.5", "-ar", "48000", str(out)], check=True)
+    elif len(parts) == 1:
         subprocess.run(["cp", str(parts[0][0]), str(out)], check=True)
     else:
         args = sum([["-i", str(p[0])] for p in parts], [])

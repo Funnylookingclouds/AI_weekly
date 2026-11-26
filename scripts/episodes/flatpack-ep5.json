@@ -1,0 +1,119 @@
+{
+ "id": "ep5",
+ "title": "It Won't Fit",
+ "speed": 1.12,
+ "voices": {
+  "duke": {
+   "id": "R9RZPy40Zzy1wNxrgQpj"
+  },
+  "pia": {
+   "id": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "gus": {
+   "id": "wGkprrTXgBM5EC3Znt6U"
+  },
+  "lotta": {
+   "id": "pFZP5JQG7iQjIQuC4Bku",
+   "settings": {
+    "style": 0.2,
+    "stability": 0.6,
+    "speed": 0.95
+   }
+  },
+  "alvin": {
+   "id": "SDARFhQygpPvpLh7Ad1B"
+  },
+  "lefty": {
+   "id": "fBD19tfE58bkETeiwUoC",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "junior": {
+   "id": "eh3mW70o6niXfNTuBPbY",
+   "settings": {
+    "speed": 1.0
+   }
+  }
+ },
+ "lines": [
+  {
+   "who": "duke",
+   "tts": "The wardrobe's here!"
+  },
+  {
+   "who": "pia",
+   "tts": "Box: two meters. Door: one meter."
+  },
+  {
+   "who": "duke",
+   "tts": "So we push harder."
+  },
+  {
+   "who": "gus",
+   "tts": "Tilt it! Tilt it!"
+  },
+  {
+   "who": "pia",
+   "tts": "It's not TILTING, it's STUCK!"
+  },
+  {
+   "who": "duke",
+   "tts": "...New plan. We build it right here."
+  },
+  {
+   "who": "pia",
+   "tts": "Duke. The door is blocked."
+  },
+  {
+   "who": "duke",
+   "tts": "...So?"
+  },
+  {
+   "who": "pia",
+   "tts": "WE'RE TRAPPED."
+  },
+  {
+   "who": "lefty",
+   "tts": "Uh... how do I get out?"
+  }
+ ],
+ "music": [
+  [
+   0,
+   6.7,
+   "happy"
+  ],
+  [
+   6.7,
+   12.0,
+   "tense"
+  ],
+  [
+   12.0,
+   12.8,
+   "stop"
+  ],
+  [
+   12.8,
+   15.0,
+   "happy"
+  ],
+  [
+   15.0,
+   20.2,
+   "tense"
+  ],
+  [
+   20.2,
+   24.5,
+   "stop"
+  ],
+  [
+   24.5,
+   28.0,
+   "happy"
+  ]
+ ],
+ "dur": 28.0
+}

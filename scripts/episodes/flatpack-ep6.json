@@ -1,0 +1,124 @@
+{
+ "id": "ep6",
+ "title": "Page 96",
+ "speed": 1.12,
+ "voices": {
+  "duke": {
+   "id": "R9RZPy40Zzy1wNxrgQpj"
+  },
+  "pia": {
+   "id": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "gus": {
+   "id": "wGkprrTXgBM5EC3Znt6U"
+  },
+  "lotta": {
+   "id": "pFZP5JQG7iQjIQuC4Bku",
+   "settings": {
+    "style": 0.2,
+    "stability": 0.6,
+    "speed": 0.95
+   }
+  },
+  "alvin": {
+   "id": "SDARFhQygpPvpLh7Ad1B"
+  },
+  "lefty": {
+   "id": "fBD19tfE58bkETeiwUoC",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "junior": {
+   "id": "eh3mW70o6niXfNTuBPbY",
+   "settings": {
+    "speed": 1.0
+   }
+  }
+ },
+ "lines": [
+  {
+   "who": "pia",
+   "tts": "It's NINETY-SIX pages."
+  },
+  {
+   "who": "duke",
+   "tts": "I'll build it from memory."
+  },
+  {
+   "who": "pia",
+   "tts": "You've never SEEN it!"
+  },
+  {
+   "who": "junior",
+   "tts": "I can help, Dad!"
+  },
+  {
+   "who": "gus",
+   "tts": "Aww."
+  },
+  {
+   "who": "pia",
+   "tts": "The hinges are on the OUTSIDE!"
+  },
+  {
+   "who": "duke",
+   "tts": "Easier to reach!"
+  },
+  {
+   "who": "duke",
+   "tts": "...Guys?",
+   "fx": "muffle"
+  },
+  {
+   "who": "pia",
+   "tts": "Duke? DUKE?!"
+  },
+  {
+   "who": "gus",
+   "tts": "Is he... stored?"
+  },
+  {
+   "who": "lefty",
+   "tts": "Uh... where does HE go?"
+  }
+ ],
+ "music": [
+  [
+   0,
+   4.6,
+   "tense"
+  ],
+  [
+   4.6,
+   9.6,
+   "happy"
+  ],
+  [
+   9.6,
+   12.5,
+   "tense"
+  ],
+  [
+   12.5,
+   13.3,
+   "happy"
+  ],
+  [
+   13.3,
+   17.8,
+   "hush"
+  ],
+  [
+   17.8,
+   22.2,
+   "stop"
+  ],
+  [
+   22.2,
+   25.7,
+   "happy"
+  ]
+ ],
+ "dur": 25.7
+}

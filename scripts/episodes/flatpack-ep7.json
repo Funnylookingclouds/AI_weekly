@@ -1,0 +1,125 @@
+{
+ "id": "ep7",
+ "title": "The Rescue",
+ "speed": 1.12,
+ "voices": {
+  "duke": {
+   "id": "R9RZPy40Zzy1wNxrgQpj"
+  },
+  "pia": {
+   "id": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "gus": {
+   "id": "wGkprrTXgBM5EC3Znt6U"
+  },
+  "lotta": {
+   "id": "pFZP5JQG7iQjIQuC4Bku",
+   "settings": {
+    "style": 0.2,
+    "stability": 0.6,
+    "speed": 0.95
+   }
+  },
+  "alvin": {
+   "id": "SDARFhQygpPvpLh7Ad1B"
+  },
+  "lefty": {
+   "id": "fBD19tfE58bkETeiwUoC",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "junior": {
+   "id": "eh3mW70o6niXfNTuBPbY",
+   "settings": {
+    "speed": 1.0
+   }
+  }
+ },
+ "lines": [
+  {
+   "who": "duke",
+   "tts": "It's DARK in here! And there's a SOCK!",
+   "fx": "muffle"
+  },
+  {
+   "who": "pia",
+   "tts": "To open: step one... disassemble everything."
+  },
+  {
+   "who": "gus",
+   "tts": "Or I knock!"
+  },
+  {
+   "who": "duke",
+   "tts": "Ow! OW!",
+   "fx": "muffle"
+  },
+  {
+   "who": "junior",
+   "tts": "Hnnngh!"
+  },
+  {
+   "who": "pia"
+  },
+  {
+   "who": "lotta",
+   "tts": "It says... push."
+  },
+  {
+   "who": "duke",
+   "tts": "Freedom! ...Did we finish it?"
+  },
+  {
+   "who": "pia",
+   "tts": "...Yes?"
+  },
+  {
+   "who": "lefty",
+   "tts": "Uh... where do WE go?"
+  }
+ ],
+ "music": [
+  [
+   0,
+   6.0,
+   "tense"
+  ],
+  [
+   6.0,
+   8.5,
+   "happy"
+  ],
+  [
+   8.5,
+   14.2,
+   "tense"
+  ],
+  [
+   14.2,
+   15.8,
+   "hush"
+  ],
+  [
+   15.8,
+   17.6,
+   "magic"
+  ],
+  [
+   17.6,
+   21.8,
+   "happy"
+  ],
+  [
+   21.8,
+   27.0,
+   "stop"
+  ],
+  [
+   27.0,
+   30.5,
+   "happy"
+  ]
+ ],
+ "dur": 30.5
+}
