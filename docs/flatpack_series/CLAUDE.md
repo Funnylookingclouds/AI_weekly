@@ -194,5 +194,5 @@ Write `output/<id>.youtube.md` and paste it in the chat, ready to copy:
 1. ✅ Name: Some Assembly Rage. Reserve `@SomeAssemblyRage` on YouTube/TikTok/Instagram.
 2. ✅ Furniture cast in code + character sheet (`output/flatpack/cast_sheet.png`).
 3. ✅ Pilot style test "Ep. 1 – The Bookcase" (`output/flatpack/some_assembly_rage_ep1.mp4`): speech bubbles + babble, music, SFX, outro.
-4. Next: audition voices per character → voiced version of Ep. 1 (bubbles become captions), then 3 more Shorts and a 3-part mini-arc ("The Wardrobe of Doom").
+4. 🔄 Voice audition reel (`output/flatpack/voice_audition.mp4`, candidates in `video/src/flatpack/audition.json`) – owner picks A/B/C per character → voiced version of Ep. 1 (bubbles become captions), then 3 more Shorts and a 3-part mini-arc ("The Wardrobe of Doom").
 5. Move to its own repo when created; keep `docs/episode_log.md` and `docs/furniture_names.md` updated after every episode.

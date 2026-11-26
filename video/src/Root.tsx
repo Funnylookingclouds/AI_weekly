@@ -10,6 +10,7 @@ import { CastSheet, CastTurn, CastLoop } from "./cast/Sheet";
 import { CastDemo, CAST_DEMO_LEN } from "./cast/Demo";
 import { FlatpackSheet } from "./flatpack/Sheet";
 import { FlatpackPilot, PILOT_LEN } from "./flatpack/Pilot";
+import { FlatpackAudition, AUDITION_LEN } from "./flatpack/Audition";
 
 const V = { fps: FPS, width: 1080, height: 1920 } as const;
 
@@ -32,6 +33,7 @@ export const Root: React.FC = () => (
     <Composition id="CastDemo" component={CastDemo} durationInFrames={CAST_DEMO_LEN} {...V} />
     <Composition id="CastLoop" component={CastLoop} durationInFrames={450} {...V} />
     <Composition id="FlatpackPilot" component={FlatpackPilot} durationInFrames={PILOT_LEN} fps={60} width={1080} height={1920} />
+    <Composition id="FlatpackAudition" component={FlatpackAudition} durationInFrames={AUDITION_LEN} fps={60} width={1080} height={1920} />
     <Still id="FlatpackSheet" component={FlatpackSheet} width={3560} height={2120} />
     <Still id="LogoSquare" component={B.LogoSquare} width={1080} height={1080} />
     <Still id="LogoAvatar" component={B.LogoAvatar} width={800} height={800} />
