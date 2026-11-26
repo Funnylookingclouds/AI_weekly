@@ -1,44 +1,37 @@
-# YouTube upload – Week 47 (Nov 16–22, 2026) – ensemble: Lumi, Pixel, Chip, Cloudy, Wattson
+# YouTube upload – Week 48 (Nov 23–29, 2026) – ensemble: Wattson hosts with Lumi, Pixel, Chip, Cloudy
 
 ## Title options
-1. **AI May Have Solved a $1,000,000 Math Problem 🤯** ← recommended
-2. Did AI Just Crack a 167-Year-Old Math Mystery?
-3. What Did AI Solve This Week? Math, Hearts & Privacy
+1. **The AI Riemann Proof Just Passed Its Computer Check 🔋** ← recommended
+2. AI Riemann Proof: Certified Correct? (Claim Check)
+3. What Did AI Solve This Week? Math, Proteins & Medicine
 
 ## Description (copy everything between the lines)
 
 ---
-AI may have just solved a million-dollar math problem – and it's not even the most important AI news this week. Here are the latest AI breakthroughs in under a minute, presented by the whole AI Bounce crew. 🧠❤️💻
+The AI-assisted Riemann Hypothesis proof just passed its computer check – plus GPT-6 designs real proteins and big pharma says AI is speeding up drug discovery. The latest AI news this week, presented by our grumpy host Wattson and the whole AI Bounce crew. 🔋🧮🧬
 
-🧮 1. RIEMANN HYPOTHESIS – CLAIMED PROOF WITH AI (CLAIM, UNDER REVIEW)
-On Nov 20, mathematician Levent Alpöge claimed a proof of the 167-year-old Riemann Hypothesis, one of the $1M Millennium Prize Problems, developed with the AI model Claude. The proof is written in the Lean proof assistant so a computer can check every step. It has NOT been verified by experts yet.
-🔗 https://www.ibm.com/think/news/anthropic-claude-riemann-hypothesis-math-proof
-🔗 https://www.unite.ai/levent-alpoges-unverified-riemann-claim-puts-claudes-lean-code-in-focus/
-🔗 https://www.scientificamerican.com/article/dueling-claims-of-riemann-hypothesis-proofs-emerge/
+🧮 1. CLAIM CHECK: THE RIEMANN PROOF (LEAN-CERTIFIED, HUMAN REVIEW ONGOING)
+On Nov 21, the Lean FRO and the Mathlib Initiative said the computer-checked (Lean) proof of the Riemann Hypothesis by Anthropic mathematician Levent Alpöge, made with Claude, is correct. Top mathematicians reacted with excitement – and some skepticism about the write-up – and human mathematical review is still in progress. (Disclosure: Claude is made by Anthropic, which also makes the assistant that produced this video.)
+🔗 https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/
+🔗 https://www.nature.com/articles/d41586-026-03812-7
 
-❤️ 2. AI IN MEDICINE – FINDING HIDDEN HEART FAILURE
-AI analysis of a single routine heart ultrasound (echocardiogram) helped identify 78% of patients with hard-to-detect heart failure (HFpEF), versus 48% with the standard clinical score alone (Journal of Cardiac Failure). Plus: an AI model trained on Swedish patient data spots warning signs of sudden cardiac death that standard tests miss (UC Berkeley, published Nov 12).
-🔗 https://www.prnewswire.com/news-releases/november-journal-of-cardiac-failure-focus-issue-on-artificial-intelligence-ai-echo-raises-hfpef-detection-to-78-302942797.html
-🔗 https://www.sciencedaily.com/releases/2026/11/261112230456.htm
+🧬 2. GPT-6 DESIGNS PROTEINS (OPENAI CLAIM, PREPRINT)
+OpenAI says its GPT-6 models can design proteins using general reasoning and code. In wet-lab tests by partner Onava, 35 of 322 designed minibinders (about 10.9%) showed binding to their targets. Not yet peer-reviewed.
+🔗 https://www.unite.ai/openai-reports-gpt-6-designs-proteins-with-reasoning-and-code/
 
-💻 3. INKLING 2 MINI – FREE AI THAT RUNS OFFLINE ON YOUR LAPTOP
-Thinking Machines Lab released Inkling 2 Mini, an open-weight AI model (Apache 2.0) that runs locally on a laptop with 32 GB of memory, so your data never leaves your computer.
-🔗 https://thinkingmachines.ai/news/inkling-2-mini/
-🔗 https://venturebeat.com/technology/thinking-machines-wows-with-inkling-2-mini-looped-transformer-model-that-runs-locally-on-laptops
+💊 3. AI IN DRUG DISCOVERY
+Big pharma companies like Novartis and Bristol Myers say AI is shrinking early drug-discovery timelines – while an Eli Lilly executive warns that claims of AI curing all disease are overstated.
+🔗 https://www.investing.com/news/stock-market-news/big-pharma-with-eye-on-anthropic-says-ai-is-shrinking-drug-discovery-timelines-5041287
 
-📅 Every week: what did AI solve? Short, jargon-free AI news this week – AI breakthroughs, AI in medicine, new AI tools and the biggest AI discoveries, explained in under 60 seconds.
+📅 Every week: what did AI solve? Short, jargon-free AI news this week – AI breakthroughs, AI math, AI in medicine, explained in under 60 seconds.
 
 🔔 Subscribe to @AIBounce for a new "What did AI solve?" every week: https://www.youtube.com/@AIBounce
 
 #Shorts #AIBounce #AI #AINews #RiemannHypothesis
 ---
 
-## Tags (paste into the Tags field – 439 characters, 25 tags)
-AI news, AI news this week, latest AI news, AI breakthroughs, artificial intelligence, what did AI solve, Riemann Hypothesis, Riemann Hypothesis proof, Riemann hypothesis solved, million dollar math problem, Millennium Prize, Claude AI, Lean proof, AI math, AI in medicine, AI heart failure, AI ultrasound, AI healthcare, sudden cardiac death AI, Inkling 2 Mini, Thinking Machines Lab, offline AI, local AI model, open source AI, AI weekly
+## Tags (paste into the Tags field)
+AI news, AI news this week, latest AI news, AI breakthroughs, what did AI solve, Riemann Hypothesis, Riemann Hypothesis proof, Riemann proof verified, Lean proof, Mathlib, Claude AI, AI math, GPT-6, OpenAI protein design, AI protein design, AI biology, AI drug discovery, AI in medicine, Novartis AI, Eli Lilly AI, AI claim check, artificial intelligence, AI Bounce, Wattson, AI shorts
 
 ## Pinned comment
-Do you think the AI-assisted Riemann proof will hold up? 👇 (Sources for every story are in the description.)
-
-## Notes
-- YouTube doesn't make links clickable in Shorts descriptions on mobile. Viewers can still copy them, and they work on desktop.
-- Disclosure: the AI model in story 1 (Claude) was made by Anthropic, which is also the maker of the assistant that produced this video.
+Should Wattson get excited yet – or wait for peer review? 🔋👇 (Sources in the description.)
