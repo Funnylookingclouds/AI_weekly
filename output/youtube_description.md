@@ -1,36 +1,34 @@
-# YouTube upload – SPECIAL EDITION 3: How much electricity does AI really use? – ensemble: Chip vs. Wattson (+ the crew)
+# YouTube upload – SPECIAL EDITION 4: The move that shocked the world (AlphaGo, Move 37) – ensemble: Chip, Lumi, Pixel, Wattson
 
 ## Title options
-1. **How Much Electricity Does AI Really Use? ⚡** ← recommended
-2. Is AI Eating the World's Power? The Real Numbers
-3. AI Uses Only 0.5% of the World's Electricity… For Now
+1. **The AI Move That Shocked the World (1 in 10,000) 🤯** ← recommended
+2. AlphaGo's Move 37: When AI Out-Thought a Champion
+3. AlphaGo vs Lee Sedol: The Move Nobody Expected
 
 ## Description (copy everything between the lines)
 
 ---
-How much electricity does AI really use? We checked the real numbers: AI-focused data centers used about half a percent of the world's electricity in 2025 – but data center demand is set to nearly double by 2030. A myth-vs-fact special edition on AI energy use, debated by nervous Chip and Wattson – a battery who knows a thing or two about power. ⚡🤖
+One move had a 1-in-10,000 chance – and an AI played it anyway. The story of AlphaGo vs Lee Sedol and the legendary Move 37, in under a minute. A special edition on AI history, presented by the whole AI Bounce crew. ⚫⚪🤖
 
-⚡ DATA CENTERS: ~485 TWh IN 2025 (≈1.5%)
-According to the International Energy Agency (IEA, April 2026 update), data centers worldwide used about 485 terawatt-hours of electricity in 2025 – roughly 1.5% of global electricity.
-🔗 https://ourworldindata.org/how-much-energy-do-data-centers-and-artificial-intelligence-use
-🔗 https://www.carbonbrief.org/ai-five-charts-that-put-data-centre-energy-use-and-emissions-into-context
+🏆 THE MATCH (March 2016, Seoul)
+Google DeepMind's AlphaGo played Lee Sedol – winner of 18 world titles – at Go, a game with about 10^170 possible board positions (far more than the ~10^80 atoms in the observable universe). Over 200 million people watched worldwide.
 
-🤖 AI'S SHARE: ~155 TWh (≈0.5%)
-AI-focused data centers used about 155 TWh in 2025 – around 0.49% of the world's electricity (Our World in Data, based on IEA figures).
+⚫ MOVE 37 (Game 2)
+AlphaGo played a move with about a 1-in-10,000 chance of being played by a human. Commentators were stunned – but it helped AlphaGo win the game and upended centuries of Go wisdom.
 
-📈 2030: NEARLY DOUBLE
-The IEA projects data centers will use about 950 TWh by 2030 – around 3% of global electricity demand. An independent Nature study projects AI data centers alone at about 1% of global electricity by 2030. Small today, growing fast.
-🔗 https://www.nature.com/articles/s44458-026-00152-5
+⚪ GOD'S TOUCH (Game 4)
+Lee Sedol struck back with Move 78, an equally rare 1-in-10,000 move nicknamed "God's Touch" – and won the game. AlphaGo took the match 4–1.
+🔗 https://deepmind.google/research/breakthroughs/alphago/
 
-📅 Every week: what did AI solve? Plus special editions on the big AI questions – short, jargon-free and under 60 seconds.
+📅 Every week: what did AI solve? Plus special editions on AI history – short, jargon-free and under 60 seconds.
 
 🔔 Subscribe to @AIBounce for a new "What did AI solve?" every week: https://www.youtube.com/@AIBounce
 
-#Shorts #AIBounce #AI #AIEnergy #DataCenters
+#Shorts #AIBounce #AI #AlphaGo #AIHistory
 ---
 
 ## Tags (paste into the Tags field)
-AI electricity, AI energy use, how much electricity does AI use, AI power consumption, data center energy, data centers electricity, AI climate, AI environmental impact, IEA data centers, AI energy 2030, terawatt hours, AI carbon footprint, is AI bad for the environment, AI myths, AI facts, AI explained, AI news, latest AI news, AI 2026, energy and AI, green AI, artificial intelligence, AI Bounce, what did AI solve, AI special edition
+AlphaGo, Move 37, AlphaGo Move 37, Lee Sedol, AlphaGo vs Lee Sedol, God's Touch, Move 78, Go game AI, AI beats human, AI history, Google DeepMind, DeepMind AlphaGo, AI Go match 2016, AI creativity, history of AI, AI milestones, AI explained, machine learning, AI documentary, AI shorts, artificial intelligence, AI news, AI Bounce, AI special edition, what did AI solve
 
 ## Pinned comment
-Did you think AI used more or less than 0.5% of the world's electricity? 👇 (Sources are in the description.)
+Would you have called Move 37 a mistake too? 👇 (Source in the description.)
