@@ -7,12 +7,13 @@ import { CHARACTERS, type Character, type Mood } from "./characters";
 import { P, HAND, onTwos, clamp } from "./kit";
 import { Bouncy, mouthOpen, type BouncyMood } from "./Bouncy";
 import { Toon, CAST, type CastId } from "../cast/cast";
+import { ComedyClub, Marquee, MicStand, Audience } from "../club/Club";
 import { Studio, Ensemble, type Member } from "../cast/stage";
 import type { Expr } from "../cast/rig";
 
 export type PlateMood = Mood | "group";
-export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr }; cast?: Member[]; tint?: string; chip?: string };
-export type Show = { presenter: Character; plates: Plate[]; stage?: boolean };
+export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr }; cast?: Member[]; tint?: string; chip?: string; /** audience laughs from plate start (true) or from this time in seconds */ laugh?: boolean | number };
+export type Show = { presenter: Character; plates: Plate[]; stage?: boolean; scene?: "club" };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
 /** Start time of the nth word in a segment that matches exactly (punctuation ignored). */
@@ -155,22 +156,25 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
           <AbsoluteFill style={{ opacity: prev && prev !== tint ? k : 1 }}><Studio tint={tint} /></AbsoluteFill>
         </>);
       })()}
-      <AbsoluteFill style={show.stage ? { transform: `scale(${1 + 0.03 * pulseAt(onTwos(f) / FPS, true, 0.35)})`, transformOrigin: "50% 45%" } : undefined}>
+      {show.scene === "club" && <><ComedyClub tint={cur.tint ?? "#ec4899"} /><Marquee tint={cur.tint ?? "#ec4899"} /></>}
+      <AbsoluteFill style={show.stage || show.scene ? { transform: `scale(${1 + 0.03 * pulseAt(onTwos(f) / FPS, true, 0.35)})`, transformOrigin: "50% 45%" } : undefined}>
       {show.plates.map((p, i) => {
         const from = Math.round(p.t * FPS);
         const to = i + 1 < show.plates.length ? Math.round(show.plates[i + 1].t * FPS) : end;
         const ch = p.who ?? show.presenter;
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, to - from)} name={`plate${i}`}>
-            {!show.stage && <Backdrop ch={ch} />}
-            <PlateSlot p={p} stage={show.stage} />
-            {show.stage && p.chip && <TopicChip label={p.chip} tint={p.tint ?? "#7c3aed"} />}
+            {!show.stage && !show.scene && <Backdrop ch={ch} />}
+            <PlateSlot p={p} stage={show.stage} club={show.scene === "club"} />
+            {show.scene === "club" && !p.cast && !p.toon && <MicStand x={p.bouncy ? 860 : 900} />}
+            {(show.stage || show.scene) && p.chip && <TopicChip label={p.chip} tint={p.tint ?? "#7c3aed"} />}
             {p.cast ? <Ensemble members={p.cast} t={t} open={mouthOpen(WORDS, t)} tint={p.tint ?? "#7c3aed"} i={i} /> : p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={p.bouncy} open={p.bouncy === "laugh" ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
             <Audio src={staticFile(i === 0 ? "whoosh.wav" : i % 3 === 0 ? "pop.wav" : "whoosh.wav")} volume={0.4} />
           </Sequence>
         );
       })}
       </AbsoluteFill>
+      {show.scene === "club" && (() => { const ls = typeof cur.laugh === "number" ? cur.laugh : cur.t; return <Audience laughing={!!cur.laugh && t >= ls} lf={f - Math.round(ls * FPS)} />; })()}
       <Doodles t={t} />
       <CaptionStrip ch={(() => { const sp = cur.cast?.find((m) => m.talk); const acc = sp ? CAST.find((c) => c.id === sp.id)?.accent : undefined; return acc ? { ...speaker, accent: acc } : speaker; })()} t={t} group={cur.mood === "group"} />
       <Audio src={staticFile("voiceover.mp3")} />
@@ -191,9 +195,20 @@ const ToonHost: React.FC<{ id: CastId; expr: Expr; t: number; i: number }> = ({ 
   );
 };
 
-const PlateSlot: React.FC<{ p: Plate; stage?: boolean }> = ({ p, stage }) => {
+const PlateSlot: React.FC<{ p: Plate; stage?: boolean; club?: boolean }> = ({ p, stage, club }) => {
   const f = onTwos(useCurrentFrame());
   const raw = useCurrentFrame();
+  if (club) {
+    // cue-card flip inside the marquee: swings in on its vertical axis, overshoots, then idles
+    const k = spring({ frame: raw, fps: FPS, config: { damping: 11, stiffness: 140 } });
+    const ry = (1 - k) * (p.from === "left" ? -95 : 95);
+    const bob = Math.sin(f / 30) * 4;
+    return (
+      <AbsoluteFill style={{ top: 200, alignItems: "center", perspective: 1800 }}>
+        <div style={{ transform: `translateY(${bob}px) rotateY(${ry}deg) scale(${0.92 + 0.08 * k})`, filter: "drop-shadow(0 18px 24px #000a)" }}><p.C /></div>
+      </AbsoluteFill>
+    );
+  }
   if (stage) {
     // hanging paper board: drops in on two strings, bounces, swings gently in 3D, casts a shadow
     const drop = interpolate(raw, [0, 22], [0, 1], { ...clamp, easing: Easing.out(Easing.bounce) });

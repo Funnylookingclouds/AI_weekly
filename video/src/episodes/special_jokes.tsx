@@ -180,17 +180,19 @@ const GrowingUp: React.FC = () => {
   );
 };
 
+const TN = { hook: "#ec4899", old: "#f59e0b", study: "#22d3ee", now: "#a855f7", end: "#22c55e" };
 export const SHOW: Show = {
   presenter: CHARACTERS.bouncy,
+  scene: "club",
   plates: [
-    { t: 0, C: ThenVsNow, mood: "body", from: "top", bouncy: "talk" },
-    { t: Y23, C: Asks, mood: "body", from: "left", bouncy: "talk" },
-    { t: word("y23", "over"), C: SameJoke, mood: "body", bouncy: "wow" },
-    { t: S1, C: Scarecrow, mood: "body", from: "left", bouncy: "bored" },
-    { t: Y23B, C: Tomato, mood: "body", from: "right", bouncy: "bored" },
-    { t: seg("y24"), C: Funnier, mood: "body", from: "top", bouncy: "wow" },
-    { t: Y26, C: Now26, mood: "body", from: "left", bouncy: "wink" },
-    { t: SURE, C: Punch26, mood: "body", from: "top", bouncy: "talk" },
-    { t: seg("loop"), C: GrowingUp, mood: "body", from: "left", bouncy: "laugh" },
+    { t: 0, C: ThenVsNow, mood: "body", bouncy: "talk", tint: TN.hook, chip: "SPECIAL · AI JOKES" },
+    { t: Y23, C: Asks, mood: "body", from: "left", bouncy: "talk", tint: TN.old, chip: "2023" },
+    { t: word("y23", "over"), C: SameJoke, mood: "body", bouncy: "wow", tint: TN.old, chip: "2023" },
+    { t: S1, C: Scarecrow, mood: "body", from: "left", bouncy: "bored", tint: TN.old, chip: "2023 · JOKE #1" },
+    { t: Y23B, C: Tomato, mood: "body", bouncy: "bored", tint: TN.old, chip: "2023 · JOKE #2" },
+    { t: seg("y24"), C: Funnier, mood: "body", bouncy: "wow", tint: TN.study, chip: "2024" },
+    { t: Y26, C: Now26, mood: "body", from: "left", bouncy: "wink", tint: TN.now, chip: "2026 · AI WROTE THIS" },
+    { t: SURE, C: Punch26, mood: "body", bouncy: "talk", tint: TN.now, chip: "2026 · PUNCHLINE", laugh: true },
+    { t: seg("loop"), C: GrowingUp, mood: "body", from: "left", bouncy: "laugh", tint: TN.end, chip: "THE VERDICT", laugh: true },
   ],
 };

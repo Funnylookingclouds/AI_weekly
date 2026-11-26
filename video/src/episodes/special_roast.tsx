@@ -132,17 +132,19 @@ const Tie: React.FC = () => {
 
 const { ture } = CHARACTERS;
 const FACTS = seg("facts");
+const TN = { hook: "#ef4444", facts: "#f59e0b", fight: "#a855f7", ture: "#f59e0b", bouncy: "#ec4899", end: "#22c55e" };
 export const SHOW: Show = {
   presenter: CHARACTERS.bouncy,
+  scene: "club",
   plates: [
-    { t: 0, C: Hook, mood: "body", from: "top", bouncy: "talk" },
-    { t: FACTS, C: NY, mood: "body", from: "left", bouncy: "talk" },
-    { t: word("facts", "but"), C: TO, mood: "body", bouncy: "wow" },
-    { t: word("facts", "and"), C: SF, mood: "body", bouncy: "talk" },
-    { t: seg("settle"), C: Settle, mood: "body", from: "top", bouncy: "wink" },
-    { t: T1, C: Roast1, mood: "happy", from: "left", who: ture },
-    { t: B1, C: Roast2, mood: "body", from: "right", bouncy: "talk" },
-    { t: seg("ture2"), C: Okay, mood: "happy", from: "left", who: ture },
-    { t: seg("loop"), C: Tie, mood: "body", from: "top", bouncy: "laugh" },
+    { t: 0, C: Hook, mood: "body", bouncy: "talk", tint: TN.hook, chip: "SPECIAL · ROAST BATTLE" },
+    { t: FACTS, C: NY, mood: "body", from: "left", bouncy: "talk", tint: TN.facts, chip: "THE RECORD" },
+    { t: word("facts", "but"), C: TO, mood: "body", bouncy: "wow", tint: TN.facts, chip: "THE RECORD" },
+    { t: word("facts", "and"), C: SF, mood: "body", bouncy: "talk", tint: TN.facts, chip: "THE RECORD" },
+    { t: seg("settle"), C: Settle, mood: "body", bouncy: "wink", tint: TN.fight, chip: "MAIN EVENT" },
+    { t: T1, C: Roast1, mood: "happy", from: "left", who: ture, tint: TN.ture, chip: "ROUND 1 · TURE", laugh: word("ture1", "edges") + 0.35 },
+    { t: B1, C: Roast2, mood: "body", bouncy: "talk", tint: TN.bouncy, chip: "ROUND 1 · BOUNCY", laugh: word("bouncy1", "model") + 0.35 },
+    { t: seg("ture2"), C: Okay, mood: "happy", from: "left", who: ture, tint: TN.ture, chip: "ROUND 1 · TURE" },
+    { t: seg("loop"), C: Tie, mood: "body", bouncy: "laugh", tint: TN.end, chip: "FINAL SCORE", laugh: word("loop", "tie") + 0.2 },
   ],
 };
