@@ -205,16 +205,17 @@ const Summary: React.FC = () => {
 const { rune, ture, saga, cara } = CHARACTERS;
 export const SHOW: Show = {
   presenter: rune,
+  stage: true,
   plates: [
-    { t: 0, C: TwelveMonths, mood: "body", from: "top", who: rune },
-    { t: seg("skill"), C: Yardstick, mood: "curious", from: "left", who: ture },
-    { t: word("skill", "november"), C: ThreeToTwelve, mood: "happy", who: ture },
-    { t: word("skill", "that"), C: Doubling, mood: "serious", from: "left", who: ture },
-    { t: word("skill", "that's"), C: TenX, mood: "body", from: "top", who: ture },
-    { t: seg("cost"), C: Cheaper, mood: "happy", from: "left", who: saga },
-    { t: word("cost", "epoch"), C: ThirteenFold, mood: "curious", who: saga },
-    { t: seg("real"), C: Clippings, mood: "curious", from: "top", who: cara },
-    { t: word("real", "and"), C: Clippings2, mood: "happy", who: cara },
-    { t: seg("loop"), C: Summary, mood: "group", from: "top" },
+    { t: 0, C: TwelveMonths, mood: "body", tint: "#8b5cf6", chip: "SPECIAL · 12 MONTHS", cast: [{ id: "pixel", expr: "surprised", talk: true }, { id: "lumi", expr: "happy" }, { id: "chip", expr: "scared" }] },
+    { t: seg("skill"), C: Yardstick, mood: "body", tint: "#06b6d4", chip: "SKILL · TASK LENGTH", cast: [{ id: "pixel", expr: "neutral", talk: true }, { id: "lumi", expr: "surprised" }] },
+    { t: word("skill", "november"), C: ThreeToTwelve, mood: "body", tint: "#06b6d4", chip: "SKILL · TASK LENGTH", cast: [{ id: "lumi", expr: "surprised", talk: true }, { id: "pixel", expr: "happy" }] },
+    { t: word("skill", "that"), C: Doubling, mood: "body", tint: "#ef4444", chip: "SKILL · DOUBLING", cast: [{ id: "chip", expr: "scared", talk: true }, { id: "lumi", expr: "surprised" }] },
+    { t: word("skill", "that's"), C: TenX, mood: "body", tint: "#ef4444", chip: "SKILL · 10× A YEAR", cast: [{ id: "chip", expr: "surprised", talk: true }, { id: "lumi", expr: "love" }] },
+    { t: seg("cost"), C: Cheaper, mood: "body", tint: "#22c55e", chip: "COST · CHEAPER", cast: [{ id: "wattson", expr: "smug", talk: true }, { id: "pixel", expr: "happy" }] },
+    { t: word("cost", "epoch"), C: ThirteenFold, mood: "body", tint: "#22c55e", chip: "COST · 13× CHEAPER", cast: [{ id: "wattson", expr: "surprised", talk: true }, { id: "pixel", expr: "laugh" }] },
+    { t: seg("real"), C: Clippings, mood: "body", tint: "#f59e0b", chip: "IN REAL LIFE", cast: [{ id: "cloudy", expr: "happy", talk: true }, { id: "chip", expr: "surprised" }] },
+    { t: word("real", "and"), C: Clippings2, mood: "body", tint: "#f59e0b", chip: "IN REAL LIFE", cast: [{ id: "cloudy", expr: "surprised", talk: true }, { id: "chip", expr: "love" }] },
+    { t: seg("loop"), C: Summary, mood: "body", tint: "#8b5cf6", chip: "ONE YEAR", cast: [{ id: "wattson", expr: "smug" }, { id: "chip", expr: "happy" }, { id: "lumi", expr: "happy", talk: true }, { id: "pixel", expr: "laugh" }, { id: "cloudy", expr: "laugh" }] },
   ],
 };

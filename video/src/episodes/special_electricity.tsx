@@ -196,15 +196,16 @@ const WatchThisSpace: React.FC = () => {
 const { rune, ture } = CHARACTERS;
 export const SHOW: Show = {
   presenter: rune,
+  stage: true,
   plates: [
-    { t: 0, C: EatingPower, mood: "body", from: "top", who: rune },
-    { t: seg("t1"), C: Meter485, mood: "happy", from: "right", who: ture },
-    { t: seg("r1"), C: WorldPie, mood: "curious", from: "left", who: rune },
-    { t: word("r1", "but"), C: AIPart, mood: "serious", from: "right", who: rune },
-    { t: word("r1", "that's", 1), C: HalfPercent, mood: "happy", from: "left", who: rune },
-    { t: seg("t2"), C: NoProblem, mood: "happy", from: "top", who: ture },
-    { t: seg("r2"), C: Double2030, mood: "serious", from: "left", who: rune },
-    { t: seg("t3"), C: SmallButFast, mood: "curious", from: "right", who: ture },
-    { t: seg("loop"), C: WatchThisSpace, mood: "group", from: "top" },
+    { t: 0, C: EatingPower, mood: "body", tint: "#8b5cf6", chip: "SPECIAL · AI & POWER", cast: [{ id: "lumi", expr: "confused", talk: true }, { id: "chip", expr: "scared" }, { id: "wattson", expr: "smug" }] },
+    { t: seg("t1"), C: Meter485, mood: "body", tint: "#ef4444", chip: "CLAIM", cast: [{ id: "chip", expr: "scared", talk: true }, { id: "wattson", expr: "smug" }] },
+    { t: seg("r1"), C: WorldPie, mood: "body", tint: "#f59e0b", chip: "FACT CHECK", cast: [{ id: "wattson", expr: "neutral", talk: true }, { id: "chip", expr: "confused" }] },
+    { t: word("r1", "but"), C: AIPart, mood: "body", tint: "#f59e0b", chip: "FACT CHECK", cast: [{ id: "wattson", expr: "smug", talk: true }, { id: "chip", expr: "surprised" }] },
+    { t: word("r1", "that's", 1), C: HalfPercent, mood: "body", tint: "#22c55e", chip: "FACT CHECK · 0.5%", cast: [{ id: "wattson", expr: "happy", talk: true }, { id: "chip", expr: "surprised" }] },
+    { t: seg("t2"), C: NoProblem, mood: "body", tint: "#22c55e", chip: "CLAIM", cast: [{ id: "chip", expr: "happy", talk: true }, { id: "wattson", expr: "angry" }] },
+    { t: seg("r2"), C: Double2030, mood: "body", tint: "#ef4444", chip: "2030 FORECAST", cast: [{ id: "wattson", expr: "angry", talk: true }, { id: "chip", expr: "scared" }] },
+    { t: seg("t3"), C: SmallButFast, mood: "body", tint: "#3b82f6", chip: "VERDICT", cast: [{ id: "chip", expr: "confused", talk: true }, { id: "wattson", expr: "smug" }] },
+    { t: seg("loop"), C: WatchThisSpace, mood: "body", tint: "#8b5cf6", chip: "WATCH THIS SPACE", cast: [{ id: "wattson", expr: "smug" }, { id: "chip", expr: "happy" }, { id: "lumi", expr: "happy", talk: true }, { id: "pixel", expr: "laugh" }, { id: "cloudy", expr: "laugh" }] },
   ],
 };
