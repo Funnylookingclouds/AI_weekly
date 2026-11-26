@@ -1,0 +1,19 @@
+{"id": "ep3", "title": "Is That... Your Baby?", "speed": 1.12, "voices": {"duke": {"id": "R9RZPy40Zzy1wNxrgQpj"}, "pia": {"id": "FGY2WhTYpPnrIDTdsKH5"}, "gus": {"id": "wGkprrTXgBM5EC3Znt6U"}, "lotta": {"id": "pFZP5JQG7iQjIQuC4Bku", "settings": {"style": 0.2, "stability": 0.6, "speed": 0.95}}, "alvin": {"id": "SDARFhQygpPvpLh7Ad1B"}, "lefty": {"id": "fBD19tfE58bkETeiwUoC", "settings": {"speed": 1.0}}, "junior": {"id": "eh3mW70o6niXfNTuBPbY", "settings": {"speed": 1.0}}},
+ "music": [[0, 4.5, "happy"], [4.5, 19.0, "tense"], [19.0, 22.0, "hush"], [22.0, 33.0, "happy"], [33.0, 39.0, "stop"], [39.0, 42.5, "happy"]],
+ "lines": [
+  {"who": "gus", "tts": "It's... so... SMALL."},
+  {"who": "duke", "tts": "Back goes here."},
+  {"who": "pia", "tts": "No. The back goes HERE."},
+  {"who": "duke", "tts": "I've built a hundred chairs!"},
+  {"who": "pia", "tts": "You've built ZERO chairs!"},
+  {"who": "gus", "tts": "Careful! You're HURTING him!"},
+  {"who": "duke+pia", "tts": "...Him?"},
+  {"who": "junior", "tts": "...Dad?"},
+  {"who": "gus", "tts": "He called me DAD!"},
+  {"who": "junior", "tts": "...Mom?"},
+  {"who": "pia", "tts": "I'm a DRESSER!"},
+  {"who": "duke", "tts": "Congrats, Mom."},
+  {"who": "lefty", "tts": "Uh... where do I go?"},
+  {"who": "junior", "tts": "Brother!"},
+  {"who": "lefty", "tts": "...Oh no."}
+ ]}

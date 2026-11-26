@@ -6,7 +6,7 @@ Outputs video/public/flatpack/:
   sfx_*.wav            rip, ratchet, bonk, chunk, crash, thunder, scratch, pop, roll, whoosh, thunk
   babble_<who>.wav     cartoon gibberish voice loops (pitch per character), used under speech bubbles
 """
-import subprocess, wave
+import json, subprocess, sys, wave
 from pathlib import Path
 import numpy as np
 
@@ -83,6 +83,12 @@ DUR, BPM = 42.5, 124
 beat = 60 / BPM
 SECTIONS = [(0, 10.4, "happy"), (10.4, 25.8, "tense"), (25.8, 27.2, "hush"), (27.2, 30.6, "magic"),
             (30.6, 34.0, "happy"), (34.0, 39.0, "stop"), (39.0, DUR, "happy")]
+MUSIC_NAME = "music.wav"
+if len(sys.argv) > 1:  # episode-specific score: scripts/flatpack_audio.py scripts/episodes/flatpack-ep2.json
+    _ep = json.loads(Path(sys.argv[1]).read_text())
+    SECTIONS = [tuple(x) for x in _ep["music"]]
+    DUR = float(_ep.get("dur", DUR))
+    MUSIC_NAME = f"music_{_ep['id']}.wav"
 mus = np.zeros(int(SR * DUR))
 HAPPY = [[60, 64, 67], [55, 59, 62], [57, 60, 64], [53, 57, 60]]  # C G Am F
 TENSE = [[57, 60, 64], [52, 56, 59]]                               # Am E
@@ -131,7 +137,7 @@ fade = np.minimum(1, t / 0.3) * np.minimum(1, (DUR - t) / 0.8)
 mus *= fade
 write(TMP / "fp_music_raw.wav", mus)
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(TMP / "fp_music_raw.wav"),
-                "-af", "loudnorm=I=-26:TP=-6:LRA=11", "-ar", str(SR), str(OUT / "music.wav")], check=True)
+                "-af", "loudnorm=I=-26:TP=-6:LRA=11", "-ar", str(SR), str(OUT / MUSIC_NAME)], check=True)
 
 # ---------------------------------------------------------------- sfx
 def noise(d): return rng.standard_normal(int(SR * d))
@@ -206,4 +212,13 @@ for who, p in PITCH.items():
         pos += d + (0.02 if rng.random() > 0.15 else 0.12)
     write(OUT / f"babble_{who}.wav", out, 0.5)
 
+# burp (low formant croak) + referee whistle
+tt = T(0.7)
+f0 = 70 + 25 * np.sin(tt * 30) * np.exp(-tt * 2)
+ph = np.cumsum(f0) / SR
+src = np.sign(np.sin(2 * np.pi * ph)) * 0.6 + np.sin(2 * np.pi * ph * 3) * 0.3
+write(OUT / "sfx_burp.wav", lp(src, 0.06) * np.sin(np.pi * np.minimum(1, tt / 0.7)) ** 0.6 * (1 + 0.5 * np.sin(tt * 55)), 0.9)
+tt = T(0.9)
+wh = np.sin(2 * np.pi * (2900 + 180 * np.sign(np.sin(2 * np.pi * 28 * tt))) * tt) * np.minimum(1, tt / 0.02) * np.minimum(1, (0.9 - tt) / 0.05)
+write(OUT / "sfx_whistle.wav", wh + 0.2 * noise(0.9) * np.exp(-tt * 3), 0.5)
 print("flatpack audio ok")

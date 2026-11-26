@@ -1,0 +1,135 @@
+{
+ "id": "ep2",
+ "title": "Bag C Is Empty",
+ "speed": 1.12,
+ "voices": {
+  "duke": {
+   "id": "R9RZPy40Zzy1wNxrgQpj"
+  },
+  "pia": {
+   "id": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "gus": {
+   "id": "wGkprrTXgBM5EC3Znt6U"
+  },
+  "lotta": {
+   "id": "pFZP5JQG7iQjIQuC4Bku",
+   "settings": {
+    "style": 0.2,
+    "stability": 0.6,
+    "speed": 0.95
+   }
+  },
+  "alvin": {
+   "id": "SDARFhQygpPvpLh7Ad1B"
+  },
+  "lefty": {
+   "id": "fBD19tfE58bkETeiwUoC",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "junior": {
+   "id": "eh3mW70o6niXfNTuBPbY",
+   "settings": {
+    "speed": 1.0
+   }
+  }
+ },
+ "music": [
+  [
+   0,
+   6.9,
+   "happy"
+  ],
+  [
+   6.9,
+   19.5,
+   "tense"
+  ],
+  [
+   19.5,
+   20.3,
+   "stop"
+  ],
+  [
+   20.3,
+   22.6,
+   "hush"
+  ],
+  [
+   22.6,
+   24.1,
+   "tense"
+  ],
+  [
+   24.1,
+   29.8,
+   "happy"
+  ],
+  [
+   29.8,
+   36.0,
+   "stop"
+  ],
+  [
+   36.0,
+   39.5,
+   "happy"
+  ]
+ ],
+ "lines": [
+  {
+   "who": "pia",
+   "tts": "Bag A: twenty-four. Bag B: sixteen. Bag C..."
+  },
+  {
+   "who": "pia",
+   "tts": "...Bag C is EMPTY."
+  },
+  {
+   "who": "duke",
+   "tts": "Relax. Who needs bag C?"
+  },
+  {
+   "who": "pia",
+   "tts": "EVERY step needs bag C!"
+  },
+  {
+   "who": "duke",
+   "tts": "YOU lost it!"
+  },
+  {
+   "who": "pia",
+   "tts": "I LABEL things, Duke!"
+  },
+  {
+   "who": "alvin",
+   "tts": "Has anyone checked... the big guy?"
+  },
+  {
+   "who": "gus",
+   "tts": "Mmm. Crunchy."
+  },
+  {
+   "who": "gus",
+   "tts": "Oh! Was that bag C?"
+  },
+  {
+   "who": "pia"
+  },
+  {
+   "who": "duke",
+   "tts": "Best. Tool. Ever."
+  },
+  {
+   "who": "lefty",
+   "tts": "Uh... where do I go?"
+  },
+  {
+   "who": "lefty",
+   "tts": "...Nope."
+  }
+ ],
+ "dur": 39.5
+}
