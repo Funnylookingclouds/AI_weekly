@@ -19,7 +19,7 @@ Format: `[action / mood + emote]` · `CHARACTER: line` · `{SFX / graphic}`. Eac
    `{record scratch – everyone freezes, shock}`
 6. `{BURP! burst – a screw flies out and KA-CHUNKs into the dresser}`
    GUS `[happy, joy]`: Oh! Was that bag C?
-   PIA `[angry, grawlix]`: Hashtag-at-percent… `{bleep}`
+   PIA `[angry, grawlix]`: "#@%&!" `{bubble only – bleep}`
 7. `{BURP–KA-CHUNK ×3 montage, dresser builds itself, STEP counter races to 12 / 12 ✔}`
    DUKE `[laugh, music]`: Best. Tool. Ever.
 8. LEFTY `[rolls in]`: Uh… where do I go?
