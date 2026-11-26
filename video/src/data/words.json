@@ -1,801 +1,801 @@
 [
  {
-  "word": "One",
-  "display": "1",
-  "start": 0.023,
-  "end": 0.186,
+  "word": "When",
+  "display": "When",
+  "start": 0.046,
+  "end": 0.197,
   "segment": "hook",
   "keyword": false
  },
  {
-  "word": "move",
-  "display": "move",
-  "start": 0.232,
-  "end": 0.708,
-  "segment": "hook",
-  "keyword": false
- },
- {
-  "word": "had",
-  "display": "had",
-  "start": 0.929,
-  "end": 1.103,
-  "segment": "hook",
-  "keyword": false
- },
- {
-  "word": "a",
-  "display": "a",
-  "start": 1.149,
-  "end": 1.184,
-  "segment": "hook",
-  "keyword": false
- },
- {
-  "word": "one-in-ten-thousand",
-  "display": "one-in-ten-thousand",
-  "start": 1.289,
-  "end": 2.496,
-  "segment": "hook",
-  "keyword": true
- },
- {
-  "word": "chance.",
-  "display": "chance.",
-  "start": 2.554,
-  "end": 3.193,
-  "segment": "hook",
-  "keyword": false
- },
- {
-  "word": "An",
-  "display": "An",
-  "start": 3.529,
-  "end": 3.657,
+  "word": "was",
+  "display": "was",
+  "start": 0.244,
+  "end": 0.348,
   "segment": "hook",
   "keyword": false
  },
  {
   "word": "AI",
   "display": "AI",
-  "start": 3.715,
-  "end": 4.18,
+  "start": 0.406,
+  "end": 0.673,
   "segment": "hook",
-  "keyword": false
- },
- {
-  "word": "played",
-  "display": "played",
-  "start": 4.365,
-  "end": 4.725,
-  "segment": "hook",
-  "keyword": false
- },
- {
-  "word": "it",
-  "display": "it",
-  "start": 4.76,
-  "end": 4.818,
-  "segment": "hook",
-  "keyword": false
- },
- {
-  "word": "anyway.",
-  "display": "anyway.",
-  "start": 4.865,
-  "end": 5.48,
-  "segment": "hook",
-  "keyword": false
- },
- {
-  "word": "March",
-  "display": "March",
-  "start": 5.962,
-  "end": 6.206,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "2016,",
-  "display": "2016,",
-  "start": 6.264,
-  "end": 7.031,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "Seoul.",
-  "display": "Seoul.",
-  "start": 7.17,
-  "end": 7.588,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "Google",
-  "display": "Google",
-  "start": 7.727,
-  "end": 8.017,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "DeepMind's",
-  "display": "DeepMind's",
-  "start": 8.052,
-  "end": 8.551,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "AlphaGo",
-  "display": "AlphaGo",
-  "start": 8.598,
-  "end": 9.004,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "takes",
-  "display": "takes",
-  "start": 9.062,
-  "end": 9.283,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "on",
-  "display": "on",
-  "start": 9.329,
-  "end": 9.411,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "Lee",
-  "display": "Lee",
-  "start": 9.457,
-  "end": 9.573,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "Sedol",
-  "display": "Sedol",
-  "start": 9.62,
-  "end": 9.956,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "winner",
-  "display": "winner",
-  "start": 10.188,
-  "end": 10.421,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "of",
-  "display": "of",
-  "start": 10.467,
-  "end": 10.525,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "eighteen",
-  "display": "18",
-  "start": 10.63,
-  "end": 10.99,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "world",
-  "display": "world",
-  "start": 11.036,
-  "end": 11.233,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "titles",
-  "display": "titles",
-  "start": 11.268,
-  "end": 11.64,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "at",
-  "display": "at",
-  "start": 11.733,
-  "end": 11.837,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "Go,",
-  "display": "Go,",
-  "start": 11.907,
-  "end": 12.29,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "a",
-  "display": "a",
-  "start": 12.394,
-  "end": 12.452,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "game",
-  "display": "game",
-  "start": 12.51,
-  "end": 12.661,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "with",
-  "display": "with",
-  "start": 12.685,
-  "end": 12.812,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "more",
-  "display": "more",
-  "start": 12.87,
-  "end": 13.056,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "possible",
-  "display": "possible",
-  "start": 13.103,
-  "end": 13.521,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "positions",
-  "display": "positions",
-  "start": 13.555,
-  "end": 14.008,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "than",
-  "display": "than",
-  "start": 14.055,
-  "end": 14.206,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "atoms",
-  "display": "atoms",
-  "start": 14.287,
-  "end": 14.589,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "in",
-  "display": "in",
-  "start": 14.635,
-  "end": 14.693,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "the",
-  "display": "the",
-  "start": 14.716,
-  "end": 14.786,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "universe.",
-  "display": "universe.",
-  "start": 14.832,
-  "end": 15.367,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "Over",
-  "display": "Over",
-  "start": 15.703,
-  "end": 15.901,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "two",
-  "display": "2",
-  "start": 15.959,
-  "end": 16.098,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "hundred",
-  "display": "hundred",
-  "start": 16.144,
-  "end": 16.377,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "million",
-  "display": "million",
-  "start": 16.411,
-  "end": 16.69,
-  "segment": "match",
-  "keyword": true
- },
- {
-  "word": "people",
-  "display": "people",
-  "start": 16.736,
-  "end": 16.992,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "watch.",
-  "display": "watch.",
-  "start": 17.038,
-  "end": 17.48,
-  "segment": "match",
-  "keyword": false
- },
- {
-  "word": "Game",
-  "display": "Game",
-  "start": 17.915,
-  "end": 18.148,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "two,",
-  "display": "2,",
-  "start": 18.182,
-  "end": 18.484,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "move",
-  "display": "move",
-  "start": 18.624,
-  "end": 18.856,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "thirty-seven.",
-  "display": "thirty-seven.",
-  "start": 18.891,
-  "end": 19.541,
-  "segment": "move37",
-  "keyword": true
- },
- {
-  "word": "AlphaGo",
-  "display": "AlphaGo",
-  "start": 20.388,
-  "end": 20.818,
-  "segment": "move37",
-  "keyword": true
- },
- {
-  "word": "plays",
-  "display": "plays",
-  "start": 20.876,
-  "end": 21.097,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "a",
-  "display": "a",
-  "start": 21.143,
-  "end": 21.166,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "stone",
-  "display": "stone",
-  "start": 21.213,
-  "end": 21.48,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "that",
-  "display": "that",
-  "start": 21.503,
-  "end": 21.607,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "commentators",
-  "display": "commentators",
-  "start": 21.654,
-  "end": 22.188,
-  "segment": "move37",
   "keyword": false
  },
  {
   "word": "first",
   "display": "first",
-  "start": 22.258,
-  "end": 22.49,
-  "segment": "move37",
+  "start": 0.72,
+  "end": 0.929,
+  "segment": "hook",
   "keyword": false
  },
  {
-  "word": "think",
-  "display": "think",
-  "start": 22.525,
-  "end": 22.699,
-  "segment": "move37",
+  "word": "mentioned?",
+  "display": "mentioned?",
+  "start": 0.975,
+  "end": 1.428,
+  "segment": "hook",
   "keyword": false
  },
  {
-  "word": "is",
-  "display": "is",
-  "start": 22.745,
-  "end": 22.826,
-  "segment": "move37",
+  "word": "Spoiler:",
+  "display": "Spoiler:",
+  "start": 1.649,
+  "end": 2.136,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "way",
+  "display": "way",
+  "start": 2.252,
+  "end": 2.426,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "before",
+  "display": "before",
+  "start": 2.485,
+  "end": 2.763,
+  "segment": "hook",
+  "keyword": false
+ },
+ {
+  "word": "ChatGPT.",
+  "display": "ChatGPT.",
+  "start": 2.81,
+  "end": 3.599,
+  "segment": "hook",
+  "keyword": true
+ },
+ {
+  "word": "August",
+  "display": "August",
+  "start": 3.954,
+  "end": 4.267,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "31st,",
+  "display": "31st,",
+  "start": 4.314,
+  "end": 5.115,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "1955.",
+  "display": "1955.",
+  "start": 5.15,
+  "end": 6.74,
+  "segment": "y1955",
+  "keyword": true
+ },
+ {
+  "word": "A",
+  "display": "A",
+  "start": 6.961,
+  "end": 7.042,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "young",
+  "display": "young",
+  "start": 7.147,
+  "end": 7.332,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "mathematician,",
+  "display": "mathematician,",
+  "start": 7.437,
+  "end": 8.168,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "John",
+  "display": "John",
+  "start": 8.215,
+  "end": 8.459,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "McCarthy,",
+  "display": "McCarthy,",
+  "start": 8.505,
+  "end": 9.12,
+  "segment": "y1955",
+  "keyword": true
+ },
+ {
+  "word": "writes",
+  "display": "writes",
+  "start": 9.306,
+  "end": 9.619,
+  "segment": "y1955",
   "keyword": false
  },
  {
   "word": "a",
   "display": "a",
-  "start": 22.861,
-  "end": 22.885,
-  "segment": "move37",
+  "start": 9.666,
+  "end": 9.701,
+  "segment": "y1955",
   "keyword": false
  },
  {
-  "word": "mistake.",
-  "display": "mistake.",
-  "start": 22.931,
-  "end": 23.407,
-  "segment": "move37",
-  "keyword": true
- },
- {
-  "word": "It",
-  "display": "It",
-  "start": 23.697,
-  "end": 23.813,
-  "segment": "move37",
+  "word": "funding",
+  "display": "funding",
+  "start": 9.805,
+  "end": 10.2,
+  "segment": "y1955",
   "keyword": false
  },
  {
-  "word": "wins",
-  "display": "wins",
-  "start": 23.86,
-  "end": 24.046,
-  "segment": "move37",
-  "keyword": true
- },
- {
-  "word": "the",
-  "display": "the",
-  "start": 24.08,
-  "end": 24.15,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "game",
-  "display": "game",
-  "start": 24.196,
-  "end": 24.475,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "and",
-  "display": "and",
-  "start": 24.812,
-  "end": 24.963,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "overturns",
-  "display": "overturns",
-  "start": 25.032,
-  "end": 25.578,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "centuries",
-  "display": "centuries",
-  "start": 25.729,
-  "end": 26.205,
-  "segment": "move37",
-  "keyword": true
- },
- {
-  "word": "of",
-  "display": "of",
-  "start": 26.251,
-  "end": 26.298,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "Go",
-  "display": "Go",
-  "start": 26.356,
-  "end": 26.472,
-  "segment": "move37",
-  "keyword": true
- },
- {
-  "word": "wisdom.",
-  "display": "wisdom.",
-  "start": 26.53,
-  "end": 26.983,
-  "segment": "move37",
-  "keyword": false
- },
- {
-  "word": "But",
-  "display": "But",
-  "start": 27.453,
-  "end": 27.593,
-  "segment": "comeback",
-  "keyword": false
- },
- {
-  "word": "in",
-  "display": "in",
-  "start": 27.628,
-  "end": 27.697,
-  "segment": "comeback",
-  "keyword": false
- },
- {
-  "word": "game",
-  "display": "game",
-  "start": 27.755,
-  "end": 27.998,
-  "segment": "comeback",
-  "keyword": false
- },
- {
-  "word": "four,",
-  "display": "4,",
-  "start": 28.056,
-  "end": 28.382,
-  "segment": "comeback",
-  "keyword": true
- },
- {
-  "word": "Lee",
-  "display": "Lee",
-  "start": 28.428,
-  "end": 28.661,
-  "segment": "comeback",
-  "keyword": true
- },
- {
-  "word": "strikes",
-  "display": "strikes",
-  "start": 28.707,
-  "end": 29.056,
-  "segment": "comeback",
-  "keyword": false
- },
- {
-  "word": "back",
-  "display": "back",
-  "start": 29.102,
-  "end": 29.323,
-  "segment": "comeback",
+  "word": "proposal",
+  "display": "proposal",
+  "start": 10.258,
+  "end": 10.827,
+  "segment": "y1955",
   "keyword": false
  },
  {
   "word": "with",
   "display": "with",
-  "start": 29.381,
-  "end": 29.508,
-  "segment": "comeback",
+  "start": 11.048,
+  "end": 11.245,
+  "segment": "y1955",
   "keyword": false
  },
  {
-  "word": "his",
-  "display": "his",
-  "start": 29.555,
-  "end": 29.659,
-  "segment": "comeback",
+  "word": "Marvin",
+  "display": "Marvin",
+  "start": 11.326,
+  "end": 11.686,
+  "segment": "y1955",
   "keyword": false
  },
  {
-  "word": "own",
-  "display": "own",
-  "start": 29.706,
-  "end": 29.88,
-  "segment": "comeback",
-  "keyword": false
- },
- {
-  "word": "one-in-ten-thousand",
-  "display": "one-in-ten-thousand",
-  "start": 29.983,
-  "end": 31.122,
-  "segment": "comeback",
+  "word": "Minsky,",
+  "display": "Minsky,",
+  "start": 11.767,
+  "end": 12.348,
+  "segment": "y1955",
   "keyword": true
  },
  {
-  "word": "move",
-  "display": "move",
-  "start": 31.18,
-  "end": 31.54,
-  "segment": "comeback",
+  "word": "Nathaniel",
+  "display": "Nathaniel",
+  "start": 12.499,
+  "end": 13.091,
+  "segment": "y1955",
   "keyword": false
  },
  {
-  "word": "\"God's",
-  "display": "\"God's",
-  "start": 31.738,
-  "end": 32.202,
-  "segment": "comeback",
-  "keyword": true
- },
- {
-  "word": "Touch\"",
-  "display": "Touch\"",
-  "start": 32.272,
-  "end": 32.724,
-  "segment": "comeback",
+  "word": "Rochester",
+  "display": "Rochester",
+  "start": 13.195,
+  "end": 13.869,
+  "segment": "y1955",
   "keyword": true
  },
  {
   "word": "and",
   "display": "and",
-  "start": 32.864,
-  "end": 33.026,
-  "segment": "comeback",
+  "start": 14.055,
+  "end": 14.24,
+  "segment": "y1955",
   "keyword": false
  },
  {
-  "word": "wins.",
-  "display": "wins.",
-  "start": 33.107,
-  "end": 33.7,
-  "segment": "comeback",
+  "word": "Claude",
+  "display": "Claude",
+  "start": 14.298,
+  "end": 14.658,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "Shannon.",
+  "display": "Shannon.",
+  "start": 14.705,
+  "end": 15.192,
+  "segment": "y1955",
   "keyword": true
  },
  {
-  "word": "AlphaGo",
-  "display": "AlphaGo",
-  "start": 34.204,
-  "end": 34.611,
-  "segment": "loop",
-  "keyword": true
+  "word": "And",
+  "display": "And",
+  "start": 15.378,
+  "end": 15.541,
+  "segment": "y1955",
+  "keyword": false
  },
  {
-  "word": "took",
-  "display": "took",
-  "start": 34.68,
-  "end": 34.843,
-  "segment": "loop",
+  "word": "right",
+  "display": "right",
+  "start": 15.61,
+  "end": 15.808,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "in",
+  "display": "in",
+  "start": 15.842,
+  "end": 15.912,
+  "segment": "y1955",
   "keyword": false
  },
  {
   "word": "the",
   "display": "the",
-  "start": 34.889,
-  "end": 34.959,
-  "segment": "loop",
+  "start": 15.959,
+  "end": 16.028,
+  "segment": "y1955",
   "keyword": false
  },
  {
-  "word": "match",
-  "display": "match",
-  "start": 35.006,
-  "end": 35.226,
-  "segment": "loop",
+  "word": "title:",
+  "display": "title:",
+  "start": 16.075,
+  "end": 16.539,
+  "segment": "y1955",
   "keyword": false
  },
  {
-  "word": "four",
-  "display": "4",
-  "start": 35.273,
-  "end": 35.412,
-  "segment": "loop",
+  "word": "a",
+  "display": "a",
+  "start": 16.678,
+  "end": 16.736,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "brand-new",
+  "display": "brand-new",
+  "start": 16.841,
+  "end": 17.421,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "term",
+  "display": "term",
+  "start": 17.491,
+  "end": 17.851,
+  "segment": "y1955",
+  "keyword": false
+ },
+ {
+  "word": "artificial",
+  "display": "artificial",
+  "start": 18.164,
+  "end": 18.745,
+  "segment": "y1955",
   "keyword": true
  },
  {
-  "word": "to",
-  "display": "to",
-  "start": 35.458,
-  "end": 35.505,
-  "segment": "loop",
+  "word": "intelligence.",
+  "display": "intelligence.",
+  "start": 18.803,
+  "end": 19.569,
+  "segment": "y1955",
+  "keyword": true
+ },
+ {
+  "word": "The",
+  "display": "The",
+  "start": 20.063,
+  "end": 20.156,
+  "segment": "y1956",
   "keyword": false
  },
  {
-  "word": "one.",
-  "display": "1.",
-  "start": 35.574,
-  "end": 35.853,
-  "segment": "loop",
+  "word": "plan:",
+  "display": "plan:",
+  "start": 20.202,
+  "end": 20.667,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "a",
+  "display": "a",
+  "start": 21.062,
+  "end": 21.108,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "two-month,",
+  "display": "two-month,",
+  "start": 21.178,
+  "end": 21.665,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "ten-person",
+  "display": "ten-person",
+  "start": 21.7,
+  "end": 22.223,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "summer",
+  "display": "summer",
+  "start": 22.281,
+  "end": 22.513,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "workshop",
+  "display": "workshop",
+  "start": 22.559,
+  "end": 22.919,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "at",
+  "display": "at",
+  "start": 22.966,
+  "end": 23.024,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "Dartmouth",
+  "display": "Dartmouth",
+  "start": 23.082,
+  "end": 23.43,
+  "segment": "y1956",
+  "keyword": true
+ },
+ {
+  "word": "College",
+  "display": "College",
+  "start": 23.465,
+  "end": 23.801,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "in",
+  "display": "in",
+  "start": 23.836,
+  "end": 23.894,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "1956.",
+  "display": "1956.",
+  "start": 23.941,
+  "end": 24.997,
+  "segment": "y1956",
+  "keyword": true
+ },
+ {
+  "word": "Their",
+  "display": "Their",
+  "start": 25.624,
+  "end": 25.822,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "bold",
+  "display": "bold",
+  "start": 25.868,
+  "end": 26.065,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "idea:",
+  "display": "idea:",
+  "start": 26.112,
+  "end": 26.553,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "every",
+  "display": "every",
+  "start": 26.89,
+  "end": 27.122,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "feature",
+  "display": "feature",
+  "start": 27.18,
+  "end": 27.47,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "of",
+  "display": "of",
+  "start": 27.505,
+  "end": 27.551,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "intelligence",
+  "display": "intelligence",
+  "start": 27.598,
+  "end": 28.062,
+  "segment": "y1956",
+  "keyword": true
+ },
+ {
+  "word": "can",
+  "display": "can",
+  "start": 28.086,
+  "end": 28.178,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "be",
+  "display": "be",
+  "start": 28.225,
+  "end": 28.283,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "described",
+  "display": "described",
+  "start": 28.318,
+  "end": 28.678,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "so",
+  "display": "so",
+  "start": 28.712,
+  "end": 28.829,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "precisely",
+  "display": "precisely",
+  "start": 28.887,
+  "end": 29.351,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "that",
+  "display": "that",
+  "start": 29.386,
+  "end": 29.49,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "a",
+  "display": "a",
+  "start": 29.514,
+  "end": 29.537,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "machine",
+  "display": "machine",
+  "start": 29.583,
+  "end": 29.885,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "could",
+  "display": "could",
+  "start": 29.908,
+  "end": 30.048,
+  "segment": "y1956",
+  "keyword": false
+ },
+ {
+  "word": "simulate",
+  "display": "simulate",
+  "start": 30.082,
+  "end": 30.454,
+  "segment": "y1956",
+  "keyword": true
+ },
+ {
+  "word": "it.",
+  "display": "it.",
+  "start": 30.489,
+  "end": 30.64,
+  "segment": "y1956",
   "keyword": false
  },
  {
   "word": "But",
   "display": "But",
-  "start": 36.039,
-  "end": 36.178,
+  "start": 31.18,
+  "end": 31.296,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 31.319,
+  "end": 31.389,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "question",
+  "display": "question",
+  "start": 31.435,
+  "end": 31.784,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "is",
+  "display": "is",
+  "start": 31.83,
+  "end": 31.911,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "even",
+  "display": "even",
+  "start": 31.958,
+  "end": 32.132,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "older.",
+  "display": "older.",
+  "start": 32.179,
+  "end": 32.655,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "In",
+  "display": "In",
+  "start": 32.945,
+  "end": 33.061,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "1950,",
+  "display": "1950,",
+  "start": 33.096,
+  "end": 33.769,
+  "segment": "y1950",
+  "keyword": true
+ },
+ {
+  "word": "Alan",
+  "display": "Alan",
+  "start": 33.816,
+  "end": 34.048,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "Turing",
+  "display": "Turing",
+  "start": 34.094,
+  "end": 34.396,
+  "segment": "y1950",
+  "keyword": true
+ },
+ {
+  "word": "asked:",
+  "display": "asked:",
+  "start": 34.454,
+  "end": 34.779,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "\"Can",
+  "display": "\"Can",
+  "start": 35.313,
+  "end": 35.754,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "machines",
+  "display": "machines",
+  "start": 35.812,
+  "end": 36.219,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "think?\"",
+  "display": "think?\"",
+  "start": 36.277,
+  "end": 36.579,
+  "segment": "y1950",
+  "keyword": true
+ },
+ {
+  "word": "and",
+  "display": "and",
+  "start": 37.101,
+  "end": 37.299,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "proposed",
+  "display": "proposed",
+  "start": 37.403,
+  "end": 38.146,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 38.541,
+  "end": 38.68,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "imitation",
+  "display": "imitation",
+  "start": 38.727,
+  "end": 39.272,
+  "segment": "y1950",
+  "keyword": true
+ },
+ {
+  "word": "game,",
+  "display": "game,",
+  "start": 39.33,
+  "end": 39.737,
+  "segment": "y1950",
+  "keyword": true
+ },
+ {
+  "word": "today's",
+  "display": "today's",
+  "start": 40.131,
+  "end": 40.607,
+  "segment": "y1950",
+  "keyword": false
+ },
+ {
+  "word": "Turing",
+  "display": "Turing",
+  "start": 40.677,
+  "end": 40.99,
+  "segment": "y1950",
+  "keyword": true
+ },
+ {
+  "word": "test.",
+  "display": "test.",
+  "start": 41.06,
+  "end": 41.536,
+  "segment": "y1950",
+  "keyword": true
+ },
+ {
+  "word": "Seventy-one",
+  "display": "Seventy-one",
+  "start": 42.041,
+  "end": 42.552,
+  "segment": "loop",
+  "keyword": true
+ },
+ {
+  "word": "years",
+  "display": "years",
+  "start": 42.586,
+  "end": 42.772,
   "segment": "loop",
   "keyword": false
  },
  {
-  "word": "both",
-  "display": "both",
-  "start": 36.225,
-  "end": 36.422,
+  "word": "later,",
+  "display": "later,",
+  "start": 42.819,
+  "end": 43.155,
   "segment": "loop",
   "keyword": false
  },
  {
-  "word": "sides",
-  "display": "sides",
-  "start": 36.468,
-  "end": 36.759,
+  "word": "that",
+  "display": "that",
+  "start": 43.26,
+  "end": 43.446,
   "segment": "loop",
   "keyword": false
  },
  {
-  "word": "showed",
-  "display": "showed",
-  "start": 36.793,
-  "end": 36.979,
+  "word": "idea",
+  "display": "idea",
+  "start": 43.492,
+  "end": 43.747,
   "segment": "loop",
   "keyword": false
  },
  {
-  "word": "us",
-  "display": "us",
-  "start": 37.014,
-  "end": 37.084,
+  "word": "fits",
+  "display": "fits",
+  "start": 43.817,
+  "end": 44.026,
   "segment": "loop",
   "keyword": false
  },
  {
-  "word": "something",
-  "display": "something",
-  "start": 37.107,
-  "end": 37.42,
+  "word": "in",
+  "display": "in",
+  "start": 44.073,
+  "end": 44.131,
   "segment": "loop",
   "keyword": false
  },
  {
-  "word": "new.",
-  "display": "new.",
-  "start": 37.478,
-  "end": 37.757,
+  "word": "your",
+  "display": "your",
+  "start": 44.177,
+  "end": 44.293,
+  "segment": "loop",
+  "keyword": false
+ },
+ {
+  "word": "pocket.",
+  "display": "pocket.",
+  "start": 44.328,
+  "end": 44.781,
   "segment": "loop",
   "keyword": true
  }
