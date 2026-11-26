@@ -1,0 +1,154 @@
+[
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 0.035,
+  "end": 0.313,
+  "segment": "intro",
+  "keyword": false
+ },
+ {
+  "word": "joke",
+  "display": "joke",
+  "start": 0.395,
+  "end": 0.65,
+  "segment": "intro",
+  "keyword": true
+ },
+ {
+  "word": "of",
+  "display": "of",
+  "start": 0.685,
+  "end": 0.731,
+  "segment": "intro",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 0.778,
+  "end": 0.848,
+  "segment": "intro",
+  "keyword": false
+ },
+ {
+  "word": "week!",
+  "display": "week!",
+  "start": 0.894,
+  "end": 1.207,
+  "segment": "intro",
+  "keyword": false
+ },
+ {
+  "word": "Why",
+  "display": "Why",
+  "start": 1.869,
+  "end": 2.183,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "did",
+  "display": "did",
+  "start": 2.241,
+  "end": 2.368,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 2.392,
+  "end": 2.473,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "AI",
+  "display": "AI",
+  "start": 2.519,
+  "end": 2.798,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "cross",
+  "display": "cross",
+  "start": 2.868,
+  "end": 3.146,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "the",
+  "display": "the",
+  "start": 3.181,
+  "end": 3.251,
+  "segment": "setup",
+  "keyword": false
+ },
+ {
+  "word": "road?",
+  "display": "road?",
+  "start": 3.297,
+  "end": 3.576,
+  "segment": "setup",
+  "keyword": true
+ },
+ {
+  "word": "Because",
+  "display": "Because",
+  "start": 4.58,
+  "end": 4.905,
+  "segment": "punch",
+  "keyword": false
+ },
+ {
+  "word": "it",
+  "display": "it",
+  "start": 4.94,
+  "end": 4.998,
+  "segment": "punch",
+  "keyword": false
+ },
+ {
+  "word": "was",
+  "display": "was",
+  "start": 5.033,
+  "end": 5.149,
+  "segment": "punch",
+  "keyword": false
+ },
+ {
+  "word": "trained",
+  "display": "trained",
+  "start": 5.219,
+  "end": 5.567,
+  "segment": "punch",
+  "keyword": false
+ },
+ {
+  "word": "on",
+  "display": "on",
+  "start": 5.613,
+  "end": 5.695,
+  "segment": "punch",
+  "keyword": false
+ },
+ {
+  "word": "chicken",
+  "display": "chicken",
+  "start": 5.753,
+  "end": 6.078,
+  "segment": "punch",
+  "keyword": true
+ },
+ {
+  "word": "data!",
+  "display": "data!",
+  "start": 6.136,
+  "end": 6.6,
+  "segment": "punch",
+  "keyword": true
+ }
+]
