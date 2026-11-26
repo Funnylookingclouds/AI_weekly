@@ -1,82 +1,76 @@
 {
- "id": "2026-w46-en",
+ "id": "2026-w47-en",
  "language": "en",
- "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+ "voice_id": "FGY2WhTYpPnrIDTdsKH5",
  "model_id": "eleven_multilingual_v2",
  "speed": 1.12,
  "segments": [
   {
    "id": "hook",
+   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+   "tts": "AI may have just solved a million-dollar math problem – and that's not even this week's biggest story."
+  },
+  {
+   "id": "news1",
    "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "AI just beat eight brain tumor experts at their own job – and that's only the start of this week."
+   "tts": "On Thursday, mathematician Levent Alpöge presented a proof of the Riemann Hypothesis, developed with the AI Claude."
   },
   {
    "id": "news1",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "At a pathology conference, Mayo Clinic researchers tested an AI on 100 brain tumor cases, choosing from 52 tumor types using tissue images."
+   "tts": "A 167-year-old mystery. The proof is written so computers can check every step –"
   },
   {
    "id": "news1",
    "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "It scored 97 percent – beating all eight specialists."
+   "tts": "and experts are reviewing it now. If it holds, it's historic."
   },
   {
-   "id": "news1",
+   "id": "news2",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "Even better: doctors got more accurate when the AI helped them."
+   "tts": "But here's what saves lives: an AI reading a single routine heart ultrasound found 78 percent of patients with hidden heart failure – versus 48 percent without AI."
   },
   {
    "id": "news2",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "Next: Google DeepMind's AlphaProof Code mathematically checked the encryption code behind Signal's private chats – millions of lines of proof in just four weeks."
-  },
-  {
-   "id": "news2",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "When researchers slipped in two old bugs, it caught both."
+   "voice_id": "wGkprrTXgBM5EC3Znt6U",
+   "tts": "And an AI trained on Swedish patient data spots warning signs of sudden cardiac death that standard tests miss."
   },
   {
    "id": "news3",
-   "voice_id": "wGkprrTXgBM5EC3Znt6U",
-   "tts": "Quick hit: AlphaGenome 2 reads DNA cell type by cell type, finding nearly twice as many gene-changing variants – clues to where diseases begin."
+   "voice_id": "MKlLqCItoCkvdhrxgtLv",
+   "tts": "Quick hit: Inkling 2 Mini – a free AI that runs offline on a laptop. Smart help, without your data ever leaving your computer."
   },
   {
    "id": "loop",
    "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "Tumors, privacy, DNA – all in seven days."
+   "tts": "All that in seven days."
   }
  ],
  "display_map": {
-  "eight": "8",
   "percent": "%",
-  "four": "4",
-  "two": "2",
   "seven": "7"
  },
  "keywords": [
-  "eight",
-  "experts",
-  "mayo",
-  "clinic",
-  "100",
-  "52",
-  "97",
+  "milliondollar",
+  "riemann",
+  "hypothesis",
+  "claude",
+  "167yearold",
+  "historic",
+  "ultrasound",
+  "78",
+  "48",
   "percent",
-  "alphaproof",
-  "signals",
-  "encryption",
-  "millions",
-  "four",
-  "weeks",
-  "two",
-  "both",
-  "alphagenome",
+  "swedish",
+  "cardiac",
+  "death",
+  "inkling",
   "2",
-  "dna",
-  "twice",
-  "tumors",
-  "privacy",
-  "seven"
+  "mini",
+  "free",
+  "offline",
+  "seven",
+  "hidden"
  ],
  "voice_gap": 0.25,
  "voice_settings": {

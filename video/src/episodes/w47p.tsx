@@ -15,7 +15,7 @@ const SRC_HEART = "Journal of Cardiac Failure (press release) · ScienceDaily";
 const SRC_INK = "Thinking Machines Lab";
 
 // ---------- hook ----------
-const MillionProblem: React.FC = () => {
+export const MillionProblem: React.FC = () => {
   const g = useTwos();
   const n = Math.round(interpolate(g, [5, 45], [0, 1_000_000], clamp));
   return (
@@ -28,7 +28,7 @@ const MillionProblem: React.FC = () => {
     </PaperCard>
   );
 };
-const NotEvenBiggest: React.FC = () => {
+export const NotEvenBiggest: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="big" rot={1} tag={TAG}>
@@ -43,7 +43,7 @@ const NotEvenBiggest: React.FC = () => {
 };
 
 // ---------- news 1: Riemann ----------
-const Riemann: React.FC = () => (
+export const Riemann: React.FC = () => (
   <PaperCard seed="rh" rot={-0.8} tag={TAG}>
     <Title sub="Thursday, Nov 20">The Riemann Hypothesis</Title>
     <div style={{ fontSize: 64, fontFamily: "DejaVu Sans Mono, monospace", marginTop: 50, textAlign: "center" }}>ζ(s) = 0 ⇒ Re(s) = ½</div>
@@ -56,7 +56,7 @@ const Riemann: React.FC = () => (
     <Source>{SRC_RH}</Source>
   </PaperCard>
 );
-const Years167: React.FC = () => {
+export const Years167: React.FC = () => {
   const g = useTwos();
   const p = interpolate(g, [5, 60], [0, 1], clamp);
   const yr = Math.round(1859 + p * 167);
@@ -75,7 +75,7 @@ const Years167: React.FC = () => {
     </PaperCard>
   );
 };
-const ProofLines: React.FC = () => {
+export const ProofLines: React.FC = () => {
   const g = useTwos();
   const lines = ["theorem riemann_hypothesis :", "  ∀ s, ζ s = 0 → …", "  s.re = 1/2 := by", "  …", "  exact proof"];
   return (
@@ -94,14 +94,14 @@ const ProofLines: React.FC = () => {
   );
 };
 const FONTS = "Inter, sans-serif";
-const UnderReview: React.FC = () => (
+export const UnderReview: React.FC = () => (
   <PaperCard seed="rev" rot={0.8} tag={TAG}>
     <Title sub="experts are checking it now">Not verified yet</Title>
     <div style={{ display: "flex", justifyContent: "center", marginTop: 110 }}><Stamp at={4} size={96}>UNDER REVIEW</Stamp></div>
     <Source>{SRC_RH}</Source>
   </PaperCard>
 );
-const Historic: React.FC = () => (
+export const Historic: React.FC = () => (
   <PaperCard seed="his" rot={-1.3} tag={TAG}>
     <Title sub="if it holds…">It would be historic</Title>
     <div style={{ display: "flex", alignItems: "center", gap: 40, marginTop: 70, justifyContent: "center" }}>
@@ -113,7 +113,7 @@ const Historic: React.FC = () => (
 );
 
 // ---------- news 2: heart ----------
-const SavesLives: React.FC = () => {
+export const SavesLives: React.FC = () => {
   const g = useTwos();
   const beat = 1 + (g % 45 < 6 ? 0.08 : 0);
   return (
@@ -125,14 +125,14 @@ const SavesLives: React.FC = () => {
     </PaperCard>
   );
 };
-const HeartBars: React.FC = () => (
+export const HeartBars: React.FC = () => (
   <PaperCard seed="bars" rot={-0.8} tag={TAG}>
     <Title sub="hidden heart failure (HFpEF) found">Patients found</Title>
     <div style={{ marginTop: 10 }}><BarPair a={48} b={78} la="without AI" lb="with AI" H={330} /></div>
     <Source>{SRC_HEART}</Source>
   </PaperCard>
 );
-const SwedishData: React.FC = () => {
+export const SwedishData: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="se" rot={1.2} tag={TAG}>
@@ -151,7 +151,7 @@ const SwedishData: React.FC = () => {
 };
 
 // ---------- news 3: Inkling ----------
-const QuickHit: React.FC = () => (
+export const QuickHit: React.FC = () => (
   <PaperCard seed="ink" rot={-1} tag={TAG}>
     <Title sub="free AI that runs offline">Inkling 2 Mini</Title>
     <div style={{ display: "flex", alignItems: "center", gap: 30, marginTop: 50 }}>
@@ -162,7 +162,7 @@ const QuickHit: React.FC = () => (
     <Source>{SRC_INK}</Source>
   </PaperCard>
 );
-const DataStays: React.FC = () => (
+export const DataStays: React.FC = () => (
   <PaperCard seed="lock" rot={1} tag={TAG}>
     <Title sub="smart help, no cloud">Your data stays home</Title>
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 50, marginTop: 50 }}>
@@ -174,7 +174,7 @@ const DataStays: React.FC = () => (
 );
 
 // ---------- ending ----------
-const Recap: React.FC = () => {
+export const Recap: React.FC = () => {
   const g = useTwos();
   const items = [{ l: "math", c: P.mustard, s: "ζ" }, { l: "hearts", c: P.red, s: "♥" }, { l: "privacy", c: P.green, s: "⌂" }];
   return (
