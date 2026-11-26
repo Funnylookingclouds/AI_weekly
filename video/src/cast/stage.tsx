@@ -84,7 +84,7 @@ export const Ensemble: React.FC<{ members: Member[]; t: number; open: number; ti
   const speakerIdx = Math.max(0, members.findIndex((m) => m.talk));
   const slots = n === 1 ? [540] : n === 2 ? (i % 2 ? [700, 340] : [380, 740])
     : n === 3 ? (() => { const side = [200, 880]; let j = 0; return members.map((_, k) => (k === speakerIdx ? 540 : side[j++])); })()
-    : members.map((_, k) => 140 + k * (800 / (n - 1)));
+    : members.map((_, k) => 175 + k * (730 / (n - 1)));
   const order = members.map((m, k) => ({ m, k })).sort((a, b) => (a.k === speakerIdx ? 1 : 0) - (b.k === speakerIdx ? 1 : 0));
   return (
     <>
