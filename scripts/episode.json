@@ -1,5 +1,5 @@
 {
- "id": "special-ai-origin-en",
+ "id": "special-electricity-en",
  "language": "en",
  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
  "model_id": "eleven_multilingual_v2",
@@ -8,52 +8,58 @@
   {
    "id": "hook",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "When was AI first mentioned? Spoiler: way before ChatGPT."
+   "tts": "Is AI eating the world's electricity? Let's check the real numbers."
   },
   {
-   "id": "y1955",
+   "id": "t1",
+   "voice_id": "SDARFhQygpPvpLh7Ad1B",
+   "tts": "It sure sounds like it! Data centers used about 485 terawatt-hours in 2025."
+  },
+  {
+   "id": "r1",
    "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "August 31st, 1955. A young mathematician, John McCarthy, writes a funding proposal with Marvin Minsky, Nathaniel Rochester and Claude Shannon. And right in the title: a brand-new term – artificial intelligence."
+   "tts": "True – that's roughly one and a half percent of all the world's electricity. But AI is only part of it. AI-focused data centers used about 155 terawatt-hours. That's around half a percent."
   },
   {
-   "id": "y1956",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "The plan: a two-month, ten-person summer workshop at Dartmouth College in 1956. Their bold idea: every feature of intelligence can be described so precisely that a machine could simulate it."
+   "id": "t2",
+   "voice_id": "SDARFhQygpPvpLh7Ad1B",
+   "tts": "Half a percent? So it's no problem at all?"
   },
   {
-   "id": "y1950",
-   "voice_id": "wGkprrTXgBM5EC3Znt6U",
-   "tts": "But the question is even older. In 1950, Alan Turing asked: \"Can machines think?\" – and proposed the imitation game, today's Turing test."
+   "id": "r2",
+   "voice_id": "MKlLqCItoCkvdhrxgtLv",
+   "tts": "Not so fast. The IEA expects data centers to nearly double by 2030 – to about three percent of the world's power."
+  },
+  {
+   "id": "t3",
+   "voice_id": "SDARFhQygpPvpLh7Ad1B",
+   "tts": "So: small today, but growing fast."
   },
   {
    "id": "loop",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "Seventy-one years later, that idea fits in your pocket."
+   "tts": "Half a percent now – watch this space."
   }
  ],
  "display_map": {
-  "seventyone": "71"
+  "three": "3"
  },
  "keywords": [
-  "chatgpt",
-  "1955",
-  "mccarthy",
-  "minsky",
-  "rochester",
-  "shannon",
-  "artificial",
-  "intelligence",
-  "dartmouth",
-  "1956",
-  "simulate",
-  "1950",
-  "turing",
-  "think",
-  "imitation",
-  "game",
-  "test",
-  "seventyone",
-  "pocket"
+  "electricity",
+  "485",
+  "2025",
+  "half",
+  "155",
+  "ai",
+  "problem",
+  "iea",
+  "double",
+  "2030",
+  "three",
+  "small",
+  "growing",
+  "fast",
+  "percent"
  ],
  "voice_gap": 0.25,
  "voice_settings": {
