@@ -1,21 +1,62 @@
 {
-  "id": "2026-w43-en",
+  "id": "special-jokes-en",
   "language": "en",
-  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+  "voice_id": "fBD19tfE58bkETeiwUoC",
   "model_id": "eleven_multilingual_v2",
   "speed": 1.12,
-  "voice_gap": 0.25,
-  "voice_settings": {"stability": 0.32, "style": 0.6},
   "segments": [
-    {"id": "hook", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Big week, team! AI just got better at seeing weeks into the future."},
-    {"id": "c1", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "That's my department! Researchers used machine learning to fix the errors in weather models – and doubled forecast skill two to six weeks ahead. It's in Nature."},
-    {"id": "l1", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "That could mean earlier warnings for heat waves and floods."},
-    {"id": "c2", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "And I finally get to plan my rain."},
-    {"id": "p1", "voice_id": "TX3LPaxmHKxFdv7VOQHJ", "tts": "Next! Hugging Face released Carbon-X – an open AI you can literally chat with about DNA. Ask what a mutation does, in plain English!"},
-    {"id": "ch1", "voice_id": "SDARFhQygpPvpLh7Ad1B", "tts": "And it runs on a laptop! Though… it hasn't been tested in a real lab yet."},
-    {"id": "w1", "voice_id": "MKlLqCItoCkvdhrxgtLv", "tts": "Quick hit: OpenAI's former science chief launched Warp Sciences – 215 million dollars for robot chemistry labs that hunt for new drugs. Robots doing chemistry. Finally, someone else gets to blow things up."},
-    {"id": "loop", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Weather, DNA, robot labs – all in seven days."}
+    {
+      "id": "hook",
+      "tts": "Can AI actually be funny? Let's compare its jokes – then and now."
+    },
+    {
+      "id": "y23",
+      "tts": "Back in 2023, researchers asked ChatGPT for a joke one thousand and eight times. Over ninety percent were the same twenty-five jokes. The number one hit: Why did the scarecrow win an award? Because he was outstanding in his field."
+    },
+    {
+      "id": "y23b",
+      "tts": "Number two: Why did the tomato turn red? It saw the salad dressing."
+    },
+    {
+      "id": "y24",
+      "tts": "One year later, a new study found most people rated ChatGPT's jokes funnier than human ones."
+    },
+    {
+      "id": "y26",
+      "tts": "So here's a 2026 joke, written by AI: I told my AI to stop overthinking. It said: \"Sure – let me think about that for thirty seconds.\""
+    },
+    {
+      "id": "loop",
+      "tts": "From scarecrows to self-roasts – AI comedy is growing up."
+    }
   ],
-  "display_map": {"seven": "7", "two": "2", "six": "6"},
-  "keywords": ["future", "department", "machine", "learning", "weather", "doubled", "nature", "heat", "floods", "rain", "carbonx", "dna", "mutation", "laptop", "lab", "warp", "215", "robot", "chemistry", "drugs", "seven"]
+  "display_map": {
+    "ninety": "90",
+    "twentyfive": "25",
+    "thirty": "30",
+    "two": "2"
+  },
+  "keywords": [
+    "funny",
+    "2023",
+    "chatgpt",
+    "ninety",
+    "percent",
+    "twentyfive",
+    "scarecrow",
+    "outstanding",
+    "tomato",
+    "dressing",
+    "funnier",
+    "2026",
+    "ai",
+    "overthinking",
+    "thirty",
+    "seconds",
+    "comedy"
+  ],
+  "voice_settings": {
+    "stability": 0.3,
+    "style": 0.6
+  }
 }
