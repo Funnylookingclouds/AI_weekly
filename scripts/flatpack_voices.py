@@ -48,6 +48,8 @@ for n, ln in enumerate(ep["lines"]):
     out = out_dir / f"line_{n}.wav"
     if len(parts) == 1 and ln.get("fx") == "muffle":  # speaking from inside furniture
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(parts[0][0]), "-af", "lowpass=f=700,lowpass=f=900,aecho=0.6:0.5:25:0.3,volume=2.2,loudnorm=I=-18:TP=-1.5", "-ar", "48000", str(out)], check=True)
+    elif len(parts) == 1 and ln.get("fx") == "whisper":  # quiet, close, breathy
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(parts[0][0]), "-af", "highpass=f=250,loudnorm=I=-23:TP=-3", "-ar", "48000", str(out)], check=True)
     elif len(parts) == 1:
         subprocess.run(["cp", str(parts[0][0]), str(out)], check=True)
     else:

@@ -17,6 +17,9 @@ import { FlatpackEp4, EP4_LEN } from "./flatpack/episodes/ep4";
 import { FlatpackEp5, EP5_LEN } from "./flatpack/episodes/ep5";
 import { FlatpackEp6, EP6_LEN } from "./flatpack/episodes/ep6";
 import { FlatpackEp7, EP7_LEN } from "./flatpack/episodes/ep7";
+import { FlatpackEp8, EP8_LEN } from "./flatpack/episodes/ep8";
+import { FlatpackEp9, EP9_LEN } from "./flatpack/episodes/ep9";
+import { FlatpackEp10, EP10_LEN } from "./flatpack/episodes/ep10";
 
 const V = { fps: FPS, width: 1080, height: 1920 } as const;
 
@@ -46,6 +49,9 @@ export const Root: React.FC = () => (
     <Composition id="FlatpackEp5" component={FlatpackEp5} durationInFrames={EP5_LEN} fps={60} width={1080} height={1920} />
     <Composition id="FlatpackEp6" component={FlatpackEp6} durationInFrames={EP6_LEN} fps={60} width={1080} height={1920} />
     <Composition id="FlatpackEp7" component={FlatpackEp7} durationInFrames={EP7_LEN} fps={60} width={1080} height={1920} />
+    <Composition id="FlatpackEp8" component={FlatpackEp8} durationInFrames={EP8_LEN} fps={60} width={1080} height={1920} />
+    <Composition id="FlatpackEp9" component={FlatpackEp9} durationInFrames={EP9_LEN} fps={60} width={1080} height={1920} />
+    <Composition id="FlatpackEp10" component={FlatpackEp10} durationInFrames={EP10_LEN} fps={60} width={1080} height={1920} />
     <Still id="FlatpackSheet" component={FlatpackSheet} width={3560} height={2120} />
     <Still id="LogoSquare" component={B.LogoSquare} width={1080} height={1080} />
     <Still id="LogoAvatar" component={B.LogoAvatar} width={800} height={800} />

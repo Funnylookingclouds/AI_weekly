@@ -1,0 +1,138 @@
+{
+ "id": "ep10",
+ "title": "Junior's First Bed",
+ "speed": 1.12,
+ "voices": {
+  "duke": {
+   "id": "R9RZPy40Zzy1wNxrgQpj"
+  },
+  "pia": {
+   "id": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "gus": {
+   "id": "wGkprrTXgBM5EC3Znt6U"
+  },
+  "lotta": {
+   "id": "pFZP5JQG7iQjIQuC4Bku",
+   "settings": {
+    "style": 0.2,
+    "stability": 0.6,
+    "speed": 0.95
+   }
+  },
+  "alvin": {
+   "id": "SDARFhQygpPvpLh7Ad1B"
+  },
+  "lefty": {
+   "id": "fBD19tfE58bkETeiwUoC",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "junior": {
+   "id": "eh3mW70o6niXfNTuBPbY",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "sven": {
+   "id": "JBFqnCBsd6RMkjVDRZzb",
+   "settings": {
+    "stability": 0.45,
+    "style": 0.5,
+    "speed": 1.0
+   }
+  }
+ },
+ "lines": [
+  {
+   "who": "gus",
+   "tts": "Your very own bed, Junior!"
+  },
+  {
+   "who": "junior",
+   "tts": "Why?"
+  },
+  {
+   "who": "pia",
+   "tts": "Because big kids sleep in beds."
+  },
+  {
+   "who": "junior",
+   "tts": "Why?"
+  },
+  {
+   "who": "junior",
+   "tts": "Why? Why? Why?"
+  },
+  {
+   "who": "duke",
+   "tts": "And then... the little dowel... went into hole B."
+  },
+  {
+   "who": "junior",
+   "tts": "AGAIN!"
+  },
+  {
+   "who": "pia"
+  },
+  {
+   "who": "gus",
+   "tts": "...He picked me.",
+   "fx": "whisper"
+  },
+  {
+   "who": "pia",
+   "tts": "Your fault.",
+   "fx": "whisper"
+  },
+  {
+   "who": "duke",
+   "tts": "YOUR fault.",
+   "fx": "whisper"
+  },
+  {
+   "who": "lefty",
+   "tts": "Uh... goodnight?",
+   "fx": "whisper"
+  }
+ ],
+ "music": [
+  [
+   0,
+   4.9,
+   "happy"
+  ],
+  [
+   4.9,
+   8.6,
+   "tense"
+  ],
+  [
+   8.6,
+   15.2,
+   "hush"
+  ],
+  [
+   15.2,
+   17.4,
+   "tense"
+  ],
+  [
+   17.4,
+   22.8,
+   "hush"
+  ],
+  [
+   22.8,
+   26.5,
+   "stop"
+  ],
+  [
+   26.5,
+   30.0,
+   "happy"
+  ]
+ ],
+ "dur": 30.0
+}

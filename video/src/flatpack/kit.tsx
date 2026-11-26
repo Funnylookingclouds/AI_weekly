@@ -14,9 +14,9 @@ export const ease = (p: number) => (p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * 
 export const back = (p: number) => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
 export const lerp = (a: number, b: number, p: number) => a + (b - a) * p;
 
-export type Who = FurniId | "alvin" | "lefty" | "junior" | "all" | "duke+pia";
-export const COLOR: Record<Who, string> = { duke: C.tomato, pia: C.teal, gus: C.grape, lotta: C.gum, alvin: "#94a3b8", lefty: "#94a3b8", junior: C.sun, all: C.sun, "duke+pia": C.sun };
-export const HEAD: Record<string, number> = { duke: 360, pia: 270, gus: 260, lotta: 405, alvin: 75, lefty: 95, junior: 170 };
+export type Who = FurniId | "alvin" | "lefty" | "junior" | "sven" | "all" | "duke+pia";
+export const COLOR: Record<Who, string> = { duke: C.tomato, pia: C.teal, gus: C.grape, lotta: C.gum, alvin: "#94a3b8", lefty: "#94a3b8", junior: C.sun, sven: "#1e3a8a", all: C.sun, "duke+pia": C.sun };
+export const HEAD: Record<string, number> = { duke: 360, pia: 270, gus: 260, lotta: 405, alvin: 75, lefty: 95, junior: 170, sven: 300 };
 export type Voice = { file: string; dur: number; words: { w: string; s: number; e: number }[] } | null;
 export type Bub = { who: Who; t0: number; t1: number; text: string; kind?: "say" | "shout" | "whisper" | "grawlix" };
 export const VDELAY = 0.05;
@@ -90,7 +90,7 @@ export type PieceDef = { id: string; w: number; h: number; built: Pose; pile: Po
 const BOX: Pose = { x: 0, y: -150, r: 0 };
 const OFF: Pose = { x: -260, y: 64, r: 74 };
 const poseOf = (p: PieceDef, s: string): Pose => s === "box" ? (p.box ?? BOX) : s === "pile" ? p.pile : s === "fall" ? p.fall : s === "off" ? (p.off ?? OFF) : s === "backwards" ? { ...p.built, flip: 1 } : s === "upside" ? { ...p.built, r: p.built.r + 180 } : { ...p.built, flip: 0 };
-export const Room: React.FC<{ t: number; angry?: boolean; wall?: [string, string] }> = ({ t, angry = false, wall = ["#bff0dc", "#a6e6cc"] }) => {
+export const Room: React.FC<{ t: number; angry?: boolean; wall?: [string, string]; hideClock?: boolean }> = ({ t, angry = false, wall = ["#bff0dc", "#a6e6cc"], hideClock = false }) => {
   const sec = t * (angry ? 40 : 6);
   return (
     <g>
@@ -108,12 +108,12 @@ export const Room: React.FC<{ t: number; angry?: boolean; wall?: [string, string
         <g transform="translate(360 470)"><rect x={-30} y={0} width={60} height={60} rx={8} fill={C.tomato} stroke={INK} strokeWidth={5} />{[-1, 0, 1].map((s) => <ellipse key={s} cx={s * 22} cy={-30} rx={14} ry={34} fill={C.mint} stroke={INK} strokeWidth={4} transform={`rotate(${s * 25} ${s * 22} 0)`} />)}</g>
       </g>
       {/* clock (spins wildly during fights) */}
-      <g transform="translate(120 -1250)">
+      {!hideClock && <g transform="translate(120 -1250)">
         <circle r={110} fill="#fff" stroke={INK} strokeWidth={10} /><circle r={92} fill={C.cream} />
         {[...Array(12)].map((_, i) => <circle key={i} cx={Math.sin((i / 12) * Math.PI * 2) * 78} cy={-Math.cos((i / 12) * Math.PI * 2) * 78} r={6} fill={INK} />)}
         <line x1={0} y1={0} x2={Math.sin(sec / 12) * 45} y2={-Math.cos(sec / 12) * 45} stroke={INK} strokeWidth={10} strokeLinecap="round" />
         <line x1={0} y1={0} x2={Math.sin(sec) * 70} y2={-Math.cos(sec) * 70} stroke={C.tomato} strokeWidth={6} strokeLinecap="round" />
-      </g>
+      </g>}
       {/* framed picture */}
       <g transform="translate(560 -1120) rotate(4)">
         <rect x={-150} y={-120} width={300} height={240} fill={C.sun} stroke={INK} strokeWidth={9} />
@@ -352,11 +352,11 @@ export const flashAt = (t: number, times: number[]) => times.reduce((a, ft) => a
 export const dustNode = (t: number, t0: number, x: number, y: number, key: string) => { const a = (t - t0) / 0.8; if (a < 0 || a > 1) return null; return <g key={key}>{[...Array(8)].map((_, i) => { const ang = (i / 8) * Math.PI; return <circle key={i} cx={x + Math.cos(ang) * (80 + a * 260) * (i % 2 ? 1 : -1)} cy={y - Math.sin(ang) * a * 60} r={30 + a * 50} fill="#fff" stroke={INK} strokeWidth={4} opacity={1 - a} />; })}</g>; };
 
 // ------------------------------------------------------------------ stage (room + world + foreground), optional split screen
-export const World: React.FC<{ t: number; cam: Cam; items: { y: number; node: React.ReactNode }[]; wall?: [string, string]; angry?: boolean }> = ({ t, cam, items, wall, angry }) => {
+export const World: React.FC<{ t: number; cam: Cam; items: { y: number; node: React.ReactNode }[]; wall?: [string, string]; angry?: boolean; hideClock?: boolean }> = ({ t, cam, items, wall, angry, hideClock }) => {
   const sorted = [...items].sort((a, b) => a.y - b.y);
   return (
     <g>
-      <g transform={`translate(${540 + cam.sx} ${960 + cam.sy}) scale(${cam.z}) translate(${-cam.x * 0.85} ${-cam.y})`}><Room t={t} angry={angry} wall={wall} /></g>
+      <g transform={`translate(${540 + cam.sx} ${960 + cam.sy}) scale(${cam.z}) translate(${-cam.x * 0.85} ${-cam.y})`}><Room t={t} angry={angry} wall={wall} hideClock={hideClock} /></g>
       <g transform={`translate(${540 + cam.sx} ${960 + cam.sy}) scale(${cam.z}) translate(${-cam.x} ${-cam.y})`}>{sorted.map((it) => it.node)}</g>
       <g transform={`translate(${540 + cam.sx} ${960 + cam.sy}) scale(${cam.z * 1.25}) translate(${-cam.x * 1.25 - 760} ${-cam.y + 480})`}>
         <rect x={-90} y={0} width={180} height={170} rx={20} fill={C.grape} stroke={INK} strokeWidth={8} />
@@ -365,7 +365,7 @@ export const World: React.FC<{ t: number; cam: Cam; items: { y: number; node: Re
     </g>
   );
 };
-export const Stage: React.FC<{ t: number; cam: Cam; items: { y: number; node: React.ReactNode }[]; wall?: [string, string]; angry?: boolean; storm?: number; split?: [Cam, Cam] | null; children?: React.ReactNode }> = ({ t, cam, items, wall, angry, storm = 0, split = null, children }) => (
+export const Stage: React.FC<{ t: number; cam: Cam; items: { y: number; node: React.ReactNode }[]; wall?: [string, string]; angry?: boolean; storm?: number; split?: [Cam, Cam] | null; hideClock?: boolean; night?: number; children?: React.ReactNode }> = ({ t, cam, items, wall, angry, storm = 0, split = null, hideClock, night = 0, children }) => (
   <AbsoluteFill style={{ background: wall?.[0] ?? "#bff0dc", overflow: "hidden" }}>
     <svg width={1080} height={1920} style={{ position: "absolute" }}>
       <defs>
@@ -379,8 +379,9 @@ export const Stage: React.FC<{ t: number; cam: Cam; items: { y: number; node: Re
           <g clipPath="url(#botHalf)"><World t={t} cam={split[1]} items={items} wall={wall} angry={angry} /></g>
           <polyline points="0,1020 1080,900" stroke={INK} strokeWidth={22} /><polyline points="0,1020 1080,900" stroke={C.sun} strokeWidth={10} />
         </g>
-      ) : <World t={t} cam={cam} items={items} wall={wall} angry={angry} />}
+      ) : <World t={t} cam={cam} items={items} wall={wall} angry={angry} hideClock={hideClock} />}
       <rect width={1080} height={1920} fill="#1e1b4b" opacity={storm} />
+      <rect width={1080} height={1920} fill="#0b1640" opacity={night} />
     </svg>
     {children}
   </AbsoluteFill>

@@ -1,0 +1,142 @@
+{
+ "id": "ep8",
+ "title": "The New Sofa",
+ "speed": 1.12,
+ "voices": {
+  "duke": {
+   "id": "R9RZPy40Zzy1wNxrgQpj"
+  },
+  "pia": {
+   "id": "FGY2WhTYpPnrIDTdsKH5"
+  },
+  "gus": {
+   "id": "wGkprrTXgBM5EC3Znt6U"
+  },
+  "lotta": {
+   "id": "pFZP5JQG7iQjIQuC4Bku",
+   "settings": {
+    "style": 0.2,
+    "stability": 0.6,
+    "speed": 0.95
+   }
+  },
+  "alvin": {
+   "id": "SDARFhQygpPvpLh7Ad1B"
+  },
+  "lefty": {
+   "id": "fBD19tfE58bkETeiwUoC",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "junior": {
+   "id": "eh3mW70o6niXfNTuBPbY",
+   "settings": {
+    "speed": 1.0
+   }
+  },
+  "sven": {
+   "id": "JBFqnCBsd6RMkjVDRZzb",
+   "settings": {
+    "stability": 0.45,
+    "style": 0.5,
+    "speed": 1.0
+   }
+  }
+ },
+ "lines": [
+  {
+   "who": "gus",
+   "tts": "...A SOFA?"
+  },
+  {
+   "who": "pia",
+   "tts": "It goes by the window."
+  },
+  {
+   "who": "duke",
+   "tts": "By the TV!"
+  },
+  {
+   "who": "gus",
+   "tts": "Oops."
+  },
+  {
+   "who": "sven",
+   "tts": "Finally. A REAL seat."
+  },
+  {
+   "who": "gus",
+   "tts": "I'M the seat here!"
+  },
+  {
+   "who": "duke",
+   "tts": "Ooh, it reclines—"
+  },
+  {
+   "who": "duke",
+   "tts": "NOT AGAIN!",
+   "fx": "muffle"
+  },
+  {
+   "who": "sven",
+   "tts": "...Fine. YOU can be the comfy one."
+  },
+  {
+   "who": "lefty",
+   "tts": "Uh... where do I go?"
+  },
+  {
+   "who": "sven",
+   "tts": "Not in me."
+  }
+ ],
+ "music": [
+  [
+   0,
+   1.8,
+   "hush"
+  ],
+  [
+   1.8,
+   8.6,
+   "tense"
+  ],
+  [
+   8.6,
+   9.3,
+   "magic"
+  ],
+  [
+   9.3,
+   13.0,
+   "tense"
+  ],
+  [
+   13.0,
+   14.9,
+   "happy"
+  ],
+  [
+   14.9,
+   16.8,
+   "tense"
+  ],
+  [
+   16.8,
+   20.6,
+   "happy"
+  ],
+  [
+   20.6,
+   25.0,
+   "stop"
+  ],
+  [
+   25.0,
+   28.5,
+   "happy"
+  ]
+ ],
+ "dur": 28.5
+}
