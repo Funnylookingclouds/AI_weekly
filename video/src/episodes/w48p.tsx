@@ -18,7 +18,7 @@ const SRC_PH = "Reuters (Nov 2026)";
 const MONO = "DejaVu Sans Mono, monospace";
 
 // ---------- hook ----------
-const Mystery: React.FC = () => {
+export const Mystery: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="w48a" rot={-1.2} tag={TAG}>
@@ -33,8 +33,8 @@ const Mystery: React.FC = () => {
     </PaperCard>
   );
 };
-const H2 = word("hook", "i'm");
-const NewHost: React.FC = () => (
+export const H2 = word("hook", "i'm");
+export const NewHost: React.FC = () => (
   <PaperCard seed="w48b" rot={1} tag={TAG}>
     <div style={{ fontSize: 44, fontWeight: 800, color: P.muted }}>Your new host:</div>
     <div style={{ fontSize: 130, fontWeight: 900, color: "#f97316", lineHeight: 1 }}>WATTSON</div>
@@ -45,8 +45,8 @@ const NewHost: React.FC = () => (
 );
 
 // ---------- news 1: Riemann claim check ----------
-const N1 = seg("news1");
-const Remember: React.FC = () => (
+export const N1 = seg("news1");
+export const Remember: React.FC = () => (
   <PaperCard seed="w48c" rot={-0.9} tag={TAG}>
     <Title sub="claim check · from wk 47">Remember this?</Title>
     <div style={{ marginTop: 40, padding: "24px 30px", background: "#fffdf4", border: `4px solid ${P.ink}`, transform: "rotate(-2deg)", boxShadow: "6px 8px 0 #0002" }}>
@@ -57,8 +57,8 @@ const Remember: React.FC = () => (
     <Source>{SRC_RH} · Claude is made by Anthropic</Source>
   </PaperCard>
 );
-const N1B = word("news1", "on");
-const LeanOK: React.FC = () => {
+export const N1B = word("news1", "on");
+export const LeanOK: React.FC = () => {
   const g = useTwos();
   const okAt = rel("news1", "correct", N1B);
   return (
@@ -74,8 +74,8 @@ const LeanOK: React.FC = () => {
     </PaperCard>
   );
 };
-const N1C = word("news1", "top");
-const Reactions: React.FC = () => {
+export const N1C = word("news1", "top");
+export const Reactions: React.FC = () => {
   const g = useTwos();
   const gb = rel("news1", "garbled", N1C);
   return (
@@ -90,8 +90,8 @@ const Reactions: React.FC = () => {
     </PaperCard>
   );
 };
-const N1D = word("news1", "fine");
-const PeerReview: React.FC = () => {
+export const N1D = word("news1", "fine");
+export const PeerReview: React.FC = () => {
   const g = useTwos();
   const sand = interpolate(g, [0, 90], [0, 1], clamp);
   return (
@@ -113,7 +113,7 @@ const PeerReview: React.FC = () => {
 };
 
 // ---------- news 2: proteins ----------
-const Protein: React.FC = () => {
+export const Protein: React.FC = () => {
   const g = useTwos();
   const pts = [...Array(90)].map((_, i) => { const a = i * 0.55; const coil = i > 20 && i < 70; const rr = coil ? 38 : 8; return `${110 + i * 7.4 + Math.cos(a) * rr},${220 + Math.sin(i / 14) * 90 + Math.sin(a) * rr + Math.sin(g / 20 + i / 10) * 6}`; });
   return (
@@ -128,8 +128,8 @@ const Protein: React.FC = () => {
     </PaperCard>
   );
 };
-const N2B = word("news2", "in");
-const Binders: React.FC = () => {
+export const N2B = word("news2", "in");
+export const Binders: React.FC = () => {
   const g = useTwos();
   const lit = Math.round(interpolate(g, [rel("news2", "35", N2B), rel("news2", "322", N2B) + 20], [0, 35], clamp));
   const hits = new Set([...Array(322)].map((_, i) => i).sort((a, b) => random(`p${a}`) - random(`p${b}`)).slice(0, lit));
@@ -146,8 +146,8 @@ const Binders: React.FC = () => {
     </PaperCard>
   );
 };
-const N2C = word("news2", "great");
-const Replacement: React.FC = () => (
+export const N2C = word("news2", "great");
+export const Replacement: React.FC = () => (
   <PaperCard seed="w48i" rot={-1} tag={TAG}>
     <Title sub="Wattson is not amused">"Next it'll design my replacement"</Title>
     <div style={{ display: "flex", justifyContent: "center", marginTop: 30 }}>
@@ -162,8 +162,8 @@ const Replacement: React.FC = () => (
 );
 
 // ---------- news 3 ----------
-const N3 = seg("news3");
-const Timelines: React.FC = () => {
+export const N3 = seg("news3");
+export const Timelines: React.FC = () => {
   const g = useTwos();
   const w = interpolate(g, [rel("news3", "shrinking", N3), rel("news3", "timelines", N3) + 20], [1, 0.55], clamp);
   return (
@@ -179,8 +179,8 @@ const Timelines: React.FC = () => {
     </PaperCard>
   );
 };
-const N3B = word("news3", "but");
-const NoMiracles: React.FC = () => (
+export const N3B = word("news3", "but");
+export const NoMiracles: React.FC = () => (
   <PaperCard seed="w48k" rot={-1} tag={TAG}>
     <Title sub="the reality check">Lilly: "don't expect miracles yet"</Title>
     <div style={{ display: "flex", justifyContent: "center", marginTop: 60 }}><Stamp at={rel("news3", "miracles", N3B)} size={90} color={P.red} rot={-6}>NO MIRACLES (YET)</Stamp></div>
@@ -189,7 +189,7 @@ const NoMiracles: React.FC = () => (
 );
 
 // ---------- ending ----------
-const ChargeMe: React.FC = () => {
+export const ChargeMe: React.FC = () => {
   const g = useTwos();
   return (
     <PaperCard seed="w48l" rot={1} tag={TAG}>
