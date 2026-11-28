@@ -1,71 +1,35 @@
 {
-  "id": "special-roast-en",
-  "language": "en",
-  "voice_id": "fBD19tfE58bkETeiwUoC",
-  "model_id": "eleven_multilingual_v2",
-  "speed": 1.12,
-  "voice_gap": 0.35,
-  "segments": [
-    {
-      "id": "hook",
-      "tts": "Has AI ever won a roast battle? Actually… yes. Sometimes."
-    },
-    {
-      "id": "facts",
-      "tts": "In 2023, a ChatGPT-powered comedy bot reportedly beat a human comic at a roast battle in New York. But at a Toronto show pitting comics against an AI avatar, the AI won only two battles. And in San Francisco, a rapper out-roasted an AI Confucius."
-    },
-    {
-      "id": "settle",
-      "tts": "So let's settle it. Ture versus me!"
-    },
-    {
-      "id": "ture1",
-      "tts": "Bouncy, you're so round, even your opinions have no edges.",
-      "voice_id": "Q4oILuo4P8VeXtE6FMLI"
-    },
-    {
-      "id": "bouncy1",
-      "tts": "Oh yeah? Ture, your beard has more parameters than my whole model."
-    },
-    {
-      "id": "ture2",
-      "tts": "…Okay. That was good.",
-      "voice_id": "Q4oILuo4P8VeXtE6FMLI"
-    },
-    {
-      "id": "loop",
-      "tts": "Final score: humans one, AI one. The roast war is officially a tie.",
-      "voice_id": "GyIXYY876myKNtA1j8NI"
-    }
-  ],
-  "display_map": {
-    "two": "2",
-    "one": "1"
+ "id": "joke-week-01-en",
+ "language": "en",
+ "voice_id": "fBD19tfE58bkETeiwUoC",
+ "model_id": "eleven_multilingual_v2",
+ "speed": 1.05,
+ "voice_gap": 0.3,
+ "voice_settings": {
+  "stability": 0.3,
+  "style": 0.6
+ },
+ "segments": [
+  {
+   "id": "intro",
+   "tts": "AI joke of the week!"
   },
-  "keywords": [
-    "roast",
-    "yes",
-    "2023",
-    "reportedly",
-    "beat",
-    "new",
-    "york",
-    "toronto",
-    "two",
-    "san",
-    "francisco",
-    "confucius",
-    "settle",
-    "round",
-    "edges",
-    "beard",
-    "parameters",
-    "good",
-    "tie",
-    "one"
-  ],
-  "voice_settings": {
-    "stability": 0.3,
-    "style": 0.6
+  {
+   "id": "setup",
+   "tts": "Why did the AI cross the road?",
+   "pause_after": 0.9
+  },
+  {
+   "id": "punch",
+   "tts": "Because it was trained on chicken data!"
   }
+ ],
+ "display_map": {},
+ "keywords": [
+  "joke",
+  "road",
+  "chicken",
+  "data"
+ ],
+ "tail": 2.4
 }
