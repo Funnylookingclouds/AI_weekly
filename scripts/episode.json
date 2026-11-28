@@ -1,66 +1,21 @@
 {
- "id": "special-alphago-en",
- "language": "en",
- "voice_id": "FGY2WhTYpPnrIDTdsKH5",
- "model_id": "eleven_multilingual_v2",
- "speed": 1.12,
- "segments": [
-  {
-   "id": "hook",
-   "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "One move had a one-in-ten-thousand chance. An AI played it anyway."
-  },
-  {
-   "id": "match",
-   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "March 2016, Seoul. Google DeepMind's AlphaGo takes on Lee Sedol – winner of eighteen world titles – at Go, a game with more possible positions than atoms in the universe. Over two hundred million people watch."
-  },
-  {
-   "id": "move37",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "Game two, move thirty-seven. AlphaGo plays a stone that commentators first think is a mistake. It wins the game – and overturns centuries of Go wisdom."
-  },
-  {
-   "id": "comeback",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "But in game four, Lee strikes back with his own one-in-ten-thousand move – \"God's Touch\" – and wins."
-  },
-  {
-   "id": "loop",
-   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "AlphaGo took the match four to one. But both sides showed us something new."
-  }
- ],
- "display_map": {
-  "eighteen": "18",
-  "two": "2",
-  "thirtyseven": "37",
-  "four": "4",
-  "one": "1"
- },
- "keywords": [
-  "oneintenthousand",
-  "alphago",
-  "lee",
-  "sedol",
-  "eighteen",
-  "go",
-  "atoms",
-  "universe",
-  "hundred",
-  "million",
-  "thirtyseven",
-  "mistake",
-  "centuries",
-  "four",
-  "gods",
-  "touch",
-  "wins",
-  "new"
- ],
- "voice_gap": 0.25,
- "voice_settings": {
-  "stability": 0.32,
-  "style": 0.6
- }
+  "id": "2026-w43-en",
+  "language": "en",
+  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.12,
+  "voice_gap": 0.25,
+  "voice_settings": {"stability": 0.32, "style": 0.6},
+  "segments": [
+    {"id": "hook", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Big week, team! AI just got better at seeing weeks into the future."},
+    {"id": "c1", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "That's my department! Researchers used machine learning to fix the errors in weather models – and doubled forecast skill two to six weeks ahead. It's in Nature."},
+    {"id": "l1", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "That could mean earlier warnings for heat waves and floods."},
+    {"id": "c2", "voice_id": "wGkprrTXgBM5EC3Znt6U", "tts": "And I finally get to plan my rain."},
+    {"id": "p1", "voice_id": "TX3LPaxmHKxFdv7VOQHJ", "tts": "Next! Hugging Face released Carbon-X – an open AI you can literally chat with about DNA. Ask what a mutation does, in plain English!"},
+    {"id": "ch1", "voice_id": "SDARFhQygpPvpLh7Ad1B", "tts": "And it runs on a laptop! Though… it hasn't been tested in a real lab yet."},
+    {"id": "w1", "voice_id": "MKlLqCItoCkvdhrxgtLv", "tts": "Quick hit: OpenAI's former science chief launched Warp Sciences – 215 million dollars for robot chemistry labs that hunt for new drugs. Robots doing chemistry. Finally, someone else gets to blow things up."},
+    {"id": "loop", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "tts": "Weather, DNA, robot labs – all in seven days."}
+  ],
+  "display_map": {"seven": "7", "two": "2", "six": "6"},
+  "keywords": ["future", "department", "machine", "learning", "weather", "doubled", "nature", "heat", "floods", "rain", "carbonx", "dna", "mutation", "laptop", "lab", "warp", "215", "robot", "chemistry", "drugs", "seven"]
 }
