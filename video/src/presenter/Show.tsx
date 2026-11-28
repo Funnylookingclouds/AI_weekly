@@ -9,11 +9,12 @@ import { Bouncy, mouthOpen, type BouncyMood } from "./Bouncy";
 import { Toon, CAST, type CastId } from "../cast/cast";
 import { ComedyClub, Marquee, MicStand, Audience } from "../club/Club";
 import { Studio, Ensemble, type Member } from "../cast/stage";
+import { Room, RoomLights, Foreground, LedSign, SpeedLines, Vignette } from "../cast/room";
 import type { Expr } from "../cast/rig";
 
 export type PlateMood = Mood | "group";
 export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr }; cast?: Member[]; tint?: string; chip?: string; /** audience laughs from plate start (true) or from this time in seconds */ laugh?: boolean | number };
-export type Show = { presenter: Character; plates: Plate[]; stage?: boolean; scene?: "club" };
+export type Show = { presenter: Character; plates: Plate[]; stage?: boolean; scene?: "club"; /** Studio v3: angled 2.5D room, live camera, wall monitor, lower-third captions */ room?: boolean; /** start straight in the scene (no separate intro; brand as watermark) */ coldOpen?: boolean };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
 /** Start time of the nth word in a segment that matches exactly (punctuation ignored). */
@@ -144,6 +145,7 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
   const end = Math.ceil(TOTAL_SEC * FPS);
   const cur = [...show.plates].reverse().find((p) => p.t <= t + 1e-6) ?? show.plates[0];
   const speaker = cur.who ?? show.presenter;
+  if (show.room) return <RoomMain show={show} />;
   return (
     <AbsoluteFill style={{ background: "#000" }}>
       {show.stage && (() => {
@@ -244,5 +246,144 @@ const TopicChip: React.FC<{ label: string; tint: string }> = ({ label, tint }) =
   const s = spring({ frame: f, fps: 60, config: { damping: 12 } });
   return (
     <div style={{ position: "absolute", left: 50, top: 92, padding: "8px 18px", background: "#fbf6ea", border: "4px solid #2b2622", borderLeft: `14px solid ${tint}`, borderRadius: 10, fontFamily: FONT, fontWeight: 900, fontSize: 28, letterSpacing: 2, color: "#2b2622", transform: `translateX(${(1 - s) * -400}px) rotate(-2deg)`, boxShadow: "4px 6px 0 #0003" }}>{label}</div>
+  );
+};
+
+// ===========================================================================
+// Studio v3 – room show
+// ===========================================================================
+const ANGLES = [0, -0.85, 0.75, -0.4, 0.9, -0.7, 0.35];
+const angleOf = (i: number) => ANGLES[i % ANGLES.length];
+
+const RoomMain: React.FC<{ show: Show }> = ({ show }) => {
+  const f = useCurrentFrame();
+  const t = f / FPS;
+  const end = Math.ceil(TOTAL_SEC * FPS);
+  const ci = Math.max(0, show.plates.findIndex((p, i) => p.t <= t + 1e-6 && (show.plates[i + 1]?.t ?? 1e9) > t + 1e-6));
+  const cur = show.plates[ci];
+  const from = Math.round(cur.t * FPS);
+  const to = ci + 1 < show.plates.length ? Math.round(show.plates[ci + 1].t * FPS) : end;
+  const lf = f - from;
+  // whip-pan: fast camera swing into each plate, with motion blur
+  const WHIP = 11;
+  const wp = Math.min(1, lf / WHIP);
+  const whipK = 1 - (1 - Math.pow(1 - wp, 3));
+  const dir = ci % 2 ? 1 : -1;
+  const camX = dir * whipK * 560;
+  const blur = whipK * 38;
+  const angle = angleOf(ci) + (ci > 0 ? (angleOf(ci - 1) - angleOf(ci)) * whipK : 0);
+  // slow continuous push-in (4.5 %) + punch on keywords
+  const push = (1 + 0.045 * Math.min(1, lf / Math.max(1, to - from))) * (1 + 0.035 * pulseAt(onTwos(f) / FPS, true, 0.35));
+  const cam = (depth: number): React.CSSProperties => ({ transform: `translateX(${-camX * depth}px) scale(${1 + (push - 1) * depth})`, transformOrigin: "50% 52%" });
+  const tint = cur.tint ?? "#7c3aed";
+  const prevTint = ci > 0 ? show.plates[ci - 1].tint ?? "#7c3aed" : tint;
+  const k = Math.min(1, lf / 30);
+  const sp = cur.cast?.find((m) => m.talk);
+  const accent = (sp && CAST.find((c) => c.id === sp.id)?.accent) ?? show.presenter.accent;
+  return (
+    <AbsoluteFill style={{ background: "#000", overflow: "hidden" }}>
+      <svg width={0} height={0} style={{ position: "absolute" }}><defs><filter id="whipblur" x="-20%" y="0" width="140%" height="100%"><feGaussianBlur stdDeviation={`${blur.toFixed(1)} 0`} /></filter></defs></svg>
+      <AbsoluteFill style={{ filter: blur > 0.6 ? "url(#whipblur)" : undefined }}>
+        <AbsoluteFill style={cam(0.55)}>
+          {prevTint !== tint && k < 1 && <Room tint={prevTint} angle={angle} />}
+          <AbsoluteFill style={{ opacity: prevTint !== tint ? k : 1 }}><Room tint={tint} angle={angle} /></AbsoluteFill>
+        </AbsoluteFill>
+        <AbsoluteFill style={cam(0.65)}><RoomLights tint={tint} /></AbsoluteFill>
+        {show.plates.map((p, i) => {
+          const pf = Math.round(p.t * FPS);
+          const pt = i + 1 < show.plates.length ? Math.round(show.plates[i + 1].t * FPS) : end;
+          return (
+            <Sequence key={i} from={pf} durationInFrames={Math.max(1, pt - pf)} name={`plate${i}`}>
+              <AbsoluteFill style={cam(0.75)}><MonitorSlot p={p} angle={angleOf(i)} /></AbsoluteFill>
+              <AbsoluteFill style={cam(1)}>
+                {p.cast ? <Ensemble members={p.cast} t={t} open={mouthOpen(WORDS, t)} tint={p.tint ?? "#7c3aed"} i={i} room /> : p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : <Presenter ch={p.who ?? show.presenter} mood={p.mood} i={i} t={t} />}
+              </AbsoluteFill>
+              <Audio src={staticFile(i % 3 === 2 ? "pop.wav" : "whoosh.wav")} volume={0.45} />
+            </Sequence>
+          );
+        })}
+        <AbsoluteFill style={cam(1.6)}><Foreground tint={tint} /></AbsoluteFill>
+        <Vignette tint={tint} />
+      </AbsoluteFill>
+      <SpeedLines k={whipK} dir={dir} />
+      {cur.chip && <LedSign label={cur.chip} tint={tint} lf={lf} />}
+      <LowerCaptions t={t} accent={accent} />
+      <Audio src={staticFile("voiceover.mp3")} />
+    </AbsoluteFill>
+  );
+};
+
+/** the board lives on a hanging studio monitor; it powers on like a CRT at each plate */
+const MonitorSlot: React.FC<{ p: Plate; angle: number }> = ({ p, angle }) => {
+  const lf = useCurrentFrame();
+  const g = onTwos(lf);
+  const on = interpolate(lf, [2, 9], [0.02, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
+  const flash = interpolate(lf, [2, 6, 12], [0, 0.9, 0], clamp);
+  const tint = p.tint ?? "#7c3aed";
+  const S = 0.84, W = 960 * S, H = 760 * S, PAD = 18;
+  const sw = Math.sin(g / 34) * 0.8;
+  return (
+    <div style={{ position: "absolute", left: 540 - W / 2 - PAD, top: 150, perspective: 1800 }}>
+      {/* ceiling cables */}
+      <svg width={W + PAD * 2} height={200} style={{ position: "absolute", top: -200, left: 0, overflow: "visible" }}>
+        {[0.18, 0.82].map((x, k) => <line key={k} x1={(W + PAD * 2) * x} y1={-60} x2={(W + PAD * 2) * x} y2={200} stroke="#14110f" strokeWidth={8} />)}
+      </svg>
+      <div style={{ transform: `rotateY(${-angle * 9}deg) rotate(${sw}deg)`, transformOrigin: "50% 0", padding: PAD, background: "linear-gradient(160deg, #3a3633, #15120f)", borderRadius: 22, border: "4px solid #0b0a09", boxShadow: `0 0 70px ${tint}77, 0 0 0 3px #ffffff18 inset, 26px 40px 40px #000a` }}>
+        <div style={{ width: W, height: H, overflow: "hidden", borderRadius: 8, background: mixHex(tint), position: "relative" }}>
+          <div style={{ width: 960, height: 760, transform: `scale(${S}, ${S * on})`, transformOrigin: "0 50%", marginTop: (H - 760 * S) / 2 }}>
+            <div style={{ transform: "translate(0, 0)" }}><p.C /></div>
+          </div>
+          {/* glass glare + scanlines + power-on flash */}
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(115deg, #ffffff26 0%, #ffffff00 30%, #ffffff00 70%, #ffffff12 100%)" }} />
+          <div style={{ position: "absolute", inset: 0, backgroundImage: "repeating-linear-gradient(0deg, #0000000d 0 2px, transparent 2px 5px)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "#fff", opacity: flash }} />
+        </div>
+        <div style={{ position: "absolute", right: 34, bottom: 6, width: 10, height: 10, borderRadius: 5, background: "#ff4d4d", boxShadow: "0 0 10px #ff4d4d" }} />
+      </div>
+    </div>
+  );
+};
+const mixHex = (tint: string) => `radial-gradient(circle, ${tint}55, #0b0d14)`;
+
+/** big lower-third captions: 2–3 words, white with black outline, keywords in teal */
+type Chunk = { words: typeof WORDS; start: number; end: number };
+const LOWER: Chunk[] = (() => {
+  const out: Chunk[] = [];
+  let cur: typeof WORDS = [];
+  const ws: typeof WORDS = [];
+  WORDS.forEach((w) => {
+    const prev = ws[ws.length - 1];
+    if (prev && /^%/.test(w.display)) ws[ws.length - 1] = { ...prev, display: prev.display + w.display, end: w.end, keyword: prev.keyword || w.keyword };
+    else ws.push(w);
+  });
+  ws.forEach((w, i) => {
+    if (w.display) cur.push(w);
+    const len = cur.map((x) => x.display).join(" ").length;
+    const brk = /[.,:;!?]$/.test(w.word) || cur.length >= 3 || len > 16 || i === ws.length - 1 || ws[i + 1]?.segment !== w.segment;
+    if (brk && cur.length) { out.push({ words: cur, start: cur[0].start, end: cur[cur.length - 1].end }); cur = []; }
+  });
+  return out;
+})();
+
+const LowerCaptions: React.FC<{ t: number; accent: string }> = ({ t, accent }) => {
+  const idx = LOWER.findIndex((c, i) => t >= c.start - 0.05 && t < (LOWER[i + 1]?.start ?? Infinity) - 0.05);
+  const ch = LOWER[idx];
+  if (!ch || t > ch.end + 0.5) return null;
+  const pop = interpolate(t - ch.start, [-0.05, 0.1], [0.82, 1], clamp);
+  return (
+    <div style={{ position: "absolute", top: 1490, left: 50, right: 170, display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0 26px", fontFamily: FONT, transform: `scale(${pop})` }}>
+      {ch.words.map((w, i) => {
+        const on = t >= w.start - 0.02, active = on && t < w.end + 0.06;
+        const color = w.keyword ? "#3fe0d0" : "#ffffff";
+        const txt = w.display.replace(/[,:;–]+$/, "");
+        const kp = w.keyword ? interpolate(t - w.start, [0, 0.08, 0.2], [0.7, 1.15, 1], clamp) : 1;
+        return (
+          <span key={i} style={{ position: "relative", display: "inline-block", fontSize: 84, fontWeight: 900, lineHeight: 1.12, letterSpacing: -1, color, WebkitTextStroke: "14px #0a0a0a", paintOrder: "stroke fill", textShadow: "0 8px 0 #000, 0 12px 24px #000a", opacity: on ? 1 : 0.55, transform: `scale(${(active ? 1.06 : 1) * (on ? kp : 1)}) translateY(${active ? -6 : 0}px)` }}>
+            {txt}
+            {active && <span style={{ position: "absolute", left: 4, right: 4, bottom: -4, height: 9, borderRadius: 5, background: accent, boxShadow: `0 0 14px ${accent}` }} />}
+          </span>
+        );
+      })}
+    </div>
   );
 };

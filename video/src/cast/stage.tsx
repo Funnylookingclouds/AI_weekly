@@ -4,7 +4,9 @@
  * `tint` sets the mood light per topic (cross-fade by changing it over time).
  */
 import React from "react";
-import { AbsoluteFill, random, useCurrentFrame } from "remotion";
+import { AbsoluteFill, random, spring, useCurrentFrame } from "remotion";
+import { PaperBurst } from "./room";
+import { WORDS } from "../timing";
 import { Toon, type CastId } from "./cast";
 import type { Expr } from "./rig";
 
@@ -78,8 +80,16 @@ export type Member = { id: CastId; expr: Expr; talk?: boolean };
  * Puts 1–5 cast members on the stage. The speaker stands in front (bigger, lit, lip-synced),
  * the others stand back, slightly darker, looking at the speaker. Coloured rim light from `tint`.
  */
-export const Ensemble: React.FC<{ members: Member[]; t: number; open: number; tint: string; i: number }> = ({ members, t, open, tint, i }) => {
+export const Ensemble: React.FC<{ members: Member[]; t: number; open: number; tint: string; i: number; room?: boolean }> = ({ members, t, open, tint, i, room }) => {
   const f = Math.round(t * 60);
+  const lf = useCurrentFrame(); // plate-local
+  const FLOOR = room ? 1445 : 1700, SC = room ? 0.94 : 1;
+  // anticipation: squash down, then spring up with overshoot (speaker only)
+  const up = spring({ frame: lf - 5, fps: 60, config: { damping: 7, stiffness: 190 } });
+  const antic = lf < 5 ? lf / 5 : 0;
+  const kw = WORDS.filter((w) => w.keyword && t - w.start >= 0 && t - w.start < 0.7).pop();
+  const kwAge = kw ? t - kw.start : -1;
+  const kwHop = kw ? Math.sin(Math.min(1, kwAge / 0.35) * Math.PI) : 0;
   const n = members.length;
   const speakerIdx = Math.max(0, members.findIndex((m) => m.talk));
   const slots = n === 1 ? [540] : n === 2 ? (i % 2 ? [700, 340] : [380, 740])
@@ -90,15 +100,23 @@ export const Ensemble: React.FC<{ members: Member[]; t: number; open: number; ti
     <>
       {order.map(({ m, k }) => {
         const front = k === speakerIdx && n <= 3;
-        const size = n >= 4 ? 280 : front ? 460 : 350;
+        const size = (n >= 4 ? 280 : front ? 460 : 350) * SC;
         const x = slots[k];
         const sx = slots[speakerIdx];
         const lookX = k === speakerIdx ? Math.sin(t / 2) * 0.3 : Math.max(-1, Math.min(1, (sx - x) / 250));
-        const top = 1700 - size * 1.3 * (550 / 600);
+        const top = FLOOR - size * 1.3 * (550 / 600);
+        const isSp = k === speakerIdx;
+        const jump = room ? (isSp ? -(1 - antic) * 0 + (lf < 5 ? 0 : -(1 - up) * 70 - kwHop * 34) : -kwHop * 10 * ((k % 2) + 0.5)) : 0;
+        const sqY = room && isSp ? (lf < 5 ? 1 - antic * 0.12 : 1 + (1 - up) * 0.1 - kwHop * 0.04) : 1;
+        const shadowK = room ? Math.max(0.35, 1 + jump / 160) : 1;
         return (
-          <div key={m.id} style={{ position: "absolute", left: x - size / 2, top, filter: `drop-shadow(0 0 22px ${tint}aa) ${front || n >= 4 ? "" : "brightness(0.82) saturate(0.9)"}`, zIndex: front ? 2 : 1 }}>
+          <React.Fragment key={m.id}>
+          {room && <div style={{ position: "absolute", left: x - size * 0.42 * shadowK, top: FLOOR - 26, width: size * 0.84 * shadowK, height: 44, borderRadius: "50%", background: "radial-gradient(ellipse, #000c, transparent 70%)", opacity: 0.75 * shadowK }} />}
+          <div style={{ position: "absolute", left: x - size / 2, top: top + jump, transform: `scale(${2 - sqY}, ${sqY})`, transformOrigin: "50% 100%", filter: `drop-shadow(0 0 22px ${tint}aa) ${front || n >= 4 ? "" : "brightness(0.82) saturate(0.9)"}`, zIndex: front ? 2 : 1 }}>
             <Toon id={m.id} expr={m.expr} f={f + k * 17} size={size} yaw={k === speakerIdx ? Math.sin(t / 1.5) * 0.3 : lookX * 0.5} open={m.talk ? open : 0} look={{ x: lookX, y: -0.1 }} />
           </div>
+          {room && isSp && kw && <PaperBurst x={x} y={top + size * 0.25} age={kwAge} seed={`${kw.start}`} />}
+          </React.Fragment>
         );
       })}
     </>

@@ -5,6 +5,7 @@ import { WORDS, FPS, TOTAL_SEC } from "./timing";
 import { IntroWarp, OutroLoading, SEG as BRAND_SEG, INTRO_SEG } from "./brand/Brand";
 import * as EP from "./episode";
 import { PresenterMain, type Show } from "./presenter/Show";
+import { BrandBug } from "./cast/room";
 import type { Beat } from "./types";
 const BEATS: Beat[] = (EP as { BEATS?: Beat[] }).BEATS ?? [];
 const SHOW: Show | undefined = (EP as { SHOW?: Show }).SHOW;
@@ -141,14 +142,19 @@ export const OUTRO_FRAMES = BRAND_SEG; // 3 s – Outro 2 "Loading next week"
 const XFADE = 12;
 export const MAIN_FRAMES = Math.ceil(TOTAL_SEC * FPS);
 
+/** cold open: no separate intro – straight into the scene, brand as watermark + animated frame */
+const COLD = !!SHOW?.coldOpen;
+const INTRO = COLD ? 0 : INTRO_FRAMES;
+
 export const WeeklyShort: React.FC = () => (
   <AbsoluteFill style={{ background: C.bg }}>
-    <Sequence durationInFrames={INTRO_FRAMES} name="Intro"><IntroWarp /></Sequence>
-    <Sequence from={INTRO_FRAMES} durationInFrames={MAIN_FRAMES} name="Main">{SHOW ? <PresenterMain show={SHOW} /> : <Main />}</Sequence>
-    <Sequence from={INTRO_FRAMES + MAIN_FRAMES - XFADE} durationInFrames={OUTRO_FRAMES} name="Outro"><FadeIn frames={XFADE}><OutroLoading /></FadeIn></Sequence>
+    {!COLD && <Sequence durationInFrames={INTRO_FRAMES} name="Intro"><IntroWarp /></Sequence>}
+    <Sequence from={INTRO} durationInFrames={MAIN_FRAMES} name="Main">{SHOW ? <PresenterMain show={SHOW} /> : <Main />}</Sequence>
+    {COLD && <Sequence durationInFrames={MAIN_FRAMES} name="BrandBug"><BrandBug /><Audio src={staticFile("brand/impact.wav")} volume={0.7} /></Sequence>}
+    <Sequence from={INTRO + MAIN_FRAMES - XFADE} durationInFrames={OUTRO_FRAMES} name="Outro"><FadeIn frames={XFADE}><OutroLoading /></FadeIn></Sequence>
     {/* music runs under the news part and the outro */}
-    <Sequence from={INTRO_FRAMES - 12}><Audio src={staticFile("music.wav")} /></Sequence>
+    <Sequence from={Math.max(0, INTRO - 12)}><Audio src={staticFile("music.wav")} /></Sequence>
   </AbsoluteFill>
 );
 
-export const DURATION = INTRO_FRAMES + MAIN_FRAMES - XFADE + OUTRO_FRAMES;
+export const DURATION = INTRO + MAIN_FRAMES - XFADE + OUTRO_FRAMES;
