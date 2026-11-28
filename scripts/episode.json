@@ -1,5 +1,5 @@
 {
- "id": "special-12months-en",
+ "id": "special-electricity-en",
  "language": "en",
  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
  "model_id": "eleven_multilingual_v2",
@@ -7,64 +7,59 @@
  "segments": [
   {
    "id": "hook",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "How fast is AI really moving? Let's measure twelve months."
-  },
-  {
-   "id": "skill",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "Researchers at METR track how long a task – in human working time – AI can complete half the time."
-  },
-  {
-   "id": "skill",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "November 2025: about three hours. This spring: around twelve."
+   "tts": "Is AI eating the world's electricity? Let's check the real numbers."
   },
   {
-   "id": "skill",
+   "id": "t1",
    "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "That length doubles roughly every three and a half months. That's about ten times longer every year."
+   "tts": "It sure sounds like it! Data centers used about 485 terawatt-hours in 2025."
   },
   {
-   "id": "cost",
+   "id": "r1",
    "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "And it's getting cheaper. Epoch AI estimates the cost of reaching the same performance falls about thirteen-fold per year."
+   "tts": "True – that's roughly one and a half percent of all the world's electricity. But AI is only part of it. AI-focused data centers used about 155 terawatt-hours. That's around half a percent."
   },
   {
-   "id": "real",
-   "voice_id": "wGkprrTXgBM5EC3Znt6U",
-   "tts": "What does that look like? This autumn alone, AI claimed proofs of famous math problems – and beat eight brain tumor experts in a test."
+   "id": "t2",
+   "voice_id": "SDARFhQygpPvpLh7Ad1B",
+   "tts": "Half a percent? So it's no problem at all?"
+  },
+  {
+   "id": "r2",
+   "voice_id": "MKlLqCItoCkvdhrxgtLv",
+   "tts": "Not so fast. The IEA expects data centers to nearly double by 2030 – to about three percent of the world's power."
+  },
+  {
+   "id": "t3",
+   "voice_id": "SDARFhQygpPvpLh7Ad1B",
+   "tts": "So: small today, but growing fast."
   },
   {
    "id": "loop",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "Ten times longer tasks, thirteen times cheaper – in just one year."
+   "tts": "Half a percent now – watch this space."
   }
  ],
  "display_map": {
-  "twelve": "12",
-  "three": "3",
-  "ten": "10",
-  "thirteenfold": "13×",
-  "thirteen": "13",
-  "eight": "8"
+  "three": "3"
  },
  "keywords": [
-  "twelve",
-  "metr",
+  "electricity",
+  "485",
+  "2025",
+  "half",
+  "155",
+  "ai",
+  "problem",
+  "iea",
+  "double",
+  "2030",
   "three",
-  "hours",
-  "doubles",
-  "ten",
-  "cheaper",
-  "epoch",
-  "thirteenfold",
-  "claimed",
-  "proofs",
-  "eight",
-  "experts",
-  "thirteen",
-  "year"
+  "small",
+  "growing",
+  "fast",
+  "percent"
  ],
  "voice_gap": 0.25,
  "voice_settings": {
