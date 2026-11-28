@@ -1,37 +1,40 @@
-# YouTube upload – Week 48 (Nov 23–29, 2026) – ensemble: Wattson hosts with Lumi, Pixel, Chip, Cloudy
+# YouTube upload – SPECIAL EDITION: When was AI first mentioned? – ensemble: Lumi, Wattson, Pixel, Cloudy
 
 ## Title options
-1. **The AI Riemann Proof Just Passed Its Computer Check 🔋** ← recommended
-2. AI Riemann Proof: Certified Correct? (Claim Check)
-3. What Did AI Solve This Week? Math, Proteins & Medicine
+1. **Who Invented the Term "Artificial Intelligence"? 🤯** ← recommended
+2. When Was AI First Mentioned? (Way Before ChatGPT)
+3. The 1955 Document That Named AI
 
 ## Description (copy everything between the lines)
 
 ---
-The AI-assisted Riemann Hypothesis proof just passed its computer check – plus GPT-6 designs real proteins and big pharma says AI is speeding up drug discovery. The latest AI news this week, presented by our grumpy host Wattson and the whole AI Bounce crew. 🔋🧮🧬
+When was AI first mentioned? Way before ChatGPT – the term "artificial intelligence" was coined in 1955. A special edition on the history of AI in under a minute, presented by the whole AI Bounce crew. 📜🤖
 
-🧮 1. CLAIM CHECK: THE RIEMANN PROOF (LEAN-CERTIFIED, HUMAN REVIEW ONGOING)
-On Nov 21, the Lean FRO and the Mathlib Initiative said the computer-checked (Lean) proof of the Riemann Hypothesis by Anthropic mathematician Levent Alpöge, made with Claude, is correct. Top mathematicians reacted with excitement – and some skepticism about the write-up – and human mathematical review is still in progress. (Disclosure: Claude is made by Anthropic, which also makes the assistant that produced this video.)
-🔗 https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/
-🔗 https://www.nature.com/articles/d41586-026-03812-7
+📜 1955 – THE NAME IS BORN
+On August 31, 1955, John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon wrote "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence" – the first known use of the term "artificial intelligence" (per the Oxford English Dictionary).
+🔗 https://ojs.aaai.org/index.php/aimagazine/article/view/1904
+🔗 https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth
 
-🧬 2. GPT-6 DESIGNS PROTEINS (OPENAI CLAIM, PREPRINT)
-OpenAI says its GPT-6 models can design proteins using general reasoning and code. In wet-lab tests by partner Onava, 35 of 322 designed minibinders (about 10.9%) showed binding to their targets. Not yet peer-reviewed.
-🔗 https://www.unite.ai/openai-reports-gpt-6-designs-proteins-with-reasoning-and-code/
+🏛 1956 – THE DARTMOUTH WORKSHOP
+The plan: "a 2 month, 10 man study" at Dartmouth College in summer 1956, built on the idea that every aspect of learning or any other feature of intelligence can in principle be described so precisely that a machine can simulate it. It's often called the birth of AI as a field.
+🔗 https://www-formal.stanford.edu/jmc/slides/dartmouth/dartmouth/node1.html
 
-💊 3. AI IN DRUG DISCOVERY
-Big pharma companies like Novartis and Bristol Myers say AI is shrinking early drug-discovery timelines – while an Eli Lilly executive warns that claims of AI curing all disease are overstated.
-🔗 https://www.investing.com/news/stock-market-news/big-pharma-with-eye-on-anthropic-says-ai-is-shrinking-drug-discovery-timelines-5041287
+❓ 1950 – "CAN MACHINES THINK?"
+Five years earlier, Alan Turing's paper "Computing Machinery and Intelligence" (Mind, 1950) asked "Can machines think?" and proposed the imitation game – today known as the Turing test.
+🔗 https://web.mit.edu/practicum/www/turingab.htm
 
-📅 Every week: what did AI solve? Short, jargon-free AI news this week – AI breakthroughs, AI math, AI in medicine, explained in under 60 seconds.
+📅 Every week: what did AI solve? Plus special editions on AI history – short, jargon-free and under 60 seconds.
 
 🔔 Subscribe to @AIBounce for a new "What did AI solve?" every week: https://www.youtube.com/@AIBounce
 
-#Shorts #AIBounce #AI #AINews #RiemannHypothesis
+#Shorts #AIBounce #AI #AIHistory #TuringTest
 ---
 
 ## Tags (paste into the Tags field)
-AI news, AI news this week, latest AI news, AI breakthroughs, what did AI solve, Riemann Hypothesis, Riemann Hypothesis proof, Riemann proof verified, Lean proof, Mathlib, Claude AI, AI math, GPT-6, OpenAI protein design, AI protein design, AI biology, AI drug discovery, AI in medicine, Novartis AI, Eli Lilly AI, AI claim check, artificial intelligence, AI Bounce, Wattson, AI shorts
+history of AI, AI history, who invented AI, who coined artificial intelligence, when was AI invented, first mention of AI, artificial intelligence history, John McCarthy, Marvin Minsky, Claude Shannon, Nathaniel Rochester, Dartmouth workshop, Dartmouth conference 1956, 1955 AI proposal, Alan Turing, Turing test, imitation game, Can machines think, Computing Machinery and Intelligence, origin of AI, AI explained, AI before ChatGPT, artificial intelligence, AI news, AI Bounce
 
 ## Pinned comment
-Should Wattson get excited yet – or wait for peer review? 🔋👇 (Sources in the description.)
+Did you know AI got its name in 1955? Which AI history moment should we cover next? 👇 (Sources are in the description.)
+
+## Notes
+- Portraits and buildings in the video are illustrations, not historical photos.

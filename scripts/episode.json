@@ -1,5 +1,5 @@
 {
- "id": "special-ai-origin-en",
+ "id": "special-12months-en",
  "language": "en",
  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
  "model_id": "eleven_multilingual_v2",
@@ -7,53 +7,64 @@
  "segments": [
   {
    "id": "hook",
-   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "When was AI first mentioned? Spoiler: way before ChatGPT."
-  },
-  {
-   "id": "y1955",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "August 31st, 1955. A young mathematician, John McCarthy, writes a funding proposal with Marvin Minsky, Nathaniel Rochester and Claude Shannon. And right in the title: a brand-new term – artificial intelligence."
-  },
-  {
-   "id": "y1956",
    "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "The plan: a two-month, ten-person summer workshop at Dartmouth College in 1956. Their bold idea: every feature of intelligence can be described so precisely that a machine could simulate it."
+   "tts": "How fast is AI really moving? Let's measure twelve months."
   },
   {
-   "id": "y1950",
+   "id": "skill",
+   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tts": "Researchers at METR track how long a task – in human working time – AI can complete half the time."
+  },
+  {
+   "id": "skill",
+   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+   "tts": "November 2025: about three hours. This spring: around twelve."
+  },
+  {
+   "id": "skill",
+   "voice_id": "SDARFhQygpPvpLh7Ad1B",
+   "tts": "That length doubles roughly every three and a half months. That's about ten times longer every year."
+  },
+  {
+   "id": "cost",
+   "voice_id": "MKlLqCItoCkvdhrxgtLv",
+   "tts": "And it's getting cheaper. Epoch AI estimates the cost of reaching the same performance falls about thirteen-fold per year."
+  },
+  {
+   "id": "real",
    "voice_id": "wGkprrTXgBM5EC3Znt6U",
-   "tts": "But the question is even older. In 1950, Alan Turing asked: \"Can machines think?\" – and proposed the imitation game, today's Turing test."
+   "tts": "What does that look like? This autumn alone, AI claimed proofs of famous math problems – and beat eight brain tumor experts in a test."
   },
   {
    "id": "loop",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "Seventy-one years later, that idea fits in your pocket."
+   "tts": "Ten times longer tasks, thirteen times cheaper – in just one year."
   }
  ],
  "display_map": {
-  "seventyone": "71"
+  "twelve": "12",
+  "three": "3",
+  "ten": "10",
+  "thirteenfold": "13×",
+  "thirteen": "13",
+  "eight": "8"
  },
  "keywords": [
-  "chatgpt",
-  "1955",
-  "mccarthy",
-  "minsky",
-  "rochester",
-  "shannon",
-  "artificial",
-  "intelligence",
-  "dartmouth",
-  "1956",
-  "simulate",
-  "1950",
-  "turing",
-  "think",
-  "imitation",
-  "game",
-  "test",
-  "seventyone",
-  "pocket"
+  "twelve",
+  "metr",
+  "three",
+  "hours",
+  "doubles",
+  "ten",
+  "cheaper",
+  "epoch",
+  "thirteenfold",
+  "claimed",
+  "proofs",
+  "eight",
+  "experts",
+  "thirteen",
+  "year"
  ],
  "voice_gap": 0.25,
  "voice_settings": {
