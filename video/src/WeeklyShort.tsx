@@ -6,6 +6,7 @@ import { IntroWarp, OutroLoading, SEG as BRAND_SEG, INTRO_SEG } from "./brand/Br
 import * as EP from "./episode";
 import { PresenterMain, type Show } from "./presenter/Show";
 import { BrandBug } from "./cast/room";
+import { PosterIntro, PosterOutro, POSTER_IN, POSTER_OUT } from "./brand/Poster";
 import type { Beat } from "./types";
 const BEATS: Beat[] = (EP as { BEATS?: Beat[] }).BEATS ?? [];
 const SHOW: Show | undefined = (EP as { SHOW?: Show }).SHOW;
@@ -144,17 +145,27 @@ export const MAIN_FRAMES = Math.ceil(TOTAL_SEC * FPS);
 
 /** cold open: no separate intro – straight into the scene, brand as watermark + animated frame */
 const COLD = !!SHOW?.coldOpen;
-const INTRO = COLD ? 0 : INTRO_FRAMES;
+/** studio / club shows get the poster intro + outro with music jingles */
+const POSTER = !!SHOW && !COLD && !!(SHOW.stage || SHOW.room || SHOW.scene);
+const CLUB = SHOW?.scene === "club";
+const OUTRO = POSTER ? POSTER_OUT : OUTRO_FRAMES;
+/** poster intro is 2.5 s, shortened (min 2.0 s) when needed to keep the whole Short ≤ 58 s */
+const INTRO = COLD ? 0 : POSTER ? Math.max(120, Math.min(POSTER_IN, 58 * 60 - (Math.ceil(TOTAL_SEC * 60) - 12 + OUTRO))) : INTRO_FRAMES;
+const PINFO = SHOW?.poster ?? { title: String(WEEK_LABEL), kicker: "AI BOUNCE" };
+const T_IN = SHOW?.plates[0]?.tint ?? (CLUB ? "#ec4899" : "#7c3aed");
+const T_OUT = SHOW?.plates[SHOW.plates.length - 1]?.tint ?? T_IN;
 
 export const WeeklyShort: React.FC = () => (
   <AbsoluteFill style={{ background: C.bg }}>
-    {!COLD && <Sequence durationInFrames={INTRO_FRAMES} name="Intro"><IntroWarp /></Sequence>}
+    {!COLD && <Sequence durationInFrames={INTRO} name="Intro">{POSTER ? <PosterIntro info={PINFO} tint={T_IN} club={CLUB} /> : <IntroWarp />}</Sequence>}
     <Sequence from={INTRO} durationInFrames={MAIN_FRAMES} name="Main">{SHOW ? <PresenterMain show={SHOW} /> : <Main />}</Sequence>
     {COLD && <Sequence durationInFrames={MAIN_FRAMES} name="BrandBug"><BrandBug /><Audio src={staticFile("brand/impact.wav")} volume={0.7} /></Sequence>}
-    <Sequence from={INTRO + MAIN_FRAMES - XFADE} durationInFrames={OUTRO_FRAMES} name="Outro"><FadeIn frames={XFADE}><OutroLoading /></FadeIn></Sequence>
-    {/* music runs under the news part and the outro */}
-    <Sequence from={Math.max(0, INTRO - 12)}><Audio src={staticFile("music.wav")} /></Sequence>
+    <Sequence from={INTRO + MAIN_FRAMES - XFADE} durationInFrames={OUTRO} name="Outro"><FadeIn frames={XFADE}>{POSTER ? <PosterOutro tint={T_OUT} club={CLUB} /> : <OutroLoading />}</FadeIn></Sequence>
+    {/* music: under news + outro (classic), or under the news part only when the posters carry their own jingles */}
+    {POSTER
+      ? <Sequence from={INTRO} durationInFrames={MAIN_FRAMES}><Audio src={staticFile("music.wav")} volume={(fr) => interpolate(fr, [0, 20, MAIN_FRAMES - 24, MAIN_FRAMES], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} /></Sequence>
+      : <Sequence from={Math.max(0, INTRO - 12)}><Audio src={staticFile("music.wav")} /></Sequence>}
   </AbsoluteFill>
 );
 
-export const DURATION = INTRO + MAIN_FRAMES - XFADE + OUTRO_FRAMES;
+export const DURATION = INTRO + MAIN_FRAMES - XFADE + OUTRO;

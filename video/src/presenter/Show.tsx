@@ -14,7 +14,7 @@ import type { Expr } from "../cast/rig";
 
 export type PlateMood = Mood | "group";
 export type Plate = { t: number; C: React.FC; mood: PlateMood; from?: "left" | "right" | "top"; who?: Character; bouncy?: BouncyMood; toon?: { id: CastId; expr: Expr }; cast?: Member[]; tint?: string; chip?: string; /** audience laughs from plate start (true) or from this time in seconds */ laugh?: boolean | number };
-export type Show = { presenter: Character; plates: Plate[]; stage?: boolean; scene?: "club"; /** Studio v3: angled 2.5D room, live camera, wall monitor, lower-third captions */ room?: boolean; /** start straight in the scene (no separate intro; brand as watermark) */ coldOpen?: boolean };
+export type Show = { presenter: Character; plates: Plate[]; stage?: boolean; scene?: "club"; /** Studio v3: angled 2.5D room, live camera, wall monitor, lower-third captions */ room?: boolean; /** start straight in the scene (no separate intro; brand as watermark) */ coldOpen?: boolean; /** intro poster: title + kicker */ poster?: { title: string; kicker: string } };
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
 /** Start time of the nth word in a segment that matches exactly (punctuation ignored). */
@@ -145,7 +145,8 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
   const end = Math.ceil(TOTAL_SEC * FPS);
   const cur = [...show.plates].reverse().find((p) => p.t <= t + 1e-6) ?? show.plates[0];
   const speaker = cur.who ?? show.presenter;
-  if (show.room) return <RoomMain show={show} />;
+  if (show.room || show.stage) return <RoomMain show={show} />;
+  const club = useCamera(show, f, show.scene === "club");
   return (
     <AbsoluteFill style={{ background: "#000" }}>
       {show.stage && (() => {
@@ -158,8 +159,11 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
           <AbsoluteFill style={{ opacity: prev && prev !== tint ? k : 1 }}><Studio tint={tint} /></AbsoluteFill>
         </>);
       })()}
-      {show.scene === "club" && <><ComedyClub tint={cur.tint ?? "#ec4899"} /><Marquee tint={cur.tint ?? "#ec4899"} /></>}
-      <AbsoluteFill style={show.stage || show.scene ? { transform: `scale(${1 + 0.03 * pulseAt(onTwos(f) / FPS, true, 0.35)})`, transformOrigin: "50% 45%" } : undefined}>
+      <svg width={0} height={0} style={{ position: "absolute" }}><defs><filter id="clubwhip" x="-20%" y="0" width="140%" height="100%"><feGaussianBlur stdDeviation={`${(club.whip * 38).toFixed(1)} 0`} /></filter></defs></svg>
+      <AbsoluteFill style={{ filter: club.on && club.whip * 38 > 0.6 ? "url(#clubwhip)" : undefined }}>
+      {show.scene === "club" && <AbsoluteFill style={club.cam(0.5)}><ComedyClub tint={cur.tint ?? "#ec4899"} /></AbsoluteFill>}
+      {show.scene === "club" && <AbsoluteFill style={club.cam(0.8)}><Marquee tint={cur.tint ?? "#ec4899"} /></AbsoluteFill>}
+      <AbsoluteFill style={club.on ? club.cam(1) : show.stage || show.scene ? { transform: `scale(${1 + 0.03 * pulseAt(onTwos(f) / FPS, true, 0.35)})`, transformOrigin: "50% 45%" } : undefined}>
       {show.plates.map((p, i) => {
         const from = Math.round(p.t * FPS);
         const to = i + 1 < show.plates.length ? Math.round(show.plates[i + 1].t * FPS) : end;
@@ -170,15 +174,17 @@ export const PresenterMain: React.FC<{ show: Show }> = ({ show }) => {
             <PlateSlot p={p} stage={show.stage} club={show.scene === "club"} />
             {show.scene === "club" && !p.cast && !p.toon && <MicStand x={p.bouncy ? 860 : 900} />}
             {(show.stage || show.scene) && p.chip && <TopicChip label={p.chip} tint={p.tint ?? "#7c3aed"} />}
-            {p.cast ? <Ensemble members={p.cast} t={t} open={mouthOpen(WORDS, t)} tint={p.tint ?? "#7c3aed"} i={i} /> : p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: 300, top: 1190 }}><Bouncy size={480} mood={typeof p.laugh === "number" && t >= p.laugh ? "laugh" : p.bouncy} open={p.bouncy === "laugh" || (typeof p.laugh === "number" && t >= p.laugh) ? 0 : mouthOpen(WORDS, t)} /></div> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
+            {p.cast ? <Ensemble members={p.cast} t={t} open={mouthOpen(WORDS, t)} tint={p.tint ?? "#7c3aed"} i={i} /> : p.toon ? <ToonHost id={p.toon.id} expr={p.toon.expr} t={t} i={i} /> : p.bouncy ? <div style={{ position: "absolute", left: club.on ? 340 : 300, top: club.on ? 1040 : 1190 }}><Bouncy size={club.on ? 400 : 480} mood={typeof p.laugh === "number" && t >= p.laugh ? "laugh" : p.bouncy} open={p.bouncy === "laugh" || (typeof p.laugh === "number" && t >= p.laugh) ? 0 : mouthOpen(WORDS, t)} /></div> : club.on ? <AbsoluteFill style={{ transform: "translate(40px, -200px) scale(0.85)", transformOrigin: "0 100%" }}><Presenter ch={ch} mood={p.mood} i={i} t={t} /></AbsoluteFill> : <Presenter ch={ch} mood={p.mood} i={i} t={t} />}
             <Audio src={staticFile(i === 0 ? "whoosh.wav" : i % 3 === 0 ? "pop.wav" : "whoosh.wav")} volume={0.4} />
           </Sequence>
         );
       })}
       </AbsoluteFill>
-      {show.scene === "club" && (() => { const ls = typeof cur.laugh === "number" ? cur.laugh : cur.t; return <Audience laughing={!!cur.laugh && t >= ls} lf={f - Math.round(ls * FPS)} />; })()}
-      <Doodles t={t} />
-      <CaptionStrip ch={(() => { const sp = cur.cast?.find((m) => m.talk); const acc = sp ? CAST.find((c) => c.id === sp.id)?.accent : undefined; return acc ? { ...speaker, accent: acc } : speaker; })()} t={t} group={cur.mood === "group"} />
+      {show.scene === "club" && (() => { const ls = typeof cur.laugh === "number" ? cur.laugh : cur.t; return <AbsoluteFill style={club.cam(1.3)}><Audience laughing={!!cur.laugh && t >= ls} lf={f - Math.round(ls * FPS)} /></AbsoluteFill>; })()}
+      </AbsoluteFill>
+      {club.on && <SpeedLines k={club.whip} dir={club.dir} />}
+      {club.on ? <LowerCaptions t={t} accent={cur.tint ?? "#ec4899"} /> : <><Doodles t={t} />
+      <CaptionStrip ch={(() => { const sp = cur.cast?.find((m) => m.talk); const acc = sp ? CAST.find((c) => c.id === sp.id)?.accent : undefined; return acc ? { ...speaker, accent: acc } : speaker; })()} t={t} group={cur.mood === "group"} /></>}
       <Audio src={staticFile("voiceover.mp3")} />
     </AbsoluteFill>
   );
@@ -252,6 +258,20 @@ const TopicChip: React.FC<{ label: string; tint: string }> = ({ label, tint }) =
 // ===========================================================================
 // Studio v3 – room show
 // ===========================================================================
+/** live camera for club shows: whip-pan into each plate, slow push-in, keyword punch */
+const useCamera = (show: Show, f: number, on: boolean) => {
+  const t = f / FPS;
+  const ci = Math.max(0, show.plates.findIndex((p, i) => p.t <= t + 1e-6 && (show.plates[i + 1]?.t ?? 1e9) > t + 1e-6));
+  const from = Math.round(show.plates[ci].t * FPS);
+  const to = ci + 1 < show.plates.length ? Math.round(show.plates[ci + 1].t * FPS) : Math.ceil(TOTAL_SEC * FPS);
+  const lf = f - from;
+  const whip = on ? Math.pow(1 - Math.min(1, lf / 11), 3) : 0;
+  const dir = ci % 2 ? 1 : -1;
+  const push = (1 + 0.045 * Math.min(1, lf / Math.max(1, to - from))) * (1 + 0.035 * pulseAt(onTwos(f) / FPS, true, 0.35));
+  const cam = (d: number): React.CSSProperties => (on ? { transform: `translateX(${-dir * whip * 520 * d}px) scale(${1 + (push - 1) * d})`, transformOrigin: "50% 52%" } : {});
+  return { on, whip, dir, cam };
+};
+
 const ANGLES = [0, -0.85, 0.75, -0.4, 0.9, -0.7, 0.35];
 const angleOf = (i: number) => ANGLES[i % ANGLES.length];
 

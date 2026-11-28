@@ -184,6 +184,7 @@ const TN = { hook: "#ec4899", old: "#f59e0b", study: "#22d3ee", now: "#a855f7", 
 export const SHOW: Show = {
   presenter: CHARACTERS.bouncy,
   scene: "club",
+  poster: { title: "Can AI actually be funny?", kicker: "COMEDY CLUB \u00b7 2023 VS 2026" },
   plates: [
     { t: 0, C: ThenVsNow, mood: "body", bouncy: "talk", tint: TN.hook, chip: "SPECIAL · AI JOKES" },
     { t: Y23, C: Asks, mood: "body", from: "left", bouncy: "talk", tint: TN.old, chip: "2023" },

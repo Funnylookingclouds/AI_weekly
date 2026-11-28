@@ -234,6 +234,7 @@ const { rune, ture, saga, cara } = CHARACTERS;
 export const SHOW: Show = {
   presenter: rune,
   stage: true,
+  poster: { title: "Who invented \"artificial intelligence\"?", kicker: "SPECIAL EDITION \u00b7 AI HISTORY" },
   plates: [
     { t: 0, C: FirstMentioned, mood: "body", tint: "#8b5cf6", chip: "SPECIAL · AI ORIGINS", cast: [{ id: "lumi", expr: "surprised", talk: true }, { id: "wattson", expr: "smug" }, { id: "pixel", expr: "happy" }] },
     { t: seg("y1955"), C: Aug1955, mood: "body", tint: "#f59e0b", chip: "1955 · THE PROPOSAL", cast: [{ id: "wattson", expr: "neutral", talk: true }, { id: "lumi", expr: "surprised" }] },

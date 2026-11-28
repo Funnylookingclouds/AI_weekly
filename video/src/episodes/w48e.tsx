@@ -11,6 +11,7 @@ const S1 = "STORY 1/3 · MATH", S2 = "STORY 2/3 · PROTEINS", S3 = "STORY 3/3 ·
 export const SHOW: Show = {
   presenter: CHARACTERS.wattson,
   stage: true,
+  poster: { title: "The AI Riemann proof passed its computer check", kicker: "WEEK 48 \u00b7 WHAT DID AI SOLVE?" },
   plates: [
     { t: 0, C: Mystery, mood: "body", tint: TINT.hook, chip: "THIS WEEK", cast: [{ id: "lumi", expr: "surprised", talk: true }, { id: "wattson", expr: "neutral" }, { id: "pixel", expr: "surprised" }] },
     { t: H2, C: NewHost, mood: "body", tint: TINT.host, chip: "YOUR HOST", cast: [{ id: "lumi", expr: "happy" }, { id: "wattson", expr: "smug", talk: true }, { id: "pixel", expr: "laugh" }] },

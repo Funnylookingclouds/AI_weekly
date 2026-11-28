@@ -65,6 +65,7 @@ const Punch: React.FC = () => {
 export const SHOW: Show = {
   presenter: CHARACTERS.bouncy,
   scene: "club",
+  poster: { title: "Joke of the week", kicker: "COMEDY CLUB \u00b7 JOKE #1" },
   plates: [
     { t: 0, C: Intro, mood: "body", bouncy: "talk", tint: "#ec4899", chip: "JOKE OF THE WEEK" },
     { t: seg("setup"), C: Setup, mood: "body", from: "left", bouncy: "wow", tint: "#22d3ee", chip: "THE SETUP" },

@@ -12,6 +12,7 @@ const S1 = "STORY 1/3 · MATH", S2 = "STORY 2/3 · HEART", S3 = "STORY 3/3 · PR
 export const SHOW: Show = {
   presenter: CHARACTERS.wattson,
   stage: true,
+  poster: { title: "AI may have solved a $1,000,000 math problem", kicker: "WEEK 47 \u00b7 WHAT DID AI SOLVE?" },
   plates: [
     { t: 0, C: MillionProblem, mood: "body", tint: TINT.hook, chip: "THIS WEEK", cast: [{ id: "pixel", expr: "surprised" }, { id: "lumi", expr: "surprised", talk: true }, { id: "chip", expr: "love" }] },
     { t: word("hook", "and"), C: NotEvenBiggest, mood: "body", tint: TINT.hook, chip: "THIS WEEK", cast: [{ id: "pixel", expr: "confused" }, { id: "lumi", expr: "smug", talk: true }, { id: "chip", expr: "surprised" }] },

@@ -206,6 +206,7 @@ const Recap: React.FC = () => {
 export const SHOW: Show = {
   presenter: CHARACTERS.wattson,
   stage: true,
+  poster: { title: "AI just doubled long-range weather forecasts", kicker: "WEEK 43 \u00b7 WHAT DID AI SOLVE?" },
   plates: [
     { t: 0, C: Future, mood: "body", chip: "THIS WEEK", from: "top", tint: TINT.hook, cast: [{ id: "lumi", expr: "happy", talk: true }, { id: "cloudy", expr: "neutral" }] },
     { t: C1, C: FixErrors, mood: "body", chip: "STORY 1/3 · WEATHER", from: "left", tint: TINT.weather, cast: [{ id: "cloudy", expr: "happy", talk: true }, { id: "lumi", expr: "surprised" }] },

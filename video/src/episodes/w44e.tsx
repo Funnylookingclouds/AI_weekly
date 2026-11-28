@@ -12,6 +12,7 @@ const S1 = "STORY 1/3 · MATH", S2 = "STORY 2/3 · WORLDS", S3 = "STORY 3/3 · R
 export const SHOW: Show = {
   presenter: CHARACTERS.wattson,
   stage: true,
+  poster: { title: "AI claims 3 of science's hardest problems", kicker: "WEEK 44 \u00b7 WHAT DID AI SOLVE?" },
   plates: [
     { t: 0, C: ThreeProblems, mood: "body", tint: TINT.hook, chip: "THIS WEEK", cast: [{ id: "lumi", expr: "surprised", talk: true }, { id: "pixel", expr: "happy" }, { id: "chip", expr: "scared" }] },
     { t: word("hook", "in", 1), C: SingleDay, mood: "body", tint: TINT.hook, chip: "THIS WEEK", cast: [{ id: "lumi", expr: "happy", talk: true }, { id: "pixel", expr: "surprised" }, { id: "chip", expr: "surprised" }] },

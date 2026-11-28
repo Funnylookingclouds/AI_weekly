@@ -178,8 +178,8 @@ const Final: React.FC = () => {
 const { rune, ture, saga, cara } = CHARACTERS;
 export const SHOW: Show = {
   presenter: rune,
-  room: true,
-  coldOpen: true,
+  stage: true,
+  poster: { title: "The AI move that shocked the world", kicker: "SPECIAL EDITION \u00b7 ALPHAGO" },
   plates: [
     { t: T0, C: Odds, mood: "body", tint: "#8b5cf6", chip: "SPECIAL · ALPHAGO", cast: [{ id: "chip", expr: "scared", talk: true }, { id: "pixel", expr: "surprised" }, { id: "lumi", expr: "surprised" }] },
     { t: seg("match"), C: Versus, mood: "body", tint: "#f59e0b", chip: "SEOUL · 2016", cast: [{ id: "lumi", expr: "happy", talk: true }, { id: "pixel", expr: "surprised" }] },

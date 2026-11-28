@@ -12,6 +12,7 @@ const S1 = "STORY 1/3 · MEDICINE", S2 = "STORY 2/3 · PRIVACY", S3 = "STORY 3/3
 export const SHOW: Show = {
   presenter: CHARACTERS.wattson,
   stage: true,
+  poster: { title: "AI just beat 8 brain tumor experts", kicker: "WEEK 46 \u00b7 WHAT DID AI SOLVE?" },
   plates: [
     { t: 0, C: EightVsAI, mood: "body", tint: TINT.hook, chip: "THIS WEEK", cast: [{ id: "lumi", expr: "surprised" }, { id: "pixel", expr: "surprised", talk: true }, { id: "chip", expr: "scared" }] },
     { t: word("hook", "and"), C: OnlyTheStart, mood: "body", tint: TINT.hook, chip: "THIS WEEK", cast: [{ id: "lumi", expr: "happy" }, { id: "pixel", expr: "smug", talk: true }, { id: "chip", expr: "happy" }] },

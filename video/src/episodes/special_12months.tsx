@@ -206,6 +206,7 @@ const { rune, ture, saga, cara } = CHARACTERS;
 export const SHOW: Show = {
   presenter: rune,
   stage: true,
+  poster: { title: "How fast is AI really improving?", kicker: "SPECIAL EDITION \u00b7 12 MONTHS" },
   plates: [
     { t: 0, C: TwelveMonths, mood: "body", tint: "#8b5cf6", chip: "SPECIAL · 12 MONTHS", cast: [{ id: "pixel", expr: "surprised", talk: true }, { id: "lumi", expr: "happy" }, { id: "chip", expr: "scared" }] },
     { t: seg("skill"), C: Yardstick, mood: "body", tint: "#06b6d4", chip: "SKILL · TASK LENGTH", cast: [{ id: "pixel", expr: "neutral", talk: true }, { id: "lumi", expr: "surprised" }] },

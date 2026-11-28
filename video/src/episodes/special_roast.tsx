@@ -136,6 +136,7 @@ const TN = { hook: "#ef4444", facts: "#f59e0b", fight: "#a855f7", ture: "#f59e0b
 export const SHOW: Show = {
   presenter: CHARACTERS.bouncy,
   scene: "club",
+  poster: { title: "Has AI ever won a roast battle?", kicker: "COMEDY CLUB \u00b7 ROAST" },
   plates: [
     { t: 0, C: Hook, mood: "body", bouncy: "talk", tint: TN.hook, chip: "SPECIAL · ROAST BATTLE" },
     { t: FACTS, C: NY, mood: "body", from: "left", bouncy: "talk", tint: TN.facts, chip: "THE RECORD" },

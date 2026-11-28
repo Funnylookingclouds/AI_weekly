@@ -197,6 +197,7 @@ const { rune, ture } = CHARACTERS;
 export const SHOW: Show = {
   presenter: rune,
   stage: true,
+  poster: { title: "How much electricity does AI really use?", kicker: "SPECIAL EDITION \u00b7 MYTH VS FACT" },
   plates: [
     { t: 0, C: EatingPower, mood: "body", tint: "#8b5cf6", chip: "SPECIAL · AI & POWER", cast: [{ id: "lumi", expr: "confused", talk: true }, { id: "chip", expr: "scared" }, { id: "wattson", expr: "smug" }] },
     { t: seg("t1"), C: Meter485, mood: "body", tint: "#ef4444", chip: "CLAIM", cast: [{ id: "chip", expr: "scared", talk: true }, { id: "wattson", expr: "smug" }] },
