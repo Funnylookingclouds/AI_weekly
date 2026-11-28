@@ -1,5 +1,5 @@
 {
- "id": "special-electricity-en",
+ "id": "special-alphago-en",
  "language": "en",
  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
  "model_id": "eleven_multilingual_v2",
@@ -7,59 +7,56 @@
  "segments": [
   {
    "id": "hook",
+   "voice_id": "SDARFhQygpPvpLh7Ad1B",
+   "tts": "One move had a one-in-ten-thousand chance. An AI played it anyway."
+  },
+  {
+   "id": "match",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "Is AI eating the world's electricity? Let's check the real numbers."
+   "tts": "March 2016, Seoul. Google DeepMind's AlphaGo takes on Lee Sedol – winner of eighteen world titles – at Go, a game with more possible positions than atoms in the universe. Over two hundred million people watch."
   },
   {
-   "id": "t1",
-   "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "It sure sounds like it! Data centers used about 485 terawatt-hours in 2025."
+   "id": "move37",
+   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+   "tts": "Game two, move thirty-seven. AlphaGo plays a stone that commentators first think is a mistake. It wins the game – and overturns centuries of Go wisdom."
   },
   {
-   "id": "r1",
+   "id": "comeback",
    "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "True – that's roughly one and a half percent of all the world's electricity. But AI is only part of it. AI-focused data centers used about 155 terawatt-hours. That's around half a percent."
-  },
-  {
-   "id": "t2",
-   "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "Half a percent? So it's no problem at all?"
-  },
-  {
-   "id": "r2",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "Not so fast. The IEA expects data centers to nearly double by 2030 – to about three percent of the world's power."
-  },
-  {
-   "id": "t3",
-   "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "So: small today, but growing fast."
+   "tts": "But in game four, Lee strikes back with his own one-in-ten-thousand move – \"God's Touch\" – and wins."
   },
   {
    "id": "loop",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "Half a percent now – watch this space."
+   "tts": "AlphaGo took the match four to one. But both sides showed us something new."
   }
  ],
  "display_map": {
-  "three": "3"
+  "eighteen": "18",
+  "two": "2",
+  "thirtyseven": "37",
+  "four": "4",
+  "one": "1"
  },
  "keywords": [
-  "electricity",
-  "485",
-  "2025",
-  "half",
-  "155",
-  "ai",
-  "problem",
-  "iea",
-  "double",
-  "2030",
-  "three",
-  "small",
-  "growing",
-  "fast",
-  "percent"
+  "oneintenthousand",
+  "alphago",
+  "lee",
+  "sedol",
+  "eighteen",
+  "go",
+  "atoms",
+  "universe",
+  "hundred",
+  "million",
+  "thirtyseven",
+  "mistake",
+  "centuries",
+  "four",
+  "gods",
+  "touch",
+  "wins",
+  "new"
  ],
  "voice_gap": 0.25,
  "voice_settings": {
