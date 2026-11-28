@@ -1,90 +1,63 @@
 {
- "id": "2026-w48-en",
+ "id": "special-ai-origin-en",
  "language": "en",
  "voice_id": "FGY2WhTYpPnrIDTdsKH5",
  "model_id": "eleven_multilingual_v2",
- "speed": 1.15,
- "voice_settings": {
-  "stability": 0.32,
-  "style": 0.6
- },
+ "speed": 1.12,
  "segments": [
   {
    "id": "hook",
    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "An AI may have cracked math's biggest mystery – and the checks are coming in."
+   "tts": "When was AI first mentioned? Spoiler: way before ChatGPT."
   },
   {
-   "id": "hook",
+   "id": "y1955",
    "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "I'm Wattson. Let's get this over with."
+   "tts": "August 31st, 1955. A young mathematician, John McCarthy, writes a funding proposal with Marvin Minsky, Nathaniel Rochester and Claude Shannon. And right in the title: a brand-new term – artificial intelligence."
   },
   {
-   "id": "news1",
+   "id": "y1956",
    "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "Remember the Riemann proof made with Claude? On Saturday, the Lean and Mathlib teams said the computer-checked proof is correct."
+   "tts": "The plan: a two-month, ten-person summer workshop at Dartmouth College in 1956. Their bold idea: every feature of intelligence can be described so precisely that a machine could simulate it."
   },
   {
-   "id": "news1",
-   "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "Top mathematicians are impressed – but one called the write-up \"garbled\", and human review is still going."
-  },
-  {
-   "id": "news1",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "Fine. I'll get excited when it's peer-reviewed."
-  },
-  {
-   "id": "news2",
-   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "Next: OpenAI says its GPT-6 models can design proteins using plain reasoning and code. In lab tests, 35 of 322 designs actually stuck to their targets."
-  },
-  {
-   "id": "news2",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "Great. Next it'll design my replacement."
-  },
-  {
-   "id": "news3",
+   "id": "y1950",
    "voice_id": "wGkprrTXgBM5EC3Znt6U",
-   "tts": "Quick hit: big drug makers say AI is shrinking discovery timelines – but Lilly warns: don't expect miracles yet."
+   "tts": "But the question is even older. In 1950, Alan Turing asked: \"Can machines think?\" – and proposed the imitation game, today's Turing test."
   },
   {
    "id": "loop",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "Math, proteins, medicine – all in seven days."
-  },
-  {
-   "id": "loop",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "Now somebody charge me."
+   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+   "tts": "Seventy-one years later, that idea fits in your pocket."
   }
  ],
  "display_map": {
-  "seven": "7"
+  "seventyone": "71"
  },
  "keywords": [
-  "mystery",
-  "wattson",
-  "riemann",
-  "claude",
-  "lean",
-  "correct",
-  "garbled",
-  "review",
-  "peerreviewed",
-  "openai",
-  "gpt6",
-  "proteins",
-  "35",
-  "322",
-  "replacement",
-  "shrinking",
-  "timelines",
-  "lilly",
-  "miracles",
-  "seven",
-  "charge"
+  "chatgpt",
+  "1955",
+  "mccarthy",
+  "minsky",
+  "rochester",
+  "shannon",
+  "artificial",
+  "intelligence",
+  "dartmouth",
+  "1956",
+  "simulate",
+  "1950",
+  "turing",
+  "think",
+  "imitation",
+  "game",
+  "test",
+  "seventyone",
+  "pocket"
  ],
- "voice_gap": 0.25
+ "voice_gap": 0.25,
+ "voice_settings": {
+  "stability": 0.32,
+  "style": 0.6
+ }
 }
