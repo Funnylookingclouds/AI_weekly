@@ -1,66 +1,62 @@
 {
- "id": "special-alphago-en",
- "language": "en",
- "voice_id": "FGY2WhTYpPnrIDTdsKH5",
- "model_id": "eleven_multilingual_v2",
- "speed": 1.12,
- "segments": [
-  {
-   "id": "hook",
-   "voice_id": "SDARFhQygpPvpLh7Ad1B",
-   "tts": "One move had a one-in-ten-thousand chance. An AI played it anyway."
+  "id": "special-jokes-en",
+  "language": "en",
+  "voice_id": "fBD19tfE58bkETeiwUoC",
+  "model_id": "eleven_multilingual_v2",
+  "speed": 1.12,
+  "segments": [
+    {
+      "id": "hook",
+      "tts": "Can AI actually be funny? Let's compare its jokes – then and now."
+    },
+    {
+      "id": "y23",
+      "tts": "Back in 2023, researchers asked ChatGPT for a joke one thousand and eight times. Over ninety percent were the same twenty-five jokes. The number one hit: Why did the scarecrow win an award? Because he was outstanding in his field."
+    },
+    {
+      "id": "y23b",
+      "tts": "Number two: Why did the tomato turn red? It saw the salad dressing."
+    },
+    {
+      "id": "y24",
+      "tts": "One year later, a new study found most people rated ChatGPT's jokes funnier than human ones."
+    },
+    {
+      "id": "y26",
+      "tts": "So here's a 2026 joke, written by AI: I told my AI to stop overthinking. It said: \"Sure – let me think about that for thirty seconds.\""
+    },
+    {
+      "id": "loop",
+      "tts": "From scarecrows to self-roasts – AI comedy is growing up."
+    }
+  ],
+  "display_map": {
+    "ninety": "90",
+    "twentyfive": "25",
+    "thirty": "30",
+    "two": "2"
   },
-  {
-   "id": "match",
-   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "March 2016, Seoul. Google DeepMind's AlphaGo takes on Lee Sedol – winner of eighteen world titles – at Go, a game with more possible positions than atoms in the universe. Over two hundred million people watch."
-  },
-  {
-   "id": "move37",
-   "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
-   "tts": "Game two, move thirty-seven. AlphaGo plays a stone that commentators first think is a mistake. It wins the game – and overturns centuries of Go wisdom."
-  },
-  {
-   "id": "comeback",
-   "voice_id": "MKlLqCItoCkvdhrxgtLv",
-   "tts": "But in game four, Lee strikes back with his own one-in-ten-thousand move – \"God's Touch\" – and wins."
-  },
-  {
-   "id": "loop",
-   "voice_id": "FGY2WhTYpPnrIDTdsKH5",
-   "tts": "AlphaGo took the match four to one. But both sides showed us something new."
+  "keywords": [
+    "funny",
+    "2023",
+    "chatgpt",
+    "ninety",
+    "percent",
+    "twentyfive",
+    "scarecrow",
+    "outstanding",
+    "tomato",
+    "dressing",
+    "funnier",
+    "2026",
+    "ai",
+    "overthinking",
+    "thirty",
+    "seconds",
+    "comedy"
+  ],
+  "voice_settings": {
+    "stability": 0.3,
+    "style": 0.6
   }
- ],
- "display_map": {
-  "eighteen": "18",
-  "two": "2",
-  "thirtyseven": "37",
-  "four": "4",
-  "one": "1"
- },
- "keywords": [
-  "oneintenthousand",
-  "alphago",
-  "lee",
-  "sedol",
-  "eighteen",
-  "go",
-  "atoms",
-  "universe",
-  "hundred",
-  "million",
-  "thirtyseven",
-  "mistake",
-  "centuries",
-  "four",
-  "gods",
-  "touch",
-  "wins",
-  "new"
- ],
- "voice_gap": 0.25,
- "voice_settings": {
-  "stability": 0.32,
-  "style": 0.6
- }
 }
