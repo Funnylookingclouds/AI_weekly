@@ -1,34 +1,37 @@
-# YouTube upload – SPECIAL EDITION 4: The move that shocked the world (AlphaGo, Move 37) – ensemble: Chip, Lumi, Pixel, Wattson
+# YouTube upload – Week 43 (Oct 19–25, 2026) – ensemble: Lumi, Cloudy, Pixel, Chip, Wattson
 
 ## Title options
-1. **The AI Move That Shocked the World (1 in 10,000) 🤯** ← recommended
-2. AlphaGo's Move 37: When AI Out-Thought a Champion
-3. AlphaGo vs Lee Sedol: The Move Nobody Expected
+1. **AI Just Doubled Long-Range Weather Forecasts 🌦️** ← recommended
+2. AI Can Now Predict Weather 6 Weeks Ahead?!
+3. What Did AI Solve This Week? Weather, DNA & Robot Labs
 
 ## Description (copy everything between the lines)
 
 ---
-One move had a 1-in-10,000 chance – and an AI played it anyway. The story of AlphaGo vs Lee Sedol and the legendary Move 37, in under a minute. A special edition on AI history, presented by the whole AI Bounce crew. ⚫⚪🤖
+AI just doubled the skill of weather forecasts two to six weeks ahead – plus an open AI you can chat with about DNA, and robot chemistry labs hunting for new drugs. The latest AI news this week, presented by the whole AI Bounce crew. 🌦️🧬🤖
 
-🏆 THE MATCH (March 2016, Seoul)
-Google DeepMind's AlphaGo played Lee Sedol – winner of 18 world titles – at Go, a game with about 10^170 possible board positions (far more than the ~10^80 atoms in the observable universe). Over 200 million people watched worldwide.
+🌦️ 1. AI DOUBLES LONG-RANGE WEATHER FORECAST SKILL
+A study in Nature (published Oct 14) shows a machine-learning method that corrects the errors of existing forecast models – reported to double forecast skill for the hard two-to-six-week window. That could mean earlier warnings for heat waves and floods. Researchers note it still needs to hold up across seasons.
+🔗 https://www.nature.com/articles/d41586-026-03077-0
+🔗 https://phys.org/news/2026-10-ai-weather-power-weeks.html
 
-⚫ MOVE 37 (Game 2)
-AlphaGo played a move with about a 1-in-10,000 chance of being played by a human. Commentators were stunned – but it helped AlphaGo win the game and upended centuries of Go wisdom.
+🧬 2. CARBON-X: CHAT WITH DNA
+Hugging Face released Carbon-X, an open 14.8B-parameter model that lets researchers ask questions about DNA in plain English – e.g. what a mutation might do – and it runs locally on a laptop. Benchmarks are self-reported and it hasn't been validated in wet-lab experiments yet.
+🔗 https://www.techrepublic.com/article/news-hugging-face-carbon-x-ai-dna-analysis/
 
-⚪ GOD'S TOUCH (Game 4)
-Lee Sedol struck back with Move 78, an equally rare 1-in-10,000 move nicknamed "God's Touch" – and won the game. AlphaGo took the match 4–1.
-🔗 https://deepmind.google/research/breakthroughs/alphago/
+🤖 3. ROBOT CHEMISTRY LABS
+OpenAI's former science chief Kevin Weil launched Warp Sciences with a reported $215 million to build AI-and-robotics chemistry labs for drug discovery.
+🔗 https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-22-2026/
 
-📅 Every week: what did AI solve? Plus special editions on AI history – short, jargon-free and under 60 seconds.
+📅 Every week: what did AI solve? Short, jargon-free AI news this week – AI breakthroughs, AI science and AI in medicine, explained in under 60 seconds.
 
 🔔 Subscribe to @AIBounce for a new "What did AI solve?" every week: https://www.youtube.com/@AIBounce
 
-#Shorts #AIBounce #AI #AlphaGo #AIHistory
+#Shorts #AIBounce #AI #AINews #WeatherForecast
 ---
 
 ## Tags (paste into the Tags field)
-AlphaGo, Move 37, AlphaGo Move 37, Lee Sedol, AlphaGo vs Lee Sedol, God's Touch, Move 78, Go game AI, AI beats human, AI history, Google DeepMind, DeepMind AlphaGo, AI Go match 2016, AI creativity, history of AI, AI milestones, AI explained, machine learning, AI documentary, AI shorts, artificial intelligence, AI news, AI Bounce, AI special edition, what did AI solve
+AI news, AI news this week, latest AI news, AI breakthroughs, what did AI solve, AI weather forecast, AI weather prediction, long range forecast, subseasonal forecast, machine learning weather, Nature study AI, Carbon-X, Hugging Face, chat with DNA, AI DNA model, AI genetics, open source AI, Warp Sciences, Kevin Weil, robot lab, AI drug discovery, AI science, artificial intelligence, AI Bounce, AI shorts
 
 ## Pinned comment
-Would you have called Move 37 a mistake too? 👇 (Source in the description.)
+Who should host next week – Lumi, Cloudy, Pixel, Chip or Wattson? 👇 (Sources in the description.)
